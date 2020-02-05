@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="event_badge_customization_template" inherit_id="event.event_registration_report_template_badge">
+        <xpath expr="//div[@class='page']" position="replace">
+            <div class="page" style="page-break-inside: avoid;">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="text-center">
+                            <img src="/event_badge_customization/static/src/img/odoo_sa_logo.png"
+                                 style="max-height:1.5cm; max-width:5cm;"
+                                 alt="Odoo Logo"/>
+                        </div>
+                        <div style="border-top: 1px solid black !important; margin-top: 2%;">
+                            <div class="text-center" style="margin-top: 1%">
+                                <h4 t-field="o.event_id.name"/>
+                                <h5>
+                                    <span t-field="o.event_id.address_id.street"/>, <span t-field="o.event_id.address_id.city"/>, <span t-field="o.event_id.address_id.state_id.code"/>
+                                    <i class="fa fa-clock-o" aria-label="Period" role="img" title="Period"></i>
+                                    <span itemprop="endDate" t-field="o.event_id.with_context(tz=o.event_id.date_tz).date_end" t-options='{"widget": "date"}'> </span>
+                                </h5>
+                            </div>
+                        </div>
+                        <div style="margin-top: 8% !important;">
+                            <div class="col-12 text-center" id="o_event_name">
+                                <h3>
+                                    <div class="fas fa-user"><span t-field="o.name"/></div>
+                                    <t t-if="o.partner_id">
+                                        <div style="margin-top: 1% ! important;">
+                                            <h4><div class="fa fa-building"><span t-field="o.partner_id.name"/></div></h4>
+                                        </div>
+                                    </t>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <img src="/event_badge_customization/static/src/img/frame.png"
+                                 style="max-height:4cm; max-width:4cm; margin-top: 5% !important" alt="Odoo Logo"/>
+                        </div>
+                        <div style="border-top: 1px solid black !important; margin-top: 6% !important;">
+                            <div class="row">
+                                <div class="col-6 text-left" style="margin-top: 2% !important">
+                                    <small>
+                                        <h5>
+                                            <div>
+                                                <b><span t-field="o.company_id.name"/></b>
+                                            </div>
+                                        </h5>
+                                        <div>
+                                            <div class="fa fa-map-marker"/>
+                                            <span t-field="o.company_id.street"/>
+                                        </div>
+                                        <div>
+                                            <span t-field="o.company_id.city"/> <span t-field="o.company_id.state_id.code"/> <span t-field="o.company_id.zip"/>
+                                        </div>
+                                        <t t-if="o.company_id.email">
+                                            <div>
+                                                <div class="fa fa-envelope"></div>
+                                                <span t-field="o.company_id.email"/>
+                                            </div>
+                                        </t>
+                                        <t t-if="o.company_id.website">
+                                            <div>
+                                                <div class="fa fa-chrome"></div>
+                                                <span t-field="o.company_id.website"/>
+                                            </div>
+                                        </t>
+                                        <t t-if="o.company_id.phone">
+                                            <div>
+                                                <div class="fa fa-phone"/>
+                                                <span t-field="o.company_id.phone"/>
+                                            </div>
+                                        </t>
+                                    </small>
+                                </div>
+                                <div class="col-6 text-right" style="margin-top: 35px !important;">
+                                    <img t-att-src="image_data_uri(o.company_id.logo_web)" style="max-height:1.5cm; max-width:5cm;" alt="Logo"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+    <record id="paperformat_a6" model="report.paperformat">
+        <field name="name">European A6</field>
+        <field name="default" eval="True"/>
+        <field name="format">A6</field>
+        <field name="page_height">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">8.5</field>
+        <field name="margin_bottom">8</field>
+        <field name="margin_left">5</field>
+        <field name="margin_right">5</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">35</field>
+        <field name="dpi">90</field>
+    </record>
+
+    <report
+        id="event.report_event_registration_badge"
+        model="event.registration"
+        string="Registration Badge"
+        report_type="qweb-pdf"
+        name="event.event_registration_report_template_badge"
+        file="event.event_registration_report_template_badge"
+        paperformat="paperformat_a6"
+        print_report_name="'Registration Event - %s' % (object.name or 'Attendee').replace('/','')"
+    />
+
+</odoo>
