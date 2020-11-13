@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!-- FORM View  -->
+        <record model='ir.ui.view' id='iot_box_cash_register_form'>
+            <field name='name'>iot.box.cash.register.form</field>
+            <field name='model'>iot.box</field>
+            <field name="inherit_id" ref="iot.iot_box_view_form"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//notebook" position="inside">
+                    <page string="Cash Register" name="cash_register">
+                        <field name="available_cash_register_ids">
+                            <tree editable="top">
+                                <field name="name" required="1"/>
+                                <field name="ip_address" required="1"/>
+                                <field name="manufacturer" required="1"/>
+                                <field name="cash_model" required="1"/>
+                                <field name="connection_type" required="1"/>
+                                <field name="connection_port"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</openerp>

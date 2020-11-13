@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- FORM View  -->
+        <record model='ir.ui.view' id='wizard_report_accounting_entry_form'>
+            <field name='name'>wizard.report.accounting.entry.form</field>
+            <field name='model'>wizard.report.accounting.entry</field>
+            <field name='arch' type='xml'>
+                <form string="Accounting Entry Filter">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name='partner_id'/>
+                                <field name='state'/>
+                            </group>
+                            <group>
+                                <field name='include_draft'/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button string="Confirm" name="print_report" type="object" class="btn-primary"/>
+                        or
+                        <button string="Cancel" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="action_report_accounting_entry_filter" model="ir.actions.act_window">
+            <field name="name">Accounting Entry Filter</field>
+            <field name="res_model">wizard.report.accounting.entry</field>
+            <field name='view_id' ref='wizard_report_accounting_entry_form'/>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+    </data>
+</odoo>

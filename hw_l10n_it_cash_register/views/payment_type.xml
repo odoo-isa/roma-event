@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!-- FORM View  -->
+        <record model='ir.ui.view' id='payment_type_hydra_form'>
+            <field name='name'>payment.type.hydra.form</field>
+            <field name='model'>payment.type</field>
+            <field name="inherit_id" ref="payment_term_extension_isa.payment_type_form"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='code']" position="after">
+                    <field name="is_foregone_payment"/>
+                    <field name="is_valid_retail_payment"/>
+                    <field name="hydra_payment_code"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</openerp>

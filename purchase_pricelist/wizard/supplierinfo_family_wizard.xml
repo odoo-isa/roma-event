@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- FORM View -->
+        <record model='ir.ui.view' id='supplierinfo_family_wizard_form'>
+            <field name='name'>supplierinfo.family.wizard.form</field>
+            <field name='model'>supplierinfo.family.wizard</field>
+            <field name='arch' type='xml'>
+                <form string='Supplierinfo Family'>
+                    <group>
+                        <field name="name"/>
+                        <field name="profit"/>
+                        <field name="discount_ids" widget="one2many">
+                            <tree editable="bottom">
+                                <field name="sequence" widget="handle"/>
+                                <field name="value"/>
+                                <field name="label"/>
+                            </tree>
+                        </field>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <!-- TREE View -->
+        <record model='ir.ui.view' id='supplierinfo_family_wizard_tree'>
+            <field name='name'>supplierinfo.family.wizard.tree</field>
+            <field name='model'>supplierinfo.family.wizard</field>
+            <field name='arch' type='xml'>
+                <tree string='Supplierinfo Family'>
+                    <field name="name"/>
+                    <field name="profit"/>
+                    <field name="calculate_discounts" string="Discounts"/>
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</odoo>

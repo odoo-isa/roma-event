@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="print_quote">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-12" style="line-height: 30pt">
+                                    <h6 class="text-left">
+                                        <strong>DICHIARAZIONE DI ASSUNZIONE DI RESPONSABILITA' PER IVA AGEVOLATA</strong>
+                                    </h6>
+                                    <p class="text-left">
+                                        Il sottoscritto <span t-field="docs.res_partner_id.parent_id.name"/><br/>
+                                        <span t-field="docs.res_partner_id.parent_id.street"/>,
+                                        <span t-field="docs.res_partner_id.parent_id.state_id.name"/><br/>
+                                        C.F. / P.I. <span t-field="docs.res_partner_id.parent_id.vat"/>
+                                    </p>
+                                    <p class="text-left">
+                                        Consapevole della responsabilità che si assume con la firma della presente, dichiara di voler usufruire dell'aliquota agevolata IVA prevista dalla normativa vigente nel settore edilizia.
+                                        Infatti i beni acquistati presso le filiali della <span t-field="user.company_id.partner_id.name"/>, la quale ha sede a <span t-field="user.company_id.state_id.name"/>, <span t-field="user.company_id.street"/>, sono destinati alla realizzazione di:
+                                        <span t-field="docs.preferential_tax_id.name"/> (seconda casa privati di cui la prestazione di servizi è ad aliquota 10%).
+                                        Per l'immobile sito in <span t-field="docs.res_partner_id.street"/>, <span t-field="docs.res_partner_id.state_id.name"/>,
+                                        come da autorizzazione n. <span t-field="docs.authorization_number"/>.<br/>
+                                        Quindi usufruiscono delle agevolazioni IVA previste dal D.P.R. 633/72 e successive modifiche e/o integrazioni.<br/>
+                                        Con la presente intendo sollevare <span t-field="user.company_id.partner_id.name"/> da ogni e qualsiasi responsabilità qualora in sede di verifica fiscale dovesse risultare errata l'applicazione
+                                        dell'IVA agevolata e pertanto rimarranno a mio completo ed esclusivo carico l'eventuale imposta residua, le pene pecuniarie, soprattasse ed interessi richiesta alla <span t-field="user.company_id.partner_id.name"/>. <br/>
+                                    </p>
+                                    <p class="text-left">
+                                        <span t-field="user.company_id.state_id.name"/> li, <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d/%m/%Y')" />
+                                    </p>
+                                    <p class="text-right">
+                                        in fede<br/>
+                                        FIRMA
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </template>
+
+    </data>
+</odoo>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- FORM View  -->
+        <record model='ir.ui.view' id='payment_withholding_tax_wizard_form'>
+            <field name='name'>payment.withholding.tax.wizard.form</field>
+            <field name='model'>payment.withholding.tax.wizard</field>
+            <field name='arch' type='xml'>
+                <form string='Create Payment for Account Withholding Tax'>
+                    <sheet>
+                        <group>
+                            <field name="date"/>
+                            <field name='account_id'/>
+                        </group>
+                        <footer>
+                            <button name="create_payment" string="Confirm" type="object" class="oe_highlight"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_payment_withholding_tax" model="ir.actions.act_window">
+            <field name="name">Create Payment for Account Withholding Tax</field>
+            <field name="binding_model_id" ref="account.model_account_move_line"/>
+            <field name="res_model">payment.withholding.tax.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+    </data>
+</odoo>

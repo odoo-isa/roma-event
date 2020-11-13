@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model='ir.ui.view' id='sale_credit_form'>
+        <field name='name'>sale.credit.form</field>
+        <field name='model'>res.partner</field>
+        <field name="inherit_id" ref="account.view_partner_property_form"/>
+        <field name='arch' type='xml'>
+            <xpath expr="//field[@name='property_payment_term_id']" position="after">
+                <field name="customer_rank" invisible="1"/>
+                <field name="sale_credit_type" attrs="{'invisible':[('customer_rank', '=', 0)]}" />
+                <field name="credit_limit" attrs="{'invisible':['|', ('customer_rank', '=', 0), ('sale_credit_type','=','unlimited')]}"/>
+                <field name="remaing_credit" attrs="{'invisible':['|', ('customer_rank', '=', 0), ('sale_credit_type','=','unlimited')]}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

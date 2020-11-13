@@ -1,0 +1,112 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_it_split_payment
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-22 07:36+0000\n"
+"PO-Revision-Date: 2020-05-22 07:36+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_it_split_payment
+#: model:account.tax.group,name:l10n_it_split_payment.account_tax_group_vpa
+msgid "22vPA"
+msgstr ""
+
+#. module: l10n_it_split_payment
+#: model:ir.model,name:l10n_it_split_payment.model_res_company
+msgid "Companies"
+msgstr "Aziende"
+
+#. module: l10n_it_split_payment
+#: model:ir.model,name:l10n_it_split_payment.model_res_config_settings
+msgid "Config Settings"
+msgstr "Impostazioni di configurazione"
+
+#. module: l10n_it_split_payment
+#: model:ir.model,name:l10n_it_split_payment.model_account_fiscal_position
+msgid "Fiscal Position"
+msgstr "Posizione fiscale"
+
+#. module: l10n_it_split_payment
+#: model:ir.model.fields,help:l10n_it_split_payment.field_account_fiscal_position__split_payment
+msgid ""
+"If it's active, invoices with this account fiscal position use split payment"
+msgstr ""
+"Se impostato, le fatture con questa posizione fiscale applicheranno la "
+"scissione dei pagamenti"
+
+#. module: l10n_it_split_payment
+#: model:ir.model.fields,field_description:l10n_it_split_payment.field_account_move_line__is_split_line
+msgid "Is Split Line"
+msgstr "E' un movimento relativo alla Scissione dei Pagamenti"
+
+#. module: l10n_it_split_payment
+#: code:addons/l10n_it_split_payment/models/account_move.py:0
+#, python-format
+msgid "It is impossible to continue, fiscal position is not consistent"
+msgstr "Impossibile continuare, la posizione fiscale inserita non è consona"
+
+#. module: l10n_it_split_payment
+#: model:ir.model.fields,help:l10n_it_split_payment.field_res_company__sp_account_id
+#: model:ir.model.fields,help:l10n_it_split_payment.field_res_config_settings__sp_account_id
+msgid ""
+"It shows account used in invoices with split payment, this account is in the"
+" move lines after invoice validation"
+msgstr ""
+"Indica il conto usato nelle fatture con split payment attivo, questo conto "
+"sarà indicato nelle righe della registrazione contabile dopo la validazione "
+"della fattura"
+
+#. module: l10n_it_split_payment
+#: model:ir.model,name:l10n_it_split_payment.model_account_move
+msgid "Journal Entries"
+msgstr "Registrazioni contabili"
+
+#. module: l10n_it_split_payment
+#: model:ir.model,name:l10n_it_split_payment.model_account_move_line
+msgid "Journal Item"
+msgstr "Movimento contabile"
+
+#. module: l10n_it_split_payment
+#: model:ir.model.fields,field_description:l10n_it_split_payment.field_res_company__sp_account_id
+#: model:ir.model.fields,field_description:l10n_it_split_payment.field_res_config_settings__sp_account_id
+#: model_terms:ir.ui.view,arch_db:l10n_it_split_payment.res_config_settings_view_form
+msgid "Sp Account"
+msgstr "Conto per la Scissione dei Pagamenti"
+
+#. module: l10n_it_split_payment
+#: model:ir.model.fields,field_description:l10n_it_split_payment.field_account_fiscal_position__split_payment
+#: model_terms:ir.ui.view,arch_db:l10n_it_split_payment.res_config_settings_view_form
+msgid "Split Payment"
+msgstr "Scissione Pagamenti"
+
+#. module: l10n_it_split_payment
+#: code:addons/l10n_it_split_payment/models/account_move.py:0
+#, python-format
+msgid "Split Payment Write Off"
+msgstr "Storno Scissione Pagamenti"
+
+#. module: l10n_it_split_payment
+#: model:ir.model.fields,help:l10n_it_split_payment.field_account_move_line__is_split_line
+msgid "Technical field used to identify the split payment line."
+msgstr ""
+"Campo tecnico utilizzato per identificare la riga relativa allo split "
+"payment"
+
+#. module: l10n_it_split_payment
+#: code:addons/l10n_it_split_payment/models/account_move.py:0
+#, python-format
+msgid ""
+"Unable to validate Split Payment Invoice if Sp Account is not defined in "
+"account setting"
+msgstr ""
+"Impossibile validare la fattura con split payment attivo se il conto "
+"relativo allo split payment non è definito nelle configurazioni"

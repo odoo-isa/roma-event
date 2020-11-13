@@ -1,0 +1,148 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* base_partner_email_validation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-18 16:15+0000\n"
+"PO-Revision-Date: 2020-03-18 16:15+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: base_partner_email_validation
+#: model:mail.template,body_html:base_partner_email_validation.mail_template_verification_res_partner
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"    Dear ${object.name},<br/><br/>\n"
+"    We have received your email validation request. To confirm it click on the following button:\n"
+"    <div style=\"margin: 16px 0px 16px 0px;\">\n"
+"        <a href=\"${object.verification_email_url}\" style=\"background-color: #875A7B; padding: 8px 16px 8px 16px; text-decoration: none; color: #fff; border-radius: 5px; font-size:13px;\">\n"
+"            Confirm Email\n"
+"        </a>\n"
+"    </div>\n"
+"</div>"
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"    Gentile ${object.name},<br/><br/>\n"
+"    Abbiamo ricevuto la tua richiesta di validazione email. Per confermarla clicca sul seguente pulsante:\n"
+"    <div style=\"margin: 16px 0px 16px 0px;\">\n"
+"        <a href=\"${object.verification_email_url}\" style=\"background-color: #875A7B; padding: 8px 16px 8px 16px; text-decoration: none; color: #fff; border-radius: 5px; font-size:13px;\">\n"
+"            Conferma Email\n"
+"        </a>\n"
+"    </div>\n"
+"</div>"
+
+#. module: base_partner_email_validation
+#: model_terms:ir.ui.view,arch_db:base_partner_email_validation.not_confirm
+msgid "Cannot be confirmed Mail!"
+msgstr "La mail non può essere confermata!"
+
+#. module: base_partner_email_validation
+#: model:ir.model,name:base_partner_email_validation.model_res_partner
+msgid "Contact"
+msgstr "Contatto"
+
+#. module: base_partner_email_validation
+#: model:mail.template,subject:base_partner_email_validation.mail_template_verification_res_partner
+msgid "Email Verification"
+msgstr "Verifica Email"
+
+#. module: base_partner_email_validation
+#: code:addons/base_partner_email_validation/models/mail_thread.py:0
+#, python-format
+msgid ""
+"For user %s  it wasn't possible to send communication because doesn't have a"
+" valid email address!"
+msgstr "Per l'utente %s  non è stato possibile inviare la comunicazione perchè non ha una mail valida!"
+
+#. module: base_partner_email_validation
+#: model_terms:ir.ui.view,arch_db:base_partner_email_validation.not_confirm
+msgid "If you think it was an error, please send mail to:"
+msgstr ""
+"Se pensi che si sia trattato di un errore, inviare una mail all'indirizzo:"
+
+#. module: base_partner_email_validation
+#: model:ir.model.fields,help:base_partner_email_validation.field_res_partner__is_verified_email
+#: model:ir.model.fields,help:base_partner_email_validation.field_res_users__is_verified_email
+msgid "Indicates if email has been verified"
+msgstr "Indica se la mail è stata verificata"
+
+#. module: base_partner_email_validation
+#: model:ir.model.fields,help:base_partner_email_validation.field_res_partner__verification_email_token
+#: model:ir.model.fields,help:base_partner_email_validation.field_res_users__verification_email_token
+msgid "Indicates token used to verify email"
+msgstr "Indica il token utilizzato per verificare l'email"
+
+#. module: base_partner_email_validation
+#: model:ir.model.fields,help:base_partner_email_validation.field_res_partner__verification_email_url
+#: model:ir.model.fields,help:base_partner_email_validation.field_res_users__verification_email_url
+msgid "Indicates url to be used confirm email"
+msgstr "Indica l'url utilizzato per confermare la mail"
+
+#. module: base_partner_email_validation
+#: model:ir.model.fields,help:base_partner_email_validation.field_res_partner__verification_email_sent
+#: model:ir.model.fields,help:base_partner_email_validation.field_res_users__verification_email_sent
+msgid "Indicates whether email has been sent to address"
+msgstr "Indica se l'email è stata inviata all'indirizzo impostato"
+
+#. module: base_partner_email_validation
+#: model:ir.model.fields,field_description:base_partner_email_validation.field_res_partner__is_verified_email
+#: model:ir.model.fields,field_description:base_partner_email_validation.field_res_users__is_verified_email
+msgid "Is verified email"
+msgstr "E' verificata email"
+
+#. module: base_partner_email_validation
+#: model_terms:ir.ui.view,arch_db:base_partner_email_validation.success_confirm
+msgid "Thank You!"
+msgstr "Grazie!"
+
+#. module: base_partner_email_validation
+#: code:addons/base_partner_email_validation/models/res_partner.py:0
+#, python-format
+msgid "There isn't mail to verify"
+msgstr "Non è presente la mail da verificare"
+
+#. module: base_partner_email_validation
+#: code:addons/base_partner_email_validation/models/res_partner.py:0
+#, python-format
+msgid "This mail is already verified"
+msgstr "Questa mail è già stata verificata"
+
+#. module: base_partner_email_validation
+#: model_terms:ir.ui.view,arch_db:base_partner_email_validation.view_partner_form
+msgid "Verification Email"
+msgstr "Verifica Email"
+
+#. module: base_partner_email_validation
+#: model:ir.model.fields,field_description:base_partner_email_validation.field_res_partner__verification_email_sent
+#: model:ir.model.fields,field_description:base_partner_email_validation.field_res_users__verification_email_sent
+msgid "Verification email sent"
+msgstr "Email di verifica inviata"
+
+#. module: base_partner_email_validation
+#: model:ir.model.fields,field_description:base_partner_email_validation.field_res_partner__verification_email_token
+#: model:ir.model.fields,field_description:base_partner_email_validation.field_res_users__verification_email_token
+msgid "Verification email token"
+msgstr "Token email di verifica"
+
+#. module: base_partner_email_validation
+#: model:ir.model.fields,field_description:base_partner_email_validation.field_res_partner__verification_email_url
+#: model:ir.model.fields,field_description:base_partner_email_validation.field_res_users__verification_email_url
+msgid "Verification email url"
+msgstr "Url email di verifica"
+
+#. module: base_partner_email_validation
+#: model_terms:ir.ui.view,arch_db:base_partner_email_validation.view_partner_form
+msgid "Waiting for validation"
+msgstr "In attesa di validazione"
+
+#. module: base_partner_email_validation
+#: model_terms:ir.ui.view,arch_db:base_partner_email_validation.success_confirm
+msgid "Your email has been confirmed"
+msgstr "La tua email è stata confermata"

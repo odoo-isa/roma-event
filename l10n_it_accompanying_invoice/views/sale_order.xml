@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record model='ir.ui.view' id='view_order_form'>
+            <field name='name'>l10n.it.accompanying.invoice.sale.order.form</field>
+            <field name='model'>sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//button[@name='%(sale.action_view_sale_advance_payment_inv)d']" position="after">
+                    <field name="enable_accompanying_invoice" invisible="1"/>
+                    <button class="oe_stat_button"
+                            string="Create Accompanying Invoice"
+                            type="object"
+                            name="create_accompanying_invoice"
+                            help="Is displayed if exists rows which billing policy (on products) is based by delivery
+                            qty and qty to invoice is positive"
+                            attrs="{'invisible':[('enable_accompanying_invoice', '!=', True)]}"
+                    />
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

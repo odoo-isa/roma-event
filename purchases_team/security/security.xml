@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Update group purchase user -->
+    <record id="purchase.group_purchase_user" model="res.groups">
+        <field name="name">User: Own Documents Only</field>
+    </record>
+
+    <!-- Create group purchase buyer -->
+    <record id="group_purchase_buyer" model="res.groups">
+        <field name="name">User: All Documents</field>
+        <field name="implied_ids" eval="[(4, ref('purchase.group_purchase_user'))]"/>
+    </record>
+
+    <!-- Update group purchase manager -->
+    <record id="purchase.group_purchase_manager" model="res.groups">
+        <field name="implied_ids" eval="[(3, ref('purchase.group_purchase_user')), (4, ref('group_purchase_buyer'))]"/>
+    </record>
+
+    <!-- Menu for group purchase buyer -->
+    <menuitem id="purchase.menu_purchase_root" groups="group_purchase_buyer"/>
+
+    <!-- Rules for group purchase user -->
+    <record id="purchase_order_personal_rule" model="ir.rule">
+        <field name="name">Personal Purchase Orders</field>
+        <field name="model_id" ref="purchase.model_purchase_order"/>
+        <field name="domain_force">['|',('user_id','=',user.id),('user_id','=',False)]</field>
+        <field name="groups" eval="[(4, ref('purchase.group_purchase_user'))]"/>
+    </record>
+
+    <record id="purchase_order_line_personal_rule" model="ir.rule">
+        <field name="name">Personal Purchase Order Lines</field>
+        <field name="model_id" ref="purchase.model_purchase_order_line"/>
+        <field name="domain_force">['|',('order_id.user_id','=',user.id),('order_id.user_id','=',False)]</field>
+        <field name="groups" eval="[(4, ref('purchase.group_purchase_user'))]"/>
+    </record>
+
+    <record id="edit_owner_res_partner_rule" model="ir.rule">
+        <field name="name">Edit Own Contacts</field>
+        <field name="model_id" ref="base.model_res_partner"/>
+        <field name="groups" eval="[(4, ref('purchase.group_purchase_user'))]"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="0"/>
+        <field name="perm_unlink" eval="0"/>
+        <field name="domain_force">['|',('purchase_user_id','=',False),('purchase_user_id', '=', user.id)]</field>
+    </record>
+
+    <!-- Rules for group purchase buyer -->
+    <record id="purchase_order_see_all" model="ir.rule">
+        <field name="name">All Purchase Orders</field>
+        <field name="model_id" ref="purchase.model_purchase_order"/>
+        <field name="domain_force">[(1,'=',1)]</field>
+        <field name="groups" eval="[(4, ref('purchases_team.group_purchase_buyer'))]"/>
+    </record>
+
+    <record id="purchase_order_line_see_all" model="ir.rule">
+        <field name="name">All Purchase Orders Lines</field>
+        <field name="model_id" ref="purchase.model_purchase_order_line"/>
+        <field name="domain_force">[(1,'=',1)]</field>
+        <field name="groups" eval="[(4, ref('purchases_team.group_purchase_buyer'))]"/>
+    </record>
+
+    <record id="edit_all_res_partner_rule" model="ir.rule">
+        <field name="name">Edit All Contacts</field>
+        <field name="model_id" ref="base.model_res_partner"/>
+        <field name="groups" eval="[(4, ref('group_purchase_buyer'))]"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+        <field name="domain_force">[(1,'=',1)]</field>
+    </record>
+
+</odoo>

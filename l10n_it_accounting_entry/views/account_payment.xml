@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- FORM View  -->
+    <record model='ir.ui.view' id="l10n_it_accounting_entry_account_payment_form">
+        <field name='name'>l10n.it.accounting.entry.account.payment.form</field>
+        <field name='model'>account.payment</field>
+        <field name="inherit_id" ref="account.view_account_payment_form"/>
+        <field name='arch' type='xml'>
+            <xpath expr="//field[@name='partner_bank_account_id']" position="after">
+                <field name="counterpart_entry_account_id" invisible="1"/>
+                <field name="counterpart_entry" domain="[('account_id', '=', counterpart_entry_account_id)]"
+                       attrs="{'invisible': [('counterpart_entry_account_id', '=', False)]}"
+                       context="{'default_account_id': counterpart_entry_account_id, 'default_partner_id': partner_id }"
+                />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

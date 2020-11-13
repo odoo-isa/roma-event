@@ -1,0 +1,974 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_it_bank_papers
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-02 12:57+0000\n"
+"PO-Revision-Date: 2020-09-02 12:57+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_it_bank_papers
+#: model_terms:ir.ui.view,arch_db:l10n_it_bank_papers.view_bank_paper_slip_form
+msgid ""
+"<i class=\"alert alert-warning\" role=\"alert\" attrs=\"{'invisible': [('check_generated_credited_move', '!=', True)]}\">\n"
+"                                Credited move is not generated yet!\n"
+"                            </i>"
+msgstr "
+"<i class=\"alert alert-warning\" role=\"alert\" attrs=\"{'invisible': "
+"[('check_generated_credited_move', '!=', True)]}\">\n"
+"                                I movimenti di credito non sono ancora stati generati!\n"
+"                            </i>"
+#. module: l10n_it_bank_papers
+#: model_terms:ir.ui.view,arch_db:l10n_it_bank_papers.unsolved_template
+msgid "<span><b>Unsolved move</b></span>"
+msgstr "<span><b>Movimenti Insoluti</b></span>"
+
+#. module: l10n_it_bank_papers
+#: model_terms:ir.ui.view,arch_db:l10n_it_bank_papers.view_bank_paper_slip_form
+msgid "Accept"
+msgstr "Accetta"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip_types__bank_papers_acceptance_account_account_id
+msgid "Acceptance - Bank Papers Account"
+msgstr "Accettazione - Conto Distinta"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__acceptance_account_move_ids
+msgid "Acceptance Account Move"
+msgstr "Movimenti Accettati"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip_types__acceptance_journal_id
+#: model:ir.model.fields,help:l10n_it_bank_papers.field_l10n_it_bank_paper_slip_types__acceptance_journal_id
+msgid "Acceptance Journal"
+msgstr "Registro Accettazione"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper__acceptance_move_id
+msgid "Acceptance Move"
+msgstr "Movimenti Accettazione"
+
+#. module: l10n_it_bank_papers
+#: model_terms:ir.ui.view,arch_db:l10n_it_bank_papers.l10n_it_bank_paper_slip_types_form
+msgid "Acceptance Step"
+msgstr "Fase di Accettazione"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__acceptance_date
+msgid "Acceptance date"
+msgstr "Data Accettazione"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields.selection,name:l10n_it_bank_papers.selection__l10n_it_bank_paper__state__accepted
+#: model:ir.model.fields.selection,name:l10n_it_bank_papers.selection__l10n_it_bank_paper_slip__state__accepted
+msgid "Accepted"
+msgstr "Accettato"
+
+#. module: l10n_it_bank_papers
+#: model_terms:ir.ui.view,arch_db:l10n_it_bank_papers.view_bank_paper_slip_form
+msgid "Accepted Move"
+msgstr "Movimenti Accettazione"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model,name:l10n_it_bank_papers.model_account_account
+msgid "Account"
+msgstr "Conto"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper__account_move_line_ids
+msgid "Account Move Line"
+msgstr "Movimenti Contabili"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,help:l10n_it_bank_papers.field_l10n_it_bank_paper__account_move_line_ids
+msgid "Account move lines for one bank paper"
+msgstr "Movimenti Contabili per Effetti Bancari"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_account_account__related_account_type
+msgid "Account type"
+msgstr "Tipo Conto"
+
+#. module: l10n_it_bank_papers
+#: model_terms:ir.ui.view,arch_db:l10n_it_bank_papers.view_bank_paper_slip_form
+msgid "Accredit"
+msgstr "Accreditamento"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__message_needaction
+msgid "Action Needed"
+msgstr "Azione richiesta"
+
+#. module: l10n_it_bank_papers
+#: code:addons/l10n_it_bank_papers/wizard/select_bank_paper_slip_type_wizard.py:0
+#, python-format
+msgid "Active model is not 'account.move.line'"
+msgstr "Il modello preso in considerazione non è 'account.move.line'"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper__amount
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip_summary_wizard__amount
+msgid "Amount"
+msgstr "Importo"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__message_attachment_count
+msgid "Attachment Count"
+msgstr "Numero allegati"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip_summary_wizard__bank_account_id
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip_types__bank_credit_account_account_id
+msgid "Bank Account"
+msgstr "Conto bancario"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip_types__bank_unpaid_bank_papers_account_account_id
+msgid "Bank Account unpaid"
+msgstr "Conto Bancario Insoluto"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip_summary_wizard__bank_amount
+msgid "Bank Amount"
+msgstr "Importo Bancario"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip_types__bank_charges_credit_account_account_id
+msgid "Bank Charges Account"
+msgstr "Conto Spese Bancarie"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip_summary_wizard__bank_expense_account_id
+msgid "Bank Expense Account"
+msgstr "Conto Spese Bancarie"
+
+#. module: l10n_it_bank_papers
+#: model:ir.actions.act_window,name:l10n_it_bank_papers.action_l10n_it_bank_paper_slip
+msgid "Bank Paeper Slip"
+msgstr "Distinta Effetti Bancari"
+
+#. module: l10n_it_bank_papers
+#: model:ir.actions.act_window,name:l10n_it_bank_papers.action_l10n_it_bank_paper
+#: model:ir.model,name:l10n_it_bank_papers.model_l10n_it_bank_paper
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_account_move_line__bank_paper_id
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__bank_paper_ids
+#: model:ir.ui.menu,name:l10n_it_bank_papers.menu_l10n_it_bank_paper
+#: model_terms:ir.ui.view,arch_db:l10n_it_bank_papers.view_bank_paper_form
+#: model_terms:ir.ui.view,arch_db:l10n_it_bank_papers.view_bank_paper_tree
+msgid "Bank Paper"
+msgstr "Effetto Bancario"
+
+#. module: l10n_it_bank_papers
+#: code:addons/l10n_it_bank_papers/wizard/select_bank_paper_slip_type_wizard.py:0
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_account_move_line__bank_paper_slip_id
+#: model:ir.ui.menu,name:l10n_it_bank_papers.menu_l10n_it_bank_paper_slip
+#: model_terms:ir.ui.view,arch_db:l10n_it_bank_papers.view_bank_paper_slip_form
+#: model_terms:ir.ui.view,arch_db:l10n_it_bank_papers.view_bank_paper_slip_tree
+#, python-format
+msgid "Bank Paper Slip"
+msgstr "Distinta"
+
+#. module: l10n_it_bank_papers
+#: model_terms:ir.ui.view,arch_db:l10n_it_bank_papers.view_bank_paper_slip_accreditation_summary_form
+msgid "Bank Paper Slip Accreditation"
+msgstr "Accreditamento Distinta"
+
+#. module: l10n_it_bank_papers
+#: code:addons/l10n_it_bank_papers/models/l10n_it_bank_paper_slip.py:0
+#, python-format
+msgid "Bank Paper Slip Accreditation Summary"
+msgstr "Sommario Accreditamento Distinta"
+
+#. module: l10n_it_bank_papers
+#: model:ir.actions.act_window,name:l10n_it_bank_papers.action_open_bank_paper_slip_types_form
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__bank_paper_slip_type_id
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_select_bank_paper_slip_type_wizard__bank_paper_slip_type_id
+#: model:ir.ui.menu,name:l10n_it_bank_papers.menu_bank_paper_slip_types
+msgid "Bank Paper Slip Type"
+msgstr "Tipologia Distinta Effetti Bancari"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model,name:l10n_it_bank_papers.model_l10n_it_bank_paper_slip_types
+#: model_terms:ir.ui.view,arch_db:l10n_it_bank_papers.l10n_it_bank_paper_slip_types_form
+msgid "Bank Paper Slip Types"
+msgstr "Tipologie Distinta Effetti Bancari"
+
+#. module: l10n_it_bank_papers
+#: code:addons/l10n_it_bank_papers/models/l10n_it_bank_paper_slip.py:0
+#, python-format
+msgid "Bank Paper Slip can not have bank papers less than zero"
+msgstr "Le distinte non possono avere effetti bancari negativi"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_file_export_wizard__riba_txt
+msgid "Bank Paper Txt"
+msgstr "Ri.Ba. Txt"
+
+#. module: l10n_it_bank_papers
+#: model_terms:ir.ui.view,arch_db:l10n_it_bank_papers.view_bank_paper_unsolved_summary_form
+msgid "Bank Paper Unsolved"
+msgstr "Effetto Bancario Insoluto"
+
+#. module: l10n_it_bank_papers
+#: code:addons/l10n_it_bank_papers/models/l10n_it_bank_paper.py:0
+#, python-format
+msgid "Bank Paper Unsolved Summary"
+msgstr "Sommario Effetto Bancario Insoluto"
+
+#. module: l10n_it_bank_papers
+#: model:ir.ui.menu,name:l10n_it_bank_papers.menu_l10n_it_bank_papers_slip
+#: model:ir.ui.menu,name:l10n_it_bank_papers.menu_l10n_it_bank_papers_slip_configuration
+msgid "Bank Papers"
+msgstr "Effetti Bancari"
+
+#. module: l10n_it_bank_papers
+#: model_terms:ir.ui.view,arch_db:l10n_it_bank_papers.view_res_partner_riba_form
+msgid "Bank Slip"
+msgstr "Effetto Bancario"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model,name:l10n_it_bank_papers.model_l10n_it_bank_paper_slip
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper__bank_paper_id
+msgid "Bank paper slip"
+msgstr "Conto Effetti Bancari"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,help:l10n_it_bank_papers.field_l10n_it_bank_paper__bank_paper_id
+msgid "Bank paper slip reference"
+msgstr "Riferimento Distinta"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model,name:l10n_it_bank_papers.model_l10n_it_bank_paper_slip_summary_wizard
+msgid "Bank paper summary wizard"
+msgstr "Riepilogo Effetti Bancari"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,help:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__bank_paper_ids
+msgid "Bank papers linked to bank paper slip"
+msgstr "Effetti Bancari collegati alla Distinta"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip_summary_wizard__account_id
+msgid "Ca. Or. Bank Account"
+msgstr "Conto Effetti Bancari"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields.selection,name:l10n_it_bank_papers.selection__l10n_it_bank_paper_slip_types__type__cash_order
+msgid "Ca.Or."
+msgstr "Ri.Ba."
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields.selection,name:l10n_it_bank_papers.selection__l10n_it_bank_paper__type__cash_order
+msgid "Ca.Or/Ri.Ba"
+msgstr "Ri.Ba"
+
+#. module: l10n_it_bank_papers
+#: model_terms:ir.ui.view,arch_db:l10n_it_bank_papers.select_bank_paper_slip_type_wizard_form
+#: model_terms:ir.ui.view,arch_db:l10n_it_bank_papers.select_payment_type_wizard_form
+#: model_terms:ir.ui.view,arch_db:l10n_it_bank_papers.view_bank_paper_slip_accreditation_summary_form
+#: model_terms:ir.ui.view,arch_db:l10n_it_bank_papers.view_bank_paper_unsolved_summary_form
+#: model_terms:ir.ui.view,arch_db:l10n_it_bank_papers.view_file_export_form
+msgid "Cancel"
+msgstr "Annulla"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields.selection,name:l10n_it_bank_papers.selection__l10n_it_bank_paper__state__canceled
+msgid "Canceled"
+msgstr "Annullato"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__check_unsolved
+msgid "Check Unsolved"
+msgstr "Controlla gli insoluti"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__check_generated_credited_move
+msgid "Check generated credited move"
+msgstr "Controlla che i movimenti accreditati siano stati generati o meno"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,help:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__check_generated_credited_move
+msgid "Checks if credited move linked to bank paper slip is generated"
+msgstr "Controlla se i movimenti accreditati collegati alla distinta sono stati generati"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,help:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__check_unsolved
+msgid "Checks if there's at least an unsolved move in bank paper slip"
+msgstr "Controlla se c'è almeno un insoluto nella distint"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model,name:l10n_it_bank_papers.model_select_bank_paper_slip_type_wizard
+msgid "Choose Bank Paper Slip Type"
+msgstr "Scegli Tipo Distinta"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_select_payment_type_wizard__payment_type_id
+msgid "Choose Payment Type"
+msgstr "Scegli metodo di pagamento"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model,name:l10n_it_bank_papers.model_res_company
+msgid "Companies"
+msgstr "Aziende"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper__company_id
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__company_id
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip_types__company_id
+msgid "Company"
+msgstr "Azienda"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip_types__company_bank_account_id
+#: model:ir.model.fields,help:l10n_it_bank_papers.field_l10n_it_bank_paper_slip_types__bank_papers_acceptance_account_account_id
+msgid "Company Bank Account"
+msgstr "Conto Corrente Bancario Aziendale"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper__company_currency_id
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__company_currency_id
+msgid "Company Currency"
+msgstr "Valuta azienda"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,help:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__bank_paper_slip_type_id
+msgid "Configuration bank paper slip"
+msgstr "Configurazione Distinta"
+
+#. module: l10n_it_bank_papers
+#: model_terms:ir.ui.view,arch_db:l10n_it_bank_papers.view_bank_paper_slip_accreditation_summary_form
+#: model_terms:ir.ui.view,arch_db:l10n_it_bank_papers.view_bank_paper_unsolved_summary_form
+msgid "Confirm"
+msgstr "Conferma"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model,name:l10n_it_bank_papers.model_res_partner
+msgid "Contact"
+msgstr "Contatto"
+
+#. module: l10n_it_bank_papers
+#: model_terms:ir.ui.view,arch_db:l10n_it_bank_papers.select_bank_paper_slip_type_wizard_form
+msgid "Create"
+msgstr "Crea"
+
+#. module: l10n_it_bank_papers
+#: model:ir.actions.act_window,name:l10n_it_bank_papers.action_create_slip
+msgid "Create Slip"
+msgstr "Genera Distinta"
+
+#. module: l10n_it_bank_papers
+#: model:ir.actions.act_window,name:l10n_it_bank_papers.action_select_payment_type_wizard_form
+#: model:ir.ui.menu,name:l10n_it_bank_papers.menu_create_slips
+msgid "Create Slips"
+msgstr "Genera Distinte"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_file_export_wizard__create_uid
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper__create_uid
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__create_uid
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip_summary_wizard__create_uid
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip_types__create_uid
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_select_bank_paper_slip_type_wizard__create_uid
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_select_payment_type_wizard__create_uid
+msgid "Created by"
+msgstr "Creato da"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_file_export_wizard__create_date
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper__create_date
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__create_date
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip_summary_wizard__create_date
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip_types__create_date
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_select_bank_paper_slip_type_wizard__create_date
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_select_payment_type_wizard__create_date
+msgid "Created on"
+msgstr "Creato il"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip_types__bank_papers_credit_account_account_id
+msgid "Credit - Bank Papers Account"
+msgstr "Credito - Conto Effetti Bancari "
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip_types__credit_journal_id
+msgid "Credit Journal"
+msgstr "Giornale di Accreditamento"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__credit_move_id
+msgid "Credit Move"
+msgstr "Movimento in avere"
+
+#. module: l10n_it_bank_papers
+#: model_terms:ir.ui.view,arch_db:l10n_it_bank_papers.l10n_it_bank_paper_slip_types_form
+msgid "Credit Step"
+msgstr "Fase di Accredito"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields.selection,name:l10n_it_bank_papers.selection__l10n_it_bank_paper__state__credited
+#: model:ir.model.fields.selection,name:l10n_it_bank_papers.selection__l10n_it_bank_paper_slip__state__credited
+msgid "Credited"
+msgstr "Accreditato"
+
+#. module: l10n_it_bank_papers
+#: model_terms:ir.ui.view,arch_db:l10n_it_bank_papers.view_bank_paper_slip_form
+msgid "Credited Move"
+msgstr "Movimenti Accreditati"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper__currency_id
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__currency_id
+msgid "Currency"
+msgstr "Valuta"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip_summary_wizard__date_maturity
+msgid "Date Maturity"
+msgstr "Data di Scadenza"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip_summary_wizard__journal_id
+msgid "Default Journal"
+msgstr "Registro di Default"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_file_export_wizard__display_name
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper__display_name
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__display_name
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip_summary_wizard__display_name
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip_types__display_name
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_select_bank_paper_slip_type_wizard__display_name
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_select_payment_type_wizard__display_name
+msgid "Display Name"
+msgstr "Nome visualizzato"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper__document_date
+msgid "Document Date"
+msgstr "Data Documento"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper__document_reference
+msgid "Document Reference"
+msgstr "Riferimento Documento"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields.selection,name:l10n_it_bank_papers.selection__l10n_it_bank_paper__state__draft
+#: model:ir.model.fields.selection,name:l10n_it_bank_papers.selection__l10n_it_bank_paper_slip__state__draft
+msgid "Draft"
+msgstr "Bozza"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip_summary_wizard__expense_amount
+msgid "Expense Amount"
+msgstr "Importo Spesa"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper__expiration_date
+msgid "Expiration Date"
+msgstr "Data di Scadenza"
+
+#. module: l10n_it_bank_papers
+#: model_terms:ir.ui.view,arch_db:l10n_it_bank_papers.view_file_export_form
+msgid "Export"
+msgstr "Esporta"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,help:l10n_it_bank_papers.field_l10n_it_bank_paper_slip_types__slip_type
+msgid ""
+"Field used to define the type of the bank paper slip. Possible value is SBF "
+"- Under Reserve"
+msgstr ""
+"Campo usato per definire il tipo di distinta. Un possibile valore è SBF - "
+"Sotto Riserva
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,help:l10n_it_bank_papers.field_l10n_it_bank_paper_slip_types__type
+msgid ""
+"Field used to define the type of the bank paper. Actually is define only "
+"Cash Order type."
+msgstr ""
+
+#. module: l10n_it_bank_papers
+#: model:ir.model,name:l10n_it_bank_papers.model_file_export_wizard
+msgid "File export wizard"
+msgstr "File Esportazione"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_file_export_wizard__filename
+msgid "Filename"
+msgstr "Nome File"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__message_follower_ids
+msgid "Followers"
+msgstr "Follower"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Follower (canali)"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Follower (partner)"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_res_partner__group_bank_papers_by_expiration
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_res_users__group_bank_papers_by_expiration
+msgid "Group Bank Papers by Expiration"
+msgstr "Raggruppamento Ri.Ba. per Scadenza"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_file_export_wizard__id
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper__id
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__id
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip_summary_wizard__id
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip_types__id
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_select_bank_paper_slip_type_wizard__id
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_select_payment_type_wizard__id
+msgid "ID"
+msgstr "ID"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper__iban
+msgid "Iban"
+msgstr "Iban"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,help:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__message_needaction
+#: model:ir.model.fields,help:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Se selezionato, nuovi messaggi richiedono attenzione."
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,help:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__message_has_error
+#: model:ir.model.fields,help:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Se selezionato, alcuni messaggi presentano un errore di consegna"
+
+#. module: l10n_it_bank_papers
+#: code:addons/l10n_it_bank_papers/models/l10n_it_bank_paper_slip.py:0
+#, python-format
+msgid "Invoice Partner Bank are not the same for every move line"
+msgstr "Il conto Bancario del Partner non è lo stesso per tutti i movimenti."
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__message_is_follower
+msgid "Is Follower"
+msgstr "È un follower"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,help:l10n_it_bank_papers.field_select_bank_paper_slip_type_wizard__bank_paper_slip_type_id
+msgid ""
+"It allows to choose bank paper slip type to create bank paper slip object"
+msgstr "Permette di scegliere il tipo di distinta per creare l'oggetto distinta"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,help:l10n_it_bank_papers.field_select_payment_type_wizard__payment_type_id
+msgid "It allows to choose payment type to filter the search of results"
+msgstr "Permette di scegliere il tipo di pagamento per filtrare la ricerca dei risultati"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,help:l10n_it_bank_papers.field_res_company__sia_code
+msgid ""
+"It identifies the exchanges that devices want to exchange, informative with their treasury banks\n"
+"                in compliance with the CBI service rules. It consists of a letter and 4 numbers"
+msgstr ""
+"Il codice SIA identifica l'azienda che vuole scambiare flussi dispositivi, "
+"informativi con le proprie banche tesoriere\n"
+"                nel rispetto delle regole del servizio CBI. E' composto da "
+"una lettera e 4 numeri"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,help:l10n_it_bank_papers.field_file_export_wizard__riba_txt
+msgid "It is necessary to download riba txt file"
+msgstr "E' necessario per scaricare il file txt delle Ri.Ba"
+
+#. module: l10n_it_bank_papers
+#: code:addons/l10n_it_bank_papers/models/account_move.py:0
+#, python-format
+msgid ""
+"It isn't possible to draft the invoice. There are one or more Bank papers "
+"linked to the move line."
+msgstr "Non è possibile portare la fattura in Bozza. Sono presenti una o più Distinte collegate ai movimenti."
+
+
+#. module: l10n_it_bank_papers
+#: code:addons/l10n_it_bank_papers/models/l10n_it_bank_paper.py:0
+#: code:addons/l10n_it_bank_papers/models/l10n_it_bank_paper_slip.py:0
+#, python-format
+msgid "It's not possible to continue because amount is 0"
+msgstr "Non è possibile continuare dato che l'importo è 0"
+
+#. module: l10n_it_bank_papers
+#: code:addons/l10n_it_bank_papers/wizard/l10n_it_bank_paper_slip_summary_wizard.py:0
+#, python-format
+msgid "It's not possible to continue because amount or bank amount are 0"
+msgstr "Non è possibile continuare dato che l'importo o l'importo bancario sono 0"
+
+#. module: l10n_it_bank_papers
+#: code:addons/l10n_it_bank_papers/models/l10n_it_bank_paper_slip.py:0
+#, python-format
+msgid ""
+"It's not possible to delete Bank Paper. First you have to cancel reconcile"
+msgstr "Non è possibile continuare perchè non esistono insoluti per questo movimento contabile"
+
+#. module: l10n_it_bank_papers
+#: code:addons/l10n_it_bank_papers/models/account_move_line.py:0
+#, python-format
+msgid ""
+"It's not possible to remove move reconcile because some of them is linked to"
+" bank paper"
+msgstr "Non è possibile cancellare l'effetto bancario. Prima è necessario annullare la riconciliazione"
+
+#. module: l10n_it_bank_papers
+#: code:addons/l10n_it_bank_papers/models/l10n_it_bank_paper_slip.py:0
+#, python-format
+msgid "It's possible delete a Bank Paper Slip only in the Draft state"
+msgstr "E' possibile cancellare una Distinta solo se si trova in stato 'Bozza'"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model,name:l10n_it_bank_papers.model_account_move
+msgid "Journal Entries"
+msgstr "Registrazioni contabili"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model,name:l10n_it_bank_papers.model_account_move_line
+msgid "Journal Item"
+msgstr "Movimento contabile"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_file_export_wizard____last_update
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper____last_update
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip____last_update
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip_summary_wizard____last_update
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip_types____last_update
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_select_bank_paper_slip_type_wizard____last_update
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_select_payment_type_wizard____last_update
+msgid "Last Modified on"
+msgstr "Ultima modifica il "
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_file_export_wizard__write_uid
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper__write_uid
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__write_uid
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip_summary_wizard__write_uid
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip_types__write_uid
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_select_bank_paper_slip_type_wizard__write_uid
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_select_payment_type_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Ultimo aggiornamento di"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_file_export_wizard__write_date
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper__write_date
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__write_date
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip_summary_wizard__write_date
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip_types__write_date
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_select_bank_paper_slip_type_wizard__write_date
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_select_payment_type_wizard__write_date
+msgid "Last Updated on"
+msgstr "Ultimo aggiornamento il"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Allegato Principale"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__message_has_error
+msgid "Message Delivery error"
+msgstr "Errore di consegna messaggio"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__message_ids
+msgid "Messages"
+msgstr "Messaggi"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__name
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip_types__name
+msgid "Name"
+msgstr "Nome"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Numero di azioni"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__message_has_error_counter
+msgid "Number of errors"
+msgstr "Numero di errori"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,help:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Numero di messaggi che richiedono un'azione"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,help:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Numero di messaggi con errore di consegna"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,help:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Numero di messaggi non letti"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper__partner_id
+msgid "Partner"
+msgstr "Partner"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper__partner_bank_id
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip_summary_wizard__partner_bank_id
+msgid "Partner Bank"
+msgstr "Conto Bancario del Partner"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip_summary_wizard__payment_type_id
+msgid "Payment Type"
+msgstr "Tipo Pagamento"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__release_date
+msgid "Release Date"
+msgstr "Data di Rilascio"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,help:l10n_it_bank_papers.field_l10n_it_bank_paper__iban
+msgid "Res Partner Bank"
+msgstr "Iban"
+
+#. module: l10n_it_bank_papers
+#: code:addons/l10n_it_bank_papers/models/account_move_line.py:0
+#, python-format
+msgid "Res Partner Bank of account move lines don't match"
+msgstr "Gli iban delle registrazioni contabili non corrispondono"
+
+#. module: l10n_it_bank_papers
+#: code:addons/l10n_it_bank_papers/models/l10n_it_bank_paper_slip.py:0
+#, python-format
+msgid "Ri.Ba. Export"
+msgstr "Esportazione Ri.Ba."
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_res_company__sia_code
+msgid "SIA Code"
+msgstr "Codice SIA"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "SMS Errore Spedizione"
+
+#. module: l10n_it_bank_papers
+#: model_terms:ir.ui.view,arch_db:l10n_it_bank_papers.select_payment_type_wizard_form
+msgid "Search"
+msgstr "Ricerca"
+
+#. module: l10n_it_bank_papers
+#: model_terms:ir.ui.view,arch_db:l10n_it_bank_papers.select_bank_paper_slip_type_wizard_form
+msgid "Select Bank Paper Slip Type"
+msgstr "Seleziona Tipo Distinta"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model,name:l10n_it_bank_papers.model_select_payment_type_wizard
+msgid "Select Payment Type"
+msgstr "Seleziona il tipo di Pagamento"
+
+#. module: l10n_it_bank_papers
+#: model_terms:ir.ui.view,arch_db:l10n_it_bank_papers.select_payment_type_wizard_form
+msgid "Select Payment type"
+msgstr "Seleziona il tipo di Pagamento"
+
+#. module: l10n_it_bank_papers
+#: model_terms:ir.ui.view,arch_db:l10n_it_bank_papers.view_bank_paper_slip_form
+msgid "Send"
+msgstr "Invia"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields.selection,name:l10n_it_bank_papers.selection__l10n_it_bank_paper__state__sent
+#: model:ir.model.fields.selection,name:l10n_it_bank_papers.selection__l10n_it_bank_paper_slip__state__sent
+msgid "Sent"
+msgstr "Inviato"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper__seq_bank_paper
+msgid "Seq Bank Paper"
+msgstr "Seq Effetto Bancario"
+
+#. module: l10n_it_bank_papers
+#: code:addons/l10n_it_bank_papers/models/l10n_it_bank_paper_slip.py:0
+#, python-format
+msgid "Sequence doesn't exist. Check if it has been deleted."
+msgstr "La sequenza non esiste. Controlla che non sia stata cancellata."
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,help:l10n_it_bank_papers.field_l10n_it_bank_paper__seq_bank_paper
+msgid "Sequence number of bank paper lines"
+msgstr "Sequenza della Distinta"
+
+#. module: l10n_it_bank_papers
+#: code:addons/l10n_it_bank_papers/wizard/select_payment_type_wizard.py:0
+#, python-format
+msgid "Slip"
+msgstr "Distinta"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip_types__slip_type
+msgid "Slip Type"
+msgstr "Tipo Distinta"
+
+#. module: l10n_it_bank_papers
+#: code:addons/l10n_it_bank_papers/models/l10n_it_bank_paper_slip.py:0
+#, python-format
+msgid ""
+"Some Account Move Line selected doesn't have associated Res Partner Bank"
+msgstr "Alcune righe di movimento selezionate non hanno un Conto Bancario del Partner associato"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper__state
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__state
+msgid "State"
+msgstr "Stato"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,help:l10n_it_bank_papers.field_account_account__related_account_type
+msgid ""
+"The 'Internal Type' is used for features available on different types of "
+"accounts: liquidity type is for cash or bank accounts, payable/receivable is"
+" for vendor/customer accounts."
+
+msgstr "Il campo Tipo interno viene usato per funzionalità disponibili in "
+"diversi tipi di conti: il tipo liquidità serve per conti cassa o banca, il "
+"tipo debito/credito è per conti fornitori/clienti."
+
+#. module: l10n_it_bank_papers
+#: code:addons/l10n_it_bank_papers/models/l10n_it_bank_paper_slip.py:0
+#, python-format
+msgid "There are move lines relating to credit notes"
+msgstr "Esistono registrazioni contabili relative alle note di credito"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,help:l10n_it_bank_papers.field_account_move_line__is_bank_paper_line
+msgid "This flag indicates that this line is part of a Bank Paper"
+msgstr "Esistono registrazioni contabili relative alle note di credito"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__total_amount
+msgid "Total Amount"
+msgstr "Importo totale"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper__type
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip_types__type
+#: model:ir.model.fields,help:l10n_it_bank_papers.field_l10n_it_bank_paper__type
+msgid "Type"
+msgstr "Tipo"
+
+#. module: l10n_it_bank_papers
+#: code:addons/l10n_it_bank_papers/models/l10n_it_bank_paper_slip.py:0
+#, python-format
+msgid ""
+"Unable to create Bank Paper Slip because of account moves have different "
+"companies"
+msgstr "Impossibile creare la Distinta poichè i movimenti hanno aziende diverse"
+
+#. module: l10n_it_bank_papers
+#: code:addons/l10n_it_bank_papers/models/l10n_it_bank_paper_slip.py:0
+#, python-format
+msgid ""
+"Unable to create Bank Paper Slip because of account moves have different "
+"currencies"
+msgstr "Impossibile creare la Distinta poichè i movimenti hanno valute diverse"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields.selection,name:l10n_it_bank_papers.selection__l10n_it_bank_paper_slip_types__slip_type__sbf
+msgid "Under Reserve"
+msgstr "Salvo Buon Fine"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields.selection,name:l10n_it_bank_papers.selection__l10n_it_bank_paper__state__unpaid
+msgid "Unpaid"
+msgstr "Insoluto"
+
+#. module: l10n_it_bank_papers
+#: model_terms:ir.ui.view,arch_db:l10n_it_bank_papers.l10n_it_bank_paper_slip_types_form
+msgid "Unpaid Bank Papers"
+msgstr "Effetti Bancari Insoluti"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip_types__unpaid_bank_papers_credit_account_account_id
+msgid "Unpaid Bank Papers Account"
+msgstr "Conto Effetti Bancari Insoluti"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip_types__unpaid_bank_papers_charges_account_account_id
+msgid "Unpaid Bank Papers Charges Account"
+msgstr "Conto Spese per Effetti Bancari Insoluti"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip_types__unpaid_bank_papers_journal_id
+msgid "Unpaid Bank Papers Journal"
+msgstr "Giornale degli Effetti Bancari Insoluti"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__message_unread
+msgid "Unread Messages"
+msgstr "Messaggi non letti"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Contatore messaggi non letti"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper__unsolved_move_id
+#: model_terms:ir.ui.view,arch_db:l10n_it_bank_papers.view_bank_paper_slip_form
+msgid "Unsolved Move"
+msgstr "Effetti Bancari Insoluti"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_account_move_line__unsolved_move_line_id
+msgid "Unsolved Move Line"
+msgstr "Movimenti Insoluti"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__website_message_ids
+msgid "Website Messages"
+msgstr "Messaggi sito web"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,help:l10n_it_bank_papers.field_l10n_it_bank_paper_slip__website_message_ids
+msgid "Website communication history"
+msgstr "Cronologia comunicazioni sito web"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,help:l10n_it_bank_papers.field_l10n_it_bank_paper_slip_types__company_bank_account_id
+msgid "With this field is possible to set a company bank account"
+msgstr "Con questo campo è possibile configurare un conto bancario aziendale"
+
+#. module: l10n_it_bank_papers
+#: model:ir.model.fields,field_description:l10n_it_bank_papers.field_account_move_line__is_bank_paper_line
+msgid "bank Paper Line"
+msgstr "Line Effetto Bancario"
+
+#. module: l10n_it_bank_papers
+#: model_terms:ir.ui.view,arch_db:l10n_it_bank_papers.view_bank_paper_slip_accreditation_summary_form
+#: model_terms:ir.ui.view,arch_db:l10n_it_bank_papers.view_bank_paper_unsolved_summary_form
+msgid "or"
+msgstr "o"

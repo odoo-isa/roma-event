@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- FORM View  -->
+    <record model='ir.ui.view' id='l10n_it_sale_stock_order_form'>
+        <field name='name'>l10n.it.sale.stock.order.form</field>
+        <field name='model'>sale.order</field>
+        <field name="inherit_id" ref="l10n_it_ddt_sale_integration.l10n_it_sale_order_form"/>
+        <field name='arch' type='xml'>
+            <xpath expr="//button[@id='create_ddt']" position="replace">
+                <button string="Create Ddt"
+                    type="action"
+                    name="%(l10n_it_ddt_stock_integration.create_ddt_stock_wizard_action)d"
+                    class="oe_highlight"
+                    attrs="{'invisible': [('can_create_ddt','=',False)]}">
+                </button>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

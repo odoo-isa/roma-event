@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record model='ir.ui.view' id='view_bank_paper_slip_form'>
+            <field name='name'>view.bank.paper.slip.form</field>
+            <field name='model'>l10n_it.bank_paper.slip</field>
+            <field name='arch' type='xml'>
+                <form string='Bank Paper Slip' duplicate="false">
+                    <header>
+                        <button string="Send" name="send" type="object" states="draft"/>
+                        <button string="Accept" name="accept" type="object" states="sent"/>
+                        <button string="Accredit" name="accredit" type="object" states="accepted"/>
+                        <field name="state" widget="statusbar" nolabel="1"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <i class="alert alert-warning" role="alert" attrs="{'invisible': [('check_generated_credited_move', '!=', True)]}">
+                                Credited move is not generated yet!
+                            </i>
+                            <button name="view_accepted_move"
+                                    string="Accepted Move"
+                                    type="object"
+                                    class="oe_stat_button"
+                                    icon="fa-align-justify"
+                                    attrs="{'invisible': [('state', 'not in', ['accepted', 'credited'])]}"
+                            />
+                            <button name="view_credited_move"
+                                    string="Credited Move"
+                                    type="object"
+                                    class="oe_stat_button"
+                                    icon="fa-align-justify"
+                                    attrs="{'invisible': [('state', '!=', 'credited')]}"
+                            />
+                            <button name="view_unsolved_move"
+                                    string="Unsolved Move"
+                                    type="object"
+                                    class="oe_stat_button"
+                                    icon="fa-align-justify"
+                                    attrs="{'invisible': [('check_unsolved', '!=', True)]}"
+                            />
+                        </div>
+                        <group>
+                            <group>
+                                <field name="check_generated_credited_move" invisible="1"/>
+                                <field name="check_unsolved" invisible="1"/>
+                                <field name='name' attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name='bank_paper_slip_type_id'/>
+                            </group>
+                            <group>
+                                <field name='total_amount'/>
+                                <field name='acceptance_date' attrs="{'readonly': [('state', 'in', ['accepted', 'credited'])]}"/>
+                            </group>
+                            <field name="bank_paper_ids" attrs="{'readonly': [('state', '!=', 'draft')]}">
+                                <tree>
+                                    <field name="state" invisible="1"/>
+                                    <field name='document_reference'/>
+                                    <field name='document_date'/>
+                                    <field name='partner_id'/>
+                                    <field name='partner_bank_id'/>
+                                    <field name='amount'/>
+                                    <field name='expiration_date'/>
+                                     <button name="record_unsolved"
+                                             type="object"
+                                             icon="fa-money"
+                                             attrs="{'invisible': [('state', '!=', 'credited')]}"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </sheet>
+                    <div class="o_attachment_preview"/>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- TREE View  for Bank Paper Slip-->
+        <record model='ir.ui.view' id='view_bank_paper_slip_tree'>
+            <field name='name'>view.bank.paper.slip.tree</field>
+            <field name='model'>l10n_it.bank_paper.slip</field>
+            <field name='arch' type='xml'>
+                <tree string='Bank Paper Slip' create="0">
+                    <field name='bank_paper_slip_type_id'/>
+                    <field name='name'/>
+                    <field name='acceptance_date'/>
+                    <field name='total_amount'/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="seq_riba" model="ir.sequence">
+            <field name="name">Ri.Ba</field>
+            <field name="code">riba</field>
+            <field name="implementation">standard</field>
+            <field name="active">True</field>
+            <field name="prefix">Ri.Ba/%(range_y)s/</field>
+            <field name="padding">5</field>
+            <field name="use_date_range">True</field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- TREE View  -->
+        <record model='ir.ui.view' id='view_res_partner_delegation_tree'>
+            <field name='name'>view.res.partner.delegation.tree</field>
+            <field name='model'>res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//page[@name='internal_notes']" position="after">
+                    <page name="delegation_partner" string="Delegation Partner">
+                        <field name="delegation_ids">
+                            <tree string='Delegation Partner' editable="top">
+                                <field name="partner_delegate_id" invisible="1"/>
+                                <field name='partner_id' required="1" string="Delegated"/>
+                                <field name='type' required="1"/>
+                                <button name="print_delegation" string="Print" class="oe_highlight" type="object"/>
+                                <field name='active_delegation'/>
+                                <field name='delegation_document' widget="binary" filename="delegation_file_name"/>
+                                <field name="note"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button type="object"
+                            class="oe_stat_button"
+                            id="delegator_button"
+                            icon="fa-handshake-o"
+                            name="get_partner_delegator"
+                            string="Delegator">
+                    </button>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,118 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_patch_isa
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-22 08:53+0000\n"
+"PO-Revision-Date: 2020-09-22 11:03+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.4.1\n"
+"Last-Translator: \n"
+"Language: it\n"
+
+#. module: account_patch_isa
+#: model:ir.model.fields,field_description:account_patch_isa.field_account_move__count_deferred_exigibility
+msgid "# of exigibility moves"
+msgstr "# di linee di esigibilità"
+
+#. module: account_patch_isa
+#: model_terms:ir.ui.view,arch_db:account_patch_isa.view_move_form
+msgid "<span class=\"o_stat_value\">Deferred exigibility</span>"
+msgstr "<span class=\"o_stat_value\">Esigibilità Differita</span>"
+
+#. module: account_patch_isa
+#: model:ir.model.fields,field_description:account_patch_isa.field_account_move__moves_deferred_exigibility
+msgid "Deferred exigibility"
+msgstr "Esigibilità Differita"
+
+#. module: account_patch_isa
+#: model_terms:ir.ui.view,arch_db:account_patch_isa.view_move_form
+msgid "Description"
+msgstr "Descrizione"
+
+#. module: account_patch_isa
+#: model_terms:ir.ui.view,arch_db:account_patch_isa.view_move_form
+msgid "Disc.%"
+msgstr "Sconto%"
+
+#. module: account_patch_isa
+#: model:ir.model.fields.selection,name:account_patch_isa.selection__account_move__invoice_mode__immediate
+msgid "Immediate invoice"
+msgstr "Fattura Immediata"
+
+#. module: account_patch_isa
+#: model:ir.model.fields,field_description:account_patch_isa.field_account_move__invoice_mode
+msgid "Invoice Mode"
+msgstr "Tipo Fattura"
+
+#. module: account_patch_isa
+#: model:ir.model.fields,help:account_patch_isa.field_account_move__invoice_mode
+msgid ""
+"Invoice type,changes if the invoice is created immediately, after the "
+"creation of the delivery note etc."
+msgstr ""
+"Tipo di fattura, cambia se la fattura viene creata immediatamente, "
+"dopo la creazione della bolla di consegna ecc."
+
+#. module: account_patch_isa
+#: model:ir.model,name:account_patch_isa.model_account_move
+msgid "Journal Entries"
+msgstr "Sezionale"
+
+#. module: account_patch_isa
+#: model_terms:ir.ui.view,arch_db:account_patch_isa.view_move_form
+msgid "Note"
+msgstr "Note"
+
+#. module: account_patch_isa
+#: model:ir.model,name:account_patch_isa.model_account_partial_reconcile
+msgid "Partial Reconcile"
+msgstr "Riconciliazione Parziale"
+
+#. module: account_patch_isa
+#: model:ir.model,name:account_patch_isa.model_account_payment_term
+msgid "Payment Terms"
+msgstr "Termini Pagamento"
+
+#. module: account_patch_isa
+#: model:ir.model,name:account_patch_isa.model_account_payment_term_line
+msgid "Payment Terms Line"
+msgstr "Linee Termini Pagamento"
+
+#. module: account_patch_isa
+#: model_terms:ir.ui.view,arch_db:account_patch_isa.view_move_form
+msgid "Section"
+msgstr "Sezione"
+
+#. module: account_patch_isa
+#: model_terms:ir.ui.view,arch_db:account_patch_isa.view_move_form
+msgid "Subtotal"
+msgstr "Subtotale"
+
+#. module: account_patch_isa
+#: code:addons/account_patch_isa/models/account_move.py:0
+#, python-format
+msgid ""
+"There is no invoiceable line. If a product has a Delivered quantities "
+"invoicing policy, please make sure that a quantity has been delivered."
+msgstr ""
+"Nessuna riga fatturabile. Se un prodotto ha una politica di "
+"fatturazione sulle quantità consegnate, assicurarsi che sia stata "
+"consegnata una quantità."
+
+#. module: account_patch_isa
+#: model_terms:ir.ui.view,arch_db:account_patch_isa.view_move_form
+msgid "Total"
+msgstr "Totale"
+
+#. module: account_patch_isa
+#: model_terms:ir.ui.view,arch_db:account_patch_isa.view_move_form
+msgid "UoM"
+msgstr "UM"

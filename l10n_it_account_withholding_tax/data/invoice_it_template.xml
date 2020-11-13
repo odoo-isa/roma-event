@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="account_invoice_it_FatturaPA_export" inherit_id="l10n_it_edi.account_invoice_it_FatturaPA_export">
+            <xpath expr="//DatiGeneraliDocumento/Numero" position="after">
+                <t t-foreach="withholding_tax_info" t-as="dati_ritenuta">
+                    <DatiRitenuta>
+                        <TipoRitenuta t-esc="dati_ritenuta['tipo_ritenuta']"/>
+                        <ImportoRitenuta t-esc="'%.2f' % (dati_ritenuta['importo_ritenuta'])"/>
+                        <AliquotaRitenuta t-esc="'%.2f' % (dati_ritenuta['aliquota_ritenuta'])"/>
+                        <CausalePagamento t-esc="dati_ritenuta['causale_pagamento']"/>
+                    </DatiRitenuta>
+                </t>
+            </xpath>
+            <xpath expr="//DatiGeneraliDocumento/DatiBollo" position="after">
+                <t t-foreach="record.line_ids.filtered(lambda l: l.tax_line_id.account_tax_type == 'cassa_previdenziale')" t-as="line_id">
+                    <t t-set="balance" t-value="abs(line_id.balance)"/>
+                    <t t-set="imponibile_cassa" t-value="[ abs(x) for x in record.invoice_line_ids.filtered(lambda l: line_id.tax_line_id in l.tax_ids).mapped('balance')]"/>
+                    <t t-set="aliquota_iva" t-value="line_id.tax_ids.filtered(lambda l: l.account_tax_type == 'vat_tax')[0].amount"/>
+                    <DatiCassaPrevidenziale>
+                        <!-- 2.1.1.7 -->
+                        <TipoCassa t-esc="line_id.tax_line_id.name"/>
+                        <AlCassa t-esc="format_numbers_two(abs(line_id.tax_line_id.amount))"/>
+                        <ImportoContributoCassa t-esc="format_numbers_two(balance)"/>
+                        <ImponibileCassa t-esc="format_numbers_two(sum(imponibile_cassa))"/>
+                        <AliquotaIVA t-esc="format_numbers_two(aliquota_iva)"/>
+                        <Ritenuta t-if="line_id.mapped('tax_ids').filtered(lambda t: t.account_tax_type == 'withholding_tax')">SI</Ritenuta>
+                        <Natura t-if="line_id.tax_line_id.l10n_it_has_exoneration" t-esc="line_id.tax_line_id.l10n_it_kind_exoneration"/>
+                    </DatiCassaPrevidenziale>
+                </t>
+            </xpath>
+            <xpath expr="//t[@t-set='payments']" position="attributes">
+                <attribute name="t-value">record.line_ids.filtered(lambda line: line.account_id.user_type_id.type in ('receivable', 'payable') and line.account_id.l10n_it_account_usage != 'withholding_tax')</attribute>
+            </xpath>
+
+            <xpath expr="//t[@t-as='tax_line']" position="after">
+                <t t-foreach="record.invoice_line_ids.filtered(lambda line: line.tax_ids.filtered(lambda t: t.account_tax_type == 'vat_tax' and t.amount == 0))" t-as="invoice_line">
+                    <t t-set="exoneration_tax" t-value="invoice_line.tax_ids.filtered(lambda t: t.account_tax_type == 'vat_tax' and t.amount==0)"/>
+                    <DatiRiepilogo>
+                        <!--2.2.2-->
+                        <AliquotaIVA t-esc="format_numbers(exoneration_tax.amount)"/>
+                        <Natura t-if="exoneration_tax.l10n_it_has_exoneration" t-esc="exoneration_tax.l10n_it_kind_exoneration"/>
+                        <ImponibileImporto t-esc="format_monetary(invoice_line.price_subtotal, currency)"/>
+                        <!-- at this point I have only tax with 0 amount cause top filter -->
+                        <Imposta t-esc="format_monetary(0, currency)"/>
+                        <EsigibilitaIVA t-if="not exoneration_tax.l10n_it_has_exoneration or exoneration_tax.l10n_it_kind_exoneration=='N6'" t-esc="exoneration_tax.l10n_it_vat_due_date"/>
+                        <RiferimentoNormativo t-if="exoneration_tax.l10n_it_has_exoneration" t-esc="exoneration_tax.l10n_it_law_reference"/>
+                    </DatiRiepilogo>
+                </t>
+            </xpath>
+
+        </template>
+
+        <template id="account_withholding_tax_fatturapa_lines" inherit_id="l10n_it_edi.account_invoice_line_it_FatturaPA">
+            <xpath expr="//DettaglioLinee/Natura" position="before">
+                <t t-if="line.tax_ids.filtered(lambda l:l.account_tax_type == 'withholding_tax')">
+                    <Ritenuta>SI</Ritenuta>
+                </t>
+            </xpath>
+        </template>
+
+        <template id="account_invoice_line_it_FatturaPA_export" inherit_id="l10n_it_edi.account_invoice_line_it_FatturaPA">
+            <xpath expr="//AliquotaIVA[1]" position="replace">
+                <AliquotaIVA t-if="line.tax_ids.filtered(lambda t: t.account_tax_type == 'vat_tax').amount_type == 'percent'" t-esc="format_numbers(line.tax_ids.filtered(lambda t: t.account_tax_type == 'vat_tax').amount)"/>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

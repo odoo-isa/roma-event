@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- FORM View  -->
+        <record model='ir.ui.view' id='view_file_export_form'>
+            <field name='name'>view.file.export.form</field>
+            <field name='model'>file.export.wizard</field>
+            <field name='arch' type='xml'>
+                <form string='Export'>
+                    <sheet>
+                        <group>
+                            <field name="filename" invisible="1"/>
+                            <field name='riba_txt' filename="filename"/>
+                        </group>
+                        <footer>
+                            <button class="oe_link" special="cancel" string="Cancel"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

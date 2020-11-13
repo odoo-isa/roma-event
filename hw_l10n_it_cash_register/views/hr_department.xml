@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!-- FORM View  -->
+        <record model='ir.ui.view' id='hr_department_iot_form'>
+            <field name='name'>hr.department.iot.form</field>
+            <field name='model'>hr.department</field>
+            <field name="inherit_id" ref="hr.view_department_form"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='manager_id']" position="after">
+                    <field name="iot_box_id"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</openerp>

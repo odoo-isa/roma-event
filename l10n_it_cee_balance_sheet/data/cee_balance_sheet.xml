@@ -1,0 +1,3426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="action_cee_balance_sheet" model="ir.actions.client">
+            <field name="name">Stato Patrimoniale CEE</field>
+            <field name="tag">account_report</field>
+        </record>
+        <menuitem id="menu_cee_balance_sheet"
+                  name="Stato Patrimoniale CEE"
+                  parent="account.account_reports_legal_statements_menu"
+                  action="action_cee_balance_sheet"
+                  groups="base.group_no_one"/>
+        <record id="cee_balance_sheet" model="account.financial.html.report">
+            <field name="name">Stato Patrimoniale CEE</field>
+            <field name="date_range" eval="True"/>
+            <field name="debit_credit" eval="True"/>
+            <field name="comparison" eval="True"/>
+            <field name="unfold_all_filter" eval="True"/>
+            <field name="generated_menu_id" ref="menu_cee_balance_sheet"/>
+        </record>
+        <record id="cee_balance_sheet_PA" model="account.financial.html.report.line">
+            <field name="name">STATO PATRIMONIALE ATTIVO</field>
+            <field name="code">PA</field>
+            <field name="financial_report_id" ref="cee_balance_sheet"/>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = PAA.balance + PAB.balance + PAC.balance + PAD.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">0</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PP" model="account.financial.html.report.line">
+            <field name="name">STATO PATRIMONIALE PASSIVO</field>
+            <field name="code">PP</field>
+            <field name="financial_report_id" ref="cee_balance_sheet"/>
+            <field name="sequence">2</field>
+            <field name="formulas">balance = PPA.balance + PPB.balance + PPC.balance + PPD.balance + PPE.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="True"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">0</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAA" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PA"/>
+            <field name="name">A) Crediti verso soci per versamenti ancora dovuti</field>
+            <field name="code">PAA</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = PAA1.balance + PAA2.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">1</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PA"/>
+            <field name="name">B) Immobilizzazioni, con separata indicazione di quelle concesse in locazione
+                finanziaria
+            </field>
+            <field name="code">PAB</field>
+            <field name="sequence">2</field>
+            <field name="formulas">balance = PAB1.balance + PAB2.balance + PAB3.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">1</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAC" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PA"/>
+            <field name="name">C) Attivo circolante</field>
+            <field name="code">PAC</field>
+            <field name="sequence">3</field>
+            <field name="formulas">balance = PAC1.balance + PAC2.balance + PAC3.balance + PAC4.balance + PAC5.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">1</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAD" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PA"/>
+            <field name="name">D) Ratei e risconti</field>
+            <field name="code">PAD</field>
+            <field name="sequence">4</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">1</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAA1" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAA"/>
+            <field name="name">- Parte richiamata</field>
+            <field name="code">PAA1</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">2</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAA2" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAA"/>
+            <field name="name">- Parte da richiamare</field>
+            <field name="code">PAA2</field>
+            <field name="sequence">2</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">2</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB1" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB"/>
+            <field name="name">I. Immateriali</field>
+            <field name="code">PAB1</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = PAB11.balance + PAB12.balance + PAB13.balance + PAB14.balance + PAB15.balance + PAB16.balance + PAB17.balance + PAB18.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">2</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB2" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB"/>
+            <field name="name">II. Materiali</field>
+            <field name="code">PAB2</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = PAB21.balance + PAB22.balance + PAB23.balance + PAB24.balance + PAB25.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">2</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB3" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB"/>
+            <field name="name">III. Finanziarie</field>
+            <field name="code">PAB3</field>
+            <field name="sequence">2</field>
+            <field name="formulas">balance = PAB31.balance + PAB32.balance + PAB33.balance + PAB34.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">2</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB11" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB1"/>
+            <field name="name">1) Costi di impianto e di ampliamento</field>
+            <field name="code">PAB11</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = PAB11a.balance + PAB11b.balance + PAB11c.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB12" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB1"/>
+            <field name="name">2) Costi di sviluppo</field>
+            <field name="code">PAB12</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = PAB12a.balance + PAB12b.balance + PAB12c.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB13" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB1"/>
+            <field name="name">3) Diritti di brevetto industriale e di utilizzazione delle opere dell'ingegno</field>
+            <field name="code">PAB13</field>
+            <field name="sequence">2</field>
+            <field name="formulas">balance = PAB13a.balance + PAB13b.balance + PAB13c.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB14" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB1"/>
+            <field name="name">4) Concessioni, licenze, marchi e diritti simili</field>
+            <field name="code">PAB14</field>
+            <field name="sequence">3</field>
+            <field name="formulas">balance = PAB14a.balance + PAB14b.balance + PAB14c.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB15" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB1"/>
+            <field name="name">5) Avviamento</field>
+            <field name="code">PAB15</field>
+            <field name="sequence">5</field>
+            <field name="formulas">balance = PAB15a.balance + PAB15b.balance + PAB15c.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB16" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB1"/>
+            <field name="name">6) Immobilizzazioni immateriali in corso e acconti</field>
+            <field name="code">PAB16</field>
+            <field name="sequence">6</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB17" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB1"/>
+            <field name="name">7) Altre</field>
+            <field name="code">PAB17</field>
+            <field name="sequence">7</field>
+            <field name="formulas">balance = PAB17a.balance + PAB17b.balance + PAB17c.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB18" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB1"/>
+            <field name="name">- Differenza da consolidamento</field>
+            <field name="code">PAB18</field>
+            <field name="sequence">4</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB11a" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB11"/>
+            <field name="name">- Costo storico</field>
+            <field name="code">PAB11a</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB11b" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB11"/>
+            <field name="name">- Fondo ammortamenti</field>
+            <field name="code">PAB11b</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB11c" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB11"/>
+            <field name="name">- Fondo svalutazioni</field>
+            <field name="code">PAB11c</field>
+            <field name="sequence">2</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB12a" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB12"/>
+            <field name="name">- Costo storico</field>
+            <field name="code">PAB12a</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB12b" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB12"/>
+            <field name="name">- Fondo ammortamenti</field>
+            <field name="code">PAB12b</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB12c" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB12"/>
+            <field name="name">- Fondo svalutazioni</field>
+            <field name="code">PAB12c</field>
+            <field name="sequence">2</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB13a" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB13"/>
+            <field name="name">- Costo storico</field>
+            <field name="code">PAB13a</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB13b" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB13"/>
+            <field name="name">- Fondo ammortamenti</field>
+            <field name="code">PAB13b</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB13c" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB13"/>
+            <field name="name">- Fondo Svalutazioni</field>
+            <field name="code">PAB13c</field>
+            <field name="sequence">2</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB14a" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB14"/>
+            <field name="name">- Costo storico</field>
+            <field name="code">PAB14a</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB14b" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB14"/>
+            <field name="name">- Fondo ammortamenti</field>
+            <field name="code">PAB14b</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB14c" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB14"/>
+            <field name="name">- Fondo svalutazioni</field>
+            <field name="code">PAB14c</field>
+            <field name="sequence">2</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB15a" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB15"/>
+            <field name="name">- Costo storico</field>
+            <field name="code">PAB15a</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB15b" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB15"/>
+            <field name="name">- Fondo ammortamenti</field>
+            <field name="code">PAB15b</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB15c" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB15"/>
+            <field name="name">- Fondo svalutazioni</field>
+            <field name="code">PAB15c</field>
+            <field name="sequence">2</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB17a" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB17"/>
+            <field name="name">- Costo storico</field>
+            <field name="code">PAB17a</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB17b" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB17"/>
+            <field name="name">- Fondo ammortamenti</field>
+            <field name="code">PAB17b</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB17c" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB17"/>
+            <field name="name">- Fondo svalutazioni</field>
+            <field name="code">PAB17c</field>
+            <field name="sequence">2</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB21" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB2"/>
+            <field name="name">1) Terreni e fabbricati</field>
+            <field name="code">PAB21</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = PAB21a.balance + PAB21b.balance + PAB21c.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB22" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB2"/>
+            <field name="name">2) Impianti e macchinario</field>
+            <field name="code">PAB22</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = PAB22a.balance + PAB22b.balance + PAB22c.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB23" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB2"/>
+            <field name="name">3) Attrezzature industriali e commerciali</field>
+            <field name="code">PAB23</field>
+            <field name="sequence">2</field>
+            <field name="formulas">balance = PAB23a.balance + PAB23b.balance + PAB23c.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB24" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB2"/>
+            <field name="name">4) Altri beni</field>
+            <field name="code">PAB24</field>
+            <field name="sequence">3</field>
+            <field name="formulas">balance = PAB24a.balance + PAB24b.balance + PAB24c.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB25" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB2"/>
+            <field name="name">5) Immobilizzazioni in corso e acconti</field>
+            <field name="code">PAB25</field>
+            <field name="sequence">4</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB21a" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB21"/>
+            <field name="name">- Costo storico</field>
+            <field name="code">PAB21a</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB21b" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB21"/>
+            <field name="name">- Fondo ammortamenti</field>
+            <field name="code">PAB21b</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB21c" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB21"/>
+            <field name="name">- Fondo svalutazioni</field>
+            <field name="code">PAB21c</field>
+            <field name="sequence">2</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB22a" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB22"/>
+            <field name="name">- Costo storico</field>
+            <field name="code">PAB22a</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB22b" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB22"/>
+            <field name="name">- Fondo ammortamenti</field>
+            <field name="code">PAB22b</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB22c" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB22"/>
+            <field name="name">- Fondo svalutazioni</field>
+            <field name="code">PAB22c</field>
+            <field name="sequence">2</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB23a" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB23"/>
+            <field name="name">- Costo storico</field>
+            <field name="code">PAB23a</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB23b" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB23"/>
+            <field name="name">- Fondo ammortamenti</field>
+            <field name="code">PAB23b</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB23c" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB23"/>
+            <field name="name">- Fondo svalutazioni</field>
+            <field name="code">PAB23c</field>
+            <field name="sequence">2</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB24a" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB24"/>
+            <field name="name">- Costo storico</field>
+            <field name="code">PAB24a</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB24b" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB24"/>
+            <field name="name">- Fondo ammortamenti</field>
+            <field name="code">PAB24b</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB24c" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB24"/>
+            <field name="name">- Fondo svalutazioni</field>
+            <field name="code">PAB24c</field>
+            <field name="sequence">2</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB31" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB3"/>
+            <field name="name">1) Partecipazioni in:</field>
+            <field name="code">PAB31</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = PAB31a.balance + PAB31b.balance + PAB31c.balance + PAB31d.balance + PAB31dbis.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB32" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB3"/>
+            <field name="name">2) Crediti</field>
+            <field name="code">PAB32</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = PAB32a.balance + PAB32b.balance + PAB32c.balance + PAB32e.balance + PAB32d.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB33" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB3"/>
+            <field name="name">3) Altri titoli</field>
+            <field name="code">PAB33</field>
+            <field name="sequence">2</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB34" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB3"/>
+            <field name="name">4) strumenti finanziari derivati attivi</field>
+            <field name="code">PAB34</field>
+            <field name="sequence">3</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB31a" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB31"/>
+            <field name="name">a) imprese controllate</field>
+            <field name="code">PAB31a</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB31b" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB31"/>
+            <field name="name">b) imprese collegate</field>
+            <field name="code">PAB31b</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB31c" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB31"/>
+            <field name="name">c) imprese controllanti</field>
+            <field name="code">PAB31c</field>
+            <field name="sequence">2</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB31d" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB31"/>
+            <field name="name">d) imprese sottoposte al controllo delle controllanti</field>
+            <field name="code">PAB31d</field>
+            <field name="sequence">3</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB31dbis" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB31"/>
+            <field name="name">d-bis) altre imprese</field>
+            <field name="code">PAB31dbis</field>
+            <field name="sequence">4</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB32a" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB32"/>
+            <field name="name">a) verso imprese controllate</field>
+            <field name="code">PAB32a</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = PAB32a1.balance + PAB32a2.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB32b" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB32"/>
+            <field name="name">b) verso imprese collegate</field>
+            <field name="code">PAB32b</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = PAB32b1.balance + PAB32b2.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB32c" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB32"/>
+            <field name="name">c) verso imprese controllanti</field>
+            <field name="code">PAB32c</field>
+            <field name="sequence">2</field>
+            <field name="formulas">balance = PAB32c1.balance + PAB32c2.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB32e" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB32"/>
+            <field name="name">d) verso imprese sottoposte al controllo delle controllanti</field>
+            <field name="code">PAB32e</field>
+            <field name="sequence">3</field>
+            <field name="formulas">balance = PAB32e1.balance + PAB32e2.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB32d" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB32"/>
+            <field name="name">d-bis) verso altri</field>
+            <field name="code">PAB32d</field>
+            <field name="sequence">4</field>
+            <field name="formulas">balance = PAB32d1.balance + PAB32d2.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB32a1" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB32a"/>
+            <field name="name">- entro esercizio successivo</field>
+            <field name="code">PAB32a1</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">5</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB32a2" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB32a"/>
+            <field name="name">- oltre esercizio successivo</field>
+            <field name="code">PAB32a2</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">5</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB32b1" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB32b"/>
+            <field name="name">- entro esercizio successivo</field>
+            <field name="code">PAB32b1</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">5</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB32b2" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB32b"/>
+            <field name="name">- oltre esercizio successivo</field>
+            <field name="code">PAB32b2</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">5</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB32c1" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB32c"/>
+            <field name="name">- entro esercizio successivo</field>
+            <field name="code">PAB32c1</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">5</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB32c2" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB32c"/>
+            <field name="name">- oltre esercizio successivo</field>
+            <field name="code">PAB32c2</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">5</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB32e1" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB32e"/>
+            <field name="name">- entro esercizio successivo</field>
+            <field name="code">PAB32e1</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">5</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB32e2" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB32e"/>
+            <field name="name">- oltre esercizio successivo</field>
+            <field name="code">PAB32e2</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">5</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB32d1" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB32d"/>
+            <field name="name">- entro esercizio successivo</field>
+            <field name="code">PAB32d1</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">5</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAB32d2" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAB32d"/>
+            <field name="name">- oltre esercizio successivo</field>
+            <field name="code">PAB32d2</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">5</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAC1" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAC"/>
+            <field name="name">I. Rimanenze</field>
+            <field name="code">PAC1</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = PAC11.balance + PAC12.balance + PAC13.balance + PAC14.balance + PAC15.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">2</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAC2" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAC"/>
+            <field name="name">II. Crediti</field>
+            <field name="code">PAC2</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = PAC21.balance + PAC22.balance + PAC23.balance + PAC24.balance + PAC26.balance + PAC2B.balance + PAC2T.balance + PAC25.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">2</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAC3" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAC"/>
+            <field name="name">III. Attività finanziarie che non costituiscono immobilizzazioni</field>
+            <field name="code">PAC3</field>
+            <field name="sequence">2</field>
+            <field name="formulas">balance = PAC31.balance + PAC32.balance + PAC33.balance + PAC37.balance + PAC34.balance + PAC35.balance + PAC36.balance + PAC3T.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">2</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAC4" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAC"/>
+            <field name="name">IV. Disponibilità liquide</field>
+            <field name="code">PAC4</field>
+            <field name="sequence">3</field>
+            <field name="formulas">balance = PAC41.balance + PAC42.balance + PAC43.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">2</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAC5" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAC"/>
+            <field name="name">V. Immobilizzazioni materiali destinate alla vendita</field>
+            <field name="code">PAC5</field>
+            <field name="sequence">4</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">2</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAC11" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAC1"/>
+            <field name="name">1) Materie prime, sussidiarie e di consumo</field>
+            <field name="code">PAC11</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAC12" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAC1"/>
+            <field name="name">2) Prodotti in corso di lavorazione e semilavorati</field>
+            <field name="code">PAC12</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAC13" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAC1"/>
+            <field name="name">3) Lavori in corso su ordinazione</field>
+            <field name="code">PAC13</field>
+            <field name="sequence">2</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAC14" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAC1"/>
+            <field name="name">4) Prodotti finiti e merci</field>
+            <field name="code">PAC14</field>
+            <field name="sequence">3</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAC15" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAC1"/>
+            <field name="name">5) Acconti</field>
+            <field name="code">PAC15</field>
+            <field name="sequence">4</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAC31" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAC3"/>
+            <field name="name">1) Partecipazioni in imprese controllate</field>
+            <field name="code">PAC31</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAC32" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAC3"/>
+            <field name="name">2) Partecipazioni in imprese collegate</field>
+            <field name="code">PAC32</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAC33" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAC3"/>
+            <field name="name">3) Partecipazioni in imprese controllanti</field>
+            <field name="code">PAC33</field>
+            <field name="sequence">2</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAC37" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAC3"/>
+            <field name="name">3 bis) Partecipazioni in imprese sottoposte al controllo delle controllanti</field>
+            <field name="code">PAC37</field>
+            <field name="sequence">3</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAC34" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAC3"/>
+            <field name="name">4) Altre partecipazioni</field>
+            <field name="code">PAC34</field>
+            <field name="sequence">4</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAC35" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAC3"/>
+            <field name="name">5) Strumenti finanziari derivati attivi</field>
+            <field name="code">PAC35</field>
+            <field name="sequence">5</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAC36" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAC3"/>
+            <field name="name">6) Altri titoli</field>
+            <field name="code">PAC36</field>
+            <field name="sequence">6</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAC3T" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAC3"/>
+            <field name="name">7) attività finanziarie per la gestione accentrata della tesoreria</field>
+            <field name="code">PAC3T</field>
+            <field name="sequence">7</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAC41" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAC4"/>
+            <field name="name">1) Depositi bancari e postali</field>
+            <field name="code">PAC41</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAC42" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAC4"/>
+            <field name="name">2) Assegni</field>
+            <field name="code">PAC42</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAC43" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAC4"/>
+            <field name="name">3) Denaro e valori in cassa</field>
+            <field name="code">PAC43</field>
+            <field name="sequence">2</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAC21" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAC2"/>
+            <field name="name">1) verso clienti</field>
+            <field name="code">PAC21</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = PAC21a.balance + PAC21b.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAC22" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAC2"/>
+            <field name="name">2) verso imprese controllate</field>
+            <field name="code">PAC22</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = PAC22a.balance + PAC22b.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAC23" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAC2"/>
+            <field name="name">3) verso imprese collegate</field>
+            <field name="code">PAC23</field>
+            <field name="sequence">2</field>
+            <field name="formulas">balance = PAC23a.balance + PAC23b.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAC24" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAC2"/>
+            <field name="name">4) verso controllanti</field>
+            <field name="code">PAC24</field>
+            <field name="sequence">3</field>
+            <field name="formulas">balance = PAC24a.balance + PAC24b.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAC26" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAC2"/>
+            <field name="name">5) verso imprese sottoposte al controllo delle controllanti</field>
+            <field name="code">PAC26</field>
+            <field name="sequence">4</field>
+            <field name="formulas">balance = PAC26a.balance + PAC26b.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAC2B" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAC2"/>
+            <field name="name">5-bis) crediti tributari</field>
+            <field name="code">PAC2B</field>
+            <field name="sequence">5</field>
+            <field name="formulas">balance = PAC2Ba.balance + PAC2Bb.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAC2T" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAC2"/>
+            <field name="name">5-ter) Imposte anticipate</field>
+            <field name="code">PAC2T</field>
+            <field name="sequence">6</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAC25" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAC2"/>
+            <field name="name">5-quater) verso altri</field>
+            <field name="code">PAC25</field>
+            <field name="sequence">7</field>
+            <field name="formulas">balance = PAC25a.balance + PAC25b.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAC21a" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAC21"/>
+            <field name="name">- entro esercizio successivo</field>
+            <field name="code">PAC21a</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAC21b" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAC21"/>
+            <field name="name">- oltre esercizio successivo</field>
+            <field name="code">PAC21b</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAC22a" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAC22"/>
+            <field name="name">- entro esercizio successivo</field>
+            <field name="code">PAC22a</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAC22b" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAC22"/>
+            <field name="name">- oltre esercizio successivo</field>
+            <field name="code">PAC22b</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAC23a" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAC23"/>
+            <field name="name">- entro esercizio successivo</field>
+            <field name="code">PAC23a</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAC23b" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAC23"/>
+            <field name="name">- oltre esercizio successivo</field>
+            <field name="code">PAC23b</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAC24a" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAC24"/>
+            <field name="name">- entro esercizio successivo</field>
+            <field name="code">PAC24a</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAC24b" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAC24"/>
+            <field name="name">- oltre esercizio successivo</field>
+            <field name="code">PAC24b</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAC26a" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAC26"/>
+            <field name="name">- entro esercizio successivo</field>
+            <field name="code">PAC26a</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAC26b" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAC26"/>
+            <field name="name">- oltre esercizio successivo</field>
+            <field name="code">PAC26b</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAC2Ba" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAC2B"/>
+            <field name="name">- entro esercizio successivo</field>
+            <field name="code">PAC2Ba</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAC2Bb" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAC2B"/>
+            <field name="name">- oltre esercizio successivo</field>
+            <field name="code">PAC2Bb</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAC25a" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAC25"/>
+            <field name="name">- entro esercizio successivo</field>
+            <field name="code">PAC25a</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PAC25b" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PAC25"/>
+            <field name="name">- oltre esercizio successivo</field>
+            <field name="code">PAC25b</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPA" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PP"/>
+            <field name="name">A) Patrimonio netto</field>
+            <field name="code">PPA</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = PPA1.balance + PPA2.balance+ PPA3.balance + PPA4.balance + PPA6.balance + PPA7.balance + PPAB.balance + PPA8.balance + PPA9.balance + PPAD.balance + PPAC.balance + PPAA.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">1</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPB" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PP"/>
+            <field name="name">B) Fondi per rischi e oneri</field>
+            <field name="code">PPB</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = PPB1.balance + PPB2.balance + PPB3.balance + PPB4.balance + PPB5.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">1</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPC" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PP"/>
+            <field name="name">C) Trattamento di fine rapporto di lavoro subordinato</field>
+            <field name="code">PPC</field>
+            <field name="sequence">2</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">1</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPD" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PP"/>
+            <field name="name">D) Debiti</field>
+            <field name="code">PPD</field>
+            <field name="sequence">3</field>
+            <field name="formulas">balance = PPD1.balance + PPD2.balance + PPDF.balance + PPD3.balance + PPD4.balance + PPD5.balance + PPD6.balance + PPD7.balance + PPD8.balance + PPD9.balance + PPDA.balance + PPDE.balance + PPDB.balance + PPDC.balance + PPDD.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">1</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPE" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PP"/>
+            <field name="name">E) Ratei e risconti</field>
+            <field name="code">PPE</field>
+            <field name="sequence">4</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">1</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPB1" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPB"/>
+            <field name="name">1) per trattamento di quiescenza e obblighi simili</field>
+            <field name="code">PPB1</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">2</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPB2" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPB"/>
+            <field name="name">2) per imposte, anche differite</field>
+            <field name="code">PPB2</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">2</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPB4" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPB"/>
+            <field name="name">- Fondo di consolidamento per rischi e oneri futuri</field>
+            <field name="code">PPB4</field>
+            <field name="sequence">2</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">2</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPB5" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPB"/>
+            <field name="name">3) Strumenti finanziari derivati passivi</field>
+            <field name="code">PPB5</field>
+            <field name="sequence">3</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">2</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPB3" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPB"/>
+            <field name="name">4) Altri fondi</field>
+            <field name="code">PPB3</field>
+            <field name="sequence">4</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">2</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPD1" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPD"/>
+            <field name="name">1) Obbligazioni</field>
+            <field name="code">PPD1</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = PPD1a.balance + PPD1b.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">2</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPD2" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPD"/>
+            <field name="name">2) Obbligazioni convertibili</field>
+            <field name="code">PPD2</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = PPD2a.balance + PPD2b.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">2</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPDF" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPD"/>
+            <field name="name">3) Debiti verso soci per finanziamenti</field>
+            <field name="code">PPDF</field>
+            <field name="sequence">2</field>
+            <field name="formulas">balance = PPDFa.balance + PPDFb.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">2</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPD3" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPD"/>
+            <field name="name">4) Debiti verso banche</field>
+            <field name="code">PPD3</field>
+            <field name="sequence">3</field>
+            <field name="formulas">balance = PPD3a.balance + PPD3b.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">2</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPD4" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPD"/>
+            <field name="name">5) Debiti verso altri finanziatori</field>
+            <field name="code">PPD4</field>
+            <field name="sequence">4</field>
+            <field name="formulas">balance = PPD4a.balance + PPD4b.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">2</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPD5" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPD"/>
+            <field name="name">6) Acconti</field>
+            <field name="code">PPD5</field>
+            <field name="sequence">5</field>
+            <field name="formulas">balance = PPD5a.balance + PPD5b.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">2</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPD6" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPD"/>
+            <field name="name">7) Debiti verso fornitori</field>
+            <field name="code">PPD6</field>
+            <field name="sequence">6</field>
+            <field name="formulas">balance = PPD6a.balance + PPD6b.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">2</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPD7" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPD"/>
+            <field name="name">8) Debiti rappresentati da titoli di credito</field>
+            <field name="code">PPD7</field>
+            <field name="sequence">7</field>
+            <field name="formulas">balance = PPD7a.balance + PPD7b.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">2</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPD8" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPD"/>
+            <field name="name">9) Debiti verso imprese controllate</field>
+            <field name="code">PPD8</field>
+            <field name="sequence">8</field>
+            <field name="formulas">balance = PPD8a.balance + PPD8b.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">2</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPD9" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPD"/>
+            <field name="name">10) Debiti verso imprese collegate</field>
+            <field name="code">PPD9</field>
+            <field name="sequence">9</field>
+            <field name="formulas">balance = PPD9a.balance + PPD9b.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">2</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPDA" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPD"/>
+            <field name="name">11) Debiti verso controllanti</field>
+            <field name="code">PPDA</field>
+            <field name="sequence">10</field>
+            <field name="formulas">balance = PPDAa.balance + PPDAb.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">2</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPDE" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPD"/>
+            <field name="name">11 bis) Debiti verso imprese sottoposte al controllo delle controllanti</field>
+            <field name="code">PPDE</field>
+            <field name="sequence">11</field>
+            <field name="formulas">balance = PPDEa.balance + PPDEb.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">2</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPDB" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPD"/>
+            <field name="name">12) Debiti tributari</field>
+            <field name="code">PPDB</field>
+            <field name="sequence">12</field>
+            <field name="formulas">balance = PPDBa.balance + PPDBb.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">2</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPDC" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPD"/>
+            <field name="name">13) Debiti verso istituti di previdenza e sicurezza sociale</field>
+            <field name="code">PPDC</field>
+            <field name="sequence">13</field>
+            <field name="formulas">balance = PPDCa.balance + PPDCb.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">2</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPDD" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPD"/>
+            <field name="name">14) Altri debiti</field>
+            <field name="code">PPDD</field>
+            <field name="sequence">14</field>
+            <field name="formulas">balance = PPDDa.balance + PPDDb.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">2</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPD1a" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPD1"/>
+            <field name="name">- entro l'esercizio successivo</field>
+            <field name="code">PPD1a</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPD1b" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPD1"/>
+            <field name="name">- oltre l'esercizio successivo</field>
+            <field name="code">PPD1b</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPD2a" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPD2"/>
+            <field name="name">- entro l'esercizio successivo</field>
+            <field name="code">PPD2a</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPD2b" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPD2"/>
+            <field name="name">- oltre l'esercizio successivo</field>
+            <field name="code">PPD2b</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPDFa" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPDF"/>
+            <field name="name">- entro l'esercizio successivo</field>
+            <field name="code">PPDFa</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPDFb" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPDF"/>
+            <field name="name">- oltre l'esercizio successivo</field>
+            <field name="code">PPDFb</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPD3a" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPD3"/>
+            <field name="name">- entro l'esercizio successivo</field>
+            <field name="code">PPD3a</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPD3b" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPD3"/>
+            <field name="name">- oltre l'esercizio successivo</field>
+            <field name="code">PPD3b</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPD4a" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPD4"/>
+            <field name="name">- entro l'esercizio successivo</field>
+            <field name="code">PPD4a</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPD4b" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPD4"/>
+            <field name="name">- oltre l'esercizio successivo</field>
+            <field name="code">PPD4b</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPD5a" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPD5"/>
+            <field name="name">- entro l'esercizio successivo</field>
+            <field name="code">PPD5a</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPD5b" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPD5"/>
+            <field name="name">- oltre l'esercizio successivo</field>
+            <field name="code">PPD5b</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPD6a" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPD6"/>
+            <field name="name">- entro l'esercizio successivo</field>
+            <field name="code">PPD6a</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPD6b" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPD6"/>
+            <field name="name">- oltre l'esercizio successivo</field>
+            <field name="code">PPD6b</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPD7a" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPD7"/>
+            <field name="name">- entro l'esercizio successivo</field>
+            <field name="code">PPD7a</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPD7b" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPD7"/>
+            <field name="name">- oltre l'esercizio successivo</field>
+            <field name="code">PPD7b</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPD8a" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPD8"/>
+            <field name="name">- entro l'esercizio successivo</field>
+            <field name="code">PPD8a</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance= sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPD8b" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPD8"/>
+            <field name="name">- oltre l'esercizio successivo</field>
+            <field name="code">PPD8b</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPD9a" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPD9"/>
+            <field name="name">- entro l'esercizio successivo</field>
+            <field name="code">PPD9a</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPD9b" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPD9"/>
+            <field name="name">- oltre l'esercizio successivo</field>
+            <field name="code">PPD9b</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPDAa" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPDA"/>
+            <field name="name">- entro l'esercizio successivo</field>
+            <field name="code">PPDAa</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPDAb" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPDA"/>
+            <field name="name">- oltre l'esercizio successivo</field>
+            <field name="code">PPDAb</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPDEa" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPDE"/>
+            <field name="name">- entro l'esercizio successivo</field>
+            <field name="code">PPDEa</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPDEb" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPDE"/>
+            <field name="name">- oltre l'esercizio successivo</field>
+            <field name="code">PPDEb</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPDBa" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPDB"/>
+            <field name="name">- entro l'esercizio successivo</field>
+            <field name="code">PPDBa</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPDBb" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPDB"/>
+            <field name="name">- oltre l'esercizio successivo</field>
+            <field name="code">PPDBb</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPDCa" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPDC"/>
+            <field name="name">- entro l'esercizio successivo</field>
+            <field name="code">PPDCa</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPDCb" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPDC"/>
+            <field name="name">- oltre l'esercizio successivo</field>
+            <field name="code">PPDCb</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPDDa" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPDD"/>
+            <field name="name">- entro l'esercizio successivo</field>
+            <field name="code">PPDDa</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPDDb" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPDD"/>
+            <field name="name">- oltre l'esercizio successivo</field>
+            <field name="code">PPDDb</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPA1" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPA"/>
+            <field name="name">I. Capitale</field>
+            <field name="code">PPA1</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">2</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPA2" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPA"/>
+            <field name="name">II. Riserva da sovrapprezzo delle azioni</field>
+            <field name="code">PPA2</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">2</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPA3" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPA"/>
+            <field name="name">III. Riserva di rivalutazione</field>
+            <field name="code">PPA3</field>
+            <field name="sequence">2</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">2</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPA4" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPA"/>
+            <field name="name">IV. Riserva legale</field>
+            <field name="code">PPA4</field>
+            <field name="sequence">3</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">2</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPA6" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPA"/>
+            <field name="name">V. Riserve statutarie</field>
+            <field name="code">PPA6</field>
+            <field name="sequence">4</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">2</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPA7" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPA"/>
+            <field name="name">VI. Altre riserve, distintamente indicate:</field>
+            <field name="code">PPA7</field>
+            <field name="sequence">5</field>
+            <field name="formulas">balance = PPA7a.balance + PPA7o.balance + PPA7p.balance + PPA7q.balance + PPA7r.balance + PPA7s.balance + PPA7b.balance + PPA7t.balance + PPA7u.balance + PPA7v.balance + PPA7w.balance + PPA7x.balance + PPA7j.balance + PPA7m.balance + PPA7l.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">2</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPAB" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPA"/>
+            <field name="name">VII. Riserva per operazioni di copertura dei flussi finanziari attesi</field>
+            <field name="code">PPAB</field>
+            <field name="sequence">6</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">2</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPA8" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPA"/>
+            <field name="name">VIII. Utili (perdite) portati a nuovo</field>
+            <field name="code">PPA8</field>
+            <field name="sequence">7</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">2</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPA9" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPA"/>
+            <field name="name">IX. Utile (perdita) dell'esercizio</field>
+            <field name="code">PPA9</field>
+            <field name="sequence">8</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">2</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPAD" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPA"/>
+            <field name="name">- Perdita ripianata nell'esercizio</field>
+            <field name="code">PPAD</field>
+            <field name="sequence">9</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">2</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPAC" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPA"/>
+            <field name="name">X. Riserva negativa per azioni proprie in portafoglio</field>
+            <field name="code">PPAC</field>
+            <field name="sequence">10</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">2</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPAA" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPA"/>
+            <field name="name">- Patrimonio di Terzi</field>
+            <field name="code">PPAA</field>
+            <field name="sequence">11</field>
+            <field name="formulas">balance = PPAA1.balance + PPAA2.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">2</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPAA1" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPAA"/>
+            <field name="name">- Capitale e riserve di terzi</field>
+            <field name="code">PPAA1</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPAA2" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPAA"/>
+            <field name="name">- Utile (perdita) dell'esercizio di pertinenza di terzi</field>
+            <field name="code">PPAA2</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPA7a" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPA7"/>
+            <field name="name">- Riserva straordinaria</field>
+            <field name="code">PPA7a</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPA7o" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPA7"/>
+            <field name="name">- Riserva da deroghe ex art. 2423 Cod.Civ.</field>
+            <field name="code">PPA7o</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPA7p" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPA7"/>
+            <field name="name">- Riserva azioni (quote) della società controllante</field>
+            <field name="code">PPA7p</field>
+            <field name="sequence">2</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPA7q" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPA7"/>
+            <field name="name">- Riserva da rivalutazione delle partecipazioni</field>
+            <field name="code">PPA7q</field>
+            <field name="sequence">3</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPA7r" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPA7"/>
+            <field name="name">- Versamenti in conto aumento di capitale</field>
+            <field name="code">PPA7r</field>
+            <field name="sequence">4</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPA7s" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPA7"/>
+            <field name="name">- Versamenti in conto futuro aumento di capitale</field>
+            <field name="code">PPA7s</field>
+            <field name="sequence">5</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPA7b" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPA7"/>
+            <field name="name">- Versamenti in conto capitale</field>
+            <field name="code">PPA7b</field>
+            <field name="sequence">6</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPA7t" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPA7"/>
+            <field name="name">- Versamenti a copertura perdite</field>
+            <field name="code">PPA7t</field>
+            <field name="sequence">7</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPA7u" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPA7"/>
+            <field name="name">- Riserva da riduzione capitale sociale</field>
+            <field name="code">PPA7u</field>
+            <field name="sequence">8</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPA7v" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPA7"/>
+            <field name="name">- Riserva avanzo di fusione</field>
+            <field name="code">PPA7v</field>
+            <field name="sequence">9</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPA7w" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPA7"/>
+            <field name="name">- Riserva per utili su cambi non realizzati</field>
+            <field name="code">PPA7w</field>
+            <field name="sequence">10</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPA7x" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPA7"/>
+            <field name="name">- Riserva da conguaglio utili in corso</field>
+            <field name="code">PPA7x</field>
+            <field name="sequence">11</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPA7j" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPA7"/>
+            <field name="name">- Varie altre riserve</field>
+            <field name="code">PPA7j</field>
+            <field name="sequence">12</field>
+            <field name="formulas">balance = PPA7j1.balance + PPA7j2.balance</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPA7m" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPA7"/>
+            <field name="name">- Riserva di consolidamento</field>
+            <field name="code">PPA7m</field>
+            <field name="sequence">13</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPA7l" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPA7"/>
+            <field name="name">- Riserva da differenze di traduzione</field>
+            <field name="code">PPA7l</field>
+            <field name="sequence">14</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">3</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPA7j1" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPA7j"/>
+            <field name="name">- varie altre riserve</field>
+            <field name="code">PPA7j1</field>
+            <field name="sequence">0</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="cee_balance_sheet_PPA7j2" model="account.financial.html.report.line">
+            <field name="parent_id" ref="cee_balance_sheet_PPA7j"/>
+            <field name="name">- da arrotondamento automatico in Euro (2 decimali)</field>
+            <field name="code">PPA7j2</field>
+            <field name="sequence">1</field>
+            <field name="formulas">balance = sum.balance</field>
+            <field name="groupby">account_id</field>
+            <field name="filter_mode">account</field>
+            <field name="figure_type">float</field>
+            <field name="print_on_new_page" eval="False"/>
+            <field name="green_on_positive" eval="True"/>
+            <field name="level">4</field>
+            <field name="special_date_changer">normal</field>
+            <field name="show_domain">foldable</field>
+            <field name="hide_if_zero" eval="False"/>
+            <field name="hide_if_empty" eval="False"/>
+        </record>
+        <record id="action_cee_balance_sheet" model="ir.actions.client">
+            <field name="context" eval="{'model': 'account.financial.html.report', 'id': ref('cee_balance_sheet')}"/>
+        </record>
+    </data>
+</odoo>

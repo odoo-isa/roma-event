@@ -1,0 +1,82 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_credit
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-27 14:37+0000\n"
+"PO-Revision-Date: 2020-03-27 14:37+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sale_credit
+#: model:ir.model,name:sale_credit.model_res_partner
+msgid "Contact"
+msgstr "Contatto"
+
+#. module: sale_credit
+#: model:ir.model.fields,field_description:sale_credit.field_res_partner__credit_limit
+#: model:ir.model.fields,field_description:sale_credit.field_res_users__credit_limit
+msgid "Credit Limit"
+msgstr "Fido Accordato"
+
+#. module: sale_credit
+#: model:ir.model.fields,help:sale_credit.field_res_partner__credit_limit
+#: model:ir.model.fields,help:sale_credit.field_res_users__credit_limit
+msgid "Credit limits of Partner"
+msgstr "Fido accordato con il partner"
+
+#. module: sale_credit
+#: model:ir.model.fields,help:sale_credit.field_res_partner__remaing_credit
+#: model:ir.model.fields,help:sale_credit.field_res_users__remaing_credit
+msgid ""
+"It is calculated as Credit Value - (Accounting Balance + Ordered Value not "
+"Invoiced)"
+msgstr "Questo è calcolato come: Fido - (Conto Contabile - Valore Ordine non Fatturato)"
+
+#. module: sale_credit
+#: code:addons/sale_credit/models/sale_order.py:0
+#, python-format
+msgid ""
+"It is not possible to confirm the order because the limit credit exceeded"
+msgstr "Non è possibile confermare l'ordine perchè il cliente ha superato il fido accordato "
+
+#. module: sale_credit
+#: model:ir.model.fields,field_description:sale_credit.field_res_partner__remaing_credit
+#: model:ir.model.fields,field_description:sale_credit.field_res_users__remaing_credit
+msgid "Remaing Credit"
+msgstr "Credito Fido Residuo"
+
+#. module: sale_credit
+#: model:ir.model.fields,field_description:sale_credit.field_res_partner__sale_credit_type
+#: model:ir.model.fields,field_description:sale_credit.field_res_users__sale_credit_type
+msgid "Sale Credit Type"
+msgstr "Tipo Fido"
+
+#. module: sale_credit
+#: model:ir.model,name:sale_credit.model_sale_order
+msgid "Sales Order"
+msgstr "Ordine di vendita"
+
+#. module: sale_credit
+#: model:ir.model.fields,help:sale_credit.field_res_partner__sale_credit_type
+#: model:ir.model.fields,help:sale_credit.field_res_users__sale_credit_type
+msgid ""
+"Type of Credit, if unlimited, the customer is excluded of credit balace"
+msgstr "Tipo di Fido, se illimitato, il cliente è escluso dal controllo del credito fido alla conferma dell'ordine"
+
+#. module: sale_credit
+#: model:ir.model.fields.selection,name:sale_credit.selection__res_partner__sale_credit_type__unlimited
+msgid "Unlimited"
+msgstr "Illimitato"
+
+#. module: sale_credit
+#: model:ir.model.fields.selection,name:sale_credit.selection__res_partner__sale_credit_type__value
+msgid "Value"
+msgstr "Valore"

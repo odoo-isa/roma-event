@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates>
+
+    <t t-extend="BillsListView.buttons">
+        <t t-jquery="button.o_button_upload_bill" t-operation="replace">
+            <button type="button" class="btn btn-secondary o_button_upload_bill_from_wizard">
+                Upload
+            </button>
+        </t>
+    </t>
+
+</templates>

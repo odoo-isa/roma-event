@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id='purchase_order_form_sale_advanced_mto' model='ir.ui.view'>
+        <field name='name'>purchase.order.form.sale.advanced.mto</field>
+        <field name='model'>purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name='arch' type='xml'>
+            <xpath expr="//field[@name='order_line']/form//field[@name='name']" position="before">
+                <field name="warehouse_dest_id"/>
+            </xpath>
+            <xpath expr="//field[@name='order_line']/tree//field[@name='name']" position="before">
+                <field name="warehouse_dest_id"
+                       attrs="{'readonly': [('state', 'in', ['purchase', 'to_approve', 'done', 'cancel'])]}"
+                       options="{'no_create':1, 'no_edit':1}"
+                       context="{'only_wh_dest': True, 'picking_type_id': parent.picking_type_id}"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

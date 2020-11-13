@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- FORM View  -->
+    <record model='ir.ui.view' id='l10n_it_res_partner_form'>
+        <field name='name'>l10n.it.res.partner.form</field>
+        <field name='model'>res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name='arch' type='xml'>
+            <xpath expr="//page[@name='sales_purchases']" position="after">
+                <page string="Delivery Options">
+                    <group>
+                        <group>
+                            <field name="goods_description_id"/>
+                            <field name="transportation_reason_id"/>
+                        </group>
+                        <group>
+                            <field name="transportation_method_id"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

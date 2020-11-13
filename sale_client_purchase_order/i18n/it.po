@@ -1,0 +1,190 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_client_purchase_order
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-08 10:37+0000\n"
+"PO-Revision-Date: 2020-09-08 10:37+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sale_client_purchase_order
+#: model_terms:ir.ui.view,arch_db:sale_client_purchase_order.sale_report
+msgid "<strong>Client purchase order:</strong>"
+msgstr ""
+
+#. module: sale_client_purchase_order
+#: model_terms:ir.ui.view,arch_db:sale_client_purchase_order.invoice_report
+msgid "CIG"
+msgstr ""
+
+#. module: sale_client_purchase_order
+#: model_terms:ir.ui.view,arch_db:sale_client_purchase_order.invoice_report
+msgid "CUP"
+msgstr ""
+
+#. module: sale_client_purchase_order
+#: model:ir.model.fields,field_description:sale_client_purchase_order.field_sale_order__client_purchase_order_ids
+#: model_terms:ir.ui.view,arch_db:sale_client_purchase_order.view_sale_order_client_purchase_form
+msgid "Client purchase order"
+msgstr "Buono d’ordine"
+
+#. module: sale_client_purchase_order
+#: model:ir.model.fields,field_description:sale_client_purchase_order.field_res_partner__client_purchase_order_required
+#: model:ir.model.fields,field_description:sale_client_purchase_order.field_res_users__client_purchase_order_required
+#: model:ir.model.fields,field_description:sale_client_purchase_order.field_sale_order__client_purchase_order_required_rel
+msgid "Client purchase order required"
+msgstr "Buono d’ordine obbligatorio"
+
+#. module: sale_client_purchase_order
+#: model:ir.model,name:sale_client_purchase_order.model_res_partner
+msgid "Contact"
+msgstr "Contatto"
+
+#. module: sale_client_purchase_order
+#: model_terms:ir.ui.view,arch_db:sale_client_purchase_order.sale_portal_report
+msgid "Coupons"
+msgstr "Buoni d'ordine"
+
+#. module: sale_client_purchase_order
+#: model:ir.model.fields,field_description:sale_client_purchase_order.field_client_purchase_order__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: sale_client_purchase_order
+#: model:ir.model.fields,field_description:sale_client_purchase_order.field_client_purchase_order__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: sale_client_purchase_order
+#: model:ir.model.fields,field_description:sale_client_purchase_order.field_client_purchase_order__date
+#: model_terms:ir.ui.view,arch_db:sale_client_purchase_order.invoice_report
+#: model_terms:ir.ui.view,arch_db:sale_client_purchase_order.sale_portal_report
+msgid "Date"
+msgstr "Data"
+
+#. module: sale_client_purchase_order
+#: model:ir.model.fields,help:sale_client_purchase_order.field_client_purchase_order__date
+msgid "Date of client purchase order"
+msgstr ""
+
+#. module: sale_client_purchase_order
+#: model:ir.model.fields,field_description:sale_client_purchase_order.field_client_purchase_order__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: sale_client_purchase_order
+#: model_terms:ir.ui.view,arch_db:sale_client_purchase_order.invoice_report
+msgid "Document ID"
+msgstr "ID documento"
+
+#. module: sale_client_purchase_order
+#: model:ir.model.fields,field_description:sale_client_purchase_order.field_client_purchase_order__id
+msgid "ID"
+msgstr ""
+
+#. module: sale_client_purchase_order
+#: model:ir.model.fields,help:sale_client_purchase_order.field_sale_order__client_purchase_order_required_rel
+msgid ""
+"It indicates value of flag field of partner who has to use client purchase "
+"order or not"
+msgstr ""
+
+#. module: sale_client_purchase_order
+#: model:ir.model.fields,help:sale_client_purchase_order.field_res_partner__client_purchase_order_required
+#: model:ir.model.fields,help:sale_client_purchase_order.field_res_users__client_purchase_order_required
+msgid "It shows if partner has to use client purchase order or not"
+msgstr ""
+
+#. module: sale_client_purchase_order
+#: model:ir.model.fields,field_description:sale_client_purchase_order.field_client_purchase_order____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: sale_client_purchase_order
+#: model:ir.model.fields,field_description:sale_client_purchase_order.field_client_purchase_order__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: sale_client_purchase_order
+#: model:ir.model.fields,field_description:sale_client_purchase_order.field_client_purchase_order__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: sale_client_purchase_order
+#: model:ir.model.fields,help:sale_client_purchase_order.field_client_purchase_order__sale_order_id
+msgid "Link to sale order"
+msgstr ""
+
+#. module: sale_client_purchase_order
+#: model:ir.model.fields,help:sale_client_purchase_order.field_sale_order__client_purchase_order_ids
+msgid "List of client purchase order linked to sale order"
+msgstr ""
+
+#. module: sale_client_purchase_order
+#: model:ir.model.fields,field_description:sale_client_purchase_order.field_client_purchase_order__name
+#: model_terms:ir.ui.view,arch_db:sale_client_purchase_order.sale_portal_report
+msgid "Name"
+msgstr "Nome"
+
+#. module: sale_client_purchase_order
+#: model:ir.model.fields,help:sale_client_purchase_order.field_client_purchase_order__name
+msgid "Name of client purchase order"
+msgstr ""
+
+#. module: sale_client_purchase_order
+#: model_terms:ir.ui.view,arch_db:sale_client_purchase_order.invoice_report
+msgid "Numitem"
+msgstr "Numero articolo"
+
+#. module: sale_client_purchase_order
+#: model_terms:ir.ui.view,arch_db:sale_client_purchase_order.invoice_report
+msgid "Order agreement code"
+msgstr "Codice Commessa Convenzione"
+
+#. module: sale_client_purchase_order
+#: model_terms:ir.ui.view,arch_db:sale_client_purchase_order.invoice_report
+msgid "Related documents"
+msgstr "Documenti correlati"
+
+#. module: sale_client_purchase_order
+#: model:ir.model.fields,field_description:sale_client_purchase_order.field_client_purchase_order__sale_order_id
+msgid "Sale order"
+msgstr "Ordine di vendita"
+
+#. module: sale_client_purchase_order
+#: model:ir.model,name:sale_client_purchase_order.model_sale_order
+msgid "Sales Order"
+msgstr "Ordine di vendita"
+
+#. module: sale_client_purchase_order
+#: code:addons/sale_client_purchase_order/models/sale_order.py:0
+#, python-format
+msgid ""
+"There's not link to coupon required to partner sale. Specify coupon in "
+"specific tab."
+msgstr ""
+"Non è presente il riferimento al buono d'ordine che è obbligatorio per la "
+"vendita al cliente. Specificare il buono d'ordine nell'apposito tab."
+
+#. module: sale_client_purchase_order
+#: model_terms:ir.ui.view,arch_db:sale_client_purchase_order.invoice_report
+msgid "Type"
+msgstr "Tipo"
+
+#. module: sale_client_purchase_order
+#: model:ir.model,name:sale_client_purchase_order.model_client_purchase_order
+msgid "client.purchase.order"
+msgstr ""
+
+#. module: sale_client_purchase_order
+#: model_terms:ir.ui.view,arch_db:sale_client_purchase_order.sale_report
+msgid "in data"
+msgstr ""

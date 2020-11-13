@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- FORM View Wizard1 -->
+        <record model='ir.ui.view' id='wizard_import_file_pricelists_form'>
+            <field name='name'>import.file.pricelists.wizard.form</field>
+            <field name='model'>import.file.pricelists.wizard</field>
+            <field name='arch' type='xml'>
+                <form string='Import Purchase Pricelists'>
+                    <group>
+                        <field name="supplier_id" domain="[('supplier_rank','>', 0)]"/>
+                        <field name="pricelist_file" required="1" filename="name"/>
+                        <field name="date_start" required="1"/>
+                        <field name="date_end" required="1"/>
+                        <field name="family_ids" domain="[('supplier_id', '=', supplier_id)]"/>
+                    </group>
+                    <footer>
+                        <button name="import_pricelist"
+                                string="Import"
+                                type="object"
+                                class="oe_highlight"
+                        />
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <!-- Form View Wizard 2 -->
+        <record model='ir.ui.view' id='wizard_import_file_pricelists_form2'>
+            <field name='name'>import.file.pricelists.wizard.form2</field>
+            <field name='model'>import.file.pricelists.wizard</field>
+            <field name='arch' type='xml'>
+                <form string='Supplier Pricelist'>
+                    <field name="supplier_pricelist_ids">
+                        <tree editable="bottom" create='false' decoration-danger="not template_id">
+                            <field name="supplier_code" readonly="1"/>
+                            <field name="description_product" readonly="1"/>
+                            <field name="category_id" readonly="1"/>
+                            <field name="supplier_family_name" readonly="1"/>
+                            <field name="supplier_price" readonly="1"/>
+                            <field name="category_discounts" readonly="1"/>
+                            <field name="standard_price" readonly="1"/>
+                            <field name="fixed_price" readonly="1"/>
+                            <field name="min_qty" readonly="1"/>
+                            <field name="template_id" readonly="1" invisible="1"/>
+                            <field name="profit"/>
+                        </tree>
+                    </field>
+                    <footer>
+                        <button name="update_products"
+                                string="Update Products"
+                                type="object"
+                                class="oe_highlight"
+                        />
+                        <button name="turn_back"
+                                string="Turn back"
+                                type="object"
+                                class="oe_highlight"
+                        />
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="action_wizard_import_pricelists" model="ir.actions.act_window">
+            <field name="name">Import Pricelists</field>
+            <field name="res_model">import.file.pricelists.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+    </data>
+</odoo>

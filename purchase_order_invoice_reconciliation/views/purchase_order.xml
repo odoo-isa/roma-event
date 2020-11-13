@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- FORM View purchase.order  -->
+    <record model='ir.ui.view' id='purchase_order_reconcile_invoice_form'>
+        <field name='name'>purchase.order.reconcile.invoice.form</field>
+        <field name='model'>purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name='arch' type='xml'>
+            <!-- Remove the create invoice button -->
+            <xpath expr="//button[@name='action_view_invoice']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+             <xpath expr="//button[@name='action_view_invoice'][2]" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <!-- -->
+            <xpath expr="//field[@name='partner_ref']" position="after">
+                <field name="internal_reference"/>
+            </xpath>
+            <xpath expr="//header/button[last()]" position="after">
+                <button type="object"
+                        name="button_close_reconcile"
+                        string="Set as Invoiced"
+                        attrs="{'invisible': ['|', ('state', 'not in', ['purchase', 'done']), ('invoice_status', '=', 'invoiced')]}"/>
+                <field name="forced_as_billed" invisible="1"/>
+                <button type="object"
+                        name="button_reopen_invoice_state"
+                        string="Reopen invoice status"
+                        attrs="{'invisible': [('invoice_status', '!=', 'invoiced'), ('forced_as_billed', '!=', True)]}"/>
+            </xpath>
+            <xpath expr="//notebook/page[last()]" position="after">
+                <page name="reconciled_invoice" string="Reconciled Invoice(s)">
+                    <field name="invoice_purchase_order_line_reconcile_ids" readonly="1">
+                        <tree>
+                            <field name="invoice_id"/>
+                            <field name="qty"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+            <xpath expr="//field[@name='amount_total']" position="after">
+                <div class="oe_subtotal_footer_separator oe_inline">
+                    <label for="billed_amount_untaxed"/>
+                </div>
+                <field name="billed_amount_untaxed"
+                       attrs="{'invisible': [('state', '=', 'draft')]}"
+                       nolabel="1"
+                       class="oe_subtotal_footer_separator"
+                       widget="monetary"
+                       options="{'currency_field': 'currency_id'}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- FORM View  -->
+    <record model='ir.ui.view' id='view_move_vendor_bill_hide'>
+        <field name='name'>view.move.vendor.bill.hide.form</field>
+        <field name='model'>account.move</field>
+        <field name="inherit_id" ref="purchase.view_move_form_inherit_purchase"/>
+        <field name='arch' type='xml'>
+            <xpath expr="//field[@name='purchase_vendor_bill_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- TREE View  -->
+    <record model='ir.ui.view' id='purchase_order_tree_invoice_status'>
+        <field name='name'>purchase.order.tree.invoice.status</field>
+        <field name='model'>purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_tree"/>
+        <field name='arch' type='xml'>
+            <xpath expr="//field[@name='partner_ref']" position="after">
+                <field name="internal_reference" optional="hide"/>
+            </xpath>
+            <xpath expr="//field[@name='invoice_status']" position="attributes">
+                <attribute name="attrs">{}</attribute>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

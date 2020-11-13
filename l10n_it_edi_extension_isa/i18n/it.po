@@ -1,0 +1,1144 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_it_edi_extension_isa
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-22 09:06+0000\n"
+"PO-Revision-Date: 2020-09-22 11:21+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: it\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#. module: l10n_it_edi_extension_isa
+#: code:addons/l10n_it_edi_extension_isa/models/account_move.py:0
+#, python-format
+msgid "%s has an amount of 0.0, you must indicate the kind of exoneration."
+msgstr "%s ha una quantità pari a 0.0, bisogna indicare il tipo di esonero."
+
+#. module: l10n_it_edi_extension_isa
+#: code:addons/l10n_it_edi_extension_isa/models/account_move.py:0
+#, python-format
+msgid "%s must have a VAT number"
+msgstr "Per l'azienda %s deve essere impostata la partita IVA"
+
+#. module: l10n_it_edi_extension_isa
+#: code:addons/l10n_it_edi_extension_isa/models/account_move.py:0
+#, python-format
+msgid "%s must have a city."
+msgstr "Per l'azienda %s o per il cliente della Fattura, deve essere impostata una città."
+
+#. module: l10n_it_edi_extension_isa
+#: code:addons/l10n_it_edi_extension_isa/models/account_move.py:0
+#, python-format
+msgid "%s must have a codice fiscale number"
+msgstr "Per l'azienda %s deve essere impostato il codice fiscale"
+
+#. module: l10n_it_edi_extension_isa
+#: code:addons/l10n_it_edi_extension_isa/models/account_move.py:0
+#, python-format
+msgid "%s must have a country"
+msgstr "Per l'azienda %s deve essere impostata una nazione"
+
+#. module: l10n_it_edi_extension_isa
+#: code:addons/l10n_it_edi_extension_isa/models/account_move.py:0
+#, python-format
+msgid "%s must have a country."
+msgstr "Per l'azienda %s o per il cliente della Fattura, deve essere impostata una nazione"
+
+#. module: l10n_it_edi_extension_isa
+#: code:addons/l10n_it_edi_extension_isa/models/account_move.py:0
+#, python-format
+msgid "%s must have a post code of length 5."
+msgstr "%s deve avere un codice postale di lunghezza 5."
+
+#. module: l10n_it_edi_extension_isa
+#: code:addons/l10n_it_edi_extension_isa/models/account_move.py:0
+#, python-format
+msgid "%s must have a post code."
+msgstr "%s deve avere un codice postale."
+
+#. module: l10n_it_edi_extension_isa
+#: code:addons/l10n_it_edi_extension_isa/models/account_move.py:0
+#, python-format
+msgid "%s must have a province."
+msgstr "Il cliente %s deve avere impostata la provincia"
+
+#. module: l10n_it_edi_extension_isa
+#: code:addons/l10n_it_edi_extension_isa/models/account_move.py:0
+#, python-format
+msgid "%s must have a street."
+msgstr "%s deve essere impostato un indirizzo."
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.account_move_form_for_import_xml
+msgid ""
+"<span class=\"o_form_label mx-3 oe_edit_only\" attrs=\"{'invisible': [ '|', '|', '|', ('state', '!"
+"=', 'draft'), ('invoice_payment_term_id', '!=', False), ('type', 'not in', ('out_invoice', "
+"'out_refund', 'in_invoice', 'in_refund', 'out_receipt', 'in_receipt'))]}\"> or </span>"
+msgstr ""
+"<span class=\"o_form_label mx-3 oe_edit_only\" attrs=\"{'invisible': [ '|', '|', '|', ('state', '!"
+"=', 'draft'), ('invoice_payment_term_id', '!=', False), ('type', 'not in', ('out_invoice', "
+"'out_refund', 'in_invoice', 'in_refund', 'out_receipt', 'in_receipt'))]}\"> o </span>"
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.account_move_form_for_import_xml
+msgid ""
+"<span class=\"o_form_label\" attrs=\"{'invisible': [('invoice_sequence_number_next_prefix', '=', "
+"False)]}\">First Number:</span>"
+msgstr ""
+"<span class=\"o_form_label\" attrs=\"{'invisible': [('invoice_sequence_number_next_prefix', '=', "
+"False)]}\">Primo Numero:</span>"
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.account_move_form_for_import_xml
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.edi_ext_isa_view_move_form
+msgid ""
+"<strong>Warning!</strong>The total amount of the invoice does not match with the total amount of the "
+"xml file"
+msgstr ""
+"<strong>Attenzione!</strong>L'importo totale delle fatture non corrisponde all'importo totale del "
+"file xml"
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.account_move_form_for_import_xml
+msgid "Account Entry"
+msgstr "Registrazione Contabile"
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.account_move_form_for_import_xml
+msgid "Accounting"
+msgstr "Contabilità"
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.account_move_form_for_import_xml
+msgid "Accounting Date"
+msgstr "Data Registrazione"
+
+#. module: l10n_it_edi_extension_isa
+#. openerp-web
+#: code:addons/l10n_it_edi_extension_isa/static/src/js/bills_tree_upload.js:0
+#, python-format
+msgid "Add Attachment"
+msgstr "Aggiungi gli allegati"
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.account_move_form_for_import_xml
+msgid "Add a line"
+msgstr "Aggiungi riga"
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.account_move_form_for_import_xml
+msgid "Add a note"
+msgstr "Aggiunti una nota"
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.account_move_form_for_import_xml
+msgid "Add a section"
+msgstr "Aggiungi una sezione"
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.account_move_form_for_import_xml
+msgid "Add an internal note..."
+msgstr "Aggiungi una nota interna..."
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__l10n_it_edi_related_document__document_type__agreement
+msgid "Agreement"
+msgstr "Convenzione"
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.res_config_settings_view_form
+msgid "Allows to create and send E-Invoice in separate steps"
+msgstr "Permette di creare e inviare Fatture Elettroniche in passaggi separati"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_edi_extension_isa.field_res_company__fatturapa_art73
+#: model:ir.model.fields,field_description:l10n_it_edi_extension_isa.field_res_config_settings__fatturapa_art73
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.res_config_settings_view_form
+msgid "Art73"
+msgstr "Art73"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__payment_type__l10n_it_edi_payment_method__mp02
+msgid "Assegno"
+msgstr "Assegno"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__payment_type__l10n_it_edi_payment_method__mp03
+msgid "Assegno Circolare"
+msgstr "Assegno Circolare"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__res_company__l10n_it_edi_preview_style__fogliostileassosoftware_v1_1_xsl
+msgid "AssoSoftware v1.1"
+msgstr "AssoSoftware v1.1"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model,name:l10n_it_edi_extension_isa.model_ir_attachment
+msgid "Attachment"
+msgstr "Allegato"
+
+#. module: l10n_it_edi_extension_isa
+#: code:addons/l10n_it_edi_extension_isa/models/account_move.py:0
+#, python-format
+msgid "Attachment File isn't present for invoice with number: %s"
+msgstr "Il file xml non è presente per la fattura con numero: %s"
+
+#. module: l10n_it_edi_extension_isa
+#: code:addons/l10n_it_edi_extension_isa/models/account_move.py:0
+#, python-format
+msgid "Attachment from XML"
+msgstr "Allegato dall'XML"
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.account_move_form_for_import_xml
+msgid "Auto-Complete"
+msgstr "Autocompletamento"
+
+#. module: l10n_it_edi_extension_isa
+#: code:addons/l10n_it_edi_extension_isa/models/account_move.py:0
+#, python-format
+msgid "Bank account not found, useful informations from XML file:"
+msgstr "Conto bancario non trovato, informazioni utili dal file XML:"
+
+#. module: l10n_it_edi_extension_isa
+#: code:addons/l10n_it_edi_extension_isa/models/ir_attachment.py:0
+#, python-format
+msgid "Base64 encoded file %s."
+msgstr "File con codifica Base64 %s."
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.account_move_form_for_import_xml
+msgid "Bill Date"
+msgstr "Data Fattura"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__payment_type__l10n_it_edi_payment_method__mp07
+msgid "Bollettino bancario"
+msgstr "Bollettino bancario"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__payment_type__l10n_it_edi_payment_method__mp18
+msgid "Bollettino di c/c postale"
+msgstr "Bollettino di c/c postale"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__payment_type__l10n_it_edi_payment_method__mp05
+msgid "Bonifico"
+msgstr "Bonifico"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_edi_extension_isa.field_l10n_it_edi_related_document__cig
+msgid "CIG"
+msgstr "CIG"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_edi_extension_isa.field_l10n_it_edi_related_document__cup
+msgid "CUP"
+msgstr "CUP"
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.account_invoice_import_wizard_form_view
+msgid "Cancel"
+msgstr "Annulla"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__payment_type__l10n_it_edi_payment_method__mp08
+msgid "Carta di Pagamento"
+msgstr "Carta di Pagamento"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model,name:l10n_it_edi_extension_isa.model_res_company
+msgid "Companies"
+msgstr "Aziende"
+
+#. module: l10n_it_edi_extension_isa
+#: code:addons/l10n_it_edi_extension_isa/models/account_move.py:0
+#, python-format
+msgid "Company not found with codice fiscale: %s. The company's user is set by default."
+msgstr "Azienda non trovata con codice fiscale: %s. L'utente dell'azienda è impostato come default."
+
+#. module: l10n_it_edi_extension_isa
+#: code:addons/l10n_it_edi_extension_isa/models/account_move.py:0
+#, python-format
+msgid "Company not found. The company's user is set by default."
+msgstr "Azienda non trovata. L'utente dell'azienda è impostato come default."
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model,name:l10n_it_edi_extension_isa.model_res_config_settings
+msgid "Config Settings"
+msgstr "Impostazioni di configurazione"
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.edi_ext_isa_notify_message_form
+msgid "Confirm"
+msgstr "Conferma"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__payment_type__l10n_it_edi_payment_method__mp01
+msgid "Contanti"
+msgstr "Contanti"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__payment_type__l10n_it_edi_payment_method__mp04
+msgid "Contanti presso Tesoreria"
+msgstr "Contanti presso Tesoreria"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__l10n_it_edi_related_document__document_type__contract
+msgid "Contract"
+msgstr "Contratto"
+
+#. module: l10n_it_edi_extension_isa
+#: code:addons/l10n_it_edi_extension_isa/models/ir_attachment.py:0
+#, python-format
+msgid "Corrupted attachment %s."
+msgstr "Allegato corrotto %s."
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.res_config_settings_view_form
+msgid "Create and Send E-invoice in separate steps"
+msgstr "Creazione e Invio di Fatture Elettroniche in passaggi separati"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_edi_extension_isa.field_account_invoice_import_wizard__create_uid
+#: model:ir.model.fields,field_description:l10n_it_edi_extension_isa.field_l10n_it_edi_related_document__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_edi_extension_isa.field_account_invoice_import_wizard__create_date
+#: model:ir.model.fields,field_description:l10n_it_edi_extension_isa.field_l10n_it_edi_related_document__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_edi_extension_isa.field_res_company__create_and_send_einvoices_in_separate_steps
+#: model:ir.model.fields,field_description:l10n_it_edi_extension_isa.field_res_config_settings__create_and_send_einvoices_in_separate_steps
+msgid "Creation and Sending of Electronic Invoices in separate steps"
+msgstr "Creazione e Invio di Fatture Elettroniche in passaggi separati"
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.account_move_form_for_import_xml
+msgid "Customer"
+msgstr "Cliente"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__l10n_it_edi_related_document__document_type__ddt
+msgid "DDT"
+msgstr "DDT"
+
+#. module: l10n_it_edi_extension_isa
+#: code:addons/l10n_it_edi_extension_isa/models/account_move.py:0
+#, python-format
+msgid "DISCOUNT: "
+msgstr "SCONTO: "
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_edi_extension_isa.field_l10n_it_edi_related_document__date
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.account_move_form_for_import_xml
+msgid "Date"
+msgstr "Data"
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.account_move_form_for_import_xml
+msgid "Description"
+msgstr "Descrizione"
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.account_move_form_for_import_xml
+msgid "Disc.%"
+msgstr "Sconto%"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_edi_extension_isa.field_account_invoice_import_wizard__display_name
+#: model:ir.model.fields,field_description:l10n_it_edi_extension_isa.field_l10n_it_edi_related_document__display_name
+msgid "Display Name"
+msgstr "Nome "
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_edi_extension_isa.field_l10n_it_edi_related_document__name
+msgid "Document ID"
+msgstr "ID Documento"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__payment_type__l10n_it_edi_payment_method__mp16
+msgid "Domiciliazione bancaria"
+msgstr "Domiciliazione bancaria"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__payment_type__l10n_it_edi_payment_method__mp17
+msgid "Domiciliazione postale"
+msgstr "Domiciliazione postale"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.actions.server,name:l10n_it_edi_extension_isa.download_fatturapa_action
+msgid "Download E-Invoice"
+msgstr "Scarica Fattura Elettronica"
+
+#. module: l10n_it_edi_extension_isa
+#: code:addons/l10n_it_edi_extension_isa/models/account_move.py:0
+#, python-format
+msgid "EXTRA CHARGE: "
+msgstr "SUPPLEMENTO: "
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_edi_extension_isa.field_payment_type__l10n_it_edi_payment_method
+msgid "Electronic Invoice Payment Method"
+msgstr "Modalità di Pagamento della Fattura Elettronica"
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.res_config_settings_view_form
+msgid "Electronic Invoicing Configuration"
+msgstr "Configurazione Fattura Elettronica"
+
+#. module: l10n_it_edi_extension_isa
+#: code:addons/l10n_it_edi_extension_isa/wizard/account_invoice_import_wizard.py:0
+#, python-format
+msgid "Error! Is not possibile to import multiple time the same invoice. Invalid xml uploaded: %s"
+msgstr "Errore! Impossibile importare più volte la stessa fattura: lista degli xml già presenti: %s"
+
+#. module: l10n_it_edi_extension_isa
+#: code:addons/l10n_it_edi_extension_isa/controllers/l10n_it_edi_controller_preview.py:0
+#, python-format
+msgid ""
+"Error. Is not possible to show the preview of the xml invoice because it is \n"
+"                not linked to this invoice. Please export the xml file and then click on Show Preview"
+msgstr ""
+"Errore. Non è possibile visualizzare la preview della fattura xml perché non c'è un file legato a "
+"questa fattura. Procedi alla generazione dell'xml e poi clicca su Anteprima."
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_edi_extension_isa.field_account_tax__l10n_it_kind_exoneration
+msgid "Exoneration"
+msgstr "Esonero"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,help:l10n_it_edi_extension_isa.field_account_tax__l10n_it_kind_exoneration
+msgid "Exoneration type"
+msgstr "Tipo Esonero"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_edi_extension_isa.field_res_company__fatturapa_sequence
+#: model:ir.model.fields,field_description:l10n_it_edi_extension_isa.field_res_config_settings__fatturapa_sequence
+msgid "Fattura PA sequence"
+msgstr "Sequenza della Fattura PA."
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__res_company__l10n_it_edi_preview_style__fatturaordinaria_v1_2_1_xsl
+msgid "FatturaOrdinaria v1.2.1"
+msgstr "FatturaOrdinaria v1.2.1"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_edi_extension_isa.field_account_invoice_import_wizard__attachment_ids
+msgid "Files"
+msgstr "Files"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,help:l10n_it_edi_extension_isa.field_account_move__create_and_send_einvoices_in_separate_steps
+msgid "Functional Fields"
+msgstr "Campi Funzionale"
+
+#. module: l10n_it_edi_extension_isa
+#: code:addons/l10n_it_edi_extension_isa/models/account_move.py:0
+#, python-format
+msgid "GLOBAL DISCOUNT"
+msgstr "SCONTO TOTALE"
+
+#. module: l10n_it_edi_extension_isa
+#: code:addons/l10n_it_edi_extension_isa/models/account_move.py:0
+#, python-format
+msgid "GLOBAL EXTRA CHARGE"
+msgstr "SUPPLEMENTO TOTALE"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__payment_type__l10n_it_edi_payment_method__mp15
+msgid "Giroconto su conti di contabilità speciale"
+msgstr "Giroconto su conti di contabilità speciale"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_edi_extension_isa.field_account_invoice_import_wizard__id
+#: model:ir.model.fields,field_description:l10n_it_edi_extension_isa.field_l10n_it_edi_related_document__id
+msgid "ID"
+msgstr "ID"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,help:l10n_it_edi_extension_isa.field_res_company__create_and_send_einvoices_in_separate_steps
+#: model:ir.model.fields,help:l10n_it_edi_extension_isa.field_res_config_settings__create_and_send_einvoices_in_separate_steps
+msgid ""
+"If set, allows to edit basic behavior of invoice validation: only the invoice is valid.Then user can "
+"use the Generate Electronic Invoice button to generate the electronic invoice."
+msgstr ""
+"Se impostato, permette di modificare il comportamento di base relativo alla convalida della fattura: "
+"l'utente può utilizzare il pulsante genera Fattura Elettronica per la generazione."
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.account_invoice_import_wizard_form_view
+msgid "Import"
+msgstr "Importa"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.actions.act_window,name:l10n_it_edi_extension_isa.account_invoice_import_wizard_action
+msgid "Import Vendor Bills"
+msgstr "Importa Fatture Fornitore"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model,name:l10n_it_edi_extension_isa.model_account_invoice_import_wizard
+msgid "Import Your Vendor Bills from Files."
+msgstr "Importa le fatture del fornitore dai file."
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model,name:l10n_it_edi_extension_isa.model_fetchmail_server
+msgid "Incoming Mail Server"
+msgstr "Server posta in arrivo"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,help:l10n_it_edi_extension_isa.field_l10n_it_edi_related_document__cig
+msgid "Indicates cig about related document"
+msgstr "Indica il cig del documento correlato"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,help:l10n_it_edi_extension_isa.field_l10n_it_edi_related_document__code
+msgid "Indicates code about related document"
+msgstr "Indica il codice del documento correlato"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,help:l10n_it_edi_extension_isa.field_l10n_it_edi_related_document__cup
+msgid "Indicates cup about related document"
+msgstr "Indica il cup del documento correlato"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,help:l10n_it_edi_extension_isa.field_l10n_it_edi_related_document__date
+msgid "Indicates date about related document"
+msgstr "Indica la data del documento correlato"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,help:l10n_it_edi_extension_isa.field_l10n_it_edi_related_document__move_id
+msgid "Indicates reference for associated move"
+msgstr "Indica il riferimento del movimento associato"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,help:l10n_it_edi_extension_isa.field_l10n_it_edi_related_document__move_line_id
+msgid "Indicates reference for associated move line"
+msgstr "Indica il riferimento delle linee di movimento associato"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,help:l10n_it_edi_extension_isa.field_l10n_it_edi_related_document__document_type
+msgid "Indicates type that related document is associated"
+msgstr "Indica il tipo per il quale è associato il documento correlato"
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.res_config_settings_view_form
+msgid ""
+"Indicates whether the document has been issued in accordance with the terms and conditions\n"
+"                                    established by ministerial."
+msgstr ""
+"Indica se il documento è stato emesso in conformità con i termini e le condizioni stabilite dal "
+"ministero"
+
+#. module: l10n_it_edi_extension_isa
+#: code:addons/l10n_it_edi_extension_isa/models/ir_attachment.py:0
+#, python-format
+msgid "Invalid xml %s."
+msgstr "File XML non valido %s."
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.account_move_form_for_import_xml
+msgid "Invoice"
+msgstr "Fattura"
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.account_move_form_for_import_xml
+msgid "Invoice Date"
+msgstr "Data Fattura"
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.account_move_form_for_import_xml
+msgid "Invoice Lines"
+msgstr "Righe Fattura"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_edi_extension_isa.field_account_move__is_equal_amount
+msgid "Is equal amount"
+msgstr "Importo Uguale"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_edi_extension_isa.field_account_invoice_import_wizard__journal_id
+msgid "Journal"
+msgstr "Registro"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model,name:l10n_it_edi_extension_isa.model_account_move
+msgid "Journal Entries"
+msgstr "Registrazioni contabili"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model,name:l10n_it_edi_extension_isa.model_account_move_line
+msgid "Journal Item"
+msgstr "Movimento contabile"
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.account_move_form_for_import_xml
+msgid "Journal Items"
+msgstr "Movimenti Contabili"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,help:l10n_it_edi_extension_isa.field_account_invoice_import_wizard__journal_id
+msgid "Journal where to generate the bills"
+msgstr "Registor usato per la geneazione delle fatture"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_edi_extension_isa.field_account_invoice_import_wizard____last_update
+#: model:ir.model.fields,field_description:l10n_it_edi_extension_isa.field_l10n_it_edi_related_document____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_edi_extension_isa.field_account_invoice_import_wizard__write_uid
+#: model:ir.model.fields,field_description:l10n_it_edi_extension_isa.field_l10n_it_edi_related_document__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_edi_extension_isa.field_account_invoice_import_wizard__write_date
+#: model:ir.model.fields,field_description:l10n_it_edi_extension_isa.field_l10n_it_edi_related_document__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_edi_extension_isa.field_l10n_it_edi_related_document__line_ref
+msgid "LineRef"
+msgstr "LineaRiF"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__payment_type__l10n_it_edi_payment_method__mp13
+msgid "MAV"
+msgstr "MAV"
+
+#. module: l10n_it_edi_extension_isa
+#: code:addons/l10n_it_edi_extension_isa/controllers/l10n_it_edi_controller_preview.py:0
+#, python-format
+msgid "No XML Invoice found."
+msgstr "Xml Fattura non trovato"
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.account_move_form_for_import_xml
+msgid "Note"
+msgstr "Note "
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_edi_extension_isa.field_l10n_it_edi_related_document__num_item
+msgid "NumItem"
+msgstr "NumeroElemento"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__l10n_it_edi_related_document__document_type__order
+msgid "Order"
+msgstr "Ordine"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_edi_extension_isa.field_l10n_it_edi_related_document__code
+msgid "Order Agreement Code"
+msgstr "Codice Commessa Convenzione"
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.account_move_form_for_import_xml
+msgid "Other Info"
+msgstr "Altre Informazioni"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__payment_type__l10n_it_edi_payment_method__mp23
+msgid "PagoPA"
+msgstr "PagoPA"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model,name:l10n_it_edi_extension_isa.model_payment_type
+msgid "Payment Type"
+msgstr "Tipo di Pagamento"
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.account_move_form_for_import_xml
+msgid "Payments"
+msgstr "Pagamenti"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_edi_extension_isa.field_res_company__l10n_it_edi_preview_style
+#: model:ir.model.fields,field_description:l10n_it_edi_extension_isa.field_res_config_settings__l10n_it_edi_preview_style
+msgid "Preview Format Style"
+msgstr "Anteprima stile del formato"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_edi_extension_isa.field_account_move__l10n_it_edi_preview_link
+msgid "Preview link"
+msgstr "Anteprima"
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.account_move_form_for_import_xml
+msgid "Price"
+msgstr "Prezzo"
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.account_move_form_for_import_xml
+msgid "Quantity:"
+msgstr "Quantità"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__payment_type__l10n_it_edi_payment_method__mp14
+msgid "Quietanza erario"
+msgstr "Quietanza erario"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__payment_type__l10n_it_edi_payment_method__mp12
+msgid "RIBA"
+msgstr "RIBA"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__payment_type__l10n_it_edi_payment_method__mp09
+msgid "RID"
+msgstr ""
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__payment_type__l10n_it_edi_payment_method__mp10
+msgid "RID Utenze"
+msgstr ""
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__payment_type__l10n_it_edi_payment_method__mp11
+msgid "RID veloce"
+msgstr ""
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,help:l10n_it_edi_extension_isa.field_l10n_it_edi_related_document__num_item
+msgid "Rapresents the reference to the line of an external document"
+msgstr "Indica il numero di riga di riferimento nel documento correlato."
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__l10n_it_edi_related_document__document_type__reception
+msgid "Reception"
+msgstr "Ricezione"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model,name:l10n_it_edi_extension_isa.model_l10n_it_edi_related_document
+#: model:ir.model.fields,field_description:l10n_it_edi_extension_isa.field_account_move__related_document_ids
+#: model:ir.model.fields,field_description:l10n_it_edi_extension_isa.field_account_move_line__related_document_line_ids
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.account_move_form_for_import_xml
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.edi_ext_isa_view_move_form
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.view_move_form
+msgid "Related Documents"
+msgstr "Documenti Correlati"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__l10n_it_edi_related_document__document_type__invoice
+msgid "Related Invoice"
+msgstr "Fattura Collegata"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_edi_extension_isa.field_l10n_it_edi_related_document__move_id
+msgid "Related Move"
+msgstr "Movimento Collegato"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_edi_extension_isa.field_l10n_it_edi_related_document__move_line_id
+msgid "Related Move Line"
+msgstr "Linea Movimento Collegato"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,help:l10n_it_edi_extension_isa.field_account_move__related_document_ids
+#: model:ir.model.fields,help:l10n_it_edi_extension_isa.field_account_move_line__related_document_line_ids
+msgid "Represent related document associated to the move"
+msgstr "Indica i documenti correlati al movimento."
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,help:l10n_it_edi_extension_isa.field_l10n_it_edi_related_document__line_ref
+msgid "Represents the reference to the move line"
+msgstr "Rappresenta il riferimento alla linea del movimento"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_edi_extension_isa.field_account_move__rounding_on_document
+#: model:ir.model.fields,help:l10n_it_edi_extension_isa.field_account_move__rounding_on_document
+msgid "Rounding on Document"
+msgstr "Arrotondamento sul Documento"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__payment_type__l10n_it_edi_payment_method__mp19
+msgid "SEPA Direct Debit"
+msgstr "SEPA Debito Diretto"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__payment_type__l10n_it_edi_payment_method__mp21
+msgid "SEPA Direct Debit B2B"
+msgstr "SEPA Debito Diretto B2B"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__payment_type__l10n_it_edi_payment_method__mp20
+msgid "SEPA Direct Debit CORE"
+msgstr "SEPA Debito Diretto CORE"
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.account_move_form_for_import_xml
+msgid "Section"
+msgstr "Sezione"
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.account_move_form_for_import_xml
+msgid "Select an old vendor bill"
+msgstr "Selezionare una fattura fornitore precedente"
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.view_move_form
+msgid "Send E-invoice"
+msgstr "Invia Fattura Elettronica"
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.res_config_settings_view_form
+msgid "Sequence"
+msgstr "Sequenza"
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.account_move_form_for_import_xml
+msgid "Source Document"
+msgstr "Documento d'origine"
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.account_move_form_for_import_xml
+msgid "Subtotal"
+msgstr "Subtotale"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model,name:l10n_it_edi_extension_isa.model_account_tax
+msgid "Tax"
+msgstr "Imposta"
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.account_move_form_for_import_xml
+msgid "Tax Grids"
+msgstr "Griglia Fiscale"
+
+#. module: l10n_it_edi_extension_isa
+#: code:addons/l10n_it_edi_extension_isa/models/account_move.py:0
+#, python-format
+msgid "Tax not found with percentage: %s and exoneration %s for the article: %s"
+msgstr "Non trovata Imposta con percentuale: %s ed esonero %s per l'articolo: %s"
+
+#. module: l10n_it_edi_extension_isa
+#: code:addons/l10n_it_edi_extension_isa/models/account_move.py:0
+#, python-format
+msgid "Tax not found with percentage: %s for the article: %s"
+msgstr "Non trovata Imposta con percentuale: %s per l'articolo: %s"
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.account_move_form_for_import_xml
+msgid "Taxes Applied"
+msgstr "Imposte Applicate"
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.account_move_form_for_import_xml
+msgid "Terms"
+msgstr "Condizioni"
+
+#. module: l10n_it_edi_extension_isa
+#: code:addons/l10n_it_edi_extension_isa/models/account_move.py:0
+#, python-format
+msgid "The buyer, %s, or his company must have either a VAT number either a tax code (Codice Fiscale)."
+msgstr "L'acquirente, %s, o la sua azienda devono avere un numero di partita IVA o un codice fiscale."
+
+#. module: l10n_it_edi_extension_isa
+#: code:addons/l10n_it_edi_extension_isa/models/account_move.py:0
+#, python-format
+msgid "The maximum length for VAT number is 30. %s have a VAT number too long: %s."
+msgstr "La lunghezza massimo per la partita IVA è 30. %s ha un numero di partita IVA troppo lungo: %s."
+
+#. module: l10n_it_edi_extension_isa
+#: code:addons/l10n_it_edi_extension_isa/models/account_move.py:0
+#, python-format
+msgid "The seller's company must have a tax system."
+msgstr "L'azienda del venditore deve avere un Sistema Fiscale."
+
+#. module: l10n_it_edi_extension_isa
+#: code:addons/l10n_it_edi_extension_isa/models/ir_mail_server.py:0
+#, python-format
+msgid "The xml file is badly formatted : {}"
+msgstr "Il file xml contiene un errore di formattazione : {}"
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.res_config_settings_view_form
+msgid ""
+"This field is a link to the sequence used to set progressive number on invoice xml\n"
+"                                    when file is generated."
+msgstr ""
+"Questo campo rappresenta la sequenza usata per incrementare l'identificativo della fattura xml "
+"quando il file viene generato"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,help:l10n_it_edi_extension_isa.field_res_company__fatturapa_sequence
+#: model:ir.model.fields,help:l10n_it_edi_extension_isa.field_res_config_settings__fatturapa_sequence
+msgid ""
+"This field is a link to the sequence used to set progressive number on invoice xml when file is "
+"generated"
+msgstr ""
+"Questo campo rappresenta la sequenza usata per incrementare l'identificativo della fattura xml "
+"quando il file viene generato"
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.account_move_form_for_import_xml
+msgid "Total"
+msgstr "Totale"
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.account_move_form_for_import_xml
+msgid "Total Credit"
+msgstr "Totale Crediti"
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.account_move_form_for_import_xml
+msgid "Total Debit"
+msgstr "Totale Debiti"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_edi_extension_isa.field_account_move__l10n_it_total_amount
+msgid "Total Invoice Amount"
+msgstr "Importo totale della Fattura"
+
+#. module: l10n_it_edi_extension_isa
+#: code:addons/l10n_it_edi_extension_isa/models/account_move.py:0
+#, python-format
+msgid "Total amount from the XML File: %s"
+msgstr "Importo proveniente dal file XML: %s"
+
+#. module: l10n_it_edi_extension_isa
+#: code:addons/l10n_it_edi_extension_isa/models/account_move.py:0
+#, python-format
+msgid "Transport informations from XML file:"
+msgstr "Informazioni sul Trasporto dal file XML:"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__payment_type__l10n_it_edi_payment_method__mp22
+msgid "Trattenuta su somme già riscosse"
+msgstr "Trattenuta su somme già riscosse"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,help:l10n_it_edi_extension_isa.field_account_move__is_equal_amount
+msgid "True if value of the total amount of invoice is different of total amount coming from SDI"
+msgstr "Vero se l'importo totale della fattura è diverso da quello proveniente dallo SDI"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_edi_extension_isa.field_l10n_it_edi_related_document__document_type
+msgid "Type"
+msgstr "Tipo"
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.account_move_form_for_import_xml
+msgid "Unit Price:"
+msgstr "Prezzo Unitario: "
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.account_move_form_for_import_xml
+msgid "UoM"
+msgstr "Unità di Misura"
+
+#. module: l10n_it_edi_extension_isa
+#. openerp-web
+#: code:addons/l10n_it_edi_extension_isa/static/src/xml/bills_tree_upload.xml:0
+#, python-format
+msgid "Upload"
+msgstr "Carica"
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.account_invoice_import_wizard_form_view
+msgid "Upload Files"
+msgstr "Carica File"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__payment_type__l10n_it_edi_payment_method__mp06
+msgid "Vaglia cambiario"
+msgstr "Vaglia cambiario"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,help:l10n_it_edi_extension_isa.field_account_move__l10n_it_total_amount
+msgid "Value of the total amount coming from SDI"
+msgstr "Valore del'importo totale proveniente dallo SDI"
+
+#. module: l10n_it_edi_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_edi_extension_isa.account_move_form_for_import_xml
+msgid "Vendor"
+msgstr "Fornitore"
+
+#. module: l10n_it_edi_extension_isa
+#: code:addons/l10n_it_edi_extension_isa/models/account_move.py:0
+#, python-format
+msgid "Vendor not found, useful informations from XML file:"
+msgstr "Fornitore non trovato, informazioni utili dal file XML:"
+
+#. module: l10n_it_edi_extension_isa
+#: code:addons/l10n_it_edi_extension_isa/models/account_move.py:0
+#, python-format
+msgid "Xml File isn't present for invoice with number: %s"
+msgstr "Il file xml non è presente per la fattura con numero: %s"
+
+#. module: l10n_it_edi_extension_isa
+#: code:addons/l10n_it_edi_extension_isa/models/account_move.py:0
+#, python-format
+msgid "You can only import invoice concern your current company: %s"
+msgstr "Si possono importare solo le fatture relative all'azienda corrente: %s"
+
+#. module: l10n_it_edi_extension_isa
+#: code:addons/l10n_it_edi_extension_isa/models/account_move_line.py:0
+#, python-format
+msgid "You must select one and only one tax by line."
+msgstr "Puoi selezionare solo un'imposta per riga fattura."
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__account_tax__l10n_it_kind_exoneration__n1
+msgid "[N1] Escluse ex art. 15"
+msgstr ""
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__account_tax__l10n_it_kind_exoneration__n2_1
+msgid "[N2.1] Non soggette ad IVA ai sensi degli artt. da 7 a 7-septies del DPR 633/72"
+msgstr ""
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__account_tax__l10n_it_kind_exoneration__n2_2
+msgid "[N2.2] Non soggette - altri casi"
+msgstr ""
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__account_tax__l10n_it_kind_exoneration__n2
+msgid "[N2] Non soggette"
+msgstr ""
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__account_tax__l10n_it_kind_exoneration__n3_1
+msgid "[N3.1] Non imponibili - esportazioni "
+msgstr ""
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__account_tax__l10n_it_kind_exoneration__n3_2
+msgid "[N3.2] Non imponibili - cessioni intracomunitarie"
+msgstr ""
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__account_tax__l10n_it_kind_exoneration__n3_3
+msgid "[N3.3] Non imponibili - cessioni verso San Marino"
+msgstr ""
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__account_tax__l10n_it_kind_exoneration__n3_4
+msgid "[N3.4] Non imponibili - operazioni assimilate alle cessioni all'esportazione"
+msgstr ""
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__account_tax__l10n_it_kind_exoneration__n3_5
+msgid "[N3.5] Non imponibili - a seguito di dichiarazioni d'intento"
+msgstr ""
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__account_tax__l10n_it_kind_exoneration__n3_6
+msgid "[N3.6] Non imponibili - altre operazioni che non concorrono alla formazione del plafond"
+msgstr ""
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__account_tax__l10n_it_kind_exoneration__n3
+msgid "[N3] Non imponibili"
+msgstr ""
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__account_tax__l10n_it_kind_exoneration__n4
+msgid "[N4] Esenti"
+msgstr ""
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__account_tax__l10n_it_kind_exoneration__n5
+msgid "[N5] Regime del margine / IVA non esposta in fattura"
+msgstr ""
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__account_tax__l10n_it_kind_exoneration__n6_1
+msgid "[N6.1] Inversione contabile - cessione di rottami e altri materiali di recupero"
+msgstr ""
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__account_tax__l10n_it_kind_exoneration__n6_2
+msgid "[N6.2] Inversione contabile - cessione di oro e argento puro"
+msgstr ""
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__account_tax__l10n_it_kind_exoneration__n6_3
+msgid "[N6.3] Inversione contabile - subappalto nel settore edile"
+msgstr ""
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__account_tax__l10n_it_kind_exoneration__n6_4
+msgid "[N6.4] Inversione contabile - cessione di fabbricati"
+msgstr ""
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__account_tax__l10n_it_kind_exoneration__n6_5
+msgid "[N6.5] Inversione contabile - cessione di telefoni cellularI"
+msgstr ""
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__account_tax__l10n_it_kind_exoneration__n6_6
+msgid "[N6.6] Inversione contabile - cessione di prodotti elettronici"
+msgstr ""
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__account_tax__l10n_it_kind_exoneration__n6_7
+msgid "[N6.7] Inversione contabile - prestazioni comparto edile e settori connessi"
+msgstr ""
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__account_tax__l10n_it_kind_exoneration__n6_8
+msgid "[N6.8] Inversione contabile - operazioni settore energetico"
+msgstr ""
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__account_tax__l10n_it_kind_exoneration__n6_9
+msgid "[N6.9] Inversione contabile - altri casi"
+msgstr ""
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__account_tax__l10n_it_kind_exoneration__n6
+msgid ""
+"[N6] Inversione contabile (per le operazioni in reverse charge ovvero nei casi di autofatturazione "
+"per acquisti extra UE di servizi ovvero per importazioni di beni nei soli casi previsti)"
+msgstr ""
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_edi_extension_isa.selection__account_tax__l10n_it_kind_exoneration__n7
+msgid ""
+"[N7] IVA assolta in altro stato UE (vendite a distanza ex art. 40 c. 3 e 4 e art. 41 c. 1 lett. b,  "
+"DL 331/93; prestazione di servizi di telecomunicazioni, tele-radiodiffusione ed elettronici ex art. "
+"7-sexies lett. f, g, art. 74-sexies DPR 633/72)"
+msgstr ""
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_edi_extension_isa.field_account_move__create_and_send_einvoices_in_separate_steps
+msgid "create_and_send_einvoices_in_separate_steps"
+msgstr ""
+
+#. module: l10n_it_edi_extension_isa
+#: code:addons/l10n_it_edi_extension_isa/models/account_move.py:0
+#, python-format
+msgid "from XML file:"
+msgstr "dal file XML:"
+
+#. module: l10n_it_edi_extension_isa
+#: model:ir.model.fields,help:l10n_it_edi_extension_isa.field_res_company__fatturapa_art73
+#: model:ir.model.fields,help:l10n_it_edi_extension_isa.field_res_config_settings__fatturapa_art73
+msgid ""
+"indicates whether the document has been issued in accordance with the terms and conditions "
+"established by ministerial decree in accordance with Article 73 of Presidential Decree633/72 (this "
+"allows the company to issue the same year more documents with the same number)"
+msgstr ""
+"Indica se il documento è stato emesso in conformità ai termini e alle condizioni stabilite dal "
+"decreto ministeriale ai sensi dell'Articolo 73 del DPR 633/72 (ciò consente all'azienda di emettere "
+"nello stesso anno più documenti con lo stesso numero)"

@@ -1,0 +1,111 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* base_partner_happy_birthday
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-19 15:49+0000\n"
+"PO-Revision-Date: 2020-02-19 15:49+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: base_partner_happy_birthday
+#: model:mail.template,body_html:base_partner_happy_birthday.base_partner_happy_birthday_template
+msgid ""
+"<table class=\"table table-condensed\" style=\"border:0px;\">\n"
+"                <tbody>\n"
+"                    <tr>\n"
+"                        <td>\n"
+"                            <p>\n"
+"                                <br/>\n"
+"                            </p>\n"
+"                            Dear ${object.name},\n"
+"                            <p>\n"
+"                                <br/>\n"
+"                            </p>\n"
+"                            <p>We noticeced that today is your special day, </p>\n"
+"                            <p>so we wanted to send our best wishes and thank you</p>\n"
+"                            <p> for your time as our customer.<br/> <br/>\n"
+"                                <img src=\"data:image/png;base64,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\"/>\n"
+"                            </p>\n"
+"                            <div style=\"text-align: left;\"> Happy Birthday!</div>\n"
+"                        </td>\n"
+"                        <td>\n"
+"                            <p>\n"
+"                                <br/>\n"
+"                            </p>\n"
+"                        </td>\n"
+"                        <td>\n"
+"                            <br/>\n"
+"                        </td>\n"
+"                    </tr>\n"
+"                </tbody>\n"
+"            </table>\n"
+"\n"
+"          "
+msgstr "<table class=\"table table-condensed\" style=\"border:0px;\">\n"
+"                <tbody>\n"
+"                    <tr>\n"
+"                        <td>\n"
+"                            <p>\n"
+"                                <br/>\n"
+"                            </p>\n"
+"                            Gentile ${object.name},\n"
+"                            <p>\n"
+"                                <br/>\n"
+"                            </p>\n"
+"                            <p>Abbiamo notato che oggi è un giorno speciale, </p>\n"
+"                            <p>per questo ti auguriamo un buon compleanno, grazie per </p>\n"
+"                            <p> essere nostro cliente.<br/> <br/>\n"
+"                                <img src=\"data:image/png;base64,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\"/>\n"
+"                            </p>\n"
+"                            <div style=\"text-align: left;\"> Buon Compleanno!</div>\n"
+"                        </td>\n"
+"                        <td>\n"
+"                            <p>\n"
+"                                <br/>\n"
+"                            </p>\n"
+"                        </td>\n"
+"                        <td>\n"
+"                            <br/>\n"
+"                        </td>\n"
+"                    </tr>\n"
+"                </tbody>\n"
+"            </table>\n"
+"\n"
+"          "
+
+#. module: base_partner_happy_birthday
+#: model:ir.model.fields,field_description:base_partner_happy_birthday.field_res_partner__birthday
+#: model:ir.model.fields,field_description:base_partner_happy_birthday.field_res_users__birthday
+msgid "Birthday"
+msgstr "Data di nascita"
+
+#. module: base_partner_happy_birthday
+#: model:ir.model,name:base_partner_happy_birthday.model_res_partner
+msgid "Contact"
+msgstr "Contatto"
+
+#. module: base_partner_happy_birthday
+#: model:mail.template,subject:base_partner_happy_birthday.base_partner_happy_birthday_template
+msgid "Happy Birthday! ${object.name}"
+msgstr "Buon Compleanno ${object.name}! "
+
+#. module: base_partner_happy_birthday
+#: model:ir.model.fields,help:base_partner_happy_birthday.field_res_partner__birthday
+#: model:ir.model.fields,help:base_partner_happy_birthday.field_res_users__birthday
+msgid "If set, we will send a greeting email on the birthday"
+msgstr "Se impostato, invieremo un'email di saluto per il compleanno"
+
+#. module: base_partner_happy_birthday
+#: model:ir.actions.server,name:base_partner_happy_birthday.base_partner_happy_birthday_cron_ir_actions_server
+#: model:ir.cron,cron_name:base_partner_happy_birthday.base_partner_happy_birthday_cron
+#: model:ir.cron,name:base_partner_happy_birthday.base_partner_happy_birthday_cron
+msgid "Send birthday wishes mail"
+msgstr "Invia mail di auguri di compleanno"

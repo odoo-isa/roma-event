@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- FORM View  -->
+        <record model='ir.ui.view' id='view_res_partner_client_purchase_form'>
+            <field name='name'>view.res.partner.client.purchase.form</field>
+            <field name='model'>res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//group[@name='sale']" position="inside">
+                    <field name="customer_rank" invisible="1"/>
+                    <field name="client_purchase_order_required" attrs="{'invisible': [('customer_rank', '=', 0)]}"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

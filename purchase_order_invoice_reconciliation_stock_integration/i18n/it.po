@@ -1,0 +1,41 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* purchase_order_invoice_reconciliation_stock_integration
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-27 15:32+0000\n"
+"PO-Revision-Date: 2020-03-27 15:32+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: purchase_order_invoice_reconciliation_stock_integration
+#: model:ir.model,name:purchase_order_invoice_reconciliation_stock_integration.model_invoice_purchase_order_line_reconcile_widget
+msgid ""
+"Abstract class for manage 'purchase order line -> invoice' reconciliation "
+"widget"
+msgstr ""
+
+#. module: purchase_order_invoice_reconciliation_stock_integration
+#. openerp-web
+#: code:addons/purchase_order_invoice_reconciliation_stock_integration/static/src/js/invoice_purchase_order_line_reconcile_ddt.js:0
+#, python-format
+msgid "DdT (split by ; if more than one)"
+msgstr "DdT (separati da ; se più di uno)"
+
+#. module: purchase_order_invoice_reconciliation_stock_integration
+#: model:ir.model.fields,field_description:purchase_order_invoice_reconciliation_stock_integration.field_stock_picking__ddt_in
+#: model:ir.model.fields,help:purchase_order_invoice_reconciliation_stock_integration.field_stock_picking__ddt_in
+msgid "Supplier's Ddt"
+msgstr "DdT Fornitore"
+
+#. module: purchase_order_invoice_reconciliation_stock_integration
+#: model:ir.model,name:purchase_order_invoice_reconciliation_stock_integration.model_stock_picking
+msgid "Transfer"
+msgstr "Trasferisci"

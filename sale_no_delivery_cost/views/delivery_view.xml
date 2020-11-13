@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- FORM View  -->
+        <record model='ir.ui.view' id='view_sale_order_delivery_form'>
+            <field name='name'>view.sale.order.delivery.form</field>
+            <field name='model'>sale.order</field>
+            <field name="inherit_id" ref="delivery.view_order_form_with_carrier"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='recompute_delivery_price']" position="after">
+                    <field name="rel_not_delivery_outgoing" invisible="1"/>
+                </xpath>
+                <xpath expr="//button[@name='action_open_delivery_wizard'][1]" position="attributes">
+                    <attribute name="attrs">{'invisible': ['|', '|', '|', ('is_all_service', '=', True), ('order_line', '=', []), ('delivery_set', '=', True), ('rel_not_delivery_outgoing', '=', True)]}</attribute>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

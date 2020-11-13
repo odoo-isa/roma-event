@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record model='ir.ui.view' id='view_move_form'>
+            <field name='name'>l10n_it.split.payment.view.move.form</field>
+            <field name='model'>account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='invoice_line_ids']/tree" position="inside">
+                    <field name="is_split_line" invisible="1"/>
+                    <field name="exclude_from_invoice_tab" invisible="1"/>
+                </xpath>
+                <xpath expr="//field[@name='line_ids']/tree" position="inside">
+                    <field name="is_split_line" invisible="1"/>
+                    <field name="exclude_from_invoice_tab" invisible="1"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

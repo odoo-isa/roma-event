@@ -1,0 +1,236 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* base_partner_delegation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-28 14:21+0000\n"
+"PO-Revision-Date: 2020-04-28 14:21+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: base_partner_delegation
+#: model:ir.model.fields,field_description:base_partner_delegation.field_res_partner_delegation__active_delegation
+msgid "Active"
+msgstr "Attivo"
+
+#. module: base_partner_delegation
+#: model:ir.model,name:base_partner_delegation.model_res_partner
+msgid "Contact"
+msgstr "Contatto"
+
+#. module: base_partner_delegation
+#: model:ir.model.fields,field_description:base_partner_delegation.field_res_partner_delegation__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: base_partner_delegation
+#: model:ir.model.fields,field_description:base_partner_delegation.field_res_partner_delegation__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: base_partner_delegation
+#: model:ir.model.fields,help:base_partner_delegation.field_res_partner_delegation__delegation_file_name
+msgid "Customize name of download pdf delegation"
+msgstr "Nome personalizzato del pdf della delegazione"
+
+#. module: base_partner_delegation
+#: model_terms:ir.ui.view,arch_db:base_partner_delegation.view_res_partner_delegated_form
+#: model_terms:ir.ui.view,arch_db:base_partner_delegation.view_res_partner_delegation_tree
+msgid "Delegated"
+msgstr "Delegato"
+
+#. module: base_partner_delegation
+#: model:ir.model.fields,field_description:base_partner_delegation.field_res_partner_delegation__delegation_document
+msgid "Delegation Document"
+msgstr "Documento di Delega"
+
+#. module: base_partner_delegation
+#: model:ir.model.fields,field_description:base_partner_delegation.field_res_partner_delegation__delegation_file_name
+msgid "Delegation File Name"
+msgstr "Nome del file della delegazione"
+
+#. module: base_partner_delegation
+#: model_terms:ir.ui.view,arch_db:base_partner_delegation.view_res_partner_delegation_tree
+msgid "Delegation Partner"
+msgstr "Deleghe"
+
+#. module: base_partner_delegation
+#: model:ir.actions.report,name:base_partner_delegation.partner_delegation
+msgid "Delegation model"
+msgstr "Modello delega"
+
+#. module: base_partner_delegation
+#: code:addons/base_partner_delegation/report/partner_delegation_report.py:0
+#, python-format
+msgid "Delegation model %s"
+msgstr "Modello delega %s"
+
+#. module: base_partner_delegation
+#: model:ir.model.fields,field_description:base_partner_delegation.field_res_partner__delegation_ids
+#: model:ir.model.fields,field_description:base_partner_delegation.field_res_users__delegation_ids
+msgid "Delegations"
+msgstr "Delegazioni"
+
+#. module: base_partner_delegation
+#: model:ir.model.fields,field_description:base_partner_delegation.field_res_partner_delegation__partner_delegate_id
+#: model:ir.model.fields,help:base_partner_delegation.field_res_partner_delegation__partner_delegate_id
+#: model_terms:ir.ui.view,arch_db:base_partner_delegation.view_res_partner_delegation_tree
+msgid "Delegator"
+msgstr "Delegante"
+
+#. module: base_partner_delegation
+#: model:ir.model.fields,field_description:base_partner_delegation.field_report_base_partner_delegation_print_delegations__display_name
+#: model:ir.model.fields,field_description:base_partner_delegation.field_res_partner_delegation__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: base_partner_delegation
+#: model:ir.model.fields,help:base_partner_delegation.field_res_partner_delegation__delegation_document
+msgid "Document with delegation in"
+msgstr "Documento con delega all'interno"
+
+#. module: base_partner_delegation
+#: model:ir.model.fields.selection,name:base_partner_delegation.selection__res_partner_delegation__type__give_back_goods
+msgid "Give Back Goods"
+msgstr "Reso Merci"
+
+#. module: base_partner_delegation
+#: model:ir.model.fields,field_description:base_partner_delegation.field_report_base_partner_delegation_print_delegations__id
+#: model:ir.model.fields,field_description:base_partner_delegation.field_res_partner_delegation__id
+msgid "ID"
+msgstr ""
+
+#. module: base_partner_delegation
+#: model:ir.model.fields,help:base_partner_delegation.field_res_partner_delegation__active_delegation
+msgid "It indicates if delegation is valid or not"
+msgstr "Indica se la delegazione è valida o meno"
+
+#. module: base_partner_delegation
+#: model:ir.model.fields,help:base_partner_delegation.field_res_partner__delegation_ids
+#: model:ir.model.fields,help:base_partner_delegation.field_res_users__delegation_ids
+msgid "It indicates list of delegates"
+msgstr "Indica la lista di delegati"
+
+#. module: base_partner_delegation
+#: model:ir.model.fields,help:base_partner_delegation.field_res_partner_delegation__note
+msgid "It is useful to write some note about delegation"
+msgstr ""
+
+#. module: base_partner_delegation
+#: code:addons/base_partner_delegation/models/res_partner.py:0
+#, python-format
+msgid ""
+"It's not possible to continue because one of delegated is the delegator."
+msgstr ""
+"Non è possibile continuare col salvataggio poichè uno dei delegati è il "
+"delegante."
+
+#. module: base_partner_delegation
+#: code:addons/base_partner_delegation/models/res_partner.py:0
+#, python-format
+msgid ""
+"It's not possible to continue because the same delegate is delegated twice "
+"with the same type."
+msgstr ""
+"Non è possibile continuare col salvataggio poichè un partner è stato "
+"delegato due volte per lo stesso tipo di delegazione"
+
+#. module: base_partner_delegation
+#: model:ir.model.fields,field_description:base_partner_delegation.field_report_base_partner_delegation_print_delegations____last_update
+#: model:ir.model.fields,field_description:base_partner_delegation.field_res_partner_delegation____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: base_partner_delegation
+#: model:ir.model.fields,field_description:base_partner_delegation.field_res_partner_delegation__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: base_partner_delegation
+#: model:ir.model.fields,field_description:base_partner_delegation.field_res_partner_delegation__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: base_partner_delegation
+#: model:ir.model,name:base_partner_delegation.model_res_partner_delegation
+msgid "Model to allow delegations from partner"
+msgstr "Modello utile alla delegazione dei partner"
+
+#. module: base_partner_delegation
+#: model:ir.model.fields,field_description:base_partner_delegation.field_res_partner_delegation__note
+#: model_terms:ir.ui.view,arch_db:base_partner_delegation.view_res_partner_delegated_form
+msgid "Note"
+msgstr ""
+
+#. module: base_partner_delegation
+#: model:ir.model.fields,field_description:base_partner_delegation.field_res_partner_delegation__partner_id
+msgid "Partner"
+msgstr "Cliente"
+
+#. module: base_partner_delegation
+#: model_terms:ir.ui.view,arch_db:base_partner_delegation.view_res_partner_delegated_tree
+msgid "Partner Delegation"
+msgstr "Delegazione"
+
+#. module: base_partner_delegation
+#: code:addons/base_partner_delegation/models/res_partner.py:0
+#, python-format
+msgid "Partner Delegator"
+msgstr "Delegante"
+
+#. module: base_partner_delegation
+#: model:ir.model.fields,help:base_partner_delegation.field_res_partner_delegation__partner_id
+msgid "Partner who is delegated"
+msgstr "Delegato"
+
+#. module: base_partner_delegation
+#: model:ir.model.fields.selection,name:base_partner_delegation.selection__res_partner_delegation__type__pick_up_goods
+msgid "Pick Up Goods"
+msgstr "Ritiro Merci"
+
+#. module: base_partner_delegation
+#: model_terms:ir.ui.view,arch_db:base_partner_delegation.view_res_partner_delegation_tree
+msgid "Print"
+msgstr "Stampa"
+
+#. module: base_partner_delegation
+#: model:ir.model.fields.selection,name:base_partner_delegation.selection__res_partner_delegation__type__purchase_goods
+msgid "Purchase and Pick up Goods"
+msgstr "Acquisto e ritiro merci"
+
+#. module: base_partner_delegation
+#: model:ir.model,name:base_partner_delegation.model_report_base_partner_delegation_print_delegations
+msgid "Report to print partner delegations"
+msgstr "Stampa delle delegazioni"
+
+#. module: base_partner_delegation
+#: model:ir.model.fields,field_description:base_partner_delegation.field_res_partner_delegation__type
+msgid "Type"
+msgstr "Tipo"
+
+#. module: base_partner_delegation
+#: model:ir.model.fields,help:base_partner_delegation.field_res_partner_delegation__type
+msgid "Type of delegation"
+msgstr "Tipo di delega"
+
+#. module: base_partner_delegation
+#: model_terms:ir.ui.view,arch_db:base_partner_delegation.print_delegations
+msgid "ad un'azione di tipo"
+msgstr ""
+
+#. module: base_partner_delegation
+#: model_terms:ir.ui.view,arch_db:base_partner_delegation.print_delegations
+msgid "delega il partner"
+msgstr ""
+
+#. module: base_partner_delegation
+#: model_terms:ir.ui.view,arch_db:base_partner_delegation.view_res_partner_delegated_form
+msgid "description"
+msgstr ""

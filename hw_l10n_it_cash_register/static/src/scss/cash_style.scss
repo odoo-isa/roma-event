@@ -1,0 +1,106 @@
+#register {
+    width: 40em;
+    margin: auto;
+    font-family: monospace;
+    #ticket {
+        background: white;
+        margin: 0 1em;
+        padding: 1em;
+        box-shadow: 0 0 5px rgba(0,0,0,.25);
+        h1 {
+            text-align: center;
+        }
+        h2 {
+            border-top-style: dashed !important;
+            border-bottom-style: dashed !important;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            thead {
+                font-weight: bold;
+            }
+            tfoot {
+                border-top-style: dashed !important;
+                font-size: larger;
+            }
+        }
+        div.payments {
+            div.btn {
+                max-width: 100px;
+                text-transform: none;
+                color: #666666;
+                font-weight: bold;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+            div.active {
+                background-color : #b9b6b6;
+                color: #000000;
+                border-color: #656565 !important;
+            }
+        }
+    }
+}
+
+div.printer{
+  width: 500px;
+  margin: auto;
+  div.cash_register {
+    width: 100%;
+    height: 20px;
+    border: 4px solid black;
+    background-color: #3a3838;
+  }
+  div.receipt-taken{
+    font-size: 20px;
+    overflow: hidden;
+    width: 90%;
+    margin-top: -10px;
+    padding-bottom: 10px;
+    div.receipt {
+      border: 2px solid black;
+      transform: translateY(-10px);
+      background-color: white;
+      animation: 3s forwards infinite;
+      animation-delay: 1000ms;
+      animation-name: print;
+    }
+    .paused {
+        animation: none !important;
+    }
+  }
+}
+
+@keyframes print {
+  0% {
+    transform: translateY(-60px)
+  }
+  35% {
+    transform: translateY(-50px);
+  }
+  70% {
+    transform: translateY(-40px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+div.cash-register{
+  background-color: #00A09D;
+  cursor: pointer;
+  color: white;
+  div.cash-user{
+    transform: translateY(-5px);
+  }
+}
+div.cash-register.active{
+  background-color: #875A7B;
+  cursor: default;
+}
+div.cash-register.offline{
+    cursor: default !important;
+    background-color: #00A09D !important;
+    opacity: .55;
+}

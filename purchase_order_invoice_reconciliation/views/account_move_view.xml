@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_move_reconcile_form" model="ir.ui.view">
+        <field name="name">view.move.reconcile.form</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="before">
+                <field name="invoice_check_status" invisible="1"/>
+                <!-- Billing control message -->
+                <div groups="account.group_account_invoice"
+                     class="alert alert-info" role="alert" style="margin-bottom:0px;"
+                     attrs="{'invisible': ['|', ('type', 'not in', ('in_invoice', 'in_refund')),('invoice_check_status', '!=', 'open')]}">
+                    Billing control with purchase orders has not yet been closed
+                </div>
+                <div groups="account.group_account_invoice"
+                     class="alert alert-success" role="alert" style="margin-bottom:0px;"
+                     attrs="{'invisible': ['|', ('type', 'not in', ('in_invoice', 'in_refund')),('invoice_check_status', '=', 'open')]}">
+                    The invoice is checked against the purchase orders
+                </div>
+            </xpath>
+            <xpath expr="//button[@name='button_cancel']" position="after">
+                <!-- Button to active reconcile -->
+                <button name="invoice_purchase_order_line_reconcile"
+                        groups="account.group_account_invoice"
+                        string="Reconcile Order"
+                        type="object"
+                        attrs="{'invisible': [
+                            '|','|',
+                            ('type', 'not in', ['in_invoice', 'in_refund']),
+                            ('state', '!=', 'posted'),
+                            ('invoice_check_status', '!=', 'open')
+                        ]}"
+                        context="{'mode': 'edit'}"/>
+                <button name="invoice_purchase_order_line_reconcile"
+                        groups="account.group_account_invoice"
+                        string="View Reconcile Order"
+                        type="object"
+                        attrs="{'invisible': [
+                            '|','|',
+                            ('type', 'not in', ['in_invoice', 'in_refund']),
+                            ('state', '!=', 'posted'),
+                            ('invoice_check_status', '=', 'open')
+                        ]}"
+                        context="{'mode': 'view'}"/>
+                <!-- Button to close invoice reconcile -->
+                <button name="invoice_end_purchase_check"
+                        groups="account.group_account_invoice"
+                        string="Close reconcile check"
+                        type="object"
+                        attrs="{'invisible': [
+                            '|','|',
+                            ('type', 'not in', ['in_invoice', 'in_refund']),
+                            ('state', '!=', 'posted'),
+                            ('invoice_check_status', '!=', 'open')
+                        ]}"/>
+                <!-- Button to reopen invoice reconcile -->
+                <button name="invoice_reopen_purchase_check"
+                        groups="account.group_account_invoice"
+                        string="Reopen reconcile check"
+                        type="object"
+                        attrs="{'invisible': [
+                            '|','|',
+                            ('type', 'not in', ['in_invoice', 'in_refund']),
+                            ('state', '!=', 'posted'),
+                            ('invoice_check_status', '=', 'open')
+                        ]}"/>
+            </xpath>
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <field name="purchase_reconciled_line" invisible="1"/>
+                <!-- Link between invoice and orders -->
+                <button name="open_reconcile_order"
+                        class="oe_stat_button"
+                        icon="fa-link"
+                        type="object"
+                        string="Reconciled Order(s)"
+                        attrs="{'invisible': [
+                            ('purchase_reconciled_line', '=', [])
+                        ]}"/>
+            </xpath>
+            <xpath expr="//field[@name='amount_residual']" position="after">
+                <!-- field for reconcile total -->
+                <field name="total_purchase_order_reconcile_price"
+                       class="oe_subtotal_footer_separator"
+                       attrs="{'invisible': [
+                             '|',
+                             ('state', '=', 'draft'),
+                             ('type', 'not in', ['in_invoice', 'in_refund'])
+                       ]}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- TREE View  -->
+    <record model='ir.ui.view' id='account_move_reconcile_purchase'>
+        <field name='name'>account.move.reconcile.purchase.tree</field>
+        <field name='model'>account.move</field>
+        <field name="inherit_id" ref="account.view_invoice_tree"/>
+        <field name='arch' type='xml'>
+            <xpath expr="//field[@name='state']" position="after">
+                <field name="invoice_check_status"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

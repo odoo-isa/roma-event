@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!-- Invoice Order Line Reconciliation -->
+        <template id="invoice_order_line_ddt_widget" inherit_id="web.assets_backend" active="True">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/purchase_order_invoice_reconciliation_stock_integration/static/src/js/invoice_purchase_order_line_reconcile_ddt.js"/>
+            </xpath>
+        </template>
+
+    </data>
+</openerp>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="tax_report_title_operations" model="account.tax.report.line">
+            <field name="name">Operazioni</field>
+            <field name="code">tax_it_operations</field>
+            <field name="country_id" ref="base.it"/>
+            <field name="sequence">1</field>
+        </record>
+
+        <record id="tax_report_title_operations_sales" model="account.tax.report.line">
+            <field name="name">I. Vendite</field>
+            <field name="code">tax_it_i</field>
+            <field name="country_id" ref="base.it"/>
+            <field name="sequence">1</field>
+            <field name="parent_id" ref="tax_report_title_operations"/>
+        </record>
+
+        <record id="tax_report_title_operations_purchase" model="account.tax.report.line">
+            <field name="name">II. Acquisti</field>
+            <field name="code">tax_it_ii</field>
+            <field name="country_id" ref="base.it"/>
+            <field name="sequence">2</field>
+            <field name="parent_id" ref="tax_report_title_operations"/>
+        </record>
+
+        <record id="tax_report_title_taxes" model="account.tax.report.line">
+            <field name="name">Imposte</field>
+            <field name="code">tax_it_taxes</field>
+            <field name="country_id" ref="base.it"/>
+            <field name="sequence">2</field>
+        </record>
+
+        <record id="tax_report_title_taxes_previous_balance" model="account.tax.report.line">
+            <field name="name">III. IVA Periodo Precedente</field>
+            <field name="code">tax_it_iii</field>
+            <field name="country_id" ref="base.it"/>
+            <field name="sequence">1</field>
+            <field name="parent_id" ref="tax_report_title_taxes"/>
+        </record>
+
+        <record id="tax_report_title_taxes_previous_balance_debit" model="account.tax.report.line">
+            <field name="name">A. IVA a Debito del Periodo Precendente</field>
+            <field name="code">tax_it_a</field>
+            <field name="country_id" ref="base.it"/>
+            <field name="sequence">1</field>
+            <field name="parent_id" ref="tax_report_title_taxes_previous_balance"/>
+        </record>
+
+        <record id="tax_report_title_taxes_previous_balance_credit" model="account.tax.report.line">
+            <field name="name">B. IVA a Credito del Periodo Precendente</field>
+            <field name="code">tax_it_b</field>
+            <field name="country_id" ref="base.it"/>
+            <field name="sequence">2</field>
+            <field name="tag_name">B</field>
+            <field name="parent_id" ref="tax_report_title_taxes_previous_balance"/>
+        </record>
+
+        <record id="tax_report_title_taxes_debit" model="account.tax.report.line">
+            <field name="name">IV. Debito</field>
+            <field name="code">tax_it_iv</field>
+            <field name="country_id" ref="base.it"/>
+            <field name="sequence">2</field>
+            <field name="parent_id" ref="tax_report_title_taxes"/>
+        </record>
+
+        <record id="tax_report_title_taxes_credit" model="account.tax.report.line">
+            <field name="name">V. Credito</field>
+            <field name="code">tax_it_v</field>
+            <field name="country_id" ref="base.it"/>
+            <field name="sequence">3</field>
+            <field name="parent_id" ref="tax_report_title_taxes"/>
+        </record>
+
+        <record id="tax_report_title_taxes_not_recoverable" model="account.tax.report.line">
+            <field name="name">VI. Indetraibile</field>
+            <field name="code">tax_it_vi</field>
+            <field name="country_id" ref="base.it"/>
+            <field name="sequence">4</field>
+            <field name="parent_id" ref="tax_report_title_taxes"/>
+        </record>
+
+        <record id="tax_report_title_taxes_summary" model="account.tax.report.line">
+            <field name="name">VII. Riepilogo IVA del Periodo</field>
+            <field name="code">tax_it_vii</field>
+            <field name="country_id" ref="base.it"/>
+            <field name="sequence">5</field>
+            <field name="parent_id" ref="tax_report_title_taxes"/>
+        </record>
+
+        <record id="tax_report_title_taxes_total_debit" model="account.tax.report.line">
+            <field name="name">C. Totale IVA a Debito</field>
+            <field name="code">tax_it_c</field>
+            <field name="country_id" ref="base.it"/>
+            <field name="sequence">1</field>
+            <field name="formula">tax_it_iv</field>
+            <field name="parent_id" ref="tax_report_title_taxes_summary"/>
+        </record>
+
+        <record id="tax_report_title_taxes_total_credit" model="account.tax.report.line">
+            <field name="name">D. Totale IVA a Credito</field>
+            <field name="code">tax_it_d</field>
+            <field name="country_id" ref="base.it"/>
+            <field name="sequence">2</field>
+            <field name="formula">tax_it_v</field>
+            <field name="parent_id" ref="tax_report_title_taxes_summary"/>
+        </record>
+
+        <record id="tax_report_title_taxes_balance_debit" model="account.tax.report.line">
+            <field name="name">E. Importo da Versare</field>
+            <field name="code">tax_it_e</field>
+            <field name="country_id" ref="base.it"/>
+            <field name="sequence">3</field>
+            <field name="formula">tax_it_iv+tax_it_v+tax_it_iii&gt;0 and tax_it_iv+tax_it_v+tax_it_iii or 0</field>
+            <field name="parent_id" ref="tax_report_title_taxes_summary"/>
+        </record>
+
+        <record id="tax_report_title_taxes_balance_credit" model="account.tax.report.line">
+            <field name="name">F. Importo da Riportare a Credito</field>
+            <field name="code">tax_it_f</field>
+            <field name="country_id" ref="base.it"/>
+            <field name="sequence">4</field>
+            <field name="formula">tax_it_iv+tax_it_v+tax_it_iii&lt;0 and tax_it_v+tax_it_iv+tax_it_iii or 0</field>
+            <field name="parent_id" ref="tax_report_title_taxes_summary"/>
+        </record>
+
+        <function model="l10n_it.vat.report" name="genera_sezioni_da_imposte"/>
+
+    </data>
+</odoo>

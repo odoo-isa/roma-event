@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record id="view_notify_message" model="ir.ui.view">
+            <field name="name">view.notify.message</field>
+            <field name="model">notify.message.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Notify Message">
+                    <field name="text"/>
+                    <footer>
+                        <button name="close" string="Close" type="object" class="oe_highlight"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+         <record id="action_open_notify_message" model="ir.actions.act_window">
+            <field name="name">Open notify message</field>
+            <field name="res_model">notify.message.wizard</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_notify_message"/>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

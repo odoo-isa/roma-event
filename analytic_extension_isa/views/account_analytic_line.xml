@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model='ir.ui.view' id='view_account_analytic_line_extended_form'>
+        <field name='name'>view.account.analytic.line.extended.form</field>
+        <field name='model'>account.analytic.line</field>
+        <field name="inherit_id" ref="account.view_account_analytic_line_form_inherit_account"/>
+        <field name='arch' type='xml'>
+            <xpath expr="//group[@name='accounting']" position="after">
+                <field name="check_consistency_amount" invisible="1"/>
+                <span role="status"
+                      class="alert alert-warning"
+                      attrs="{'invisible': [('check_consistency_amount', '=', True)]}">Warning! The amount of the accounting line and the sum of the amounts of the analytic lines are not equal</span>
+            </xpath>
+        </field>
+    </record>
+</odoo>
+
+

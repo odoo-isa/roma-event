@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- FORM View  -->
+        <record model='ir.ui.view' id='view_bank_paper_slip_accreditation_summary_form'>
+            <field name='name'>view.bank.paper.slip.summary.form</field>
+            <field name='model'>l10n_it.bank_paper.slip.summary.wizard</field>
+            <field name='arch' type='xml'>
+                <form string='Bank Paper Slip Accreditation'>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name='journal_id' required="1"/>
+                                <field name='bank_account_id' required="1"/>
+                                <field name='account_id' required="1"/>
+                                <field name='bank_expense_account_id' required="1"/>
+                            </group>
+                            <group>
+                                <field name='amount'/>
+                                <field name='expense_amount'/>
+                                <field name='bank_amount'/>
+                            </group>
+                        </group>
+                        <footer>
+                            <button name="confirm" string="Confirm" type="object" class="oe_highlight" context="{'action_button': 'accreditation'}"/>
+                            or
+                            <button string="Cancel" class="btn btn-secondary" special="cancel"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- FORM View  -->
+        <record model='ir.ui.view' id='view_bank_paper_unsolved_summary_form'>
+            <field name='name'>view.bank.paper.unsolved.summary.form</field>
+            <field name='model'>l10n_it.bank_paper.slip.summary.wizard</field>
+            <field name='arch' type='xml'>
+                <form string='Bank Paper Unsolved'>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name='journal_id' required="1"/>
+                                <field name='bank_account_id' required="1"/>
+                                <field name='account_id' required="1"/>
+                                <field name='bank_expense_account_id' required="1"/>
+                                <field name='payment_type_id' required="1"/>
+                            </group>
+                            <group>
+                                <field name='amount'/>
+                                <field name='expense_amount'/>
+                                <field name='bank_amount'/>
+                                <field name='date_maturity' required="1"/>
+                                <field name='partner_bank_id' domain="[('partner_id','=',context.get('partner_id'))]"/>
+                            </group>
+                        </group>
+                        <footer>
+                            <button name="confirm" string="Confirm" type="object" class="oe_highlight" context="{'action_button': 'unsolved'}"/>
+                            or
+                            <button string="Cancel" class="btn btn-secondary" special="cancel"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

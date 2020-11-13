@@ -1,0 +1,79 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_gas_license
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-19 07:55+0000\n"
+"PO-Revision-Date: 2020-03-19 07:55+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sale_gas_license
+#: model:ir.model,name:sale_gas_license.model_res_partner
+msgid "Contact"
+msgstr "Contatto"
+
+#. module: sale_gas_license
+#: model:ir.model.fields,field_description:sale_gas_license.field_product_product__contains_gas
+#: model:ir.model.fields,field_description:sale_gas_license.field_product_template__contains_gas
+msgid "Contains Gas"
+msgstr "Contiene Gas"
+
+#. module: sale_gas_license
+#: model:ir.model.fields,field_description:sale_gas_license.field_res_partner__fgas_license
+#: model:ir.model.fields,field_description:sale_gas_license.field_res_users__fgas_license
+msgid "F-gas License"
+msgstr "Licenza F-gas"
+
+#. module: sale_gas_license
+#: model:ir.model.fields,help:sale_gas_license.field_res_partner__fgas_license
+#: model:ir.model.fields,help:sale_gas_license.field_res_users__fgas_license
+msgid "Indicates whether the partner has a license to sell fgas products "
+msgstr "Indica se il partner ha una licenza per vendere prodotti f-gas"
+
+#. module: sale_gas_license
+#: model:ir.model,name:sale_gas_license.model_product_product
+msgid "Product"
+msgstr "Prodotto"
+
+#. module: sale_gas_license
+#: model:ir.model,name:sale_gas_license.model_product_template
+msgid "Product Template"
+msgstr "Modello prodotto"
+
+#. module: sale_gas_license
+#: model:ir.model,name:sale_gas_license.model_sale_order
+msgid "Sales Order"
+msgstr "Ordine di vendita"
+
+#. module: sale_gas_license
+#: code:addons/sale_gas_license/models/sale_order.py:0
+#, python-format
+msgid ""
+"The partner does not have the f-gas license number, therefore he cannot insert gas option products."
+msgstr "Il partner non ha una licenza f-gas, quindi non può inserire prodotti opzionali che contengono Gas"
+
+#. module: sale_gas_license
+#: code:addons/sale_gas_license/models/sale_order.py:0
+#, python-format
+msgid "The partner does not have the f-gas license number, therefore he cannot insert gas products."
+msgstr "Il partner non ha una licenza f-gas, quindi non può inserire prodotti che contengono Gas"
+
+#. module: sale_gas_license
+#: model:ir.model.fields,help:sale_gas_license.field_product_product__contains_gas
+#: model:ir.model.fields,help:sale_gas_license.field_product_template__contains_gas
+msgid "This product contains Gas"
+msgstr "Questo prodotto contiene Gas"
+
+#. module: sale_gas_license
+#: code:addons/sale_gas_license/models/sale_order.py:0
+#, python-format
+msgid "Warning"
+msgstr "Attenzione"

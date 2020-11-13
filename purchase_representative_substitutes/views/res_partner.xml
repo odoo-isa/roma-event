@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_partner_property_form" model="ir.ui.view">
+            <field name="name">res.partner.property.form.inherit.purchases.substitutes</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="account.view_partner_property_form"/>
+            <field name="groups_id" eval="[(4,ref('purchases_team.group_purchase_buyer'))]"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='property_supplier_payment_term_id']" position="after">
+                    <field name="replacement_purchase_user_ids"
+                           widget="many2many_tags"
+                           options='{"no_create": True}'
+                           attrs="{'invisible': [('user_ids', '=', [])]}"
+                    />
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

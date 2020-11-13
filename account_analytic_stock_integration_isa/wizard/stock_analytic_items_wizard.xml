@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!--  Stock Analytic Items Form View  -->
+    <record id="view_stock_analytic_items_wizard_form_account_analytic_stock_integration_isa" model="ir.ui.view">
+        <field name="name">stock.analytic.items.wizard.form.account.analytic.stock.integration.isa</field>
+        <field name="model">stock.analytic.items.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <p>Are you sure you want to build Stock Analytic Items?</p>
+                <footer>
+                    <button name="action_build" string="Confirm" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-default" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!--  Window Action  -->
+    <record id="action_analytic_stock_items_account_analytic_stock_integration_isa" model="ir.actions.act_window">
+        <field name="name">Build Stock Analytic Items</field>
+        <field name="res_model">stock.analytic.items.wizard</field>
+        <field name="binding_view_types">form</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_stock_analytic_items_wizard_form_account_analytic_stock_integration_isa"/>
+        <field name="target">new</field>
+    </record>
+
+    <!--  Menuitem  -->
+    <menuitem name="Build Stock Analytic Items" action="action_analytic_stock_items_account_analytic_stock_integration_isa" id="menu_action_stock_analytic_items_account_analytic_stock_integration_isa"
+    parent="account.menu_finance_entries_management" groups="account.group_account_manager"/>
+</odoo>

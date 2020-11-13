@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- FORM Product Supplier Family -->
+        <record id='product_supplier_family_form' model='ir.ui.view'>
+            <field name='name'>product.supplier.family.form</field>
+            <field name='model'>product.supplier.family</field>
+            <field name='arch' type='xml'>
+                <form string='Product Supplier Family'>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" required="1"/>
+                                <field name="profit"/>
+                                <field name="discount_ids">
+                                    <tree editable="bottom">
+                                        <field name="sequence" widget="handle"/>
+                                        <field name="value"/>
+                                        <field name="label"/>
+                                    </tree>
+                                </field>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- TREE Product Supplier Family -->
+        <record id='product_supplier_family_tree' model='ir.ui.view'>
+            <field name='name'>product.supplier.family.tree</field>
+            <field name='model'>product.supplier.family</field>
+            <field name='arch' type='xml'>
+                <tree string='Product Supplier Family'>
+                    <field name="name"/>
+                    <field name="profit"/>
+                    <field name="calculate_family_discounts" string="Discounts"/>
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</odoo>

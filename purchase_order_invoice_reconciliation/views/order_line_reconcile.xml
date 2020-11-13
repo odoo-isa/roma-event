@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+
+    <template id="invoice_view">
+        <div>
+            <span class="o_form_label">
+                <span name="type">Supplier Invoice</span>
+            </span>
+            <h1 class="mt0">
+                <span t-esc="invoice.name"/>
+            </h1>
+            <div class="mt-5 d-flex flex-wrap data-table">
+                <div class="col-md-6">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="cell-label">
+                                    Supplier
+                                </td>
+                                <td>
+                                    <t t-set="partner" t-value="invoice.partner_id"/>
+                                    <span t-esc="partner.name"/><br/>
+                                    <span t-esc="partner.street"/><br/>
+                                    <span>
+                                        <t t-esc="partner.city"/>
+                                        <t t-esc="partner.state_id.code"/>
+                                        <t t-esc="partner.zip"/>
+                                    </span><br/>
+                                    <span>
+                                        <t t-esc="partner.country_id.name"/> ‒
+                                        <t t-esc="partner.vat"/>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cell-label">
+                                    Ref
+                                </td>
+                                <td>
+                                    <span t-esc="invoice.ref"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-6">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="cell-label">
+                                    Invoice date
+                                </td>
+                                <td>
+                                    <span t-esc="invoice.invoice_date" t-options="{'widget': 'date'}"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cell-label">
+                                    Accounting date
+                                </td>
+                                <td>
+                                    <span t-esc="invoice.date" t-options="{'widget': 'date'}"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cell-label">
+                                    Journal
+                                </td>
+                                <td>
+                                    <span t-esc="invoice.journal_id.name"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="o_notebook">
+                <div class="o_notebook_headers">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item"><a data-toggle="tab" disable_anchor="true" href="#invoice_line" class="nav-link active" role="tab">Invoice lines</a></li>
+                    </ul>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="invoice_line">
+                        <div class="o_field_one2many o_field_widget o_field_x2many o_field_x2many_list o_readonly_modifier">
+                            <div class="o_list_view">
+                                <div class="table-responsive">
+                                    <table class="o_list_table table table-sm table-hover table-striped o_list_table_ungrouped">
+                                        <thead>
+                                            <tr>
+                                                <th>Product</th>
+                                                <th>name</th>
+                                                <th class="text-right">Quantity</th>
+                                                <th class="text-right">Price unit</th>
+                                                <th class="text-right">Price subtotal</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="o_data_row" t-foreach="invoice.invoice_line_ids" t-as="invoice_line">
+                                                <td class="o_data_cell o_field_cell">
+                                                    <span t-esc="invoice_line.product_id.name"/>
+                                                </td>
+                                                <td class="o_data_cell o_field_cell">
+                                                    <span t-esc="invoice_line.name"/>
+                                                </td>
+                                                <td class="o_data_cell o_field_cell text-right">
+                                                    <span t-esc="invoice_line.quantity"
+                                                          t-options='{"widget": "float", "decimal_precision": "Product Unit of Measure"}'/>
+                                                </td>
+                                                <td class="o_data_cell o_field_cell text-right">
+                                                    <span t-esc="invoice_line.price_unit"
+                                                          t-options='{"widget": "float", "decimal_precision": "Product Price"}'/>
+                                                </td>
+                                                <td class="o_data_cell o_field_cell text-right">
+                                                    <span t-esc="invoice_line.price_subtotal"
+                                                          t-options='{"widget": "float", "decimal_precision": "Product Price"}'/>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="oe_group text-right">
+                            <table class="o_group o_inner_group oe_subtotal_footer o_group_col_6" style="float: none !important">
+                                <tbody>
+                                    <tr>
+                                        <td class="o_td_label font-weight-bold pr-3">Amount untaxed:</td>
+                                        <td class="w-100">
+                                            <span t-esc="invoice.amount_untaxed"
+                                                  t-options='{"widget": "monetary", "display_currency": invoice.currency_id}'/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="o_td_label font-weight-bold pr-3">Total price reconcile form purchase order:</td>
+                                        <td class="w-100" id="total_reconcile">
+                                            <span t-esc="invoice.total_purchase_order_reconcile_price"
+                                                  t-options='{"widget": "monetary", "display_currency": invoice.currency_id}'/>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div> <!-- end of invoice panel -->
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="print_order_header">
+        <tr class="o_data_row o_is_line_section">
+            <td class="o_data_cell o_field_cell"/>
+            <td class="o_data_cell o_field_cell" colspan="7">
+                    <span t-esc="order.name"/>
+                    <span t-if="order.invoice_status == 'invoiced'">
+                        (The order is set as fully billed. Re-open invoice status if you want to operate with it)
+                    </span>
+            </td>
+        </tr>
+    </template>
+
+    <template id="print_order_lines">
+        <t t-set="filtered_order_lines" t-value="order_lines.filtered(lambda l: l.display_type not in ('line_note','line_section'))"/>
+        <t t-foreach="filtered_order_lines" t-as="order_line">
+            <tr t-attf-class="o_data_row #{'text-danger' if float_compare(order_line.product_qty, order_line.qty_invoiced, precision_rounding=precision) &lt;= 0 else ''}"
+                t-attf-data-order-line-id="#{order_line.id}">
+                <t t-set="input_visible" t-value="True"/>
+                <t t-set="purchase_method" t-value="'purchase'"/>
+                <t t-set="input_visible" t-value="False" t-if="order.invoice_status == 'invoiced'"/>
+                <t t-if="order_line.product_id.purchase_method == 'receive' and
+                         float_is_zero(order_line.qty_received, precision_digits=precision)">
+                    <t t-set="input_visible" t-value="False"/>
+                    <t t-set="purchase_method" t-value="'receive'"/>
+                </t>
+                <td class="o_data_cell o_field_cell">
+                    <input type="checkbox" class="line_check"
+                           t-if="input_visible and mode == 'edit'"
+                           tabindex="-1"
+                           t-attf-name="select-#{order_line.id}"/>
+                    <i class="fa fa-info-circle"
+                       data-role="purchase_method"
+                       t-if="purchase_method == 'receive' and not input_visible"
+                       data-container="body"
+                       data-toggle="popover"
+                       data-placement="left"
+                       data-trigger="focus"
+                       tabindex="-1"
+                       data-content="The product has purchase method based to receive quantity but the quantity has not yet been received."
+                    />
+                </td>
+                <td class="o_data_cell o_field_cell">
+                    <span t-esc="order_line.product_id.name"/>
+                </td>
+                <td class="o_data_cell o_field_cell">
+                    <span t-esc="order_line.name"/>
+                </td>
+                <td class="o_data_cell o_field_cell text-right">
+                    <span t-esc="order_line.product_qty"
+                          t-options='{"widget": "float", "decimal_precision": "Product Unit of Measure"}'/>
+                </td>
+                <td class="o_data_cell o_field_cell text-right">
+                    <span t-esc="order_line.qty_received"
+                          t-options='{"widget": "float", "decimal_precision": "Product Unit of Measure"}'/>
+                </td>
+                <td class="o_data_cell o_field_cell text-right">
+                    <i tabindex="-1" class="text-info fa fa-info-circle" data-role="billed_info" t-if="order_line.qty_invoiced &gt; 0"/>
+                    <span t-esc="order_line.qty_invoiced"
+                          t-options='{"widget": "float", "decimal_precision": "Product Unit of Measure"}'/>
+                </td>
+                <td class="o_data_cell o_field_cell text-right">
+                    <input class="o_field_float o_field_number o_field_widget o_input o_required_modifier"
+                           t-if="input_visible and mode == 'edit'"
+                           t-attf-name="product_qty"
+                           t-att-data-precision="precision"
+                           t-attf-data-value="#{round((order_line.product_qty - order_line.qty_invoiced), precision)}"
+                           type="number"/>
+                </td>
+                <td class="o_data_cell o_field_cell text-right">
+                    <span t-esc="order_line.price_unit"
+                          t-options='{"widget": "monetary", "display_currency": order_line.currency_id}'/>
+                </td>
+                <td></td>
+            </tr>
+        </t>
+    </template>
+
+    <template id="order_lines">
+        <div t-if="purchase_orders">
+            <div class="o_notebook">
+                <div class="o_notebook_headers">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item"><a data-toggle="tab" disable_anchor="true" href="#orders_line" class="nav-link active" role="tab">Order(s) line</a></li>
+                    </ul>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="orders_line">
+                        <div class="text-right" t-if="mode == 'edit'">
+                            <button type="button" class="btn btn-primary mb-3" accesskey="R" aria-keyshortcuts="Alt+Shift+R" id="reconcile"><span>Reconcile</span></button>
+                        </div>
+                        <div class="o_field_one2many o_field_widget o_field_x2many o_field_x2many_list o_readonly_modifier">
+                            <div class="o_list_view">
+                                <div class="table-responsive">
+                                    <table class="o_list_table table table-sm table-hover table-striped o_list_table_ungrouped o_section_and_note_list_view">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    <input type="checkbox" id="select-all" name="select-all" tabindex="-1" t-if="mode == 'edit'"/>
+                                                </th>
+                                                <th>Product</th>
+                                                <th>Description</th>
+                                                <th class="text-right">Quantity</th>
+                                                <th class="text-right">Receipt Quantity</th>
+                                                <th class="text-right">Billed Quantity</th>
+                                                <th class="text-right">To reconcile qty</th>
+                                                <th class="text-right">Price Unit</th>
+                                                <th/>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                            <t t-foreach="purchase_orders" t-as="order">
+                                                <t t-call="purchase_order_invoice_reconciliation.print_order_header">
+                                                    <t t-set="order" t-value="order"/>
+                                                </t>
+                                                <t t-call="purchase_order_invoice_reconciliation.print_order_lines">
+                                                    <t t-set="order" t-value="order"/>
+                                                    <t t-set="order_lines" t-value="order.order_line"/>
+                                                </t>
+                                            </t>
+                                            <span data-role="extra_lines"/>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lead text-center" t-else="">
+            <i class="fa fa-info"/> Using filter on top for select purchase order(s)
+        </div>
+    </template>
+
+    <template id="reconciled_billed_info">
+        <div>
+            <ul class="list-group">
+                <li class="list-group-item"  t-foreach="purchase_reconciliation_line" t-as="line">
+                    <table>
+                        <tr>
+                            <td class="font-weight-bold">Quantity:</td>
+                            <td>
+                                <span t-esc="line.qty"
+                                      t-options='{"widget": "float", "decimal_precision": "Product Unit of Measure"}'/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="font-weight-bold">Memo:</td>
+                            <td>
+                                <span t-esc="line.invoice_id.name"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="font-weight-bold">Date:</td>
+                            <td>
+                                <span t-esc="line.invoice_id.date" t-options="{'widget': 'date'}"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="font-weight-bold">Journal:</td>
+                            <td>
+                                <span t-esc="line.invoice_id.journal_id.name"/>
+                            </td>
+                        </tr>
+                    </table>
+                    <button type="button" class="btn btn-sm mt-2 btn-primary unreconciled"
+                            t-if="line.purchase_order_line_id.order_id.invoice_status != 'invoiced' and mode=='edit'"
+                            t-att-data-reconcile-id="line.id">
+                        <span>Unreconciled</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </template>
+
+</data>
+</odoo>

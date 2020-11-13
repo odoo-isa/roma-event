@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- FORM View  -->
+        <record model='ir.ui.view' id='view_waste_cost_form'>
+            <field name='name'>view.waste.cost.form</field>
+            <field name='model'>sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//group[@name='note_group']" position="before">
+                    <div class="oe_right">
+                        <field name="is_waste_cost_line" invisible="1"/>
+                        <button
+                            string="Add waste cost"
+                            name="compute_waste_cost"
+                            type="object"
+                            attrs="{'invisible': ['|', ('order_line', '=', []), ('is_waste_cost_line', '=', True)]}"
+                        />
+                        <button
+                            string="Update waste cost"
+                            name="compute_waste_cost"
+                            type="object"
+                            attrs="{'invisible': [('is_waste_cost_line', '!=', True)]}"
+                        />
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model='ir.ui.view' id='account_change_due_date_invoice_form'>
+        <field name='name'>account.change.due.date.invoice.form</field>
+        <field name='model'>account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name='arch' type='xml'>
+            <xpath expr="//field[@name='line_ids']" position="before">
+                <button string="Change Due Date"
+                        type="object"
+                        name="get_move_lines_to_change"
+                        attrs="{'invisible': ['|',('state','in',['draft','cancel']),('type', 'not in', ('out_invoice', 'out_refund'))]}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

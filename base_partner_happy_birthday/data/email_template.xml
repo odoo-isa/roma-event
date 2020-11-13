@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="base_partner_happy_birthday_template" model="mail.template">
+          <field name="name">Happy Birthday Template</field>
+          <field name="subject">Happy Birthday! ${object.name}</field>
+          <field name="email_from">${object.company_id and object.company_id.email or ''}</field>
+          <field name="email_to">${object.email|safe}</field>
+          <field name="lang">${object.lang}</field>
+          <field name="model_id" ref="base.model_res_partner"/>
+          <field name="body_html" type="html">
+              <table class="table table-condensed" style="border:0px;">
+                  <tbody>
+                      <tr>
+                          <td>
+                              <p><br/></p>
+                                  Dear ${object.name},
+                              <p><br/></p>
+                                <p>We noticeced that today is your special day, </p>
+                                <p>so we wanted to send our best wishes and thank you</p>
+                                <p> for your time as our customer. :-)<br/> <br/>
+                                <img src="/base_partner_happy_birthday/static/src/img/birthday_cake.png" style="border-style:none;height:auto;vertical-align:middle;max-width:400px;width:auto" alt="Happy Birthday" border="0"/>
+                            </p>
+                            <div style="text-align: left;"> Happy Birthday!</div>
+                          </td>
+                          <td>
+                              <p><br/></p>
+                          </td>
+                          <td>
+                              <br/>
+                          </td>
+                      </tr>
+                </tbody>
+            </table>
+          </field>
+       </record>
+    </data>
+</odoo>

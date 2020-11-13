@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- TREE View  -->
+    <record model='ir.ui.view' id='account_move_accounting_entry_tree'>
+        <field name='name'>account.move.accounting.entry.tree</field>
+        <field name='model'>account.move</field>
+        <field name="inherit_id" ref="account.view_move_tree"/>
+        <field name='arch' type='xml'>
+            <xpath expr="//field[@name='ref']" position="after">
+                <field name="accounting_entry_ids" optional="show" widget="many2many_tags"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- FORM View  -->
+    <record model='ir.ui.view' id='account_move_accounting_entry_form'>
+        <field name='name'>account.move.accounting.entry.form</field>
+        <field name='model'>account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name='arch' type='xml'>
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="open_accounting_entries" class="oe_stat_button"
+                        icon="fa-list" type="object"
+                        attrs="{'invisible': [('accounting_entry_count', '=', 0)]}">
+                    <span class="o_stat_value"><field name="accounting_entry_count"/></span>
+                    <span class="o_stat_text">Accounting Entries</span>
+                </button>
+            </xpath>
+            <xpath expr="//field[@name='line_ids']/tree/field[@name='credit']" position="after">
+                <field name="has_accounting_entry_management" invisible="1"/>
+                <field name="accounting_entry_id" optional="hide"
+                       context="{'default_account_id': account_id,
+                                 'default_partner_id': partner_id,
+                                 'default_state': 'open'}"
+                       domain="[('account_id', '=', account_id), '|', ('company_id', '=', False), ('company_id', '=', parent.company_id)]"
+                       attrs="{
+                        'readonly': [('has_accounting_entry_management', '=', False)]
+                       }"
+                />
+            </xpath>
+            <xpath expr="//field[@name='line_ids']/form//field[@name='tax_ids']" position="after">
+                <field name="has_accounting_entry_management" invisible="1"/>
+                <field name="accounting_entry_id"
+                       context="{'default_account_id': account_id,
+                                 'default_partner_id': partner_id,
+                                 'default_state': 'open'}"
+                       domain="[('account_id', '=', account_id), '|', ('company_id', '=', False), ('company_id', '=', parent.company_id)]"
+                       attrs="{
+                        'readonly': [('has_accounting_entry_management', '=', False)]
+                       }"
+                />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

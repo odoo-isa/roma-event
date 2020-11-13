@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- FORM View  -->
+        <record model='ir.ui.view' id='res_config_settings_view_form'>
+            <field name='name'>res.config.settings.view.form</field>
+            <field name='model'>res.config.settings</field>
+            <field name="inherit_id" ref="account.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@id='analytic']" position="after">
+                    <t groups="account.group_account_user">
+                        <h2>Split Payment</h2>
+                        <div class="row mt16 o_settings_container" id="split_payment_settings">
+                            <div class="col-12 col-lg-6 o_setting_box" id="split_account_settings">
+                                <div class="o_setting_right_pane">
+                                    <label for="sp_account_id" string="Sp Account"/>
+                                </div>
+                                <div class="o_setting_right_pane">
+                                    <field name="sp_account_id"/>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

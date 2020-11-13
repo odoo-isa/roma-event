@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- FORM View  -->
+        <record model='ir.ui.view' id='l10n_it_payment_withholding_tax_form'>
+            <field name='name'>l10n_it.payment.withholding.tax.form</field>
+            <field name='model'>l10n_it.payment.withholding.tax</field>
+            <field name='arch' type='xml'>
+                <form create="false" delete="false" edit="false">
+                    <header>
+                        <button name="cancel_payment_withholding_tax"
+                                string="Cancel"
+                                type="object"
+                                class="oe_highlight"
+                                confirm="Confirming the operation, the registration of the payment will be eliminated
+                                and the accounting movements that generated it will be reported in the Confirmed state,
+                                ready to be paid again. Are ypu sure?"/>
+                    </header>
+                    <sheet>
+                        <h2 style="color: #875A7A; text-align: center">
+                            Payment for Withholding Tax
+                        </h2>
+                        <h3>
+                            <i class="fa fa-list-ul" aria-label="Name" title="Name" style="margin-right: 10px"/> <field name='name'/>
+                        </h3>
+                        <i class="fa fa-angle-double-right" aria-label="Move" title="Move" style="margin-right: 10px"/> <field name="move_id"/>
+                        <group>
+                            <field name="date"/>
+                        </group>
+                        <separator string="Originator Move Lines"/>
+                        <field name="origin_move_line_ids"/>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- TREE View  -->
+        <record model='ir.ui.view' id='l10n_it_payment_withholding_tax_tree'>
+            <field name='name'>l10n_it.payment.withholding.tax.tree</field>
+            <field name='model'>l10n_it.payment.withholding.tax</field>
+            <field name='arch' type='xml'>
+                <tree string='Payment for Withholding Tax' create="false" delete="false" edit="false">
+                    <field name='name'/>
+                    <field name="move_id"/>
+                    <field name="date"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_open_payment_done_withholding_tax_lines" model="ir.actions.act_window">
+            <field name="name">Payment Done on Account Withholding Tax</field>
+            <field name="res_model">l10n_it.payment.withholding.tax</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="l10n_it_payment_withholding_tax_tree"/>
+        </record>
+
+    </data>
+</odoo>

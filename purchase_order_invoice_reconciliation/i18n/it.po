@@ -1,0 +1,669 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* purchase_order_invoice_reconciliation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-27 14:51+0000\n"
+"PO-Revision-Date: 2020-03-27 14:51+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: purchase_order_invoice_reconciliation
+#: code:addons/purchase_order_invoice_reconciliation/wizard/unbalance_reconciliation_reason_wizard.py:0
+#: code:addons/purchase_order_invoice_reconciliation/wizard/unbalance_reconciliation_reason_wizard.py:0
+#: code:addons/purchase_order_invoice_reconciliation/wizard/unbalance_reconciliation_reason_wizard.py:0
+#, python-format
+msgid "%s<br/>Reason: %s"
+msgstr "%s<br/>Motivo: %s"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.print_order_header
+msgid ""
+"(The order is set as fully billed. Re-open invoice status if you want to "
+"operate with it)"
+msgstr ""
+"(L'ordine è impostato come completamente fatturato. Riapri lo stato fattura se vuoi "
+"apportare modifiche.)"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.invoice_close_check
+msgid ""
+".\n"
+"                <span class=\"font-weight-bold\">Unbalance :</span>"
+msgstr ""
+".\n"
+"                <span class=\"font-weight-bold\">Squadratura:</span>"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.order_set_billed
+msgid ""
+".\n"
+"            <span class=\"font-weight-bold\">Unbalance :</span>"
+msgstr ""
+".\n"
+"            <span class=\"font-weight-bold\">Squadratura :</span>"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.order_set_billed
+msgid ""
+"<i class=\"fa fa-exclamation-triangle\" aria-hidden=\"true\"/>\n"
+"            For this order you are reconciling a taxable amount of"
+msgstr ""
+"<i class=\"fa fa-exclamation-triangle\" aria-hidden=\"true\"/>\n"
+"            Per questo ordine stai riconciliando un imponibile pari a"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.invoice_close_check
+msgid ""
+"<i class=\"fa fa-exclamation-triangle\" aria-hidden=\"true\"/> For this "
+"invoice you are reconciling a taxable amount of"
+msgstr ""
+"<i class=\"fa fa-exclamation-triangle\" aria-hidden=\"true\"/> Per questa "
+"fattura stai riconciliando un imponibile pari a"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.invoice_close_check
+msgid ""
+"<i class=\"fa fa-exclamation-triangle\" aria-hidden=\"true\"/> These orders "
+"have a squaring between the taxable total and the reconciled total:"
+msgstr ""
+"<i class=\"fa fa-exclamation-triangle\" aria-hidden=\"true\"/> Per questi ordini "
+"è presente una squadratura tra l'importo imponibile e il totale riconciliato"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.order_lines
+msgid "<i class=\"fa fa-info\"/> Using filter on top for select purchase order(s)"
+msgstr "<i class=\"fa fa-info\"/> Usa i filtri in alto per selezionare gli ordini"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.invoice_view
+msgid ""
+"<span class=\"o_form_label\">\n"
+"                <span name=\"type\">Supplier Invoice</span>\n"
+"            </span>"
+msgstr ""
+"<span class=\"o_form_label\">\n"
+"                <span name=\"type\">Fattura Fornitore</span>\n"
+"            </span>"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.order_lines
+msgid "<span>Reconcile</span>"
+msgstr "<span>Riconcilia</span>"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.reconciled_billed_info
+msgid "<span>Unreconciled</span>"
+msgstr "<span>Annulla Riconciliazione</span>"
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model,name:purchase_order_invoice_reconciliation.model_invoice_purchase_order_line_reconcile_widget
+msgid ""
+"Abstract class for manage 'purchase order line -> invoice' reconciliation "
+"widget"
+msgstr ""
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.invoice_view
+msgid "Accounting date"
+msgstr "Data registrazione"
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model.fields,help:purchase_order_invoice_reconciliation.field_purchase_order_line__invoice_purchase_order_line_reconcile_ids
+msgid "Already reconciled lines"
+msgstr "Linee già riconciliate"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.order_lines
+msgid "Alt+Shift+R"
+msgstr ""
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model.fields,field_description:purchase_order_invoice_reconciliation.field_purchase_filter_reconcile__amount
+msgid "Amount"
+msgstr "Totale"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.invoice_close_check
+msgid "Amount Untaxed"
+msgstr "Totale Imponibile"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.invoice_view
+msgid "Amount untaxed:"
+msgstr "Totale imponibile:"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.order_lines
+msgid "Billed Quantity"
+msgstr "Quantità fatturata"
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model.fields,field_description:purchase_order_invoice_reconciliation.field_purchase_order__billed_amount_untaxed
+msgid "Billed amount untaxed"
+msgstr "Importo imponibile fatturato"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.view_move_reconcile_form
+msgid "Billing control with purchase orders has not yet been closed"
+msgstr "Il controllo fattura con gli ordini di acquisto non è ancora chiuso"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.unbalance_reconciliation_reason_wizard
+msgid "Cancel"
+msgstr "Annulla"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.unbalance_reconciliation_reason_wizard
+msgid "Close Invoice Check"
+msgstr "Chiudi Controllo Fattura"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.view_move_reconcile_form
+msgid "Close reconcile check"
+msgstr "Chiudi controllo riconciliazione"
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model.fields.selection,name:purchase_order_invoice_reconciliation.selection__account_move__invoice_check_status__close_unbalance
+msgid "Close with unbalance invoice and orders"
+msgstr "Chiuso con squadratura su fattura e ordini"
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model.fields.selection,name:purchase_order_invoice_reconciliation.selection__account_move__invoice_check_status__close
+msgid "Closed"
+msgstr "Chiuso"
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model.fields.selection,name:purchase_order_invoice_reconciliation.selection__account_move__invoice_check_status__close_unbalance_invoice
+msgid "Closed with unbalance invoice"
+msgstr "Chiuso con squadratura su fattura"
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model.fields.selection,name:purchase_order_invoice_reconciliation.selection__account_move__invoice_check_status__close_unbalance_orders
+msgid "Closed with unbalance orders"
+msgstr "Chiuso con squadratura ordini"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.unbalance_reconciliation_reason_wizard
+msgid "Confirm"
+msgstr "Conferma"
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model.fields,field_description:purchase_order_invoice_reconciliation.field_invoice_purchase_order_line_reconcile__create_uid
+#: model:ir.model.fields,field_description:purchase_order_invoice_reconciliation.field_unbalance_reconciliation_reason_wizard__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model.fields,field_description:purchase_order_invoice_reconciliation.field_invoice_purchase_order_line_reconcile__create_date
+#: model:ir.model.fields,field_description:purchase_order_invoice_reconciliation.field_unbalance_reconciliation_reason_wizard__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model.fields,field_description:purchase_order_invoice_reconciliation.field_purchase_filter_reconcile__currency_id
+msgid "Currency"
+msgstr "Valuta"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.invoice_close_check
+msgid "Date"
+msgstr "Data"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.reconciled_billed_info
+msgid "Date:"
+msgstr "Data:"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.order_lines
+msgid "Description"
+msgstr "Descrizione"
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model.fields,field_description:purchase_order_invoice_reconciliation.field_invoice_purchase_order_line_reconcile__display_name
+#: model:ir.model.fields,field_description:purchase_order_invoice_reconciliation.field_invoice_purchase_order_line_reconcile_widget__display_name
+#: model:ir.model.fields,field_description:purchase_order_invoice_reconciliation.field_purchase_filter_reconcile__display_name
+#: model:ir.model.fields,field_description:purchase_order_invoice_reconciliation.field_unbalance_reconciliation_reason_wizard__display_name
+msgid "Display Name"
+msgstr "Nome Visualizzato"
+
+#. module: purchase_order_invoice_reconciliation
+#. openerp-web
+#: code:addons/purchase_order_invoice_reconciliation/static/src/js/invoice_purchase_order_line_reconcile.js:0
+#, python-format
+msgid "Error on reconcile"
+msgstr "Errore su riconciliazione"
+
+#. module: purchase_order_invoice_reconciliation
+#. openerp-web
+#: code:addons/purchase_order_invoice_reconciliation/static/src/xml/invoice_purchase_order_line_reconcile.xml:0
+#, python-format
+msgid "Filters"
+msgstr "Filtri"
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model.fields,field_description:purchase_order_invoice_reconciliation.field_purchase_order__forced_as_billed
+msgid "Forced as billed"
+msgstr "Foza come fatturata"
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model.fields,field_description:purchase_order_invoice_reconciliation.field_invoice_purchase_order_line_reconcile__id
+#: model:ir.model.fields,field_description:purchase_order_invoice_reconciliation.field_invoice_purchase_order_line_reconcile_widget__id
+#: model:ir.model.fields,field_description:purchase_order_invoice_reconciliation.field_purchase_filter_reconcile__id
+#: model:ir.model.fields,field_description:purchase_order_invoice_reconciliation.field_unbalance_reconciliation_reason_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.invoice_close_check
+msgid "Internal Ref."
+msgstr "Rif. Interno"
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model.fields,field_description:purchase_order_invoice_reconciliation.field_purchase_filter_reconcile__internal_reference
+#: model:ir.model.fields,field_description:purchase_order_invoice_reconciliation.field_purchase_order__internal_reference
+msgid "Internal reference"
+msgstr "Riferimento Interno"
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model.fields,field_description:purchase_order_invoice_reconciliation.field_invoice_purchase_order_line_reconcile__invoice_id
+msgid "Invoice"
+msgstr "Fattura"
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model.fields,field_description:purchase_order_invoice_reconciliation.field_purchase_order_line__invoice_purchase_order_line_reconcile_ids
+msgid "Invoice Order Line Reconciled"
+msgstr "Riconciliazione fattura righe di ordine"
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model.fields,field_description:purchase_order_invoice_reconciliation.field_account_move__invoice_check_status
+msgid "Invoice check status"
+msgstr "Controllo stato fattura"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.invoice_view
+msgid "Invoice date"
+msgstr "Data fattura"
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model.fields,help:purchase_order_invoice_reconciliation.field_invoice_purchase_order_line_reconcile__invoice_id
+msgid "Invoice id that has been reconciled"
+msgstr "Id della fattura che è stata riconciliata"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.invoice_view
+msgid "Invoice lines"
+msgstr "Righe di fattura"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.invoice_view
+msgid "Journal"
+msgstr "Sezionale"
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model,name:purchase_order_invoice_reconciliation.model_account_move
+msgid "Journal Entries"
+msgstr "Registrazioni contabili"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.reconciled_billed_info
+msgid "Journal:"
+msgstr "Sezionale:"
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model.fields,field_description:purchase_order_invoice_reconciliation.field_invoice_purchase_order_line_reconcile____last_update
+#: model:ir.model.fields,field_description:purchase_order_invoice_reconciliation.field_invoice_purchase_order_line_reconcile_widget____last_update
+#: model:ir.model.fields,field_description:purchase_order_invoice_reconciliation.field_purchase_filter_reconcile____last_update
+#: model:ir.model.fields,field_description:purchase_order_invoice_reconciliation.field_unbalance_reconciliation_reason_wizard____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model.fields,field_description:purchase_order_invoice_reconciliation.field_invoice_purchase_order_line_reconcile__write_uid
+#: model:ir.model.fields,field_description:purchase_order_invoice_reconciliation.field_unbalance_reconciliation_reason_wizard__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model.fields,field_description:purchase_order_invoice_reconciliation.field_invoice_purchase_order_line_reconcile__write_date
+#: model:ir.model.fields,field_description:purchase_order_invoice_reconciliation.field_unbalance_reconciliation_reason_wizard__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.reconciled_billed_info
+msgid "Memo:"
+msgstr ""
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model.fields,field_description:purchase_order_invoice_reconciliation.field_unbalance_reconciliation_reason_wizard__message_info
+msgid "Message info"
+msgstr "Messaggio"
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model.fields,help:purchase_order_invoice_reconciliation.field_purchase_order__internal_reference
+msgid "Mnemonic reference to the purchase order"
+msgstr "Riferimento mnemonico all'ordine di acquisto"
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model.fields.selection,name:purchase_order_invoice_reconciliation.selection__account_move__invoice_check_status__open
+msgid "Open"
+msgstr "Aperto"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.invoice_close_check
+msgid "Order"
+msgstr "Ordine"
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model.fields,field_description:purchase_order_invoice_reconciliation.field_purchase_filter_reconcile__date_order
+msgid "Order date"
+msgstr "Data ordine"
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model.fields,help:purchase_order_invoice_reconciliation.field_invoice_purchase_order_line_reconcile__purchase_order_line_id
+msgid "Order line that has been reconciled (totally or partially)"
+msgstr ""
+"Righe di ordine che sono state riconciliate (totalmente o parzialmente)"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.order_lines
+msgid "Order(s) line"
+msgstr "Righe di ordine"
+
+#. module: purchase_order_invoice_reconciliation
+#. openerp-web
+#: code:addons/purchase_order_invoice_reconciliation/static/src/js/invoice_purchase_order_line_reconcile.js:0
+#, python-format
+msgid "Please, select at least one line to reconcile."
+msgstr "Seleziona almeno una linea da riconciliare."
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.order_lines
+msgid "Price Unit"
+msgstr "Prezzo Unitario"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.invoice_view
+msgid "Price subtotal"
+msgstr "Prezzo imponibile"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.invoice_view
+msgid "Price unit"
+msgstr "Prezzo unitario"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.invoice_view
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.order_lines
+msgid "Product"
+msgstr "prodotto"
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model,name:purchase_order_invoice_reconciliation.model_purchase_order
+msgid "Purchase Order"
+msgstr "Ordine di acquisto"
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model,name:purchase_order_invoice_reconciliation.model_purchase_order_line
+#: model:ir.model.fields,field_description:purchase_order_invoice_reconciliation.field_invoice_purchase_order_line_reconcile__purchase_order_line_id
+msgid "Purchase Order Line"
+msgstr "Riga ordine di acquisto"
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model.fields,field_description:purchase_order_invoice_reconciliation.field_purchase_filter_reconcile__name
+msgid "Purchase order name"
+msgstr "Nome ordine di acquisto"
+
+#. module: purchase_order_invoice_reconciliation
+#. openerp-web
+#: code:addons/purchase_order_invoice_reconciliation/static/src/js/invoice_purchase_order_line_reconcile.js:0
+#, python-format
+msgid "Purchase orders"
+msgstr "Ordini di acquisto"
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model.fields,field_description:purchase_order_invoice_reconciliation.field_account_move__purchase_reconciled_line
+msgid "Purchase reconciled lines"
+msgstr "Linee di ordine riconciliate"
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model,name:purchase_order_invoice_reconciliation.model_purchase_filter_reconcile
+msgid "Purchase used for filter in reconcile"
+msgstr "Ordine usato per i filtri in riconciliazione"
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model.fields,field_description:purchase_order_invoice_reconciliation.field_invoice_purchase_order_line_reconcile__qty
+msgid "Qty"
+msgstr "Quantità"
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model.fields,help:purchase_order_invoice_reconciliation.field_invoice_purchase_order_line_reconcile__qty
+msgid "Qty of product that has been reconciled"
+msgstr "Quantità di prodotto che è stata riconciliata"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.invoice_view
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.order_lines
+msgid "Quantity"
+msgstr "Quantità"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.reconciled_billed_info
+msgid "Quantity:"
+msgstr "Quantità:"
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model.fields,field_description:purchase_order_invoice_reconciliation.field_unbalance_reconciliation_reason_wizard__reason
+msgid "Reason"
+msgstr "Motivo"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.order_lines
+msgid "Receipt Quantity"
+msgstr "Quantità Ricevuta"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.view_move_reconcile_form
+msgid "Reconcile Order"
+msgstr "Riconcilia Ordine"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.invoice_close_check
+msgid "Reconciled Amount"
+msgstr "Riconcilia importo"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.purchase_order_reconcile_invoice_form
+msgid "Reconciled Invoice(s)"
+msgstr "Fatture Riconciliate"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.view_move_reconcile_form
+msgid "Reconciled Order(s)"
+msgstr "Ordine(i) Riconciliato(i)"
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model.fields,help:purchase_order_invoice_reconciliation.field_account_move__purchase_reconciled_line
+msgid "Reconciled purchase order line"
+msgstr "Linee di ordine di acquisto riconciliate"
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model,name:purchase_order_invoice_reconciliation.model_invoice_purchase_order_line_reconcile
+msgid "Reconciliation between purchase order line and invoice"
+msgstr "Riconciliazione tra linee di ordine di acquisto e fattura"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.invoice_view
+msgid "Ref"
+msgstr "Rif"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.invoice_close_check
+msgid "Ref."
+msgstr "Rif."
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model.fields,field_description:purchase_order_invoice_reconciliation.field_purchase_filter_reconcile__partner_ref
+msgid "Reference"
+msgstr "Riferimento"
+
+#. module: purchase_order_invoice_reconciliation
+#. openerp-web
+#: code:addons/purchase_order_invoice_reconciliation/static/src/xml/invoice_purchase_order_line_reconcile.xml:0
+#, python-format
+msgid "Refresh"
+msgstr "Ricarica"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.purchase_order_reconcile_invoice_form
+msgid "Reopen invoice status"
+msgstr "Riapri stato fattura"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.view_move_reconcile_form
+msgid "Reopen reconcile check"
+msgstr "Riapri controllo riconc."
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.purchase_order_reconcile_invoice_form
+msgid "Set as Invoiced"
+msgstr "Imposta come fatturato"
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model.fields,help:purchase_order_invoice_reconciliation.field_unbalance_reconciliation_reason_wizard__reason
+msgid "Short annotation that indicate the motivation of the reconciliation."
+msgstr "Breve annotazione che indica il motivo della riconciliazione."
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model.fields,field_description:purchase_order_invoice_reconciliation.field_purchase_filter_reconcile__supplier_id
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.invoice_view
+msgid "Supplier"
+msgstr "Fornitore"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.view_move_reconcile_form
+msgid "The invoice is checked against the purchase orders"
+msgstr "La fattura è controllata rispetto agli ordini di acquisto"
+
+#. module: purchase_order_invoice_reconciliation
+#: code:addons/purchase_order_invoice_reconciliation/models/account_move.py:0
+#, python-format
+msgid "The invoice reconcile's check it was reopen."
+msgstr "Il controllo riconciliazione fattura è stato riaperto."
+
+#. module: purchase_order_invoice_reconciliation
+#: code:addons/purchase_order_invoice_reconciliation/models/purchase_order.py:0
+#, python-format
+msgid "The invoice status's order it was set as to invoice."
+msgstr ""
+"Lo stato di fatturazione dell'ordine è stato impostato come da fatturare."
+
+#. module: purchase_order_invoice_reconciliation
+#: code:addons/purchase_order_invoice_reconciliation/models/purchase_order.py:0
+#, python-format
+msgid "The order it was set as invoiced."
+msgstr "L'ordine è stato impostato come fatturato."
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model.fields,help:purchase_order_invoice_reconciliation.field_purchase_order__billed_amount_untaxed
+msgid "The reconciled amount between this purchase order and invoice(s)"
+msgstr ""
+"L'importo riconciliato tra questo ordine di acquisto e la(e) fattura(e)"
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model.fields,help:purchase_order_invoice_reconciliation.field_account_move__invoice_check_status
+msgid "This field indicate the status of the invoice check"
+msgstr "Questo campo indica lo stato del controllo fattura fornitore"
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model.fields,help:purchase_order_invoice_reconciliation.field_purchase_order__forced_as_billed
+msgid "This order it was forced as billed"
+msgstr "Questo ordine è stato forzato come fatturato"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.order_lines
+msgid "To reconcile qty"
+msgstr "Qty da riconciliare"
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model.fields,field_description:purchase_order_invoice_reconciliation.field_account_move__total_purchase_order_reconcile_price
+msgid "Total price reconcile form purchase order (Untaxed)"
+msgstr "Prezzo totale riconciliato dagli ordini di acquisto (Imponibile)"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.invoice_view
+msgid "Total price reconcile form purchase order:"
+msgstr "Prezzo totale riconciliato dagli ordini di acquisto"
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model.fields,help:purchase_order_invoice_reconciliation.field_account_move__total_purchase_order_reconcile_price
+msgid "Total reconciled from purchase orders"
+msgstr "Totale riconciliato dagli ordini"
+
+#. module: purchase_order_invoice_reconciliation
+#: code:addons/purchase_order_invoice_reconciliation/models/account_move.py:0
+#, python-format
+msgid "Unable to register payment for invoice that have to be yet check"
+msgstr "Impossibile registrare un pagamento. La fattura non è stata ancora controllata"
+
+#. module: purchase_order_invoice_reconciliation
+#: code:addons/purchase_order_invoice_reconciliation/models/account_move.py:0
+#, python-format
+msgid ""
+"Unable to set invoice in draft state: there are reconcile movements that "
+"have to be cancel."
+msgstr ""
+"Impossibile impostare la fattura in bozza: ci sono movimenti di riconciliazione "
+"che devono essere annullati"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.invoice_close_check
+msgid "Unbalance"
+msgstr "Squadratura"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.unbalance_reconciliation_reason_wizard
+msgid "Unbalance Reason"
+msgstr "Motivo Squadratura"
+
+#. module: purchase_order_invoice_reconciliation
+#. openerp-web
+#: code:addons/purchase_order_invoice_reconciliation/static/src/xml/invoice_purchase_order_line_reconcile.xml:0
+#, python-format
+msgid "Using filter on top for select purchase order(s)"
+msgstr "Utilizza i filtri in alto per selezione gli ordini"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.view_move_reconcile_form
+msgid "View Reconcile Order"
+msgstr "Visualizza ordini riconciliati"
+
+#. module: purchase_order_invoice_reconciliation
+#: model:ir.model,name:purchase_order_invoice_reconciliation.model_unbalance_reconciliation_reason_wizard
+msgid "Wizard for message reconciliation confirm"
+msgstr ""
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.invoice_close_check
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.order_set_billed
+msgid "in the face of"
+msgstr "a fronte di"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.invoice_view
+msgid "name"
+msgstr "nome"
+
+#. module: purchase_order_invoice_reconciliation
+#: model_terms:ir.ui.view,arch_db:purchase_order_invoice_reconciliation.unbalance_reconciliation_reason_wizard
+msgid "or"
+msgstr "o"

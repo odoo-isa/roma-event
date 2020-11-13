@@ -1,0 +1,52 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* purchase_stock_extension_isa
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-20 11:03+0000\n"
+"PO-Revision-Date: 2020-10-20 11:03+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: purchase_stock_extension_isa
+#: model:ir.model.fields,help:purchase_stock_extension_isa.field_purchase_order_line__stock_quantity_sale_info_tree
+msgid "Compute field to show the reserved quantity in tree view"
+msgstr "Campo calcolato che mostra la quantità riservata in vista a lista"
+
+#. module: purchase_stock_extension_isa
+#: model:ir.model,name:purchase_stock_extension_isa.model_stock_move_quantity_owner_info
+msgid "Information about owner of the goods"
+msgstr "Informazioni sul proprietario delle merci"
+
+#. module: purchase_stock_extension_isa
+#: model:ir.model.fields,help:purchase_stock_extension_isa.field_purchase_order_line__stock_quantity_sale_info
+msgid "Information about the product quantity owner reserved for the sale"
+msgstr "Informazioni sulla quantità del prodotto riservata alla vendita"
+
+#. module: purchase_stock_extension_isa
+#: model:ir.model.fields,field_description:purchase_stock_extension_isa.field_stock_move_quantity_owner_info__purchase_line_id
+msgid "Purchase Line"
+msgstr "Riga ordine di Acquisto"
+
+#. module: purchase_stock_extension_isa
+#: model:ir.model,name:purchase_stock_extension_isa.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr "Riga ordine di acquisto"
+
+#. module: purchase_stock_extension_isa
+#: model:ir.model.fields,field_description:purchase_stock_extension_isa.field_purchase_order_line__stock_quantity_sale_info
+#: model_terms:ir.ui.view,arch_db:purchase_stock_extension_isa.purchase_order_form_purchase_stock_extension_isa
+msgid "Sale Quantity Owner"
+msgstr "Proprietario Quantità Venduta"
+
+#. module: purchase_stock_extension_isa
+#: model:ir.model.fields,field_description:purchase_stock_extension_isa.field_purchase_order_line__stock_quantity_sale_info_tree
+msgid "Sale Quantity Owner tree"
+msgstr "Proprietario Quantità Venduta"

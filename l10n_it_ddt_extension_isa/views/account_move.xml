@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record model='ir.ui.view' id='name_id_form'>
+            <field name='name'>l10nview.move.form</field>
+            <field name='model'>account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//form/sheet/notebook/page[@id='invoice_tab']/field[@name='invoice_line_ids']/tree/field[@name='account_id']" position="after">
+                    <field name="ddt_id"/>
+                </xpath>
+                <xpath expr="//form/sheet/notebook/page[@id='aml_tab']/field[@name='line_ids']/tree/field[@name='payment_id']" position="after">
+                    <field name="ddt_id" invisible="1"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

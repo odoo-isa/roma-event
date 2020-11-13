@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Form view -->
+        <record id="product_supplierinfo_form_view_incas" model="ir.ui.view">
+            <field name="name">product.supplierinfo.form.view.incas</field>
+            <field name="model">product.supplierinfo</field>
+            <field name="inherit_id" ref="product.product_supplierinfo_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//label[@for='date_start']" position="before">
+                    <label for="supplier_price"/>
+                    <div class="o_row">
+                        <field name="supplier_price" readonly="1"/>
+                    </div>
+                    <label for="discounts"/>
+                    <div class="o_row">
+                        <field name="discounts" readonly="1"/>
+                    </div>
+                    <label for="profit"/>
+                    <div class="o_row">
+                        <field name="profit" readonly="1"/>
+                    </div>
+                </xpath>
+                <xpath expr="//field[@name='date_start']" position="attributes">
+                    <attribute name="attrs">{'required': 1}</attribute>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>
+

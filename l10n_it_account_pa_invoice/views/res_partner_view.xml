@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- FORM View  -->
+        <record model='ir.ui.view' id='view_res_partner_pa_invoice_form'>
+            <field name='name'>view.res.partner.pa.invoice.form</field>
+            <field name='model'>res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='vat']" position="after">
+                    <field name="cig" attrs="{'invisible': [('type', '!=', 'delivery')]}"/>
+                    <field name="cup" attrs="{'invisible': [('type', '!=', 'delivery')]}"/>
+                </xpath>
+                <xpath expr="//field[@name='child_ids']//field[@name='company_id']" position="before">
+                    <field name="cig" attrs="{'invisible': [('type', '!=', 'delivery')]}"/>
+                    <field name="cup" attrs="{'invisible': [('type', '!=', 'delivery')]}"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

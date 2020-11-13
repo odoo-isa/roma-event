@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record model='ir.ui.view' id='res_partner_form_l10n_it'>
+            <field name='name'>l10n_it_edi_extension_isa.res.partner.form.l10n_it</field>
+            <field name='model'>res.partner</field>
+            <field name="inherit_id" ref="l10n_it_edi.res_partner_form_l10n_it"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='l10n_it_pa_index']" position="attributes">
+                    <attribute name="attrs"></attribute>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

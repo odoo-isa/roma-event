@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Template for show ddt invoice errors -->
+        <template id="ddt_invoice_errors">
+            <table class="table">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">Error</th>
+                        <th scope="col"/>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr t-foreach="errors" t-as="error">
+                        <td>
+                            <t t-esc="error_value['desc']"/>
+                        </td>
+                        <td>
+                            <ul>
+                              <li t-foreach="error_value['ddt']" t-as="ddt">
+                                  <t t-esc="ddt.name_get()[0][1]"/>
+                              </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </template>
+
+    </data>
+</odoo>

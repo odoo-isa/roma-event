@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- FORM View  -->
+    <record model='ir.ui.view' id='l10n_it_sale_order_form'>
+        <field name='name'>l10n.it.sale.order.form</field>
+        <field name='model'>sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="priority">10</field>
+        <field name='arch' type='xml'>
+            <xpath expr="//div[hasclass('oe_title')]" position="before">
+                <field name="qty_to_invoice_from_ddt" invisible="1"/>
+                <div class="alert alert-warning" role="alert"
+                     attrs="{'invisible': [('qty_to_invoice_from_ddt', '&lt;=', 0.0)]}">
+                    Exists DdT that should be invoiced.
+                </div>
+            </xpath>
+            <xpath expr="//header/button[@name='action_quotation_send']" position="before">
+                <field name="can_create_ddt" invisible="1"/>
+                <button string="Create Ddt"
+                    id="create_ddt"
+                    type="action"
+                    name="%(l10n_it_ddt_sale_integration.create_ddt_sale_wizard_action)d"
+                    class="oe_highlight"
+                    attrs="{'invisible': [('can_create_ddt','=',False)]}">
+                </button>
+            </xpath>
+            <xpath expr="//button[@name='action_view_invoice']" position="before">
+                <button name="action_view_ddt" type="object" class="oe_stat_button" icon="fa-file-text" attrs="{'invisible': [('ddt_count', '=', 0)]}">
+                    <field name="ddt_count" widget="statinfo" string="DdT"/>
+                </button>
+            </xpath>
+            <xpath expr="//field[@name='order_line']/tree/field[@name='qty_delivered']" position="after">
+                <field name="qty_in_ddt" attrs="{'column_invisible': [('parent.state', 'not in', ['sale', 'done'])]}"/>
+            </xpath>
+            <xpath expr="//group[@name='sale_shipping']" position="attributes">
+                <attribute name="groups"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_ddt_to_invoice" model="ir.actions.act_window">
+        <field name="name">Ddt</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">l10n_it.ddt</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('invoice_id', 'in', [None,False]),('state','=','confirmed')]</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- FORM View  -->
+        <record model='ir.ui.view' id='view_product_pricelist_item_discount_form'>
+            <field name='name'>view.product.pricelist.item.discount.form</field>
+            <field name='model'>product.pricelist.item</field>
+            <field name="inherit_id" ref="product.product_pricelist_item_form_view"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='price_max_margin']" position="after">
+                    <label for="discount1"/>
+                    <div class="o_row">
+                        <field name="discount1"/>
+                        <span>%%</span>
+                    </div>
+                    <label for="discount2"/>
+                    <div class="o_row">
+                        <field name="discount2"/>
+                        <span>%%</span>
+                    </div>
+                    <label for="discount3"/>
+                    <div class="o_row">
+                        <field name="discount3"/>
+                        <span>%%</span>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

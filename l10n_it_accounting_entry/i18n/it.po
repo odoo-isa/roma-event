@@ -1,0 +1,560 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_it_accounting_entry
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-01 12:41+0000\n"
+"PO-Revision-Date: 2020-10-01 14:42+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: it\n"
+"X-Generator: Poedit 2.3.1\n"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model.fields,field_description:l10n_it_accounting_entry.field_account_move__accounting_entry_count
+msgid "# of Accounting entries"
+msgstr "# di partite contabile"
+
+#. module: l10n_it_accounting_entry
+#: model_terms:ir.ui.view,arch_db:l10n_it_accounting_entry.report_accounting_entry_document
+msgid ""
+"<br/>\n"
+"                                <strong>Account: </strong>"
+msgstr ""
+
+#. module: l10n_it_accounting_entry
+#: model_terms:ir.ui.view,arch_db:l10n_it_accounting_entry.l10n_it_accounting_entry_merge_form
+msgid ""
+"<span class=\"lead\" colspan=\"2\">\n"
+"                            All selected accounting entries will be split. "
+"Proceed?\n"
+"                        </span>"
+msgstr ""
+"<span class=\"lead\" colspan=\"2\">\n"
+"                            Tutte le partite selezionate verranno "
+"disaccorpate. Procedere?\n"
+"                        </span>"
+
+#. module: l10n_it_accounting_entry
+#: model_terms:ir.ui.view,arch_db:l10n_it_accounting_entry.account_move_accounting_entry_form
+msgid "<span class=\"o_stat_text\">Accounting Entries</span>"
+msgstr "<span class=“o_stat_text”>Partite Contabili</span>"
+
+#. module: l10n_it_accounting_entry
+#: model_terms:ir.ui.view,arch_db:l10n_it_accounting_entry.report_accounting_entry_document
+msgid "<strong>Partner: </strong>"
+msgstr "<strong>Cliente: </strong>"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model,name:l10n_it_accounting_entry.model_account_account
+#: model:ir.model.fields,field_description:l10n_it_accounting_entry.field_l10n_it_accounting_entry__account_id
+#: model_terms:ir.ui.view,arch_db:l10n_it_accounting_entry.l10n_it_accounting_entry_search
+#: model_terms:ir.ui.view,arch_db:l10n_it_accounting_entry.report_accounting_entry_document
+msgid "Account"
+msgstr "Conto"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model.fields,field_description:l10n_it_accounting_entry.field_l10n_it_accounting_entry__accounting_entry_lines
+msgid "Account Move Lines"
+msgstr "Movimenti Contabili"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model.fields,field_description:l10n_it_accounting_entry.field_account_payment__counterpart_entry_account_id
+msgid "Account of the counterpart entry"
+msgstr ""
+
+#. module: l10n_it_accounting_entry
+#: model:ir.actions.act_window,name:l10n_it_accounting_entry.action_open_l10n_it_accounting_entry
+msgid "Accounting Entries Management"
+msgstr "Gestione Partite Contabili"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model,name:l10n_it_accounting_entry.model_l10n_it_accounting_entry
+#: model_terms:ir.ui.view,arch_db:l10n_it_accounting_entry.l10n_it_accounting_entry_form
+#: model_terms:ir.ui.view,arch_db:l10n_it_accounting_entry.l10n_it_accounting_entry_search
+#: model_terms:ir.ui.view,arch_db:l10n_it_accounting_entry.l10n_it_accounting_entry_tree
+msgid "Accounting Entry"
+msgstr "Partita Contabile"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.actions.act_window,name:l10n_it_accounting_entry.action_report_accounting_entry_filter
+#: model_terms:ir.ui.view,arch_db:l10n_it_accounting_entry.wizard_report_accounting_entry_form
+msgid "Accounting Entry Filter"
+msgstr "Filtro Partite Contabili"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model,name:l10n_it_accounting_entry.model_report_l10n_it_accounting_entry_report_accounting_entry
+msgid "Accounting Entry Report"
+msgstr "Stampa Partite Contabili"
+
+#. module: l10n_it_accounting_entry
+#: model_terms:ir.ui.view,arch_db:l10n_it_accounting_entry.l10n_it_accounting_entry_merge_form
+msgid "Accounting Merge"
+msgstr "Accorpa partite contabili"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model.fields,field_description:l10n_it_accounting_entry.field_account_move__accounting_entry_ids
+#: model:ir.ui.menu,name:l10n_it_accounting_entry.l10n_it_accounting_entry_menu
+#: model:ir.ui.menu,name:l10n_it_accounting_entry.l10n_it_accounting_entry_root
+msgid "Accounting entries"
+msgstr "Partite Contabili"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model.fields,field_description:l10n_it_accounting_entry.field_account_move_line__accounting_entry_id
+msgid "Accounting entry"
+msgstr "Partita Contabile"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model.fields,field_description:l10n_it_accounting_entry.field_l10n_it_accounting_entry_merge_split__accounting_entry_to_split
+msgid "Accounting entry to split"
+msgstr "Partite da disaccorpare"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model.fields,help:l10n_it_accounting_entry.field_l10n_it_accounting_entry__accounting_entry_lines
+msgid "All the move line that compose the accounting entry"
+msgstr "Tutti i movimenti contabili che compongono la partita"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model.fields,help:l10n_it_accounting_entry.field_l10n_it_accounting_entry_merge_split__main_accounting_entry
+msgid "All the moves will be linked to this accounting entry."
+msgstr "Tutti i movimenti verranno accorpati a questa partita."
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model.fields,field_description:l10n_it_accounting_entry.field_l10n_it_accounting_entry__amount
+msgid "Amount"
+msgstr "Totale"
+
+#. module: l10n_it_accounting_entry
+#: model_terms:ir.ui.view,arch_db:l10n_it_accounting_entry.l10n_it_accounting_entry_merge_form
+#: model_terms:ir.ui.view,arch_db:l10n_it_accounting_entry.wizard_report_accounting_entry_form
+msgid "Cancel"
+msgstr "Cancella"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model.fields.selection,name:l10n_it_accounting_entry.selection__l10n_it_accounting_entry__state__close
+#: model:ir.model.fields.selection,name:l10n_it_accounting_entry.selection__wizard_report_accounting_entry__state__close
+#: model_terms:ir.ui.view,arch_db:l10n_it_accounting_entry.l10n_it_accounting_entry_search
+msgid "Close"
+msgstr "Chiusa"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model.fields,field_description:l10n_it_accounting_entry.field_l10n_it_accounting_entry__company_id
+msgid "Company"
+msgstr "Azienda"
+
+#. module: l10n_it_accounting_entry
+#: model_terms:ir.ui.view,arch_db:l10n_it_accounting_entry.wizard_report_accounting_entry_form
+msgid "Confirm"
+msgstr "Conferma"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model.fields,field_description:l10n_it_accounting_entry.field_account_payment__counterpart_entry
+msgid "Counterpart Entry"
+msgstr "Contropartita"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model.fields,field_description:l10n_it_accounting_entry.field_l10n_it_accounting_entry__create_uid
+#: model:ir.model.fields,field_description:l10n_it_accounting_entry.field_l10n_it_accounting_entry_merge_split__create_uid
+#: model:ir.model.fields,field_description:l10n_it_accounting_entry.field_wizard_report_accounting_entry__create_uid
+msgid "Created by"
+msgstr "Creato da"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model.fields,field_description:l10n_it_accounting_entry.field_l10n_it_accounting_entry__create_date
+#: model:ir.model.fields,field_description:l10n_it_accounting_entry.field_l10n_it_accounting_entry_merge_split__create_date
+#: model:ir.model.fields,field_description:l10n_it_accounting_entry.field_wizard_report_accounting_entry__create_date
+msgid "Created on"
+msgstr "Creato il"
+
+#. module: l10n_it_accounting_entry
+#: model_terms:ir.ui.view,arch_db:l10n_it_accounting_entry.report_accounting_entry_document
+msgid "Credit"
+msgstr "Avere"
+
+#. module: l10n_it_accounting_entry
+#: model_terms:ir.ui.view,arch_db:l10n_it_accounting_entry.report_accounting_entry_document
+msgid "Debit"
+msgstr "Dare"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model.fields,field_description:l10n_it_accounting_entry.field_l10n_it_accounting_entry_merge_split__display_name
+#: model:ir.model.fields,field_description:l10n_it_accounting_entry.field_report_l10n_it_accounting_entry_report_accounting_entry__display_name
+#: model:ir.model.fields,field_description:l10n_it_accounting_entry.field_wizard_report_accounting_entry__display_name
+msgid "Display Name"
+msgstr "Nome Visualizzato"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model.fields,field_description:l10n_it_accounting_entry.field_l10n_it_accounting_entry__display_name
+msgid "Display name"
+msgstr "Nome Visualizzato"
+
+#. module: l10n_it_accounting_entry
+#: model_terms:ir.ui.view,arch_db:l10n_it_accounting_entry.l10n_it_accounting_entry_form
+#: model_terms:ir.ui.view,arch_db:l10n_it_accounting_entry.report_accounting_entry_document
+msgid "Entry Lines"
+msgstr "Linee Partita Contabile"
+
+#. module: l10n_it_accounting_entry
+#: model_terms:ir.ui.view,arch_db:l10n_it_accounting_entry.report_accounting_entry_document
+msgid "Expiration"
+msgstr "Scadenza"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model,name:l10n_it_accounting_entry.model_account_full_reconcile
+msgid "Full Reconcile"
+msgstr "Riconciliazione totale"
+
+#. module: l10n_it_accounting_entry
+#: model_terms:ir.ui.view,arch_db:l10n_it_accounting_entry.l10n_it_accounting_entry_search
+msgid "Group By"
+msgstr "Raggruppa per"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model.fields,field_description:l10n_it_accounting_entry.field_account_move_line__has_accounting_entry_management
+msgid "Has accounting entry management"
+msgstr "Ha una gestione a partite contabili"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model.fields,field_description:l10n_it_accounting_entry.field_l10n_it_accounting_entry__id
+#: model:ir.model.fields,field_description:l10n_it_accounting_entry.field_l10n_it_accounting_entry_merge_split__id
+#: model:ir.model.fields,field_description:l10n_it_accounting_entry.field_report_l10n_it_accounting_entry_report_accounting_entry__id
+#: model:ir.model.fields,field_description:l10n_it_accounting_entry.field_wizard_report_accounting_entry__id
+msgid "ID"
+msgstr ""
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model.fields,help:l10n_it_accounting_entry.field_l10n_it_accounting_entry_merge_split__accounting_entry_to_split
+msgid "If operation is split must be specified the accounting entry to split"
+msgstr ""
+"Se l'operazione è disaccorpa  deve essere specificata la voce contabile da "
+"disaccorpare"
+
+#. module: l10n_it_accounting_entry
+#: model_terms:ir.actions.act_window,help:l10n_it_accounting_entry.action_open_l10n_it_accounting_entry
+msgid ""
+"In this view is possible see and manage with accounting entries.\n"
+"                The accounting entries, generally, are created when posted "
+"an account move that has account that are\n"
+"                managed with the accounting entry flag."
+msgstr ""
+"In questa vista sono visualizzate le partite contabili.\n"
+"                Le partite contabili, generalmente, sono create quando "
+"vengono registrati movimenti contabili che sono\n"
+"                gestiti con il flag di gestione partite."
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model.fields,field_description:l10n_it_accounting_entry.field_wizard_report_accounting_entry__include_draft
+msgid "Include draft"
+msgstr "Include Bozza"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model,name:l10n_it_accounting_entry.model_account_move
+msgid "Journal Entries"
+msgstr "Registrazioni contabili"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model,name:l10n_it_accounting_entry.model_account_move_line
+msgid "Journal Item"
+msgstr "Movimento contabile"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model.fields,field_description:l10n_it_accounting_entry.field_l10n_it_accounting_entry____last_update
+#: model:ir.model.fields,field_description:l10n_it_accounting_entry.field_l10n_it_accounting_entry_merge_split____last_update
+#: model:ir.model.fields,field_description:l10n_it_accounting_entry.field_report_l10n_it_accounting_entry_report_accounting_entry____last_update
+#: model:ir.model.fields,field_description:l10n_it_accounting_entry.field_wizard_report_accounting_entry____last_update
+msgid "Last Modified on"
+msgstr "Ultima Modifica il"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model.fields,field_description:l10n_it_accounting_entry.field_l10n_it_accounting_entry__write_uid
+#: model:ir.model.fields,field_description:l10n_it_accounting_entry.field_l10n_it_accounting_entry_merge_split__write_uid
+#: model:ir.model.fields,field_description:l10n_it_accounting_entry.field_wizard_report_accounting_entry__write_uid
+msgid "Last Updated by"
+msgstr "Ultima Modifica da"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model.fields,field_description:l10n_it_accounting_entry.field_l10n_it_accounting_entry__write_date
+#: model:ir.model.fields,field_description:l10n_it_accounting_entry.field_l10n_it_accounting_entry_merge_split__write_date
+#: model:ir.model.fields,field_description:l10n_it_accounting_entry.field_wizard_report_accounting_entry__write_date
+msgid "Last Updated on"
+msgstr "Ultima Modifica il"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model.fields,help:l10n_it_accounting_entry.field_account_move__accounting_entry_ids
+msgid "List of all accounting entries linked to this move"
+msgstr "Lista di tutte le partite contabili legate a questo movimento"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model.fields,field_description:l10n_it_accounting_entry.field_l10n_it_accounting_entry_merge_split__main_accounting_entry
+msgid "Main accounting entry"
+msgstr "Partita contabile principale"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model.fields,field_description:l10n_it_accounting_entry.field_account_account__managed_by_accounting_entry
+msgid "Managed by Accounting Entry"
+msgstr "Gestito con le partite contabili"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.actions.act_window,name:l10n_it_accounting_entry.l10n_it_accounting_entry_merge_action
+#: model:ir.actions.act_window,name:l10n_it_accounting_entry.l10n_it_accounting_entry_merge_action_from_move
+#: model:ir.actions.act_window,name:l10n_it_accounting_entry.l10n_it_accounting_entry_merge_action_from_move_line
+msgid "Merge Accounting Entry"
+msgstr "Accorpa Partite Contabili"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model,name:l10n_it_accounting_entry.model_l10n_it_accounting_entry_merge_split
+msgid "Merge or Split multiple accounting entries"
+msgstr "Accorpa o disaccorpa le partite contabili"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model.fields,field_description:l10n_it_accounting_entry.field_l10n_it_accounting_entry__name
+#: model_terms:ir.ui.view,arch_db:l10n_it_accounting_entry.report_accounting_entry_document
+msgid "Name"
+msgstr "Nome"
+
+#. module: l10n_it_accounting_entry
+#: model_terms:ir.ui.view,arch_db:l10n_it_accounting_entry.l10n_it_accounting_entry_merge_form
+msgid "Ok"
+msgstr ""
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model.fields.selection,name:l10n_it_accounting_entry.selection__l10n_it_accounting_entry__state__open
+#: model:ir.model.fields.selection,name:l10n_it_accounting_entry.selection__wizard_report_accounting_entry__state__open
+#: model_terms:ir.ui.view,arch_db:l10n_it_accounting_entry.l10n_it_accounting_entry_search
+msgid "Open"
+msgstr "Aperta"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model.fields,field_description:l10n_it_accounting_entry.field_l10n_it_accounting_entry__partner_id
+#: model:ir.model.fields,field_description:l10n_it_accounting_entry.field_wizard_report_accounting_entry__partner_id
+#: model_terms:ir.ui.view,arch_db:l10n_it_accounting_entry.l10n_it_accounting_entry_search
+msgid "Partner"
+msgstr "Cliente"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model,name:l10n_it_accounting_entry.model_account_payment
+msgid "Payments"
+msgstr "Pagamenti"
+
+#. module: l10n_it_accounting_entry
+#: code:addons/l10n_it_accounting_entry/wizard/l10n_it_accounting_entry_merge_split.py:0
+#, python-format
+msgid "Please specify the main accounting entry"
+msgstr "Specificare la partita contabile principale"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.actions.report,name:l10n_it_accounting_entry.action_report_accounting_entry
+msgid "Print Accounting Entry"
+msgstr "Stampa Partite Contabili"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.ui.menu,name:l10n_it_accounting_entry.menu_report_accounting_entry
+msgid "Report"
+msgstr "Stampa"
+
+#. module: l10n_it_accounting_entry
+#: code:addons/l10n_it_accounting_entry/wizard/l10n_it_accounting_entry_merge_split.py:0
+#, python-format
+msgid "Select at least one account entry to split"
+msgstr "Seleziona almeno una partita contabile da dividere"
+
+#. module: l10n_it_accounting_entry
+#: code:addons/l10n_it_accounting_entry/wizard/l10n_it_accounting_entry_merge_split.py:0
+#, python-format
+msgid "Select at least two accounting entry to merge."
+msgstr "Selezionare almeno due partite contabili da accorpare."
+
+#. module: l10n_it_accounting_entry
+#: model:ir.actions.act_window,name:l10n_it_accounting_entry.l10n_it_accounting_entry_split_action
+#: model:ir.actions.act_window,name:l10n_it_accounting_entry.l10n_it_accounting_entry_split_action_from_move
+msgid "Split Accounting Entry"
+msgstr "Disaccorpa Partite Contabili"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model.fields,field_description:l10n_it_accounting_entry.field_l10n_it_accounting_entry__state
+#: model:ir.model.fields,field_description:l10n_it_accounting_entry.field_wizard_report_accounting_entry__state
+msgid "State"
+msgstr "Stato"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model.constraint,message:l10n_it_accounting_entry.constraint_l10n_it_accounting_entry_name_partner_account_uniq
+msgid "Statement must be unique by name account and partner."
+msgstr "La partita contabile deve essere univoca per conto e partner"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model.fields,help:l10n_it_accounting_entry.field_account_move__accounting_entry_count
+msgid "System field for count the number of the accounting entries"
+msgstr "Campo di sistema per contare il numero delle partite contabili"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model.fields,help:l10n_it_accounting_entry.field_account_move_line__has_accounting_entry_management
+msgid ""
+"System field that indicate if account line haa the management of the "
+"accounting entry"
+msgstr "Campo di sistema che indica se il conto contabile è gestito a partite"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model.fields,help:l10n_it_accounting_entry.field_account_account__managed_by_accounting_entry
+msgid "The account is subjected to the accounting entry management"
+msgstr "Il conto è soggetto alla gestione con partite contabili"
+
+#. module: l10n_it_accounting_entry
+#: code:addons/l10n_it_accounting_entry/models/l10n_it_accounting_entry.py:0
+#, python-format
+msgid ""
+"The account move line of this account entry must to have the same company. "
+"Unable to have multi company on the same accounting entry."
+msgstr ""
+"Le linee di movimento contabile di questa partita devono appartenere alla "
+"stessa azienda. Impossibile avere più aziende sulla stessa partita "
+"contabile."
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model.fields,help:l10n_it_accounting_entry.field_account_payment__counterpart_entry_account_id
+msgid ""
+"The account of the counterpart retrieved by journal if managed by "
+"accounting entry"
+msgstr ""
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model.fields,help:l10n_it_accounting_entry.field_l10n_it_accounting_entry__account_id
+msgid "The account of this accounting entry"
+msgstr "Il conto della partita contabile"
+
+#. module: l10n_it_accounting_entry
+#: code:addons/l10n_it_accounting_entry/models/l10n_it_accounting_entry.py:0
+#, python-format
+msgid "The accounting entry %s could not be found"
+msgstr "La partita contabile %s non può essere trovata"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model.fields,help:l10n_it_accounting_entry.field_l10n_it_accounting_entry__state
+msgid ""
+"The field indicates the status of the accounting item: when the state is "
+"open it means that the sum of the Debit and Credit of the accounting "
+"records related to the accounting entry is not currently balanced; if "
+"instead it is equal to 0 then the accounting entry is considered closed and "
+"the amounts balanced."
+msgstr ""
+"Il campo indica lo stato della partita: quando lo stato è aperto indica che "
+"la somma del dare e avere dei movimenti contabili non è bilanciata; se "
+"invece è uguale a zero allora la partita contabile è considerata chiusa."
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model.fields,help:l10n_it_accounting_entry.field_l10n_it_accounting_entry__name
+msgid "The name of the accounting entry. This is an unique name."
+msgstr "Il nome della partita contabile."
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model.fields,help:l10n_it_accounting_entry.field_l10n_it_accounting_entry__partner_id
+msgid "The partner of this accounting entry. Can be null"
+msgstr "Il partner di questa partita. Può essere vuoto"
+
+#. module: l10n_it_accounting_entry
+#: code:addons/l10n_it_accounting_entry/wizard/wizard_report_accounting_entry.py:0
+#, python-format
+msgid "There are not reports to print"
+msgstr "Non ci sono partite da stampare"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model.fields,help:l10n_it_accounting_entry.field_l10n_it_accounting_entry__amount
+msgid ""
+"This field contains the amount of the accounting entry, computed as the "
+"difference in absolute value between the debit and credit of all the "
+"accounting movements linked to the accounting entry. It is used to define "
+"the state of the accounting entry."
+msgstr ""
+"Questo campo contiene il totale della partita, calcolato come la differenza "
+"in valore assoluto tra dare e avere di tutti i movimenti contabili "
+"collegati. E’ usato per calcolare lo stato della partita."
+
+#. module: l10n_it_accounting_entry
+#: code:addons/l10n_it_accounting_entry/wizard/l10n_it_accounting_entry_merge_split.py:0
+#, python-format
+msgid "This function is not expected for this model %s"
+msgstr "Questa funzione non è attesa per questo modello %s"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model.fields,help:l10n_it_accounting_entry.field_account_move_line__accounting_entry_id
+msgid ""
+"This is the accounting entry. Will be generated automatically at the post "
+"action or it can be set manually"
+msgstr ""
+"Questa è la partita contabile. Verrà generata automaticamente alla "
+"registrazione di un movimento. Può essere impostata manualmente in "
+"registrazioni di prima nota"
+
+#. module: l10n_it_accounting_entry
+#: code:addons/l10n_it_accounting_entry/wizard/l10n_it_accounting_entry_merge_split.py:0
+#, python-format
+msgid "This operation cannot be performed from this model %s."
+msgstr "Questa operazione non può essere eseguita da questo modello %s"
+
+#. module: l10n_it_accounting_entry
+#: model_terms:ir.ui.view,arch_db:l10n_it_accounting_entry.l10n_it_accounting_entry_form
+msgid "Total Credit"
+msgstr "Totale Avere"
+
+#. module: l10n_it_accounting_entry
+#: model_terms:ir.ui.view,arch_db:l10n_it_accounting_entry.l10n_it_accounting_entry_form
+msgid "Total Debit"
+msgstr "Totale Dare"
+
+#. module: l10n_it_accounting_entry
+#: code:addons/l10n_it_accounting_entry/models/l10n_it_accounting_entry.py:0
+#, python-format
+msgid "Unable to find entry to split"
+msgstr "Impossibile trovare la partita da dividere."
+
+#. module: l10n_it_accounting_entry
+#: code:addons/l10n_it_accounting_entry/models/l10n_it_accounting_entry.py:0
+#, python-format
+msgid "Unable to have the same accounting entry for different account."
+msgstr "Impossibile avere una stessa partita per conti differenti."
+
+#. module: l10n_it_accounting_entry
+#: code:addons/l10n_it_accounting_entry/models/l10n_it_accounting_entry.py:0
+#, python-format
+msgid "Unable to have the same accounting entry for more than one partner."
+msgstr "Impossibile avere la stessa partita per più partner."
+
+#. module: l10n_it_accounting_entry
+#: code:addons/l10n_it_accounting_entry/wizard/l10n_it_accounting_entry_merge_split.py:0
+#, python-format
+msgid "Unable to merge accounting entries from different company"
+msgstr "Impossibile accorpare partite contabili di differenti aziende"
+
+#. module: l10n_it_accounting_entry
+#: code:addons/l10n_it_accounting_entry/wizard/l10n_it_accounting_entry_merge_split.py:0
+#, python-format
+msgid "Unable to merge accounting entries with different account"
+msgstr "Impossibile accorpare partite contabili con conti diversi"
+
+#. module: l10n_it_accounting_entry
+#: code:addons/l10n_it_accounting_entry/wizard/l10n_it_accounting_entry_merge_split.py:0
+#, python-format
+msgid "Unable to merge accounting entries with different partner"
+msgstr "Impossibile accorpare partite contabili con partner diversi"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model.fields,help:l10n_it_accounting_entry.field_l10n_it_accounting_entry__display_name
+msgid "Using for display name of the accounting entry"
+msgstr "Usato per il nome visualizzato della partita contabile"
+
+#. module: l10n_it_accounting_entry
+#: model_terms:ir.ui.view,arch_db:l10n_it_accounting_entry.l10n_it_accounting_entry_merge_form
+#: model_terms:ir.ui.view,arch_db:l10n_it_accounting_entry.wizard_report_accounting_entry_form
+msgid "or"
+msgstr "o"
+
+#. module: l10n_it_accounting_entry
+#: model:ir.model,name:l10n_it_accounting_entry.model_wizard_report_accounting_entry
+msgid "wizard.report.accounting.entry"
+msgstr ""

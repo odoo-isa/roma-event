@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- FORM View  -->
+        <record model='ir.ui.view' id='view_product_category_subsidized_vat_form'>
+            <field name='name'>view.product.category.subsidized.vat.form</field>
+            <field name='model'>product.category</field>
+            <field name="inherit_id" ref="product.product_category_form_view"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//group[@name='first']/field[@name='parent_id']" position="after">
+                    <field name="preferential_tax_na"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

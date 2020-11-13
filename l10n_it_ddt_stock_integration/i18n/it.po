@@ -1,0 +1,253 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_it_ddt_stock_integration
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-24 11:29+0000\n"
+"PO-Revision-Date: 2020-03-24 11:29+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_it_ddt_stock_integration
+#: model:ir.model.fields,field_description:l10n_it_ddt_stock_integration.field_stock_picking__ddt_count
+msgid "# DdT"
+msgstr "# Ddt"
+
+#. module: l10n_it_ddt_stock_integration
+#: model:ir.model.fields,field_description:l10n_it_ddt_stock_integration.field_stock_picking__invoice_count
+msgid "# of invoices"
+msgstr "# di Fatture"
+
+#. module: l10n_it_ddt_stock_integration
+#: model:ir.model.fields.selection,name:l10n_it_ddt_stock_integration.selection__create_ddt_from_stock_wizard__select_options__add_to_existing_ddt
+msgid "Add Pickings to Ddt"
+msgstr "Aggiungi Picking al Ddt"
+
+#. module: l10n_it_ddt_stock_integration
+#: model:ir.model.fields,field_description:l10n_it_ddt_stock_integration.field_create_ddt_from_stock_wizard__available_ddt
+msgid "Available DdT"
+msgstr "Ddt Disponibili"
+
+#. module: l10n_it_ddt_stock_integration
+#: model:ir.model.fields,field_description:l10n_it_ddt_stock_integration.field_stock_picking__can_create_ddt
+msgid "Can Create DDT"
+msgstr "Può creare Ddt"
+
+#. module: l10n_it_ddt_stock_integration
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_stock_integration.l10n_it_ddt_stock_form
+msgid "Cancel"
+msgstr "Annulla"
+
+#. module: l10n_it_ddt_stock_integration
+#: model:ir.model.fields,help:l10n_it_ddt_stock_integration.field_stock_move__qty_in_ddt_invoiced
+msgid "Compute system field to have the qty in ddt that has already invoiced"
+msgstr "Campo calcolato usato per mostrare la quantità già fatturata nel DdT\""
+
+#. module: l10n_it_ddt_stock_integration
+#: model:ir.model.fields,help:l10n_it_ddt_stock_integration.field_stock_picking__can_create_ddt
+msgid "Compute system field used for show or hide the create ddt button"
+msgstr "Campo calcolato usato per mostrare o nascondere il pulsante per la creazione del DdT"
+
+#. module: l10n_it_ddt_stock_integration
+#: model:ir.actions.act_window,name:l10n_it_ddt_stock_integration.create_ddt_stock_wizard_action
+msgid "Create DdT"
+msgstr "Crea Ddt"
+
+#. module: l10n_it_ddt_stock_integration
+#: model:ir.model.fields.selection,name:l10n_it_ddt_stock_integration.selection__create_ddt_from_stock_wizard__select_options__create_ddt
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_stock_integration.stock_picking_ddt_view_form
+msgid "Create Ddt"
+msgstr "Crea Ddt"
+
+#. module: l10n_it_ddt_stock_integration
+#: model:ir.model,name:l10n_it_ddt_stock_integration.model_create_ddt_from_stock_wizard
+msgid "Create Ddt from stock"
+msgstr "Crea DdT da Magazzino"
+
+#. module: l10n_it_ddt_stock_integration
+#: model:ir.model.fields,field_description:l10n_it_ddt_stock_integration.field_create_ddt_from_stock_wizard__create_uid
+msgid "Created by"
+msgstr "Creato da"
+
+#. module: l10n_it_ddt_stock_integration
+#: model:ir.model.fields,field_description:l10n_it_ddt_stock_integration.field_create_ddt_from_stock_wizard__create_date
+msgid "Created on"
+msgstr "CFreato il"
+
+#. module: l10n_it_ddt_stock_integration
+#: model:ir.model,name:l10n_it_ddt_stock_integration.model_l10n_it_ddt_line
+msgid "DDT Line"
+msgstr "Righe Ddt"
+
+#. module: l10n_it_ddt_stock_integration
+#: model:ir.model.fields,field_description:l10n_it_ddt_stock_integration.field_stock_picking_type__l10n_it_ddt_sequence
+msgid "DDT Sequence"
+msgstr "Sequenca Ddt"
+
+#. module: l10n_it_ddt_stock_integration
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_stock_integration.stock_picking_ddt_view_form
+msgid "DdT"
+msgstr "Ddt"
+
+#. module: l10n_it_ddt_stock_integration
+#: model:ir.model.fields,field_description:l10n_it_ddt_stock_integration.field_stock_move__ddt_lines_ids
+msgid "DdT linked lines"
+msgstr "Linee Collegate al Ddt"
+
+#. module: l10n_it_ddt_stock_integration
+#: model:ir.model.fields,field_description:l10n_it_ddt_stock_integration.field_create_ddt_from_stock_wizard__ddt_id
+#: model:ir.model.fields,field_description:l10n_it_ddt_stock_integration.field_stock_picking__ddt_ids
+msgid "Ddt"
+msgstr "Ddt"
+
+#. module: l10n_it_ddt_stock_integration
+#: model:ir.model.fields,field_description:l10n_it_ddt_stock_integration.field_create_ddt_from_stock_wizard__display_name
+msgid "Display Name"
+msgstr "Nome Visualizzato0"
+
+#. module: l10n_it_ddt_stock_integration
+#: model:ir.model.fields,field_description:l10n_it_ddt_stock_integration.field_create_ddt_from_stock_wizard__id
+msgid "ID"
+msgstr "ID"
+
+#. module: l10n_it_ddt_stock_integration
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_stock_integration.stock_picking_ddt_view_form
+msgid "Invoice"
+msgstr "Fattura"
+
+#. module: l10n_it_ddt_stock_integration
+#: model:ir.model.fields,field_description:l10n_it_ddt_stock_integration.field_stock_picking__invoice_ids
+msgid "Invoices"
+msgstr "Fatture"
+
+#. module: l10n_it_ddt_stock_integration
+#: model:ir.model.fields,field_description:l10n_it_ddt_stock_integration.field_create_ddt_from_stock_wizard____last_update
+msgid "Last Modified on"
+msgstr "Ultima modifica il"
+
+#. module: l10n_it_ddt_stock_integration
+#: model:ir.model.fields,field_description:l10n_it_ddt_stock_integration.field_create_ddt_from_stock_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Ultima modifica di"
+
+#. module: l10n_it_ddt_stock_integration
+#: model:ir.model.fields,field_description:l10n_it_ddt_stock_integration.field_create_ddt_from_stock_wizard__write_date
+msgid "Last Updated on"
+msgstr "Ultimo aggiornamento il"
+
+#. module: l10n_it_ddt_stock_integration
+#: model:ir.model.fields,help:l10n_it_ddt_stock_integration.field_l10n_it_ddt_line__stock_move_id
+msgid "Link this ddt line to stock move"
+msgstr "Collega questa riga del DdT allo stock move"
+
+#. module: l10n_it_ddt_stock_integration
+#: model:ir.model.fields,help:l10n_it_ddt_stock_integration.field_stock_move__ddt_lines_ids
+msgid "Linked DdT lines"
+msgstr "Linee DdT collegate"
+
+#. module: l10n_it_ddt_stock_integration
+#: model:ir.model.fields,field_description:l10n_it_ddt_stock_integration.field_l10n_it_ddt__location_id
+msgid "Location"
+msgstr "Ubicazione"
+
+#. module: l10n_it_ddt_stock_integration
+#: model:ir.model.fields,help:l10n_it_ddt_stock_integration.field_stock_picking__ddt_count
+msgid "Number of DdT linked to picking."
+msgstr "Numero di DdT collegati al picking"
+
+#. module: l10n_it_ddt_stock_integration
+#: model:ir.model.fields,field_description:l10n_it_ddt_stock_integration.field_l10n_it_ddt__picking_returned_count
+msgid "Picking Returned Count"
+msgstr "Contatore Picking di Ritorno"
+
+#. module: l10n_it_ddt_stock_integration
+#: model:ir.model,name:l10n_it_ddt_stock_integration.model_stock_picking_type
+msgid "Picking Type"
+msgstr "Tipo Picking"
+
+#. module: l10n_it_ddt_stock_integration
+#: model:ir.model.fields,field_description:l10n_it_ddt_stock_integration.field_stock_move__qty_in_ddt_invoiced
+msgid "Qty in DdT already invoiced"
+msgstr "Quantità sul DdT già fatturata"
+
+#. module: l10n_it_ddt_stock_integration
+#: model:ir.model.fields,field_description:l10n_it_ddt_stock_integration.field_l10n_it_ddt__ddt_lines_return
+msgid "Returned Ddt Line"
+msgstr "Movimenti di Ritorno"
+
+#. module: l10n_it_ddt_stock_integration
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_stock_integration.l10n_it_ddt_stock_view_form
+msgid "Reverse Moves"
+msgstr "Storna Movimenti"
+
+#. module: l10n_it_ddt_stock_integration
+#: model:ir.model.fields,field_description:l10n_it_ddt_stock_integration.field_create_ddt_from_stock_wizard__select_options
+msgid "Select Option"
+msgstr "Seleziona un'opzione"
+
+#. module: l10n_it_ddt_stock_integration
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_stock_integration.l10n_it_ddt_stock_form
+msgid "Select Options"
+msgstr "Seleziona un'opzione"
+
+#. module: l10n_it_ddt_stock_integration
+#: model:ir.model,name:l10n_it_ddt_stock_integration.model_stock_move
+msgid "Stock Move"
+msgstr "Movimento di magazzino"
+
+#. module: l10n_it_ddt_stock_integration
+#: model:ir.model.fields,field_description:l10n_it_ddt_stock_integration.field_l10n_it_ddt_line__stock_move_id
+msgid "Stock move line"
+msgstr "Riga del Movimento di Magazzino"
+
+#. module: l10n_it_ddt_stock_integration
+#: model:ir.model.fields,help:l10n_it_ddt_stock_integration.field_create_ddt_from_stock_wizard__available_ddt
+msgid "System Field's for calculate available ddt."
+msgstr "Campo di sistema per calcolare i DdT disponibili"
+
+#. module: l10n_it_ddt_stock_integration
+#: code:addons/l10n_it_ddt_stock_integration/wizard/create_ddt_from_stock_wizard.py:0
+#, python-format
+msgid "There aren't move line to adding to DdT."
+msgstr "Non ci sono righe del movimento di magazzino da aggiungere al DdT"
+
+#. module: l10n_it_ddt_stock_integration
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_stock_integration.l10n_it_ddt_stock_view_form
+msgid "To Refund"
+msgstr "Da rimborsare"
+
+#. module: l10n_it_ddt_stock_integration
+#: model:ir.model,name:l10n_it_ddt_stock_integration.model_stock_picking
+msgid "Transfer"
+msgstr "Trasferisci"
+
+#. module: l10n_it_ddt_stock_integration
+#: model:ir.model,name:l10n_it_ddt_stock_integration.model_l10n_it_ddt
+msgid "Transport Document"
+msgstr "Documento di Trasporto"
+
+#. module: l10n_it_ddt_stock_integration
+#: code:addons/l10n_it_ddt_stock_integration/wizard/create_ddt_from_stock_wizard.py:0
+#, python-format
+msgid "Unable to add picking to DdT. The destination DdT isn't specified"
+msgstr ""
+"Impossibile aggiungere il picking al DdT. Il DdT di destinazione non è "
+"specificato"
+
+#. module: l10n_it_ddt_stock_integration
+#: code:addons/l10n_it_ddt_stock_integration/models/stock_picking.py:0
+#, python-format
+msgid "Unable to create DdT for partner that aren't customer or supplier."
+msgstr "Impossibile creare DdT per partner che non sono clienti o fornitori."
+
+#. module: l10n_it_ddt_stock_integration
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_stock_integration.l10n_it_ddt_stock_form
+msgid "create"
+msgstr "Crea"

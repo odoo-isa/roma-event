@@ -1,0 +1,281 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* base_extension_isa
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-06-11 06:42+0000\n"
+"PO-Revision-Date: 2019-06-11 06:42+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+#. module: base_extension_isa
+#: model:ir.model.fields,field_description:base_extension_isa.field_sale_order__amount_not_invoiced
+msgid "Amount not Invoiced"
+msgstr "Importo non Fatturato"
+
+#. module: base_extension_isa
+#: model_terms:ir.ui.view,arch_db:base_extension_isa.view_isa_modules_filter
+msgid "ISA Modules"
+msgstr "Moduli ISA"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_base_extension_isa
+msgid "ISA Extension: Base"
+msgstr "Estensioni ISA: Base"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_base_partner_email_validation
+msgid "Partner Email Validation"
+msgstr "Validazione Email per il Contatto"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_base_partner_happy_birthday
+msgid "Partner Happy Birthday"
+msgstr "Auguri di Compleanno per il Contatto"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_purchase_order_invoice_reconciliation
+msgid "Purchase Order/Invoice Reconciliation"
+msgstr "Riconciliazione Ordini/Fatture di Acquisto"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_purchase_order_invoice_reconciliation_stock_integration
+msgid "Purchase Order/Invoice Reconciliation and Stock Integration"
+msgstr "Integrazione Riconciliazione Ordini/Fatture di Acquisto e Magazzino"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_base_partner_delegation
+msgid "Partner Delegation"
+msgstr "Delega per il Contatto"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_account_patch_isa
+msgid "ISA Patch: Account"
+msgstr "Patch ISA: Fatturazione"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_payment_term_extension_isa
+msgid "ISA Extension: Payment Terms"
+msgstr "Estensioni ISA: Termini di Pagamento"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_product_unique_ref
+msgid "Products Unique Internal Reference"
+msgstr "Riferimento Interno Unico per Prodotti"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_sale_gas_license
+msgid "Sale F-Gas License"
+msgstr "Vendite con Licenza F-Gas"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_base_aquilanti
+msgid "ISA Customization: Base (Aquilanti S.p.A.)"
+msgstr "Personalizzazioni ISA: Base (Aquilanti S.p.A.)"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_l10n_it_aquilanti
+msgid "ISA Customization: Accounting (Aquilanti S.p.A.)"
+msgstr "Personalizzazioni ISA: Contabilità (Aquilanti S.p.A.)"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_l10n_it_ddt_extension_isa
+msgid "ISA Localization for Italy: Delivery Note"
+msgstr "Localizzazioni ISA per Italia: Documento di Trasporto"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_l10n_it_ddt_sale_integration
+msgid "ISA Localization for Italy: Delivery Note and Sale Integration"
+msgstr "Localizzazioni ISA per Italia: Integrazione Documento di Trasporto e Vendite"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_l10n_it_ddt_stock_integration
+msgid "ISA Localization for Italy: Delivery Note and Stock Integration"
+msgstr "Localizzazioni ISA per Italia: Integrazione Documento di Trasporto e Magazzino"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_l10n_it_ddt_sale_stock_integration
+msgid "ISA Localization for Italy: Delivery Note, Sale and Stock Integration"
+msgstr "Localizzazioni ISA per Italia: Integrazione Documento di Trasporto, Vendite e Magazzino"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_purchases_team
+msgid "Purchases Team"
+msgstr "Team degli Acquisti"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_purchase_representative_substitutes
+msgid "Purchase Representative Substitutes"
+msgstr "Sostituto del Referente Acquisti"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_l10n_it_edi_extension_isa
+msgid "ISA Localization for Italy: Advanced E-Invoicing"
+msgstr "Localizzazioni ISA per Italia: Fatturazione Elettronica Avanzata"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_account_extension_isa
+msgid "ISA Extension: Account"
+msgstr "Estensioni ISA: Contabilità"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_account_reports_extension_isa
+msgid "ISA Extension: Account Reports"
+msgstr "Estensioni ISA: Resoconti Contabilità"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_l10n_it_accounting_entry
+msgid "ISA Localization for Italy: Accounting Entry Management"
+msgstr "Localizzazioni ISA per Italia: Gestione Partite Contabili"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_l10n_it_split_payment
+msgid "ISA Localization for Italy: Split Payment"
+msgstr "Localizzazioni ISA per Italia: Split Payment"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_l10n_it_account_tax_report
+msgid "ISA Localization for Italy: Tax Report"
+msgstr "Localizzazioni ISA per Italia: Resoconto Fiscale"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_l10n_it_account_withholding_tax
+msgid "ISA Localization for Italy: Account Withholding Tax"
+msgstr "Localizzazioni ISA per Italia: Ritenute Fiscali"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_l10n_it_account_withholding_tax_ddt_integration
+msgid "ISA Localization for Italy: Account Withholding Tax and Delivery Note Integration"
+msgstr "Localizzazioni ISA per Italia: Integrazione Ritenute Fiscali e Documento di Trasporto"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_l10n_it_cee_balance_sheet
+msgid "ISA Localization for Italy: CEE Balance Sheet"
+msgstr "Localizzazioni ISA per Italia: Riclassificazione Bilancio CEE"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_l10n_it_account_withholding_tax_sale_integration
+msgid "ISA Localization for Italy: Account Withholding and Sale Integration"
+msgstr "Localizzazioni ISA per Italia: Integrazione Ritenute Fiscali e Vendite"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_l10n_it_preferential_tax
+msgid "ISA Localization for Italy: Preferential Tax"
+msgstr "Localizzazioni ISA per Italia: IVA Agevolata"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_account_advanced_reconciliation
+msgid "Advanced Accounting Reconciliation"
+msgstr "Riconciliazione Contabile Avanzata"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_sale_credit
+msgid "Sale Credit"
+msgstr "Fido Clienti"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_l10n_it_bank_papers
+msgid "ISA Localization for Italy: Bank Papers"
+msgstr "Localizzazioni ISA per Italia: Effetti Bancari"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_l10n_it_account_pa_invoice
+msgid "ISA Localization for Italy: Government Invoicing"
+msgstr "Localizzazioni ISA per Italia: Fatturazione Pubblica Amministrazione"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_account_analytic_stock_integration_isa
+msgid "Account Analytic and Stock Integration"
+msgstr "Integrazione Contabilità Analitica e Magazzino"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_analytic_extension_isa
+msgid "ISA Extension: Analytic Accounting"
+msgstr "Estensioni ISA: Contabilità Analitica"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_sale_aquilanti
+msgid "ISA Customization: Sale (Aquilanti S.p.A.)"
+msgstr "Personalizzazioni ISA: Vendite (Aquilanti S.p.A.)"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_purchase_aquilanti
+msgid "ISA Customization: Purchase (Aquilanti S.p.A.)"
+msgstr "Personalizzazioni ISA: Acquisti (Aquilanti S.p.A.)"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_l10n_it_primapaint
+msgid "ISA Customization: Accounting (Primapaint S.r.L.)"
+msgstr "Personalizzazioni ISA: Contabilità (Primapaint S.r.L.)"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_sale_extension_isa
+msgid "ISA Extension: Sale"
+msgstr "Estensioni ISA: Vendite"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_stock_extension_isa
+msgid "ISA Extension: Stock"
+msgstr "Estensioni ISA: Magazzino"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_l10n_it_accompanying_invoice
+msgid "ISA Localization for Italy: Accompanying Invoice"
+msgstr "Localizzazioni ISA per Italia: Fattura Accompagnatoria"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_l10n_it_shipping_info
+msgid "ISA Localization for Italy: Shipping Info"
+msgstr "Localizzazioni ISA per Italia: Informazioni di Spedizione"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_l10n_it_shipping_info_sale_integration
+msgid "ISA Localization for Italy: Shipping Info Sale Integration"
+msgstr "Localizzazioni ISA per Italia: Integrazione Informazioni di Spedizione e Vendite"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_l10n_it_shipping_info_sale_stock_integration
+msgid "ISA Localization for Italy: Shipping Info Sale Stock Integration"
+msgstr "Localizzazioni ISA per Italia: Integrazione Informazioni di Spedizione, Vendite e Magazzino"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_l10n_it_shipping_info_stock_integration
+msgid "ISA Localization for Italy: Shipping Info Stock Integration"
+msgstr "Localizzazioni ISA per Italia: Integrazione Informazioni di Spedizione e Magazzino"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_sale_client_purchase_order
+msgid "Sale Client Purchase Order"
+msgstr "Buoni d'Acquisto su Vendite"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_sale_client_purchase_ddt_integration
+msgid "Sale Client Purchase Order and Delivery Note Integration"
+msgstr "Integrazione Buoni d'Acquisto su Vendite e Documento di Trasporto"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_sale_client_purchase_stock_integration
+msgid "Sale Client Purchase Order and Stock Integration"
+msgstr "Integrazione Buoni d'Acquisto su Vendite e Magazzino"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_sale_multiple_discount
+msgid "Sale Multiple Discount"
+msgstr "Sconti Multipli sulle Vendite"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_sale_pricelist_multiple_discount
+msgid "Sale Pricelist Multiple Discount"
+msgstr "Sconti Multipli sui Listini di  Vendita"
+
+#. module: base_extension_isa
+#: model:ir.module.module,shortdesc:base.module_purchase_multiple_discount
+msgid "Purchase Multiple Discount"
+msgstr "Sconti Multipli sugli Acquisti"
+

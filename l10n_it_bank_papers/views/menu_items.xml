@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="action_l10n_it_bank_paper_slip" model="ir.actions.act_window">
+            <field name="name">Bank Paeper Slip</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">l10n_it.bank_paper.slip</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+         <record id="action_l10n_it_bank_paper" model="ir.actions.act_window">
+            <field name="name">Bank Paper</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">l10n_it.bank_paper</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_l10n_it_bank_papers_slip_configuration"
+                  name="Bank Papers"
+                  parent="account.menu_finance_configuration"
+                  />
+        <menuitem id="menu_l10n_it_bank_papers_slip"
+                  name="Bank Papers"
+                  parent="account.menu_finance_entries"
+                  />
+        <menuitem id="menu_l10n_it_bank_paper_slip"
+                   name="Bank Paper Slip"
+                   parent="l10n_it_bank_papers.menu_l10n_it_bank_papers_slip"
+                   action="action_l10n_it_bank_paper_slip"
+                   sequence="1"/>
+
+        <menuitem id="menu_l10n_it_bank_paper"
+                   name="Bank Paper"
+                   parent="l10n_it_bank_papers.menu_l10n_it_bank_papers_slip"
+                   action="action_l10n_it_bank_paper"
+                   sequence="10"/>
+
+        <menuitem id="menu_create_slips"
+                  parent="l10n_it_bank_papers.menu_l10n_it_bank_papers_slip"
+                  action="action_select_payment_type_wizard_form"
+                  sequence="20"
+                  string="Create Slips"/>
+
+
+       <menuitem id="menu_bank_paper_slip_types"
+                 parent="l10n_it_bank_papers.menu_l10n_it_bank_papers_slip_configuration"
+                 action="action_open_bank_paper_slip_types_form"
+                 sequence="30"/>
+
+    </data>
+</odoo>
+
+
+

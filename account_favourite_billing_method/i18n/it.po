@@ -1,0 +1,101 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_favourite_billing_method
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-26 14:05+0000\n"
+"PO-Revision-Date: 2020-10-26 15:08+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: it\n"
+"X-Generator: Poedit 2.3.1\n"
+
+#. module: account_favourite_billing_method
+#: model:ir.model.fields.selection,name:account_favourite_billing_method.selection__res_partner__favorite_billing_method__accompanying
+msgid "Accompanying document"
+msgstr "Documento di accompagnamento"
+
+#. module: account_favourite_billing_method
+#: model:ir.model.fields.selection,name:account_favourite_billing_method.selection__res_partner__favorite_billing_method__all
+msgid "All"
+msgstr "Tutto"
+
+#. module: account_favourite_billing_method
+#: model:ir.model,name:account_favourite_billing_method.model_res_partner
+msgid "Contact"
+msgstr "Contatto"
+
+#. module: account_favourite_billing_method
+#: model:ir.model.fields.selection,name:account_favourite_billing_method.selection__res_partner__favorite_billing_method__deferred
+msgid "Deferred Invoice"
+msgstr "Fattura differita"
+
+#. module: account_favourite_billing_method
+#: model:ir.model.fields,field_description:account_favourite_billing_method.field_res_partner__deferred_billing_method
+#: model:ir.model.fields,field_description:account_favourite_billing_method.field_res_users__deferred_billing_method
+msgid "Deferred billing method"
+msgstr "Metodo di fatturazione differita"
+
+#. module: account_favourite_billing_method
+#: code:addons/account_favourite_billing_method/models/account_move.py:0
+#, python-format
+msgid ""
+"Error invoice creating. Partner favorite billing method doesn't allow to "
+"create invoice"
+msgstr ""
+"Errore nella creazione della fattura. La modalità di fatturazione "
+"predefinita del cliente non permette la creazione della fattura"
+
+#. module: account_favourite_billing_method
+#: model:ir.model.fields,field_description:account_favourite_billing_method.field_res_partner__favorite_billing_method
+#: model:ir.model.fields,field_description:account_favourite_billing_method.field_res_users__favorite_billing_method
+msgid "Favorite billing method"
+msgstr "Metodo di fatturazione preferito"
+
+#. module: account_favourite_billing_method
+#: model:ir.model.fields.selection,name:account_favourite_billing_method.selection__res_partner__deferred_billing_method__delivery_adress
+msgid "Group invoice by delivery adress"
+msgstr "Raggruppamento fatturazione per indirizzo di spedizione"
+
+#. module: account_favourite_billing_method
+#: model:ir.model,name:account_favourite_billing_method.model_account_move
+msgid "Journal Entries"
+msgstr "Registrazioni contabili"
+
+#. module: account_favourite_billing_method
+#: model:ir.model.fields.selection,name:account_favourite_billing_method.selection__res_partner__deferred_billing_method__ddt
+msgid "One invoice for each DdT"
+msgstr "Una fattura per ogni DdT"
+
+#. module: account_favourite_billing_method
+#: model:ir.model.fields.selection,name:account_favourite_billing_method.selection__res_partner__deferred_billing_method__standard
+msgid "Standard"
+msgstr ""
+
+#. module: account_favourite_billing_method
+#: model:ir.model.fields,help:account_favourite_billing_method.field_res_partner__favorite_billing_method
+#: model:ir.model.fields,help:account_favourite_billing_method.field_res_users__favorite_billing_method
+msgid ""
+"This field allows to choice a fixed method to create invoices for this "
+"specific partner"
+msgstr ""
+"Questo campo permette di scegliere un metodo fisso per creare fatture per "
+"questo specifico cliente"
+
+#. module: account_favourite_billing_method
+#: model:ir.model.fields,help:account_favourite_billing_method.field_res_partner__deferred_billing_method
+#: model:ir.model.fields,help:account_favourite_billing_method.field_res_users__deferred_billing_method
+msgid ""
+"This field, visible only if billing method is deferred, allows to choice if "
+"invoice must be grouped standard, or one for each DdT, or one for all DdT"
+msgstr ""
+"Questo campo, visibile solo se il metodo di fatturazione è differito, "
+"permette di scegliere se la fattura deve essere raggruppata in maniera "
+"standard, o una per ogni DdT, oppure una per tutti i DdT"

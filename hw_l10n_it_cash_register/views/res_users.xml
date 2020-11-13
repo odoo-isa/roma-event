@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!-- FORM View  -->
+        <record model='ir.ui.view' id='res_users_default_cash_form'>
+            <field name='name'>res.users.default.cash.form</field>
+            <field name='model'>res.users</field>
+            <field name="inherit_id" ref="hr.res_users_view_form_profile"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='department_id']" position="after">
+                    <field name="related_department_iot_box" invisible="1"/>
+                    <field name="default_cash_device" domain="[('iot_box_id', '=', related_department_iot_box)]"
+                           options="{'no_create': True}"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</openerp>

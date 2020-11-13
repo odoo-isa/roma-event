@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="res_config_settings_view_form" model="ir.ui.view">
+            <field name="name">res.config.settings.view.form.inherit.l10n.it.edi.extension.isa</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="account.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@id='invoicing_settings']" position="after">
+                    <h2>Electronic Invoicing Configuration</h2>
+                    <div class="row mt16 o_settings_container" id="einvoice_for_steps">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="create_and_send_einvoices_in_separate_steps"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="create_and_send_einvoices in_separate_steps"
+                                       string="Create and Send E-invoice in separate steps"
+                                />
+                                <div class="text-muted">
+                                    Allows to create and send E-Invoice in separate steps
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field name="fatturapa_art73"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="fatturapa_art73" string="Art73"/>
+                                <div class="text-muted">
+                                    Indicates whether the document has been issued in accordance with the terms and conditions
+                                    established by ministerial.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <label for="fatturapa_sequence" string="Sequence"/>
+                                <div class="text-muted">
+                                    This field is a link to the sequence used to set progressive number on invoice xml
+                                    when file is generated.
+                                </div>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <field name="fatturapa_sequence"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt16 o_settings_container" id="einvoice_preview_xml">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <label for="l10n_it_edi_preview_style"/>
+                                <div class="mt16">
+                                    <field name="l10n_it_edi_preview_style" class="o_light_label" widget="radio"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

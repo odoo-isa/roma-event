@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- FORM View  -->
+    <record model='ir.ui.view' id='base_extension_isa_extended_sale_order_form'>
+        <field name='name'>base.extension.isa.extended.sale.order.form</field>
+        <field name='model'>sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name='arch' type='xml'>
+            <xpath expr="//field[@name='amount_total']" position="after">
+                <field name="amount_not_invoiced" invisible="1"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

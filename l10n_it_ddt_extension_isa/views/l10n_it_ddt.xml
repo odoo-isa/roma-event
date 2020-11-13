@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model='ir.ui.view' id='l10n_it_ddt_extension_isa_view_form'>
+        <field name='name'>l10n.it.ddt.extension_isa.view.form</field>
+        <field name='model'>l10n_it.ddt</field>
+        <field name="inherit_id" ref="l10n_it_edi.l10n_it_ddt"/>
+        <field name='arch' type='xml'>
+            <xpath expr="//form" position="replace">
+                <form>
+                    <header>
+                        <button string="Create invoice"
+                                type="action"
+                                name="%(l10n_it_ddt_extension_isa.create_invoice_wizard_action)d"
+                                class="oe_highlight"
+                                attrs="{'invisible': [
+                                    '|', ('invoice_option', '!=', 'billable'), ('state', '!=', 'confirmed')]
+                                }"
+                        />
+                        <button string="Set Cancelled"
+                                type="object"
+                                name="set_to_cancelled"
+                                states="confirmed,draft"
+                        />
+                        <button string="Set to Draft"
+                                type="object"
+                                name="set_to_draft"
+                                class="oe_highlight"
+                                states="confirmed,cancelled"
+                        />
+                        <button string="Confirm"
+                                type="object"
+                                name="confirm_ddt"
+                                class="oe_highlight"
+                                states="draft"
+                        />
+                         <field name="state" widget="statusbar" statusbar_visible="draft,confirmed,invoiced"/>
+                    </header>
+                    <sheet string="Ddt">
+                        <div class="oe_button_box" name="button_box">
+                           <button type="object"
+                                name="action_view_invoice_from_ddt"
+                                string="Invoice"
+                                class="oe_stat_button"
+                                icon="fa-pencil-square-o"
+                                attrs="{'invisible': [('invoice_id', 'in', [None,False])] }"/>
+
+                        </div>
+                        <div class="oe_right" states="cancelled">
+                          <h5><span class="badge-pill badge-danger">Cancelled</span></h5>
+                        </div>
+                        <div class="oe_right" states="draft">
+                          <h5><span class="badge-pill badge-secondary">Draft</span></h5>
+                        </div>
+                        <div class="oe_right" states="confirmed">
+                          <h5><span class="badge-pill badge-success">Confirmed</span></h5>
+                        </div>
+                        <div class="oe_title oe_left">
+                            <group>
+                                <h1>
+                                    <field name="name" readonly="1" />
+                                </h1>
+                            </group>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="partner_type" widget="radio"/>
+                                <field name="partner_id"
+                                       widget="res_partner_many2one" context="{'res_partner_search_mode': partner_type, 'show_address': 1, 'show_vat': True}" options='{"always_reload": True}'
+                                />
+                                <field name="partner_shipping_id"
+                                       context="{'default_parent_id': partner_id, 'default_type': 'delivery'}"
+                                />
+                                <field name="l10n_it_ddt_sequence"/>
+                                <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+                                <field name="invoice_id" invisible="1"/>
+                            </group>
+                            <group>
+                                <field name="payment_term_id"/>
+                                <field name="invoice_option"/>
+                                <field name="currency_id" invisible="1"/>
+                                <field name="date"/>
+                                <field name="date_done"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Line" name="line">
+                                <field name="ddt_lines">
+                                    <tree editable="bottom">
+                                        <field name="type_tax_use" invisible="1"/>
+                                        <field name="product_id"/>
+                                        <field name="description"/>
+                                        <field name="quantity"/>
+                                        <field name="price_unit"/>
+                                        <field name="ddt_line_tax_ids" widget="many2many_tags"
+                                               options="{'no_create': True}"
+                                               domain="[
+                                                    ('type_tax_use', '=', type_tax_use),
+                                                    '|', ('active', '=', False), ('active', '=', True)
+                                               ]"/>
+                                        <field name="uom_id" groups="uom.group_uom"/>
+                                        <field name="price_subtotal"/>
+                                    </tree>
+                                    <form>
+                                        <group>
+                                            <group>
+                                                <field name="product_id"/>
+                                                <field name="quantity"/>
+                                                <field name="price_unit"/>
+                                                <field name="uom_id" groups="uom.group_uom"/>
+                                                <field name="ddt_line_tax_ids" widget="many2many_tags"/>
+                                                <field name="price_subtotal"/>
+                                            </group>
+                                            <group>
+                                                <field name="description"/>
+                                            </group>
+                                        </group>
+                                    </form>
+                                </field>
+                                <group class="oe_subtotal_footer oe_right">
+                                    <field name="amount_untaxed"/>
+                                </group>
+                                <field name="note" placeholder="notes..."/>
+                            </page>
+                            <page string="Shipping Information">
+                                <group>
+                                    <group>
+                                        <field name="goods_description_id" required="1"/>
+                                        <field name="transportation_reason_id" required="1"/>
+                                        <field name="transportation_method_id" required="1"/>
+                                        <field name="incoterm_id" required="1"/>
+                                    </group>
+                                    <group>
+                                        <field name="parcels"/>
+                                        <field name="weight"/>
+                                        <field name="weight_net"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- TREE View  -->
+    <record model='ir.ui.view' id='l10n_it_ddt_extension_isa_view_tree'>
+        <field name='name'>l10.it.ddt.extension.isa.view.tree</field>
+        <field name='model'>l10n_it.ddt</field>
+        <field name="inherit_id" ref="l10n_it_edi.l10n_it_ddt_list_view"/>
+        <field name='arch' type='xml'>
+             <xpath expr="//tree" position="attributes">
+                 <attribute name="decoration-muted">state == 'cancelled'</attribute>
+            </xpath>
+            <xpath expr="//field[@name='date']" position="after">
+                <field name="date_done"/>
+                <field name="partner_id"/>
+                <field name="state"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_l10n_it_ddt_extension_isa" model="ir.actions.act_window">
+        <field name="name">Ddt</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">l10n_it.ddt</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_ddt_to_invoice" model="ir.actions.act_window">
+            <field name="name">DdT to Invoice</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">l10n_it.ddt</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'create': False}</field>
+            <field name="domain">[('state', '=', 'confirmed'), ('invoice_option', '=', 'billable')]</field>
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                No DdT to invoice found
+              </p><p>
+                You can select all DdT and invoice them in batch,<br/>
+                or check every DdT and invoice them one by one.
+              </p>
+            </field>
+        </record>
+
+    <record id="view_l10n_it_ddt_search" model="ir.ui.view">
+        <field name="name">view.l10n.it.ddt.search</field>
+        <field name="model">l10n_it.ddt</field>
+        <field name="arch" type="xml">
+            <search string="Ddt">
+                <field name="name"/>
+                <field name="partner_id"/>
+                <field name="partner_shipping_id"/>
+                <group expand="1" string="Group By">
+                    <filter string="Customer" name="partner_id" context="{'group_by':'partner_id'}"/>
+                    <filter string="Partner Shipping " name="partner_shipping_id" context="{'group_by':'partner_shipping_id'}"/>
+                    <filter string="Transportation Reason" name="transportation_reason_id" context="{'group_by':'transportation_reason_id'}"/>
+                </group>
+                <filter string="Draft" name="draft" domain="[('state', '=', 'draft')]"/>
+                <filter string="To Invoice" name="to_invoice"
+                        domain="[('state', '=', 'confirmed'), ('invoice_option', '=', 'billable')]"/>
+            </search>
+        </field>
+    </record>
+
+
+
+</odoo>
+
+

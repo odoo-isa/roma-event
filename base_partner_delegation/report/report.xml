@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <report
+            id="partner_delegation"
+            model="res.partner.delegation"
+            string="Delegation model"
+            report_type="qweb-pdf"
+            name="base_partner_delegation.print_delegations"
+            file="base_partner_delegation.print_delegations"
+            attachment_use="True"
+        />
+
+    </data>
+</odoo>

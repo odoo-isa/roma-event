@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="report_invoice_document_preferential_tax" inherit_id="account.report_invoice_document">
+            <xpath expr="//div[@id='informations']" position="inside">
+                <div class="col-auto mw-100 mb-2" name="invoice_description">
+                     <t t-if="o.partner_shipping_id.account_preferential_taxes_ids">
+                         <strong>Invoice description:</strong>
+                         <p class="m-0">Your declaration n° <t t-esc="o.partner_shipping_id.account_preferential_taxes_ids.filtered(lambda t: t.active_tax).authorization_number"/> of <t t-esc="o.partner_shipping_id.account_preferential_taxes_ids.filtered(lambda t: t.active_tax).released_date.strftime('%d/%m/%Y')"/></p>
+                         <p class="m-0"><t t-esc="o.partner_shipping_id.account_preferential_taxes_ids.filtered(lambda t: t.active_tax).preferential_tax_id.invoice_description"/></p>
+                     </t>
+                </div>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

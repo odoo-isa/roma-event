@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model='ir.ui.view' id="sale_gas_license_res_partner_extended_form">
+        <field name='name'>sale.gas.license.res.partner.extended.form</field>
+        <field name='model'>res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name='arch' type='xml'>
+            <xpath expr="//group[@name='sale']/field[@name='user_id']" position="after">
+                <field name="fgas_license"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

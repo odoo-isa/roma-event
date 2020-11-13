@@ -1,0 +1,62 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_it_sale_stock_integration
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-06 08:49+0000\n"
+"PO-Revision-Date: 2020-04-06 08:49+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_it_sale_stock_integration
+#: model:ir.model.fields,field_description:l10n_it_sale_stock_integration.field_l10n_it_ddt__carrier_id
+msgid "Carrier"
+msgstr "Vettore"
+
+#. module: l10n_it_sale_stock_integration
+#: model_terms:ir.ui.view,arch_db:l10n_it_sale_stock_integration.l10n_it_sale_stock_order_form
+msgid "Create Ddt"
+msgstr "Crea DDT"
+
+#. module: l10n_it_sale_stock_integration
+#: model:ir.model,name:l10n_it_sale_stock_integration.model_create_ddt_from_stock_wizard
+msgid "Create Ddt from stock"
+msgstr "Crea DdT da Magazzino"
+
+#. module: l10n_it_sale_stock_integration
+#: model:ir.model,name:l10n_it_sale_stock_integration.model_account_move
+msgid "Journal Entries"
+msgstr "Registrazioni contabili"
+
+#. module: l10n_it_sale_stock_integration
+#: model:ir.model,name:l10n_it_sale_stock_integration.model_sale_order
+msgid "Sales Order"
+msgstr "Ordine di vendita"
+
+#. module: l10n_it_sale_stock_integration
+#: model:ir.model,name:l10n_it_sale_stock_integration.model_stock_move
+msgid "Stock Move"
+msgstr "Movimento di magazzino"
+
+#. module: l10n_it_sale_stock_integration
+#: model:ir.model,name:l10n_it_sale_stock_integration.model_stock_picking
+msgid "Transfer"
+msgstr "Trasferisci"
+
+#. module: l10n_it_sale_stock_integration
+#: model:ir.model,name:l10n_it_sale_stock_integration.model_l10n_it_ddt
+msgid "Transport Document"
+msgstr "Documento di Trasporto"
+
+#. module: l10n_it_sale_stock_integration
+#: model:ir.model.fields,field_description:l10n_it_sale_stock_integration.field_stock_move__weight_net
+#: model:ir.model.fields,field_description:l10n_it_sale_stock_integration.field_stock_picking__weight_net
+msgid "Weight Net"
+msgstr "Peso Netto"

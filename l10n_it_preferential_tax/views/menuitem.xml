@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="action_preferential_tax" model="ir.actions.act_window">
+            <field name="name">Preferential taxes</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">account.preferential.tax.type</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_preferential_tax" parent="account.account_invoicing_menu" action="action_preferential_tax" sequence="3" string="Preferential taxes"/>
+
+    </data>
+</odoo>

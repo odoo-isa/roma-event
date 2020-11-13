@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- FORM View  -->
+    <record model='ir.ui.view' id='analytic_account_section_report'>
+        <field name='name'>analytic.account.section.report.form</field>
+        <field name='model'>account.account</field>
+        <field name="inherit_id" ref="account.view_account_form"/>
+        <field name='arch' type='xml'>
+            <xpath expr="//group" position="after">
+                <notebook>
+                    <page string="Analytic Account">
+                        <field name="user_has_analytic_group" invisible="1"/>
+                        <div class="alert alert-warning" role="alert"
+                             attrs="{'invisible': [('user_has_analytic_group', '=', True)]}">
+                            <i class="fa fa-warning"/> Enable the analytic account in the user's profile to manage
+                            analytic account
+                        </div>
+                        <field name="analytic_account_ids" nolabel="1" options="{'no_create': True}"
+                               context="{'tree_view_ref':'account_reports_extension_isa.account_analytic_account_for_account_tree'}"
+                               domain="['|', ('company_id', '=', company_id), ('company_id', '=', False)]"
+                        />
+                    </page>
+                </notebook>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

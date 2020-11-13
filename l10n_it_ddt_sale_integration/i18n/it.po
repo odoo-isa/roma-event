@@ -1,0 +1,289 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_it_ddt_sale_integration
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-06 08:59+0000\n"
+"PO-Revision-Date: 2020-04-06 08:59+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_it_ddt_sale_integration
+#: model:ir.model.fields,field_description:l10n_it_ddt_sale_integration.field_sale_order__ddt_count
+msgid "# DdT"
+msgstr "# Ddt"
+
+#. module: l10n_it_ddt_sale_integration
+#: model:ir.model.fields.selection,name:l10n_it_ddt_sale_integration.selection__create_ddt_from_sale_wizard__select_options__add_to_existing_ddt
+msgid "Add to existing Ddt"
+msgstr "Aggiungi al Ddt esistente"
+
+#. module: l10n_it_ddt_sale_integration
+#: model:ir.model.fields,field_description:l10n_it_ddt_sale_integration.field_create_ddt_from_sale_wizard__available_ddt
+msgid "Available DdT"
+msgstr "Ddt disponibili"
+
+#. module: l10n_it_ddt_sale_integration
+#: model:ir.model.fields,field_description:l10n_it_ddt_sale_integration.field_sale_order__can_create_ddt
+msgid "Can Create DDT"
+msgstr "può creare Ddt"
+
+#. module: l10n_it_ddt_sale_integration
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_sale_integration.l10n_it_ddt_sale_create_form
+msgid "Cancel"
+msgstr "Annulla"
+
+#. module: l10n_it_ddt_sale_integration
+#: model:ir.model.fields,help:l10n_it_ddt_sale_integration.field_sale_order_line__qty_in_ddt_invoiced
+msgid "Compute system field to have the qty in ddt that has already invoiced"
+msgstr "Campo calcolato usato per mostrare la quantità già fatturata nel Ddt."
+
+#. module: l10n_it_ddt_sale_integration
+#: model:ir.model.fields,help:l10n_it_ddt_sale_integration.field_sale_order__can_create_ddt
+msgid "Compute system field used for show or hide the create ddt button"
+msgstr ""
+"Campo calcolato usato per mostrare o nascondere il pulsante per la creazione"
+" del DdT"
+
+#. module: l10n_it_ddt_sale_integration
+#: model:ir.actions.act_window,name:l10n_it_ddt_sale_integration.create_ddt_sale_wizard_action
+msgid "Create DdT"
+msgstr "Crea Ddt"
+
+#. module: l10n_it_ddt_sale_integration
+#: model:ir.model,name:l10n_it_ddt_sale_integration.model_create_ddt_from_sale_wizard
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_sale_integration.l10n_it_sale_order_form
+msgid "Create Ddt"
+msgstr "Crea Ddt"
+
+#. module: l10n_it_ddt_sale_integration
+#: model:ir.model.fields.selection,name:l10n_it_ddt_sale_integration.selection__create_ddt_from_sale_wizard__select_options__create_new_ddt
+msgid "Create new Ddt"
+msgstr "Crea nuov Ddt"
+
+#. module: l10n_it_ddt_sale_integration
+#: model:ir.model.fields,field_description:l10n_it_ddt_sale_integration.field_create_ddt_from_sale_wizard__create_uid
+msgid "Created by"
+msgstr "Creato da"
+
+#. module: l10n_it_ddt_sale_integration
+#: model:ir.model.fields,field_description:l10n_it_ddt_sale_integration.field_create_ddt_from_sale_wizard__create_date
+msgid "Created on"
+msgstr "Creato il"
+
+#. module: l10n_it_ddt_sale_integration
+#: model:ir.model,name:l10n_it_ddt_sale_integration.model_l10n_it_ddt_line
+msgid "DDT Line"
+msgstr "Righe Ddt"
+
+#. module: l10n_it_ddt_sale_integration
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_sale_integration.down_payment_template
+msgid "DDT Number"
+msgstr "Numero DDT"
+
+#. module: l10n_it_ddt_sale_integration
+#: model:ir.model.fields,field_description:l10n_it_ddt_sale_integration.field_sale_order__ddt_ids
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_sale_integration.l10n_it_sale_order_form
+msgid "DdT"
+msgstr "Ddt"
+
+#. module: l10n_it_ddt_sale_integration
+#: model:ir.model.fields,field_description:l10n_it_ddt_sale_integration.field_sale_order_line__ddt_lines_ids
+msgid "DdT linked lines"
+msgstr "Linee collegato al Ddt"
+
+#. module: l10n_it_ddt_sale_integration
+#: model:ir.actions.act_window,name:l10n_it_ddt_sale_integration.action_ddt_to_invoice
+#: model:ir.model.fields,field_description:l10n_it_ddt_sale_integration.field_create_ddt_from_sale_wizard__ddt_id
+msgid "Ddt"
+msgstr ""
+
+#. module: l10n_it_ddt_sale_integration
+#: model:ir.model,name:l10n_it_ddt_sale_integration.model_ddt_advance_payment_invoice_wizard
+msgid "Ddt Advance Payment Invoice"
+msgstr "Anticipo su fattura di vendita"
+
+#. module: l10n_it_ddt_sale_integration
+#: model:ir.model.fields,help:l10n_it_ddt_sale_integration.field_sale_order__ddt_ids
+msgid "Ddt that are linked to specific order"
+msgstr "Ddt legati ad uno specifico ordine"
+
+#. module: l10n_it_ddt_sale_integration
+#: model:ir.model.fields,field_description:l10n_it_ddt_sale_integration.field_ddt_advance_payment_invoice_wizard__deduct_down_payments
+msgid "Deduct down payments"
+msgstr "Deduci Anticipo"
+
+#. module: l10n_it_ddt_sale_integration
+#: model:ir.model.fields,field_description:l10n_it_ddt_sale_integration.field_create_ddt_from_sale_wizard__display_name
+msgid "Display Name"
+msgstr "Nome visualizzato"
+
+#. module: l10n_it_ddt_sale_integration
+#: code:addons/l10n_it_ddt_sale_integration/models/l10n_it_ddt.py:0
+#, python-format
+msgid "Down Payment"
+msgstr "Anticipo"
+
+#. module: l10n_it_ddt_sale_integration
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_sale_integration.down_payment_template
+msgid "Down Payment Amount"
+msgstr "Importo Anticipo"
+
+#. module: l10n_it_ddt_sale_integration
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_sale_integration.down_payment_template
+msgid "Down Payment List"
+msgstr "Lista degli Anticipi"
+
+#. module: l10n_it_ddt_sale_integration
+#: code:addons/l10n_it_ddt_sale_integration/wizard/ddt_advance_payment_invoice.py:0
+#, python-format
+msgid "Error during result view."
+msgstr "Errore durante la visualizzazione del messaggio"
+
+#. module: l10n_it_ddt_sale_integration
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_sale_integration.l10n_it_sale_order_form
+msgid "Exists DdT that should be invoiced."
+msgstr "Esiste un Ddt che dovrebbe essere fatturato."
+
+#. module: l10n_it_ddt_sale_integration
+#: model:ir.model.fields,field_description:l10n_it_ddt_sale_integration.field_ddt_advance_payment_invoice_wizard__has_down_payments
+msgid "Has down payments"
+msgstr "Ha un anticipo"
+
+#. module: l10n_it_ddt_sale_integration
+#: model:ir.model.fields,field_description:l10n_it_ddt_sale_integration.field_create_ddt_from_sale_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: l10n_it_ddt_sale_integration
+#: model:ir.model.fields,field_description:l10n_it_ddt_sale_integration.field_create_ddt_from_sale_wizard____last_update
+msgid "Last Modified on"
+msgstr "Ultima modifica il"
+
+#. module: l10n_it_ddt_sale_integration
+#: model:ir.model.fields,field_description:l10n_it_ddt_sale_integration.field_create_ddt_from_sale_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Ultimo aggiornamento di"
+
+#. module: l10n_it_ddt_sale_integration
+#: model:ir.model.fields,field_description:l10n_it_ddt_sale_integration.field_create_ddt_from_sale_wizard__write_date
+msgid "Last Updated on"
+msgstr "Ultimo aggiornamehnto il"
+
+#. module: l10n_it_ddt_sale_integration
+#: model:ir.model.fields,help:l10n_it_ddt_sale_integration.field_l10n_it_ddt_line__sale_order_line_id
+msgid "Link this ddt line to sale order line"
+msgstr "Collega la riga del DdT alla riga dell'ordine di vendita"
+
+#. module: l10n_it_ddt_sale_integration
+#: model:ir.model.fields,help:l10n_it_ddt_sale_integration.field_sale_order_line__ddt_lines_ids
+msgid "Linked DdT lines"
+msgstr "Linee Ddt collegate"
+
+#. module: l10n_it_ddt_sale_integration
+#: model:ir.model.fields,field_description:l10n_it_ddt_sale_integration.field_ddt_advance_payment_invoice_wizard__message
+msgid "Message"
+msgstr ""
+
+#. module: l10n_it_ddt_sale_integration
+#: model:ir.model.fields,help:l10n_it_ddt_sale_integration.field_sale_order__ddt_count
+msgid "Number of DdT linked to order."
+msgstr "Numero di DdT collegati all'ordine"
+
+#. module: l10n_it_ddt_sale_integration
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_sale_integration.down_payment_template
+msgid "Order Number"
+msgstr "Numero Ordine"
+
+#. module: l10n_it_ddt_sale_integration
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_sale_integration.down_payment_template
+msgid "Partner"
+msgstr ""
+
+#. module: l10n_it_ddt_sale_integration
+#: model:ir.model.fields,field_description:l10n_it_ddt_sale_integration.field_sale_order_line__qty_in_ddt_invoiced
+msgid "Qty in DdT already invoiced"
+msgstr "Quantità sul DdT già fatturata"
+
+#. module: l10n_it_ddt_sale_integration
+#: model:ir.model.fields,field_description:l10n_it_ddt_sale_integration.field_sale_order_line__qty_in_ddt
+msgid "Qty in Delivery Note"
+msgstr "Quantità nel Documento di Trasporto"
+
+#. module: l10n_it_ddt_sale_integration
+#: model:ir.model.fields,field_description:l10n_it_ddt_sale_integration.field_sale_order__qty_to_invoice_from_ddt
+msgid "Qty to invoice from DdT"
+msgstr "Quantità da fatturare sul Ddt"
+
+#. module: l10n_it_ddt_sale_integration
+#: model:ir.model.fields,help:l10n_it_ddt_sale_integration.field_sale_order_line__qty_in_ddt
+msgid "Quantity added in Delivery Note"
+msgstr "Quantità aggiunta nel Ddt"
+
+#. module: l10n_it_ddt_sale_integration
+#: model:ir.model.fields,field_description:l10n_it_ddt_sale_integration.field_l10n_it_ddt_line__sale_order_line_id
+msgid "Sale order line"
+msgstr "Riga Ordine di vendita"
+
+#. module: l10n_it_ddt_sale_integration
+#: model:ir.model,name:l10n_it_ddt_sale_integration.model_sale_order
+msgid "Sales Order"
+msgstr "Ordine di vendita"
+
+#. module: l10n_it_ddt_sale_integration
+#: model:ir.model,name:l10n_it_ddt_sale_integration.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Riga ordine di vendita"
+
+#. module: l10n_it_ddt_sale_integration
+#: model:ir.model.fields,field_description:l10n_it_ddt_sale_integration.field_create_ddt_from_sale_wizard__select_options
+msgid "Select Option"
+msgstr "Seleziona un'opzione"
+
+#. module: l10n_it_ddt_sale_integration
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_sale_integration.l10n_it_ddt_sale_create_form
+msgid "Select Options"
+msgstr "Seleziona un'opzione"
+
+#. module: l10n_it_ddt_sale_integration
+#: model:ir.model.fields,help:l10n_it_ddt_sale_integration.field_create_ddt_from_sale_wizard__available_ddt
+msgid "System Field's for calculate available ddt."
+msgstr "Campo di sistema per calcolare i DdT disponibili"
+
+#. module: l10n_it_ddt_sale_integration
+#: code:addons/l10n_it_ddt_sale_integration/wizard/create_ddt_from_sale_wizard.py:0
+#, python-format
+msgid "There aren't order line to adding to DdT."
+msgstr "Non ci sono righe dell'ordine da aggiungere al DdT"
+
+#. module: l10n_it_ddt_sale_integration
+#: model:ir.model.fields,help:l10n_it_ddt_sale_integration.field_ddt_advance_payment_invoice_wizard__message
+msgid ""
+"This field is used to show which tuple of order and DDT have a down payment "
+"associated, usefull to decide if deduct it or not."
+msgstr "Questo campo è utilizzato per mostrare quali coppie di Ordini e DDT hanno un anticipo associato, utile per decidere se dedurlo o meno"
+
+#. module: l10n_it_ddt_sale_integration
+#: model:ir.model,name:l10n_it_ddt_sale_integration.model_l10n_it_ddt
+msgid "Transport Document"
+msgstr "Documento di Trasporto"
+
+#. module: l10n_it_ddt_sale_integration
+#: code:addons/l10n_it_ddt_sale_integration/wizard/create_ddt_from_sale_wizard.py:0
+#, python-format
+msgid "Unable to add picking to DdT. The destination DdT isn't specified"
+msgstr ""
+"Impossibile aggiungere il picking al DdT. Il DdT di destinazione non è "
+"specificato"
+
+#. module: l10n_it_ddt_sale_integration
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_sale_integration.l10n_it_ddt_sale_create_form
+msgid "create"
+msgstr "Crea"

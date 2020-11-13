@@ -1,0 +1,25 @@
+/**
+ * Widget purchase order --> invoice reconciliation
+ */
+
+div.data-table{
+    table {
+        table-layout: fixed;
+        width: 100% ;
+        tr{
+            padding-top: 8px;
+            td{
+                padding-top: 10px;
+            }
+            td.cell-label {
+            width: 35%;
+            font-weight: bold;
+            vertical-align: top;
+            }
+        }
+    }
+}
+
+#refresh{
+    margin-left: 10px;
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="base_partner_email_validation.success_confirm" name="Successful Confirm">
+        <t t-call="portal.frontend_layout">
+            <div class="jumbotron text-center">
+                <div class="modal-dialog modal-confirm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="icon-box">
+                                <i class="fa fa-check"/>
+                            </div>
+                            <h4 class="modal-title">Thank You!</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p class="text-center">Your email has been confirmed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="base_partner_email_validation.not_confirm" name="Not Successful Confirm">
+        <t t-call="portal.frontend_layout">
+            <div class="jumbotron text-center">
+                <div class="modal-dialog modal-notconfirm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="icon-box">
+                                <i class="fa fa-exclamation-triangle"></i>
+                            </div>
+                            <h4 class="modal-title">Cannot be confirmed Mail!</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p class="text-center">If you think it was an error, please send mail to: <span t-esc="company_email"/></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+</odoo>

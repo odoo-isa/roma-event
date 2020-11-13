@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="sale_report" inherit_id="sale.report_saleorder_document">
+            <xpath expr="//div[@id='informations']" position="inside">
+                <div class="col-auto mw-100 mb-2">
+                    <strong>Client purchase order:</strong>
+                    <t t-foreach="doc.client_purchase_order_ids" t-as="client_purchase_order_id">
+                        <p>
+                            <span t-field="client_purchase_order_id.name"/> in data <span t-field="client_purchase_order_id.date"/>
+                        </p>
+                    </t>
+                </div>
+            </xpath>
+        </template>
+
+        <template id="sale_portal_report" inherit_id="sale.sale_order_portal_content">
+            <xpath expr="//table[@id='sales_order_table']" position="after">
+                <h3 id="details">Coupons</h3>
+                <table class="table table-sm" id="coupon_table">
+                    <thead class="bg-100">
+                        <tr>
+                            <th class="text-left">Name</th>
+                            <th class="text-left">Date</th>
+                        </tr>
+                    </thead>
+                    <tbody class="sale_coupon_tbody">
+                        <t t-foreach="sale_order.client_purchase_order_ids" t-as="line">
+                            <tr>
+                                <td>
+                                    <span t-field="line.name"/>
+                                </td>
+                                <td>
+                                    <span t-field="line.date"/>
+                                </td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

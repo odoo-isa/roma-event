@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- FORM View  -->
+    <record model='ir.ui.view' id='l10n_it_shipping_info_sale_order_form'>
+        <field name='name'>l10n.it.shipping.info.sale.order.form</field>
+        <field name='model'>sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name='arch' type='xml'>
+            <xpath expr="//group[@name='sale_shipping']" position="inside">
+                <field name="goods_description_id"/>
+                <field name="transportation_reason_id"/>
+                <field name="transportation_method_id"/>
+                <field name="incoterm"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

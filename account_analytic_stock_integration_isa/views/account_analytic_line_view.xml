@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!--  Account Analytic Line Tree Inherit  -->
+    <record id="account_analytic_line_tree_inherit_account_analytic_stock_integration_isa" model="ir.ui.view">
+        <field name="name">account.analytic.line.tree.inherit.account.analytic.stock.integration.isa</field>
+        <field name="model">account.analytic.line</field>
+        <field name="inherit_id" ref="analytic.view_account_analytic_line_tree"/>
+        <field name="arch" type="xml">
+            <field name="amount" position="after">
+                <field name="created_from_wizard" optional="hide"/>
+            </field>
+        </field>
+    </record>
+
+    <!--  Account Analytic Line Form Inherit  -->
+    <record id="account_analytic_line_form_inherit_account_analytic_stock_integration_isa" model="ir.ui.view">
+        <field name="name">account.analytic.line.form.inherit.account.analytic.stock.integration.isa</field>
+        <field name="model">account.analytic.line</field>
+        <field name="inherit_id" ref="analytic.view_account_analytic_line_form"/>
+        <field name="arch" type="xml">
+            <field name="product_uom_id" position="after">
+                <field name="created_from_wizard"/>
+            </field>
+        </field>
+    </record>
+
+    <!--  Account Analytic Line Search Inherit  -->
+    <record id="account_analytic_line_search_inherit_account_analytic_stock_integration_isa" model="ir.ui.view">
+        <field name="name">account.analytic.line.search.inherit.account.analytic.stock.integration.isa</field>
+        <field name="model">account.analytic.line</field>
+        <field name="inherit_id" ref="analytic.view_account_analytic_line_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search//group" position="inside">
+                <filter name="group_created_from_wizard" string="Created from Stock Wizard" domain="[('created_from_wizard', '=', True)]"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

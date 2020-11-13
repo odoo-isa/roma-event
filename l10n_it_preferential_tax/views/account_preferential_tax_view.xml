@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- TREE View  -->
+        <record model='ir.ui.view' id='view_account_preferential_tax_tree'>
+            <field name='name'>view.account.preferential.tax.tree</field>
+            <field name='model'>account.preferential.tax</field>
+            <field name='arch' type='xml'>
+                <tree editable="bottom">
+                    <field name='preferential_tax_id' required="1"/>
+                    <field name="authorization_number" required="1"/>
+                    <field name='released_date' required="1"/>
+                    <field name='expiration_date' required="1" readonly="1"/>
+                    <field name='self_declaration' widget="binary" filename="file_name"/>
+                    <field name='active_tax'/>
+                    <button name="print_vat_quote" string="Print" class="oe_highlight" type="object"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- FORM View  -->
+        <record model='ir.ui.view' id='view_account_preferential_tax_form'>
+            <field name='name'>view.account.preferential.tax.form</field>
+            <field name='model'>account.preferential.tax</field>
+            <field name='arch' type='xml'>
+                <form>
+                    <group>
+                        <field name='preferential_tax_id' required="1"/>
+                        <field name="authorization_number" required="1"/>
+                        <field name='released_date' required="1"/>
+                        <field name='expiration_date' required="1" readonly="1"/>
+                    </group>
+                    <group>
+                        <field name='self_declaration' widget="binary" filename="file_name"/>
+                        <field name='active_tax'/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

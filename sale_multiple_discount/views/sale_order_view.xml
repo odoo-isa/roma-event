@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- FORM View  -->
+        <record model='ir.ui.view' id='view_order_multiple_discount_form'>
+            <field name='name'>view.order.multiple.discount.fomr</field>
+            <field name='model'>sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='order_line']//tree//field[@name='price_unit']" position="after">
+                    <field name="discount1" groups="product.group_discount_per_so_line"/>
+                    <field name="discount2" groups="product.group_discount_per_so_line"/>
+                    <field name="discount3" groups="product.group_discount_per_so_line"/>
+                </xpath>
+                <xpath expr="//field[@name='order_line']//form//field[@name='tax_id']" position="after">
+                    <label for="discount1" groups="product.group_discount_per_so_line"/>
+                    <div name="discount1" groups="product.group_discount_per_so_line">
+                        <field name="discount1" class="oe_inline"/> %
+                    </div>
+                    <label for="discount2" groups="product.group_discount_per_so_line"/>
+                    <div name="discount2" groups="product.group_discount_per_so_line">
+                        <field name="discount2" class="oe_inline"/> %
+                    </div>
+                    <label for="discount3" groups="product.group_discount_per_so_line"/>
+                    <div name="discount3" groups="product.group_discount_per_so_line">
+                        <field name="discount3" class="oe_inline"/> %
+                    </div>
+                </xpath>
+                <xpath expr="//field[@name='order_line']//tree//field[@name='discount']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='order_line']//form//label[@for='discount']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='order_line']//form//div[@name='discount']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

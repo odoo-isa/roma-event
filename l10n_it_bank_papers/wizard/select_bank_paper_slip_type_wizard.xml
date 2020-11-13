@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- FORM View  -->
+        <record model='ir.ui.view' id='select_bank_paper_slip_type_wizard_form'>
+            <field name='name'>select.bank.paper.slip.type.wizard.form</field>
+            <field name='model'>select.bank_paper.slip.type.wizard</field>
+            <field name='arch' type='xml'>
+                <form string='Select Bank Paper Slip Type'>
+                    <group>
+                        <field name='bank_paper_slip_type_id'/>
+                    </group>
+                    <footer>
+                        <button name="create_bank_paper_slip" type="object" string="Create" class="btn-primary"/>
+                        <button string="Cancel" class="btn btn-secondary" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,66 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hw_l10n_it_cash_stock_integration
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-02 09:37+0000\n"
+"PO-Revision-Date: 2020-11-02 10:39+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: it\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#. module: hw_l10n_it_cash_stock_integration
+#: model:ir.model,name:hw_l10n_it_cash_stock_integration.model_res_company
+msgid "Companies"
+msgstr "Aziende"
+
+#. module: hw_l10n_it_cash_stock_integration
+#: model:ir.model,name:hw_l10n_it_cash_stock_integration.model_res_config_settings
+msgid "Config Settings"
+msgstr "Impostazioni di configurazione"
+
+#. module: hw_l10n_it_cash_stock_integration
+#: model:ir.model.fields,field_description:hw_l10n_it_cash_stock_integration.field_res_company__cash_register_force_reserve
+#: model:ir.model.fields,field_description:hw_l10n_it_cash_stock_integration.field_res_config_settings__cash_register_force_reserve
+msgid "Force Picking reservation on counter sales"
+msgstr "Forza la giacenza sulle vendita al banco"
+
+#. module: hw_l10n_it_cash_stock_integration
+#: model_terms:ir.ui.view,arch_db:hw_l10n_it_cash_stock_integration.res_config_settings_sale_cash_register_form
+msgid "Force goods availability when perform counter sale"
+msgstr "Forza la disponibilità della merce quando viene eseguita una vendita al banco"
+
+#. module: hw_l10n_it_cash_stock_integration
+#: model:ir.model.fields,help:hw_l10n_it_cash_stock_integration.field_res_company__cash_register_force_reserve
+#: model:ir.model.fields,help:hw_l10n_it_cash_stock_integration.field_res_config_settings__cash_register_force_reserve
+msgid ""
+"If enable this flag, the picking will be confirmed regardless the availability of goods during the \n"
+"        sale's counter."
+msgstr ""
+"Se abilitato questo flag, il picking sarà confermato a prescindere dalla quantità di merce disponibile durante la \n"
+"        vendita al banco."
+
+#. module: hw_l10n_it_cash_stock_integration
+#: model:ir.model,name:hw_l10n_it_cash_stock_integration.model_sale_order
+msgid "Sales Order"
+msgstr "Ordine di vendita"
+
+#. module: hw_l10n_it_cash_stock_integration
+#: code:addons/hw_l10n_it_cash_stock_integration/models/sale_order.py:0
+#, python-format
+msgid "Some products require lots/serial numbers."
+msgstr "Alcuni prodotti richiedono lotti/numeri di serie."
+
+#. module: hw_l10n_it_cash_stock_integration
+#: code:addons/hw_l10n_it_cash_stock_integration/models/sale_order.py:0
+#, python-format
+msgid "There are not available quantity. Unable to proceed."
+msgstr "Non c'è disponibilità. Impossibile proseguire."

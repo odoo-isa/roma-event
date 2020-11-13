@@ -1,0 +1,65 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_client_purchase_ddt_integration
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-22 13:05+0000\n"
+"PO-Revision-Date: 2020-05-22 15:05+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: it\n"
+"X-Generator: Poedit 2.3.1\n"
+
+#. module: sale_client_purchase_ddt_integration
+#: model:ir.model.fields,field_description:sale_client_purchase_ddt_integration.field_l10n_it_ddt__client_purchase_order_required_rel
+msgid "Client purchase orde required"
+msgstr "Buono d’ordine obbligatorio"
+
+#. module: sale_client_purchase_ddt_integration
+#: model:ir.model.fields,field_description:sale_client_purchase_ddt_integration.field_l10n_it_ddt__client_purchase_order_ids
+#: model_terms:ir.ui.view,arch_db:sale_client_purchase_ddt_integration.view_ddt_client_purchase_form
+msgid "Client purchase order"
+msgstr "Buono d’ordine"
+
+#. module: sale_client_purchase_ddt_integration
+#: model:ir.model,name:sale_client_purchase_ddt_integration.model_create_ddt_from_sale_wizard
+msgid "Create Ddt"
+msgstr "Crea Ddt"
+
+#. module: sale_client_purchase_ddt_integration
+#: model:ir.model.fields,field_description:sale_client_purchase_ddt_integration.field_client_purchase_order__ddt_ids
+msgid "DDT"
+msgstr ""
+
+#. module: sale_client_purchase_ddt_integration
+#: model_terms:ir.ui.view,arch_db:sale_client_purchase_ddt_integration.ddt_report
+msgid "Date"
+msgstr "Data"
+
+#. module: sale_client_purchase_ddt_integration
+#: model_terms:ir.ui.view,arch_db:sale_client_purchase_ddt_integration.ddt_report
+msgid "Description"
+msgstr "Descrizione"
+
+#. module: sale_client_purchase_ddt_integration
+#: code:addons/sale_client_purchase_ddt_integration/models/l10n_it_ddt.py:0
+#, python-format
+msgid "Partner requires purchase order in related tab"
+msgstr "Il cliente necessita dei buoni d’ordine nel relativo tab"
+
+#. module: sale_client_purchase_ddt_integration
+#: model:ir.model,name:sale_client_purchase_ddt_integration.model_l10n_it_ddt
+msgid "Transport Document"
+msgstr "Documento di Trasporto"
+
+#. module: sale_client_purchase_ddt_integration
+#: model:ir.model,name:sale_client_purchase_ddt_integration.model_client_purchase_order
+msgid "client.purchase.order"
+msgstr ""

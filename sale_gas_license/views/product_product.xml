@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model='ir.ui.view' id='sale_gas_license_product_product_extended_form'>
+        <field name='name'>sale.gas.license.product.product.extended.form</field>
+        <field name='model'>product.product</field>
+        <field name="inherit_id" ref="product.product_normal_form_view"/>
+        <field name='arch' type='xml'>
+            <xpath expr="//field[@name='barcode']" position="after">
+                <field name="contains_gas" attrs="{'invisible': [('type', 'in',['service'])]}"/>
+            </xpath>
+        </field>
+    </record>
+
+     <record model='ir.ui.view' id='sale_gas_license_product_product__extended_easy_form'>
+        <field name='name'>sale.gas.license.product.product.extended.easy.form</field>
+        <field name='model'>product.product</field>
+        <field name="inherit_id" ref="product.product_variant_easy_edit_view"/>
+        <field name='arch' type='xml'>
+            <xpath expr="//field[@name='barcode']" position="after">
+                <field name="contains_gas" attrs="{'invisible': [('type', 'in',['service'])]}"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+        <record model='ir.ui.view' id='stock_picking_weight_net'>
+        <field name='name'>stock.picking.weight.net.form</field>
+        <field name='model'>stock.picking</field>
+        <field name="inherit_id" ref="delivery.view_picking_withcarrier_out_form"/>
+        <field name='arch' type='xml'>
+            <xpath expr="//field[@name='shipping_weight']" position="before">
+                <field name="weight_net"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

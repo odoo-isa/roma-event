@@ -1,0 +1,670 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hw_l10n_it_cash_register
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-02 09:08+0000\n"
+"PO-Revision-Date: 2020-11-02 10:36+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: it\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#. module: hw_l10n_it_cash_register
+#. openerp-web
+#: code:addons/hw_l10n_it_cash_register/static/src/xml/template.xml:0
+#, python-format
+msgid "(Available)"
+msgstr "(Disponibile)"
+
+#. module: hw_l10n_it_cash_register
+#: model_terms:ir.ui.view,arch_db:hw_l10n_it_cash_register.sale_print_bill
+msgid ""
+"<span class=\"o_stat_text\">Print</span>\n"
+"                        <span class=\"o_stat_text\">Bill</span>"
+msgstr ""
+"<span class=\"o_stat_text\">Stampa</span>\n"
+"                        <span class=\"o_stat_text\">Scontrino</span>"
+
+#. module: hw_l10n_it_cash_register
+#: code:addons/hw_l10n_it_cash_register/models/sale_order.py:0
+#, python-format
+msgid "A receipt is already present. Number receipt %d"
+msgstr "Uno scontrino è già presente. Numero scontrino %d"
+
+#. module: hw_l10n_it_cash_register
+#: code:addons/hw_l10n_it_cash_register/drivers/HydraDriver.py:0
+#, python-format
+msgid "A transaction is open, close the transaction first."
+msgstr "Una transazione è aperta, chiudi la transazione prima."
+
+#. module: hw_l10n_it_cash_register
+#. openerp-web
+#: code:addons/hw_l10n_it_cash_register/static/src/js/l10n_it_cash_register.js:0
+#, python-format
+msgid "Amount payment is different from grand total."
+msgstr "Totale pagamenti differente da totale generale."
+
+#. module: hw_l10n_it_cash_register
+#: model:ir.model.fields,field_description:hw_l10n_it_cash_register.field_iot_box__available_cash_register_ids
+msgid "Available cash register"
+msgstr "Registratori di cassa disponibili"
+
+#. module: hw_l10n_it_cash_register
+#: code:addons/hw_l10n_it_cash_register/drivers/HydraDriver.py:0
+#, python-format
+msgid "Battery Warning. Please turn off device and retry."
+msgstr "Batteria in esaurimento. Spegni il dispositivo e riprova."
+
+#. module: hw_l10n_it_cash_register
+#: code:addons/hw_l10n_it_cash_register/drivers/HydraDriver.py:0
+#, python-format
+msgid "CAN NOT PERFORM SALES."
+msgstr "IMPOSSIBILE ESEGUIRE LA VENDITA."
+
+#. module: hw_l10n_it_cash_register
+#: model_terms:ir.ui.view,arch_db:hw_l10n_it_cash_register.iot_box_cash_register_form
+msgid "Cash Register"
+msgstr "Registratore di cassa"
+
+#. module: hw_l10n_it_cash_register
+#: code:addons/hw_l10n_it_cash_register/models/base_cash_register.py:0
+#, python-format
+msgid "Cash Register cannot have same ip address"
+msgstr "Registratore di cassa non può avere lo stesso indirizzo"
+
+#. module: hw_l10n_it_cash_register
+#: code:addons/hw_l10n_it_cash_register/drivers/HydraDriver.py:0
+#, python-format
+msgid "Cash in/out transaction in progress."
+msgstr "Flusso di cassa in/out transazione in corso."
+
+#. module: hw_l10n_it_cash_register
+#: model:ir.model.fields,field_description:hw_l10n_it_cash_register.field_base_cash_register__name
+msgid "Cash name"
+msgstr "Nome cassa"
+
+#. module: hw_l10n_it_cash_register
+#: model:ir.model,name:hw_l10n_it_cash_register.model_base_cash_register
+msgid "Cash register configuration"
+msgstr "Configurazione registratori di cassa"
+
+#. module: hw_l10n_it_cash_register
+#: model:ir.model.fields,field_description:hw_l10n_it_cash_register.field_account_tax__cash_department
+msgid "Cash register department"
+msgstr "Reparto registratore di cassa"
+
+#. module: hw_l10n_it_cash_register
+#. openerp-web
+#: code:addons/hw_l10n_it_cash_register/static/src/js/l10n_it_cash_register.js:0
+#, python-format
+msgid ""
+"Cash register is already busy from ${cur_user}. Do you want to continue?"
+msgstr "Registratore di cassa già occupato da ${cur_user}.  Vuoi procedere?"
+
+#. module: hw_l10n_it_cash_register
+#: model:ir.model.fields,field_description:hw_l10n_it_cash_register.field_base_cash_register__cash_model
+msgid "Cash register model"
+msgstr "Modello registratore di cassa"
+
+#. module: hw_l10n_it_cash_register
+#: model:ir.model.fields,help:hw_l10n_it_cash_register.field_base_cash_register__name
+msgid "Cash register name"
+msgstr "Nome registratore di cassa"
+
+#. module: hw_l10n_it_cash_register
+#: model_terms:ir.ui.view,arch_db:hw_l10n_it_cash_register.sale_order_cash_ticket
+msgid "Change"
+msgstr "Resto"
+
+#. module: hw_l10n_it_cash_register
+#: code:addons/hw_l10n_it_cash_register/drivers/HydraDriver.py:0
+#, python-format
+msgid "Change is not allowed for this payment type."
+msgstr "Resto non è ammesso per questo tipo di pagamento."
+
+#. module: hw_l10n_it_cash_register
+#: model:ir.model.fields,help:hw_l10n_it_cash_register.field_payment_type__is_valid_retail_payment
+msgid ""
+"Check this flag if this payment type can be used in cash printer interface"
+msgstr ""
+"Imposta questo flag se questo pagamento può essere usato nel registratore "
+"di cassa"
+
+#. module: hw_l10n_it_cash_register
+#. openerp-web
+#: code:addons/hw_l10n_it_cash_register/static/src/js/l10n_it_cash_register.js:0
+#, python-format
+msgid "Connect with the device"
+msgstr "Connessione con il device"
+
+#. module: hw_l10n_it_cash_register
+#: model:ir.model.fields,field_description:hw_l10n_it_cash_register.field_base_cash_register__connection_port
+msgid "Connection Port"
+msgstr "Porta"
+
+#. module: hw_l10n_it_cash_register
+#: model:ir.model.fields,help:hw_l10n_it_cash_register.field_base_cash_register__connection_port
+msgid ""
+"Connection port. In case of socket the socket port, in case of TCP the TCP "
+"port."
+msgstr ""
+"Porta. In caso di collegamento socket, la porta del socket. In caso di TCP "
+"la porta TCP."
+
+#. module: hw_l10n_it_cash_register
+#: model:ir.model.fields,field_description:hw_l10n_it_cash_register.field_base_cash_register__connection_type
+msgid "Connection type"
+msgstr "Tipo di connessione"
+
+#. module: hw_l10n_it_cash_register
+#. openerp-web
+#: code:addons/hw_l10n_it_cash_register/static/src/js/l10n_it_cash_register.js:0
+#, python-format
+msgid "Create command to send to the device"
+msgstr "Creazione comando da spedire al dispositivo"
+
+#. module: hw_l10n_it_cash_register
+#: model:ir.model.fields,field_description:hw_l10n_it_cash_register.field_base_cash_register__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: hw_l10n_it_cash_register
+#: model:ir.model.fields,field_description:hw_l10n_it_cash_register.field_base_cash_register__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: hw_l10n_it_cash_register
+#: code:addons/hw_l10n_it_cash_register/drivers/HydraDriver.py:0
+#, python-format
+msgid "Cutter Error. Please turn off device and retry."
+msgstr "Errore taglierina. Per favore resetta il dispositivo e riprova."
+
+#. module: hw_l10n_it_cash_register
+#: model:ir.model.fields,field_description:hw_l10n_it_cash_register.field_res_users__default_cash_device
+msgid "Default cash register"
+msgstr "Registratore di cassa di default"
+
+#. module: hw_l10n_it_cash_register
+#: model_terms:ir.ui.view,arch_db:hw_l10n_it_cash_register.sale_order_cash_ticket
+msgid "Description"
+msgstr "Descrizione"
+
+#. module: hw_l10n_it_cash_register
+#: code:addons/hw_l10n_it_cash_register/drivers/HydraDriver.py:0
+#, python-format
+msgid "Device Busy. Please check the device monitor."
+msgstr ""
+"Dispositivo occupato. Per favore controlla il monitor del dispositivo."
+
+#. module: hw_l10n_it_cash_register
+#: code:addons/hw_l10n_it_cash_register/drivers/HydraDriver.py:0
+#, python-format
+msgid "Discount/markup limit exceeded."
+msgstr "Sconto limite raggiunto."
+
+#. module: hw_l10n_it_cash_register
+#: model:ir.model.fields,field_description:hw_l10n_it_cash_register.field_base_cash_register__display_name
+msgid "Display Name"
+msgstr "Nome visualizzato"
+
+#. module: hw_l10n_it_cash_register
+#. openerp-web
+#: code:addons/hw_l10n_it_cash_register/static/src/js/l10n_it_cash_register.js:0
+#, python-format
+msgid "Error"
+msgstr "Errore"
+
+#. module: hw_l10n_it_cash_register
+#: code:addons/hw_l10n_it_cash_register/drivers/HydraDriver.py:0
+#, python-format
+msgid "Error with the cutter."
+msgstr "Errore con la taglierina"
+
+#. module: hw_l10n_it_cash_register
+#: code:addons/hw_l10n_it_cash_register/drivers/HydraDriver.py:0
+#, python-format
+msgid "Fatal Error on the device. Need service."
+msgstr "Fatal Error. Necessaria assistenza."
+
+#. module: hw_l10n_it_cash_register
+#: code:addons/hw_l10n_it_cash_register/drivers/HydraDriver.py:0
+#, python-format
+msgid "Fiscal File Full. Daily data exceed the maximum limit. Need service."
+msgstr ""
+"Fiscal File pieno. Dati giornalieri superano il limite massimo. Necessaria "
+"assistenza."
+
+#. module: hw_l10n_it_cash_register
+#: code:addons/hw_l10n_it_cash_register/drivers/HydraDriver.py:0
+#, python-format
+msgid "Fiscal memory is full."
+msgstr "La memoria fiscale è piena."
+
+#. module: hw_l10n_it_cash_register
+#: code:addons/hw_l10n_it_cash_register/drivers/HydraDriver.py:0
+#, python-format
+msgid ""
+"Generic error message. Please communicate this number to the support: %s"
+msgstr "Errore generico. Per favore comunica questo numero al supporto. %s"
+
+#. module: hw_l10n_it_cash_register
+#: model_terms:ir.ui.view,arch_db:hw_l10n_it_cash_register.sale_order_cash_ticket
+msgid "Grand total"
+msgstr "Totale Generale"
+
+#. module: hw_l10n_it_cash_register
+#: model:ir.model,name:hw_l10n_it_cash_register.model_hr_department
+msgid "HR Department"
+msgstr "Ufficio risorse umane"
+
+#. module: hw_l10n_it_cash_register
+#: model:ir.model.fields.selection,name:hw_l10n_it_cash_register.selection__base_cash_register__cash_model__hydra20
+msgid "Hydra SF20"
+msgstr "Hydra SF20"
+
+#. module: hw_l10n_it_cash_register
+#: model:ir.model.fields,help:hw_l10n_it_cash_register.field_payment_type__hydra_payment_code
+msgid "Hydra payment code as configured into the cash register parameters"
+msgstr ""
+"Codice di pagamento Hydra così come configurato nel registratore di cassa"
+
+#. module: hw_l10n_it_cash_register
+#: model:ir.model.fields,field_description:hw_l10n_it_cash_register.field_base_cash_register__id
+msgid "ID"
+msgstr ""
+
+#. module: hw_l10n_it_cash_register
+#: model:ir.model.fields,field_description:hw_l10n_it_cash_register.field_base_cash_register__iot_box_id
+#: model:ir.model.fields,field_description:hw_l10n_it_cash_register.field_hr_department__iot_box_id
+msgid "IOT Box"
+msgstr ""
+
+#. module: hw_l10n_it_cash_register
+#: model:ir.model.fields,field_description:hw_l10n_it_cash_register.field_payment_type__is_foregone_payment
+msgid "IS foregone payment"
+msgstr "È un pagamento non riscosso"
+
+#. module: hw_l10n_it_cash_register
+#: code:addons/hw_l10n_it_cash_register/models/sale_order.py:0
+#, python-format
+msgid "In order to print bill the order must be confirmed."
+msgstr "Per stampare lo scontrino, l'ordine deve essere confermato."
+
+#. module: hw_l10n_it_cash_register
+#: code:addons/hw_l10n_it_cash_register/drivers/HydraDriver.py:0
+#, python-format
+msgid "Inactive payment type."
+msgstr "Tipo di pagamento non attivo."
+
+#. module: hw_l10n_it_cash_register
+#: code:addons/hw_l10n_it_cash_register/drivers/HydraDriver.py:0
+#, python-format
+msgid "Invalid Discount/Markup type."
+msgstr "Sconto non valido."
+
+#. module: hw_l10n_it_cash_register
+#: code:addons/hw_l10n_it_cash_register/drivers/HydraDriver.py:0
+#, python-format
+msgid "Invalid sales operation."
+msgstr "Operazione di vendita non valida."
+
+#. module: hw_l10n_it_cash_register
+#: model:ir.model,name:hw_l10n_it_cash_register.model_iot_box
+msgid "IoT Box"
+msgstr "Box IoT"
+
+#. module: hw_l10n_it_cash_register
+#: model:ir.model.fields,field_description:hw_l10n_it_cash_register.field_base_cash_register__ip_address
+msgid "Ip address"
+msgstr "Indirizzo ip"
+
+#. module: hw_l10n_it_cash_register
+#: model:ir.model.fields,help:hw_l10n_it_cash_register.field_base_cash_register__ip_address
+msgid "Ip address as configured in cash register settings"
+msgstr "Indirizzo ip come configurato nel registratore di  cassa"
+
+#. module: hw_l10n_it_cash_register
+#: model:ir.model.fields,field_description:hw_l10n_it_cash_register.field_payment_type__is_valid_retail_payment
+msgid "Is a valid retail payment"
+msgstr "È un pagamento valido per il banco"
+
+#. module: hw_l10n_it_cash_register
+#: code:addons/hw_l10n_it_cash_register/drivers/HydraDriver.py:0
+#, python-format
+msgid "Larger quantity value than the one allowed."
+msgstr "Quantità pi grande di quella ammessa"
+
+#. module: hw_l10n_it_cash_register
+#: model:ir.model.fields,field_description:hw_l10n_it_cash_register.field_base_cash_register____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: hw_l10n_it_cash_register
+#: model:ir.model.fields,field_description:hw_l10n_it_cash_register.field_base_cash_register__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: hw_l10n_it_cash_register
+#: model:ir.model.fields,field_description:hw_l10n_it_cash_register.field_base_cash_register__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: hw_l10n_it_cash_register
+#: model:ir.model.fields,help:hw_l10n_it_cash_register.field_base_cash_register__iot_box_id
+msgid "Linked IOT which manage this cash register"
+msgstr "IOT collegato che gestisce questo registratore di cassa"
+
+#. module: hw_l10n_it_cash_register
+#: model:ir.model.fields,help:hw_l10n_it_cash_register.field_iot_box__available_cash_register_ids
+msgid "List of all available cash register device"
+msgstr "Lista di tutti i registratori di cassa disponibili"
+
+#. module: hw_l10n_it_cash_register
+#: model:ir.model.fields,field_description:hw_l10n_it_cash_register.field_base_cash_register__manufacturer
+msgid "Manufacturer of the device"
+msgstr "Produttore del dispositivo"
+
+#. module: hw_l10n_it_cash_register
+#: code:addons/hw_l10n_it_cash_register/models/sale_order.py:0
+#, python-format
+msgid "Must be present only one VAT"
+msgstr "Deve essere presente una sola imposta IVA"
+
+#. module: hw_l10n_it_cash_register
+#: code:addons/hw_l10n_it_cash_register/models/sale_order.py:0
+#, python-format
+msgid "Must be set the department for vat %s"
+msgstr "Deve essere impostato il reparto per il codice IVA %s"
+
+#. module: hw_l10n_it_cash_register
+#: code:addons/hw_l10n_it_cash_register/drivers/HydraDriver.py:0
+#, python-format
+msgid "Must insert the payment amount."
+msgstr "Deve essere inserito l'importo del pagamento."
+
+#. module: hw_l10n_it_cash_register
+#: code:addons/hw_l10n_it_cash_register/drivers/HydraDriver.py:0
+#, python-format
+msgid "Negative receipt total."
+msgstr "Scontrino con totale negativo."
+
+#. module: hw_l10n_it_cash_register
+#. openerp-web
+#: code:addons/hw_l10n_it_cash_register/static/src/js/l10n_it_cash_register.js:0
+#, python-format
+msgid "No cash register specified. Please specify one from the top bar."
+msgstr ""
+"Non è stato specificato il registratore di cassa. Per favore specificalo "
+"uno dalla barra in alto."
+
+#. module: hw_l10n_it_cash_register
+#: code:addons/hw_l10n_it_cash_register/drivers/HydraDriver.py:0
+#, python-format
+msgid "Number of receipt %s"
+msgstr "Numero di scontrino %s"
+
+#. module: hw_l10n_it_cash_register
+#: model_terms:ir.ui.view,arch_db:hw_l10n_it_cash_register.sale_order_cash_ticket
+msgid "P.I."
+msgstr ""
+
+#. module: hw_l10n_it_cash_register
+#: code:addons/hw_l10n_it_cash_register/drivers/HydraDriver.py:0
+#, python-format
+msgid "Paper End."
+msgstr "Carta terminata."
+
+#. module: hw_l10n_it_cash_register
+#: code:addons/hw_l10n_it_cash_register/drivers/HydraDriver.py:0
+#, python-format
+msgid "Paper end. Please change paper."
+msgstr "Carta terminata. Per favore inserire carta."
+
+#. module: hw_l10n_it_cash_register
+#: model:ir.model,name:hw_l10n_it_cash_register.model_payment_type
+msgid "Payment Type"
+msgstr "Tipo di Pagamento"
+
+#. module: hw_l10n_it_cash_register
+#: model:ir.model.fields,field_description:hw_l10n_it_cash_register.field_payment_type__hydra_payment_code
+msgid "Payment code for Hydra cash register"
+msgstr "Tipo di pagamento per registratore di cassa Hydra"
+
+#. module: hw_l10n_it_cash_register
+#: code:addons/hw_l10n_it_cash_register/drivers/HydraDriver.py:0
+#, python-format
+msgid "Please provide zeroing command to close fiscal daily"
+msgstr ""
+"Per favore esegui il comando di azzeramento per effettuare la chiusura "
+"fiscale giornaliera"
+
+#. module: hw_l10n_it_cash_register
+#: code:addons/hw_l10n_it_cash_register/drivers/HydraDriver.py:0
+#, python-format
+msgid "Price Error."
+msgstr "Errore di prezzo"
+
+#. module: hw_l10n_it_cash_register
+#: model_terms:ir.ui.view,arch_db:hw_l10n_it_cash_register.sale_order_cash_ticket
+msgid "Price("
+msgstr "Prezzo("
+
+#. module: hw_l10n_it_cash_register
+#. openerp-web
+#: code:addons/hw_l10n_it_cash_register/static/src/xml/template.xml:0
+#, python-format
+msgid "Print"
+msgstr "Stampa"
+
+#. module: hw_l10n_it_cash_register
+#: code:addons/hw_l10n_it_cash_register/drivers/HydraDriver.py:0
+#, python-format
+msgid "Printer Offline. Please turn off device and retry."
+msgstr "Stampante offline. Per favore resetta il device e riprova."
+
+#. module: hw_l10n_it_cash_register
+#: code:addons/hw_l10n_it_cash_register/drivers/HydraDriver.py:0
+#, python-format
+msgid "Printer Timeout. Please turn off device and retry."
+msgstr "Tempo scaduto. Per favore resetta il device e riprova."
+
+#. module: hw_l10n_it_cash_register
+#. openerp-web
+#: code:addons/hw_l10n_it_cash_register/static/src/js/l10n_it_cash_register.js:0
+#, python-format
+msgid "Printing complete."
+msgstr "Stampa completata."
+
+#. module: hw_l10n_it_cash_register
+#: code:addons/hw_l10n_it_cash_register/drivers/HydraDriver.py:0
+#, python-format
+msgid "Printing type error."
+msgstr "Errore di stampa."
+
+#. module: hw_l10n_it_cash_register
+#: code:addons/hw_l10n_it_cash_register/drivers/HydraDriver.py:0
+#, python-format
+msgid "Receipt in Payment."
+msgstr "Scontrino in pagamento."
+
+#. module: hw_l10n_it_cash_register
+#: model:ir.model.fields,field_description:hw_l10n_it_cash_register.field_sale_order__receipt_number
+msgid "Receipt number"
+msgstr "Numero scontrino"
+
+#. module: hw_l10n_it_cash_register
+#: code:addons/hw_l10n_it_cash_register/drivers/HydraDriver.py:0
+#, python-format
+msgid "Receipt sales amount exceeded."
+msgstr "Max Totale vendita per scontrino raggiunta."
+
+#. module: hw_l10n_it_cash_register
+#: model:ir.model.fields,field_description:hw_l10n_it_cash_register.field_res_users__related_department_iot_box
+msgid "Related IOT box"
+msgstr "IOT box relativo"
+
+#. module: hw_l10n_it_cash_register
+#. openerp-web
+#: code:addons/hw_l10n_it_cash_register/static/src/js/l10n_it_cash_register.js:0
+#, python-format
+msgid "Resend command print"
+msgstr "Rispedisci comando di stampa"
+
+#. module: hw_l10n_it_cash_register
+#. openerp-web
+#: code:addons/hw_l10n_it_cash_register/static/src/xml/template.xml:0
+#, python-format
+msgid "Retry"
+msgstr "Riprova"
+
+#. module: hw_l10n_it_cash_register
+#: model_terms:ir.ui.view,arch_db:hw_l10n_it_cash_register.sale_order_cash_ticket
+msgid "Sale document"
+msgstr "Documento di vendita"
+
+#. module: hw_l10n_it_cash_register
+#: model:ir.model,name:hw_l10n_it_cash_register.model_sale_order
+msgid "Sales Order"
+msgstr "Ordine di vendita"
+
+#. module: hw_l10n_it_cash_register
+#: model:ir.model.fields,help:hw_l10n_it_cash_register.field_res_users__default_cash_device
+msgid "Set the default cash register device for this user"
+msgstr "Imposta il registratore di cassa di default per questo utente"
+
+#. module: hw_l10n_it_cash_register
+#: model:ir.model.fields,help:hw_l10n_it_cash_register.field_payment_type__is_foregone_payment
+msgid "Set this flag if this type of payment is a foregone payment"
+msgstr "Imposta questo flag se il pagamento è un non riscosso"
+
+#. module: hw_l10n_it_cash_register
+#: model:ir.model.fields,help:hw_l10n_it_cash_register.field_hr_department__iot_box_id
+#: model:ir.model.fields,help:hw_l10n_it_cash_register.field_res_users__related_department_iot_box
+msgid "Set which IOT BOX is assigned"
+msgstr "Imposta quale IOT BOX è assegnato"
+
+#. module: hw_l10n_it_cash_register
+#: model:ir.model.fields.selection,name:hw_l10n_it_cash_register.selection__base_cash_register__connection_type__socket
+msgid "Socket"
+msgstr "Socket"
+
+#. module: hw_l10n_it_cash_register
+#: model:ir.model,name:hw_l10n_it_cash_register.model_account_tax
+msgid "Tax"
+msgstr "Imposta"
+
+#. module: hw_l10n_it_cash_register
+#: code:addons/hw_l10n_it_cash_register/drivers/HydraDriver.py:0
+#, python-format
+msgid "The ECR is busy, try again later."
+msgstr "L'ECR è occupato, riprova più tardi."
+
+#. module: hw_l10n_it_cash_register
+#: model:ir.model.fields,help:hw_l10n_it_cash_register.field_account_tax__cash_department
+msgid "The configured department from the cash register configuration"
+msgstr ""
+"Il reparto configurato dalle configurazioni del registratore di cassa"
+
+#. module: hw_l10n_it_cash_register
+#: model:ir.model.fields,help:hw_l10n_it_cash_register.field_base_cash_register__connection_type
+msgid "The connection type cash register interface"
+msgstr "Il tipo di connessione con l'interfaccia del registratore di cassa"
+
+#. module: hw_l10n_it_cash_register
+#: code:addons/hw_l10n_it_cash_register/drivers/HydraDriver.py:0
+#, python-format
+msgid "The day is open, issue a Z- report first."
+msgstr "Il giorno è aperto, esegui comando Z-report prima."
+
+#. module: hw_l10n_it_cash_register
+#: model:ir.model.fields,help:hw_l10n_it_cash_register.field_base_cash_register__manufacturer
+msgid "The device manufacturer"
+msgstr "Il produttore del dispositivo"
+
+#. module: hw_l10n_it_cash_register
+#: model:ir.model.fields,help:hw_l10n_it_cash_register.field_base_cash_register__cash_model
+msgid "The model of the cash register"
+msgstr "Il modello del registratore di cassa"
+
+#. module: hw_l10n_it_cash_register
+#: model:ir.model.fields,help:hw_l10n_it_cash_register.field_sale_order__receipt_number
+msgid "The number of the receipt from the cash register"
+msgstr "Il numero dello scontrino dal registratore di cassa"
+
+#. module: hw_l10n_it_cash_register
+#: code:addons/hw_l10n_it_cash_register/drivers/HydraDriver.py:0
+#, python-format
+msgid "The payment code doesn't exist. Please check payment configuration."
+msgstr ""
+"Il tipo di pagamento non esiste. Per favore verifica la configurazione dei "
+"pagamenti."
+
+#. module: hw_l10n_it_cash_register
+#: code:addons/hw_l10n_it_cash_register/drivers/HydraDriver.py:0
+#, python-format
+msgid "The printer cover is open."
+msgstr "Lo sportello di stampa è aperto."
+
+#. module: hw_l10n_it_cash_register
+#: code:addons/hw_l10n_it_cash_register/drivers/HydraDriver.py:0
+#, python-format
+msgid "The printer is disconnected."
+msgstr "Il dispositivo è disconnesso."
+
+#. module: hw_l10n_it_cash_register
+#: model_terms:ir.ui.view,arch_db:hw_l10n_it_cash_register.sale_order_cash_ticket
+msgid ""
+"Unable to find a valid payment type. Please configure it or enable for "
+"retail sale."
+msgstr ""
+"Impossibile trovare un tipo di pagamento valido. Per favore configuralo o "
+"abilitalo per la vendita al banco."
+
+#. module: hw_l10n_it_cash_register
+#: model:ir.model,name:hw_l10n_it_cash_register.model_res_users
+msgid "Users"
+msgstr "Utenti"
+
+#. module: hw_l10n_it_cash_register
+#: model_terms:ir.ui.view,arch_db:hw_l10n_it_cash_register.sale_order_cash_ticket
+msgid "Vat"
+msgstr "IVA"
+
+#. module: hw_l10n_it_cash_register
+#: code:addons/hw_l10n_it_cash_register/drivers/HydraDriver.py:0
+#, python-format
+msgid "Wrong TIME, not allowed operation."
+msgstr "Tempo Errato, operazione non permessa."
+
+#. module: hw_l10n_it_cash_register
+#: code:addons/hw_l10n_it_cash_register/drivers/HydraDriver.py:0
+#, python-format
+msgid "Wrong VAT Value. Please check the VAT department configuration"
+msgstr ""
+"Valore di IVA errato. Per favore controllo la configurazione dei "
+"dipartimenti"
+
+#. module: hw_l10n_it_cash_register
+#: code:addons/hw_l10n_it_cash_register/drivers/HydraDriver.py:0
+#, python-format
+msgid "Wrong VAT rate."
+msgstr "Valore IVA errato."
+
+#. module: hw_l10n_it_cash_register
+#: code:addons/hw_l10n_it_cash_register/drivers/HydraDriver.py:0
+#, python-format
+msgid "Zero discount/markup."
+msgstr "Sconto Zero."
+
+#. module: hw_l10n_it_cash_register
+#: model_terms:ir.ui.view,arch_db:hw_l10n_it_cash_register.sale_order_cash_ticket
+msgid "of which VAT"
+msgstr "di cui IVA"

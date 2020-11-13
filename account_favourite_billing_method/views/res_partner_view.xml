@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- FORM View  -->
+        <record model='ir.ui.view' id='l10n_it_res_partner_billing_form'>
+            <field name='name'>l10n_it.res.partner.billing.form</field>
+            <field name='model'>res.partner</field>
+            <field name="inherit_id" ref="account.view_partner_property_form"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='bank_ids']" position="before">
+                    <field name="favorite_billing_method"/>
+                    <field name="deferred_billing_method" attrs="{'invisible': [('favorite_billing_method', '=', 'accompanying')],
+                                                                  'required': [('favorite_billing_method', '!=', 'accompanying')]}"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

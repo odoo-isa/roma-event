@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_stock_warehouse_sale_pickup_manager,stock.warehouse.sale.picking.manager,model_stock_warehouse_sale_pickup,stock.group_stock_manager,1,1,1,1
+access_stock_warehouse_sale_picking_user,stock.warehouse.sale.picking.user,model_stock_warehouse_sale_pickup,base.group_user,1,0,0,0
+access_sale_pickup_warehouse_rel_manager,sale.pickup.warehouse.rel.manager,model_sale_pickup_warehouse_rel,stock.group_stock_manager,1,1,1,1
+access_sale_pickup_warehouse_rel_user,sale.pickup.warehouse.rel.user,model_sale_pickup_warehouse_rel,base.group_user,1,0,0,0

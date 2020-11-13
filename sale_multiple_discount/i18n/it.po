@@ -1,0 +1,89 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_multiple_discount
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-23 09:13+0000\n"
+"PO-Revision-Date: 2020-10-23 09:13+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sale_multiple_discount
+#: model_terms:ir.ui.view,arch_db:sale_multiple_discount.report_saleorder_multiple_discount
+msgid "<span>First Discount</span>"
+msgstr "<span>Sconto 1</span>"
+
+#. module: sale_multiple_discount
+#: model_terms:ir.ui.view,arch_db:sale_multiple_discount.report_saleorder_multiple_discount
+msgid "<span>Second Discount</span>"
+msgstr "<span>Sconto 2</span>"
+
+#. module: sale_multiple_discount
+#: model_terms:ir.ui.view,arch_db:sale_multiple_discount.report_saleorder_multiple_discount
+msgid "<span>Third Discount</span>"
+msgstr "<span>Sconto 3</span>"
+
+#. module: sale_multiple_discount
+#: model_terms:ir.ui.view,arch_db:sale_multiple_discount.sale_pricelist_multiple_discount_product_category_form
+msgid "Discounts"
+msgstr "Sconti"
+
+#. module: sale_multiple_discount
+#: model:ir.model.fields,field_description:sale_multiple_discount.field_product_category__extra_max_discount
+msgid "Extra Max Discount"
+msgstr "Sconto extra Massimo"
+
+#. module: sale_multiple_discount
+#: model:ir.model.fields,help:sale_multiple_discount.field_product_category__extra_max_discount
+msgid "Extra maximum discount allowed for the counter user"
+msgstr "Extra sconto massimo permesso per gli utenti banco"
+
+#. module: sale_multiple_discount
+#: model:ir.model.fields,field_description:sale_multiple_discount.field_sale_order_line__discount1
+msgid "First Discount %"
+msgstr "Sconto 1 %"
+
+#. module: sale_multiple_discount
+#: model:ir.model.fields,help:sale_multiple_discount.field_product_category__set_extra_max_discount
+msgid "If true, it allows you to set the maximum extra discount"
+msgstr "Se vero, permette di imostare lo sconto massimo"
+
+#. module: sale_multiple_discount
+#: model:ir.model,name:sale_multiple_discount.model_product_category
+msgid "Product Category"
+msgstr "Categoria prodotto"
+
+#. module: sale_multiple_discount
+#: model:ir.model,name:sale_multiple_discount.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Riga ordine di vendita"
+
+#. module: sale_multiple_discount
+#: model:ir.model.fields,field_description:sale_multiple_discount.field_sale_order_line__discount2
+msgid "Second Discount %"
+msgstr "Sconto 2 %"
+
+#. module: sale_multiple_discount
+#: model:ir.model.fields,field_description:sale_multiple_discount.field_product_category__set_extra_max_discount
+msgid "Set Extra Max Discount"
+msgstr "Imposta scontro extra massimo"
+
+#. module: sale_multiple_discount
+#: model:ir.model.fields,field_description:sale_multiple_discount.field_sale_order_line__discount3
+msgid "Third Discount %"
+msgstr "Sconto 3 %"
+
+#. module: sale_multiple_discount
+#: code:addons/sale_multiple_discount/models/sale_order_line.py:0
+#, python-format
+msgid ""
+"Warning! The third discount has exceeded the maximum applicable discount. "
+"(Maximum discount applicable for this product %s"
+msgstr "Attenzione! Il terzo sconto supera il massimo sconto applicabile per l'utente.(Massimo sconto applicabile per questa categoria di prodotti %s)"

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- FORM View  -->
+    <record model='ir.ui.view' id='l10n_it_ddt_advance_payment_invoice'>
+        <field name='name'>l10n.it.ddt.advance.payment.invoice</field>
+        <field name='model'>ddt.advance.payment.invoice.wizard</field>
+        <field name='arch' type='xml'>
+            <form>
+                <sheet>
+                    <group>
+                        <field name='invoice_date'/>
+                        <field name="journal_id"/>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="create_invoices"
+                            string="Create Invoices"
+                            type="object"
+                            class="oe_highlight"
+                    />
+                    <button name="create_invoices"
+                            string="Create and View Invoices"
+                            type="object"
+                            context="{'open_invoices': True}"
+                            class="oe_highlight"
+                    />
+                    or
+                    <button string="Cancel"
+                            class="oe_link"
+                            special="cancel"
+                    />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+   <record model="ir.actions.act_window" id="create_invoice_wizard_action">
+        <field name="name">Create Deferred Invoice </field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">ddt.advance.payment.invoice.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="l10n_it_ddt_extension_isa.model_l10n_it_ddt"/>
+    </record>
+
+</odoo>

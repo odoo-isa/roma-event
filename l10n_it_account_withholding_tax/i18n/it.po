@@ -1,0 +1,672 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_it_account_withholding_tax
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-22 08:19+0000\n"
+"PO-Revision-Date: 2020-09-22 10:43+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: it\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#. module: l10n_it_account_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_it_account_withholding_tax.select_account_move_line_withholding_tax_form
+msgid "-> View partially reconciled entries"
+msgstr "→ Registrazioni parzialmente riconciliate"
+
+#. module: l10n_it_account_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_it_account_withholding_tax.l10n_it_payment_withholding_tax_form
+msgid ""
+"<i class=\"fa fa-angle-double-right\" aria-label=\"Move\" title=\"Move\" "
+"style=\"margin-right: 10px\"/>"
+msgstr ""
+"<i class=\"fa fa-angle-double-right\" aria-label=\"Movimento\" title="
+"\"Movimento\" style=\"margin-right: 10px\"/>"
+
+#. module: l10n_it_account_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_it_account_withholding_tax.l10n_it_payment_withholding_tax_form
+msgid ""
+"<i class=\"fa fa-list-ul\" aria-label=\"Name\" title=\"Name\" style="
+"\"margin-right: 10px\"/>"
+msgstr ""
+"<i class=\"fa fa-list-ul\" aria-label=\"Nome\" title=\"Nome\" style="
+"\"margin-right: 10px\"/>"
+
+#. module: l10n_it_account_withholding_tax
+#: model:ir.model,name:l10n_it_account_withholding_tax.model_account_account
+#: model:ir.model.fields,field_description:l10n_it_account_withholding_tax.field_payment_withholding_tax_wizard__account_id
+msgid "Account"
+msgstr "Conto"
+
+#. module: l10n_it_account_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_it_account_withholding_tax.select_account_move_line_withholding_tax_tree
+msgid "Account Move Line"
+msgstr "Movimenti Cotabili"
+
+#. module: l10n_it_account_withholding_tax
+#: model:ir.ui.menu,name:l10n_it_account_withholding_tax.menu_l10n_it_account_withholding_tax
+msgid "Account Withholding Tax"
+msgstr "Ritenuta d'acconto"
+
+#. module: l10n_it_account_withholding_tax
+#: model:ir.model.fields,field_description:l10n_it_account_withholding_tax.field_account_tax__account_tax_type
+msgid "Account tax type"
+msgstr "Tipo Tassa"
+
+#. module: l10n_it_account_withholding_tax
+#: model:ir.model.fields,help:l10n_it_account_withholding_tax.field_account_tax__cash_basis_transition_account_id
+msgid ""
+"Account used to transition the tax amount in exigibility on payment. It "
+"will contain the tax amount as long as the original invoice has not been "
+"reconciled; at reconciliation, this amount cancelled on this account and "
+"put on the regular tax account through a giro payment move."
+msgstr ""
+"Conto utilizzato per trasferire l'importo dell'imposta in esigibilità al "
+"pagamento. Conterrà l'importo dell'imposta fintanto che la fattura "
+"originale non è stata riconciliata; al momento della riconciliazione, tale "
+"importo viene annullato su questo conto e depositato sul conto fiscale "
+"regolare tramite un movimento di versamento bancario."
+
+#. module: l10n_it_account_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_it_account_withholding_tax.select_account_move_line_withholding_tax_form
+msgid "Accounting Documents"
+msgstr "Documenti Contabili"
+
+#. module: l10n_it_account_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_it_account_withholding_tax.select_account_move_line_withholding_tax_form
+msgid "Amount"
+msgstr "Importo"
+
+#. module: l10n_it_account_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_it_account_withholding_tax.select_account_move_line_withholding_tax_form
+msgid "Analytic"
+msgstr "Analitico"
+
+#. module: l10n_it_account_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_it_account_withholding_tax.select_account_move_line_withholding_tax_form
+msgid "Analytic Lines"
+msgstr "Righe Analitiche"
+
+#. module: l10n_it_account_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_it_account_withholding_tax.l10n_it_payment_withholding_tax_form
+msgid "Cancel"
+msgstr "Annulla"
+
+#. module: l10n_it_account_withholding_tax
+#: code:addons/l10n_it_account_withholding_tax/models/account_partial_reconcile.py:0
+#: code:addons/l10n_it_account_withholding_tax/wizard/payment_withholding_tax_wizard.py:0
+#, python-format
+msgid ""
+"Cannot find parameter for the withholding tax, You should configure it. \n"
+"Please go to Account Configuration."
+msgstr ""
+"Impossibile trovare il parametro per la ritenuta d'acconto, è necessario "
+"configurarlo. \n"
+"Per farlo vai nelle Configurazione della Contabilità."
+
+#. module: l10n_it_account_withholding_tax
+#: model:ir.model.fields.selection,name:l10n_it_account_withholding_tax.selection__account_tax__account_tax_type__cassa_previdenziale
+msgid "Cassa Previdenziale"
+msgstr "Cassa Previdenziale"
+
+#. module: l10n_it_account_withholding_tax
+#: model:account.tax.group,name:l10n_it_account_withholding_tax.tax_group_tc16
+msgid "Cassa autonoma assistenza integrativa giornalisti italiani (CASAGIT)"
+msgstr "Cassa autonoma assistenza integrativa giornalisti italiani (CASAGIT)"
+
+#. module: l10n_it_account_withholding_tax
+#: model:account.tax.group,name:l10n_it_account_withholding_tax.tax_group_tc05
+msgid "Cassa nazionale del notariato"
+msgstr "Cassa nazionale del notariato"
+
+#. module: l10n_it_account_withholding_tax
+#: model:account.tax.group,name:l10n_it_account_withholding_tax.tax_group_tc01
+msgid "Cassa nazionale previdenza e assistenza avvocati e procuratori"
+msgstr "Cassa nazionale previdenza e assistenza avvocati e procuratori"
+
+#. module: l10n_it_account_withholding_tax
+#: model:account.tax.group,name:l10n_it_account_withholding_tax.tax_group_tc04
+msgid ""
+"Cassa nazionale previdenza e assistenza ingegneri e architetti liberi "
+"professionisti"
+msgstr ""
+"Cassa nazionale previdenza e assistenza ingegneri e architetti liberi "
+"professionisti"
+
+#. module: l10n_it_account_withholding_tax
+#: model:account.tax.group,name:l10n_it_account_withholding_tax.tax_group_tc06
+msgid ""
+"Cassa nazionale previdenza e assistenza ragionieri e periti commerciali"
+msgstr ""
+"Cassa nazionale previdenza e assistenza ragionieri e periti commerciali"
+
+#. module: l10n_it_account_withholding_tax
+#: model:account.tax.group,name:l10n_it_account_withholding_tax.tax_group_tc02
+msgid "Cassa previdenza dottori commercialisti"
+msgstr "Cassa previdenza dottori commercialisti"
+
+#. module: l10n_it_account_withholding_tax
+#: model:account.tax.group,name:l10n_it_account_withholding_tax.tax_group_tc03
+msgid "Cassa previdenza e assistenza geometri"
+msgstr "Cassa previdenza e assistenza geometri"
+
+#. module: l10n_it_account_withholding_tax
+#: model:ir.model.fields,help:l10n_it_account_withholding_tax.field_account_tax__withholding_payment_details
+msgid "Code from 770S model"
+msgstr "Codice dal modello 770S"
+
+#. module: l10n_it_account_withholding_tax
+#: model:ir.model,name:l10n_it_account_withholding_tax.model_res_company
+msgid "Companies"
+msgstr "Aziende"
+
+#. module: l10n_it_account_withholding_tax
+#: model:ir.model.fields,field_description:l10n_it_account_withholding_tax.field_l10n_it_payment_withholding_tax__company_id
+msgid "Company"
+msgstr "Azienda"
+
+#. module: l10n_it_account_withholding_tax
+#: model:ir.model.fields,help:l10n_it_account_withholding_tax.field_l10n_it_payment_withholding_tax__company_id
+msgid "Company related to this journal"
+msgstr "Azienda collegata a questo sezionale"
+
+#. module: l10n_it_account_withholding_tax
+#: model:ir.model,name:l10n_it_account_withholding_tax.model_res_config_settings
+msgid "Config Settings"
+msgstr "Impostazioni di configurazione"
+
+#. module: l10n_it_account_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_it_account_withholding_tax.payment_withholding_tax_wizard_form
+msgid "Confirm"
+msgstr "Conferma"
+
+#. module: l10n_it_account_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_it_account_withholding_tax.l10n_it_payment_withholding_tax_form
+msgid ""
+"Confirming the operation, the registration of the payment will be "
+"eliminated                                 and the accounting movements "
+"that generated it will be reported in the Confirmed "
+"state,                                 ready to be paid again. Are ypu sure?"
+msgstr ""
+"Confermando l'operazione, la registrazione del pagamento verrà eliminata e "
+"il movimento contabile che l'ha generato verrà riportato nello stato "
+"Confermato, disponibile ad un nuovo pagamento. Confermare per procedere."
+
+#. module: l10n_it_account_withholding_tax
+#: model:ir.actions.act_window,name:l10n_it_account_withholding_tax.action_payment_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_it_account_withholding_tax.payment_withholding_tax_wizard_form
+msgid "Create Payment for Account Withholding Tax"
+msgstr "Crea Versamento per Ritenuta d'acconto"
+
+#. module: l10n_it_account_withholding_tax
+#: model:ir.model.fields,field_description:l10n_it_account_withholding_tax.field_l10n_it_payment_withholding_tax__create_uid
+#: model:ir.model.fields,field_description:l10n_it_account_withholding_tax.field_payment_withholding_tax_wizard__create_uid
+msgid "Created by"
+msgstr "Creato da"
+
+#. module: l10n_it_account_withholding_tax
+#: model:ir.model.fields,field_description:l10n_it_account_withholding_tax.field_l10n_it_payment_withholding_tax__create_date
+#: model:ir.model.fields,field_description:l10n_it_account_withholding_tax.field_payment_withholding_tax_wizard__create_date
+msgid "Created on"
+msgstr "Creato il"
+
+#. module: l10n_it_account_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_it_account_withholding_tax.select_account_move_line_withholding_tax_form
+msgid "Currency"
+msgstr "Valuta"
+
+#. module: l10n_it_account_withholding_tax
+#: model:ir.model.fields,field_description:l10n_it_account_withholding_tax.field_l10n_it_payment_withholding_tax__date
+#: model:ir.model.fields,field_description:l10n_it_account_withholding_tax.field_payment_withholding_tax_wizard__date
+msgid "Date"
+msgstr "Data"
+
+#. module: l10n_it_account_withholding_tax
+#: model:ir.model.fields,help:l10n_it_account_withholding_tax.field_payment_withholding_tax_wizard__date
+msgid "Date set on the accounting registration."
+msgstr "Data del Versamento della Ritenuta."
+
+#. module: l10n_it_account_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_it_account_withholding_tax.select_account_move_line_withholding_tax_form
+msgid "Dates"
+msgstr "Date"
+
+#. module: l10n_it_account_withholding_tax
+#: model:ir.model.fields,field_description:l10n_it_account_withholding_tax.field_l10n_it_payment_withholding_tax__display_name
+#: model:ir.model.fields,field_description:l10n_it_account_withholding_tax.field_payment_withholding_tax_wizard__display_name
+msgid "Display Name"
+msgstr "Nome Visualizzato"
+
+#. module: l10n_it_account_withholding_tax
+#: model:account.tax.group,name:l10n_it_account_withholding_tax.tax_group_tc07
+msgid ""
+"Ente nazionale assistenza agenti e rappresentanti di commercio (ENASARCO)"
+msgstr ""
+"Ente nazionale assistenza agenti e rappresentanti di commercio (ENASARCO)"
+
+#. module: l10n_it_account_withholding_tax
+#: model:account.tax.group,name:l10n_it_account_withholding_tax.tax_group_tc19
+msgid "Ente nazionale previdenza e assistenza biologi (ENPAB)"
+msgstr "Ente nazionale previdenza e assistenza biologi (ENPAB)"
+
+#. module: l10n_it_account_withholding_tax
+#: model:account.tax.group,name:l10n_it_account_withholding_tax.tax_group_tc08
+msgid "Ente nazionale previdenza e assistenza consulenti del lavoro (ENPACL)"
+msgstr "Ente nazionale previdenza e assistenza consulenti del lavoro (ENPACL)"
+
+#. module: l10n_it_account_withholding_tax
+#: model:account.tax.group,name:l10n_it_account_withholding_tax.tax_group_tc10
+msgid "Ente nazionale previdenza e assistenza farmacisti (ENPAF)"
+msgstr "Ente nazionale previdenza e assistenza farmacisti (ENPAF)"
+
+#. module: l10n_it_account_withholding_tax
+#: model:account.tax.group,name:l10n_it_account_withholding_tax.tax_group_tc12
+msgid ""
+"Ente nazionale previdenza e assistenza impiegati dell'agricoltura (ENPAIA)"
+msgstr ""
+"Ente nazionale previdenza e assistenza impiegati dell'agricoltura (ENPAIA)"
+
+#. module: l10n_it_account_withholding_tax
+#: model:account.tax.group,name:l10n_it_account_withholding_tax.tax_group_tc09
+msgid "Ente nazionale previdenza e assistenza medici (ENPAM)"
+msgstr "Ente nazionale previdenza e assistenza medici (ENPAM)"
+
+#. module: l10n_it_account_withholding_tax
+#: model:account.tax.group,name:l10n_it_account_withholding_tax.tax_group_tc20
+msgid ""
+"Ente nazionale previdenza e assistenza professione infermieristica (ENPAPI)"
+msgstr ""
+"Ente nazionale previdenza e assistenza professione infermieristica (ENPAPI)"
+
+#. module: l10n_it_account_withholding_tax
+#: model:account.tax.group,name:l10n_it_account_withholding_tax.tax_group_tc21
+msgid "Ente nazionale previdenza e assistenza psicologi (ENPAP)"
+msgstr "Ente nazionale previdenza e assistenza psicologi (ENPAP)"
+
+#. module: l10n_it_account_withholding_tax
+#: model:account.tax.group,name:l10n_it_account_withholding_tax.tax_group_tc11
+msgid "Ente nazionale previdenza e assistenza veterinari (ENPAV)"
+msgstr "Ente nazionale previdenza e assistenza veterinari (ENPAV)"
+
+#. module: l10n_it_account_withholding_tax
+#: model:account.tax.group,name:l10n_it_account_withholding_tax.tax_group_tc18
+msgid "Ente previdenza e assistenza pluricategoriale (EPAP)"
+msgstr "Ente previdenza e assistenza pluricategoriale (EPAP)"
+
+#. module: l10n_it_account_withholding_tax
+#: model:account.tax.group,name:l10n_it_account_withholding_tax.tax_group_tc17
+msgid ""
+"Ente previdenza periti industriali e periti industriali laureati (EPPI)"
+msgstr ""
+"Ente previdenza periti industriali e periti industriali laureati (EPPI)"
+
+#. module: l10n_it_account_withholding_tax
+#: model:account.tax.group,name:l10n_it_account_withholding_tax.tax_group_tc13
+msgid "Fondo previdenza impiegati imprese di spedizione agenzie marittime"
+msgstr "Fondo previdenza impiegati imprese di spedizione agenzie marittime"
+
+#. module: l10n_it_account_withholding_tax
+#: code:addons/l10n_it_account_withholding_tax/models/account_move.py:0
+#, python-format
+msgid ""
+"Founded more than one withholding tax, useful informations from XML file:"
+msgstr ""
+"Trovate più ritenute d'acconto all'interno della stessa fattura, "
+"informazioni utili recuperate dal fil XML:"
+
+#. module: l10n_it_account_withholding_tax
+#: code:addons/l10n_it_account_withholding_tax/models/l10n_it_payment_withholding_tax.py:0
+#: code:addons/l10n_it_account_withholding_tax/wizard/payment_withholding_tax_wizard.py:0
+#, python-format
+msgid "Generated Payments"
+msgstr "Versamenti Generati"
+
+#. module: l10n_it_account_withholding_tax
+#: code:addons/l10n_it_account_withholding_tax/models/account_partial_reconcile.py:0
+#: code:addons/l10n_it_account_withholding_tax/wizard/payment_withholding_tax_wizard.py:0
+#, python-format
+msgid "Go to the configuration panel"
+msgstr "Apri pannello di configurazione"
+
+#. module: l10n_it_account_withholding_tax
+#: model:ir.model.fields,field_description:l10n_it_account_withholding_tax.field_l10n_it_payment_withholding_tax__id
+#: model:ir.model.fields,field_description:l10n_it_account_withholding_tax.field_payment_withholding_tax_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: l10n_it_account_withholding_tax
+#: model:account.tax.group,name:l10n_it_account_withholding_tax.tax_group_tc22
+msgid "INPS"
+msgstr "INPS"
+
+#. module: l10n_it_account_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_it_account_withholding_tax.select_account_move_line_withholding_tax_form
+msgid "Information"
+msgstr "Informazioni"
+
+#. module: l10n_it_account_withholding_tax
+#: code:addons/l10n_it_account_withholding_tax/models/account_move.py:0
+#, python-format
+msgid ""
+"Is not possible to import invoice with multiple withholding tax. Please "
+"check the  \n"
+"                                invoice before importing it. Useful details:"
+"<br/>\n"
+"                    <ul>Invoice Line: %(line_number)s</ul>\n"
+"                    <ul>Product: %(product)s</ul>\n"
+"                    <ul>Price Unit: %(price_unit)s</ul>\n"
+"                    <ul>Quantity: %(quantity)s</ul>line_number"
+msgstr ""
+"Non è possibile importare una fattura con più ritenute d'acconto. Perfavore "
+"controlla la \n"
+"                                fattura prima di importarla. Dettagli utili:"
+"<br/>\n"
+"                    <ul>Linea Fattura: %(line_number)s</ul>\n"
+"                    <ul>Prodotto: %(product)s</ul>\n"
+"                    <ul>Prezzo Unitario: %(price_unit)s</ul>\n"
+"                    <ul>Quantità: %(quantity)s</ul>number"
+
+#. module: l10n_it_account_withholding_tax
+#: code:addons/l10n_it_account_withholding_tax/models/account_move.py:0
+#, python-format
+msgid ""
+"Is not possible to import invoice with multiple withholding tax. Please "
+"check the invoice before importing it."
+msgstr ""
+"Non è possibile importare completamente una fattura con più ritenute "
+"d'acconto associate. Per favore verifica la fattura prima di procedere"
+
+#. module: l10n_it_account_withholding_tax
+#: model:account.tax.group,name:l10n_it_account_withholding_tax.tax_group_tc14
+msgid "Istituto nazionale previdenza giornalisti italiani (INPGI)"
+msgstr "Istituto nazionale previdenza giornalisti italiani (INPGI)"
+
+#. module: l10n_it_account_withholding_tax
+#: code:addons/l10n_it_account_withholding_tax/models/account_move_line.py:0
+#, python-format
+msgid ""
+"It's not possible to continue because there is lines with same pension fund "
+"and different taxes"
+msgstr ""
+"Non è possibile continuare perché ci sono linee con la stessa cassa "
+"previdenziale e tasse diverse"
+
+#. module: l10n_it_account_withholding_tax
+#: code:addons/l10n_it_account_withholding_tax/models/account_move_line.py:0
+#, python-format
+msgid ""
+"It's not possible to save because line %s has two security fund in taxes"
+msgstr ""
+"Non è possibile salvare perché la riga%s ha due imposte di tipo cassa "
+"previdenziale."
+
+#. module: l10n_it_account_withholding_tax
+#: model:ir.model,name:l10n_it_account_withholding_tax.model_account_move
+msgid "Journal Entries"
+msgstr "Registrazioni contabili"
+
+#. module: l10n_it_account_withholding_tax
+#: model:ir.model,name:l10n_it_account_withholding_tax.model_account_move_line
+#: model_terms:ir.ui.view,arch_db:l10n_it_account_withholding_tax.select_account_move_line_withholding_tax_form
+msgid "Journal Item"
+msgstr "Movimento contabile"
+
+#. module: l10n_it_account_withholding_tax
+#: model:ir.model.fields,field_description:l10n_it_account_withholding_tax.field_l10n_it_payment_withholding_tax____last_update
+#: model:ir.model.fields,field_description:l10n_it_account_withholding_tax.field_payment_withholding_tax_wizard____last_update
+msgid "Last Modified on"
+msgstr "Ultima modifica il"
+
+#. module: l10n_it_account_withholding_tax
+#: model:ir.model.fields,field_description:l10n_it_account_withholding_tax.field_l10n_it_payment_withholding_tax__write_uid
+#: model:ir.model.fields,field_description:l10n_it_account_withholding_tax.field_payment_withholding_tax_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Ultimo aggiornamento di"
+
+#. module: l10n_it_account_withholding_tax
+#: model:ir.model.fields,field_description:l10n_it_account_withholding_tax.field_l10n_it_payment_withholding_tax__write_date
+#: model:ir.model.fields,field_description:l10n_it_account_withholding_tax.field_payment_withholding_tax_wizard__write_date
+msgid "Last Updated on"
+msgstr "Ultimo aggiornamento il"
+
+#. module: l10n_it_account_withholding_tax
+#: model:ir.model.fields,help:l10n_it_account_withholding_tax.field_l10n_it_payment_withholding_tax__origin_move_line_ids
+msgid ""
+"List of account move lines that has generate the payment of withholding tax."
+msgstr ""
+"Lista dei Movimenti Contabili che hanno generato il versamento della "
+"Ritenuta d'acconto."
+
+#. module: l10n_it_account_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_it_account_withholding_tax.select_account_move_line_withholding_tax_form
+msgid "Matching"
+msgstr "Abbinamento"
+
+#. module: l10n_it_account_withholding_tax
+#: model:ir.model.fields,field_description:l10n_it_account_withholding_tax.field_l10n_it_payment_withholding_tax__move_id
+msgid "Move"
+msgstr "Movimento"
+
+#. module: l10n_it_account_withholding_tax
+#: model:ir.model.fields,field_description:l10n_it_account_withholding_tax.field_l10n_it_payment_withholding_tax__name
+msgid "Name"
+msgstr "Nome"
+
+#. module: l10n_it_account_withholding_tax
+#: code:addons/l10n_it_account_withholding_tax/models/l10n_it_payment_withholding_tax.py:0
+#, python-format
+msgid "New"
+msgstr "Nuovo"
+
+#. module: l10n_it_account_withholding_tax
+#: model:account.tax.group,name:l10n_it_account_withholding_tax.tax_group_tc15
+msgid "Opera nazionale assistenza orfani sanitari italiani (ONAOSI)"
+msgstr "Opera nazionale assistenza orfani sanitari italiani (ONAOSI)"
+
+#. module: l10n_it_account_withholding_tax
+#: model:ir.model.fields,field_description:l10n_it_account_withholding_tax.field_l10n_it_payment_withholding_tax__origin_move_line_ids
+msgid "Origin Move Lines"
+msgstr "Movimenti Contabili di partenza"
+
+#. module: l10n_it_account_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_it_account_withholding_tax.l10n_it_payment_withholding_tax_form
+msgid "Originator Move Lines"
+msgstr "Movimenti Contabili di partenza"
+
+#. module: l10n_it_account_withholding_tax
+#: model:ir.model,name:l10n_it_account_withholding_tax.model_account_partial_reconcile
+msgid "Partial Reconcile"
+msgstr "Riconciliazione parziale"
+
+#. module: l10n_it_account_withholding_tax
+#: model:ir.actions.act_window,name:l10n_it_account_withholding_tax.action_open_payment_withholding_tax_lines
+#: model:ir.ui.menu,name:l10n_it_account_withholding_tax.menu_l10n_it_account_withholding_tax_payment_to_do
+msgid "Payment Account Withholding Tax"
+msgstr "Crea Versamento Ritenuta d'acconto"
+
+#. module: l10n_it_account_withholding_tax
+#: model:ir.actions.act_window,name:l10n_it_account_withholding_tax.action_open_payment_done_withholding_tax_lines
+#: model:ir.ui.menu,name:l10n_it_account_withholding_tax.menu_l10n_it_account_withholding_tax_payment_done
+msgid "Payment Done on Account Withholding Tax"
+msgstr "Lista Versamenti Ritenuta d'acconto"
+
+#. module: l10n_it_account_withholding_tax
+#: model:ir.model,name:l10n_it_account_withholding_tax.model_l10n_it_payment_withholding_tax
+#: model:ir.model,name:l10n_it_account_withholding_tax.model_payment_withholding_tax_wizard
+#: model:ir.model.fields,field_description:l10n_it_account_withholding_tax.field_account_move_line__l10n_it_payment_withholding_tax_id
+#: model_terms:ir.ui.view,arch_db:l10n_it_account_withholding_tax.l10n_it_payment_withholding_tax_form
+#: model_terms:ir.ui.view,arch_db:l10n_it_account_withholding_tax.l10n_it_payment_withholding_tax_tree
+msgid "Payment for Withholding Tax"
+msgstr "Versamento Ritenuta d'acconto"
+
+#. module: l10n_it_account_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_it_account_withholding_tax.account_invoice_it_FatturaPA_export
+#: model_terms:ir.ui.view,arch_db:l10n_it_account_withholding_tax.account_withholding_tax_fatturapa_lines
+msgid "SI"
+msgstr "SI"
+
+#. module: l10n_it_account_withholding_tax
+#: model:ir.model.fields,help:l10n_it_account_withholding_tax.field_payment_withholding_tax_wizard__account_id
+msgid ""
+"Set this field with the accounting account for which the transaction is "
+"registered."
+msgstr ""
+"Imposta questo campo con il conto contabile per il quale registrare la "
+"transazione."
+
+#. module: l10n_it_account_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_it_account_withholding_tax.select_account_move_line_withholding_tax_form
+msgid "States"
+msgstr "Condizioni"
+
+#. module: l10n_it_account_withholding_tax
+#: model:ir.model,name:l10n_it_account_withholding_tax.model_account_tax
+msgid "Tax"
+msgstr "Imposta"
+
+#. module: l10n_it_account_withholding_tax
+#: code:addons/l10n_it_account_withholding_tax/models/account_move.py:0
+#, python-format
+msgid ""
+"Tax not found with percentage: %s and exoneration %s for the article: %s"
+msgstr ""
+"Non trovata Imposta con percentuale: %s ed esonero %s per l'articolo: %s"
+
+#. module: l10n_it_account_withholding_tax
+#: code:addons/l10n_it_account_withholding_tax/models/account_move.py:0
+#, python-format
+msgid "Tax not found with percentage: %s for the article: %s"
+msgstr "Non trovata Imposta con percentuale: %s per l'articolo: %s"
+
+#. module: l10n_it_account_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_it_account_withholding_tax.select_account_move_line_withholding_tax_form
+msgid "Taxes"
+msgstr "Imposte"
+
+#. module: l10n_it_account_withholding_tax
+#: model:ir.model.fields,help:l10n_it_account_withholding_tax.field_account_move__is_withholding_tax
+msgid "Technical field that indicate if the move is a withholding tax"
+msgstr "Campo Tecnico che indica se il movimento è una ritenuta d'acconto."
+
+#. module: l10n_it_account_withholding_tax
+#: model:ir.model.fields,help:l10n_it_account_withholding_tax.field_account_account__l10n_it_account_usage
+msgid "That indicate the usage of this account"
+msgstr "Indica l'utilizzo di questo conto."
+
+#. module: l10n_it_account_withholding_tax
+#: model:ir.model.fields,help:l10n_it_account_withholding_tax.field_account_move_line__l10n_it_payment_withholding_tax_id
+msgid "This field show the linked payment for Withholding Tax."
+msgstr "Questo campo mostra il versamento della ritenuta"
+
+#. module: l10n_it_account_withholding_tax
+#: model:ir.model.fields,help:l10n_it_account_withholding_tax.field_res_company__withholding_journal_id
+#: model:ir.model.fields,help:l10n_it_account_withholding_tax.field_res_company__withholding_payment_term
+#: model:ir.model.fields,help:l10n_it_account_withholding_tax.field_res_config_settings__withholding_journal_id
+#: model:ir.model.fields,help:l10n_it_account_withholding_tax.field_res_config_settings__withholding_payment_term
+msgid ""
+"This value will be set in the withholding move that will be created when "
+"tax exigibility will be \n"
+"        triggered"
+msgstr ""
+"Questo valore verrà impostato nel movimento della ritenuta d'acconto quando "
+"è impostata l'esigibilità fiscale."
+
+#. module: l10n_it_account_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_it_account_withholding_tax.select_account_move_line_withholding_tax_tree
+msgid "Total Credit"
+msgstr "Totale Avere"
+
+#. module: l10n_it_account_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_it_account_withholding_tax.select_account_move_line_withholding_tax_tree
+msgid "Total Debit"
+msgstr "Totale Dare"
+
+#. module: l10n_it_account_withholding_tax
+#: model:ir.model.fields,field_description:l10n_it_account_withholding_tax.field_account_tax__cash_basis_transition_account_id
+msgid "Transition account tax"
+msgstr "Conto Transitorio"
+
+#. module: l10n_it_account_withholding_tax
+#: code:addons/l10n_it_account_withholding_tax/wizard/payment_withholding_tax_wizard.py:0
+#, python-format
+msgid "Unable to create a withholding payment with negative value."
+msgstr ""
+"Impossibile creare un pagamento con ritenuta d'acconto con valore negativo."
+
+#. module: l10n_it_account_withholding_tax
+#: code:addons/l10n_it_account_withholding_tax/wizard/payment_withholding_tax_wizard.py:0
+#, python-format
+msgid "Unable to find a valid currency for this move."
+msgstr "Impossibile trovare una valuta valida per questo movimento."
+
+#. module: l10n_it_account_withholding_tax
+#: code:addons/l10n_it_account_withholding_tax/models/account_move.py:0
+#, python-format
+msgid "Unable to find withholding tax, useful informations from XML file:"
+msgstr ""
+"Impossibile trovare la ritenuta d'acconto, informazioni utili sul file XML:"
+
+#. module: l10n_it_account_withholding_tax
+#: model:ir.model.fields,field_description:l10n_it_account_withholding_tax.field_account_account__l10n_it_account_usage
+msgid "Usage"
+msgstr "Uso"
+
+#. module: l10n_it_account_withholding_tax
+#: model:ir.model.fields,help:l10n_it_account_withholding_tax.field_account_tax__account_tax_type
+msgid "What kind of tax this record rapresent"
+msgstr "Quale tipo di tassa rappresenta questo record."
+
+#. module: l10n_it_account_withholding_tax
+#: model:account.tax.group,name:l10n_it_account_withholding_tax.tax_group_wthv
+msgid "Withholding Incurs"
+msgstr "Ritenuta d'acconto"
+
+#. module: l10n_it_account_withholding_tax
+#: model:ir.model.fields,field_description:l10n_it_account_withholding_tax.field_res_company__withholding_journal_id
+#: model:ir.model.fields,field_description:l10n_it_account_withholding_tax.field_res_config_settings__withholding_journal_id
+msgid "Withholding Journal"
+msgstr "Registro Ritenuta d'acconto"
+
+#. module: l10n_it_account_withholding_tax
+#: model:ir.model.fields,field_description:l10n_it_account_withholding_tax.field_account_tax__withholding_payment_details
+msgid "Withholding Payment Details"
+msgstr "Causale pagamento ritenuta d'acconto"
+
+#. module: l10n_it_account_withholding_tax
+#: model:ir.model.fields.selection,name:l10n_it_account_withholding_tax.selection__account_tax__account_tax_type__withholding_tax
+msgid "Withholding Tax"
+msgstr "Ritenuta d'acconto"
+
+#. module: l10n_it_account_withholding_tax
+#: model:ir.model.fields,field_description:l10n_it_account_withholding_tax.field_res_company__withholding_payment_term
+#: model:ir.model.fields,field_description:l10n_it_account_withholding_tax.field_res_config_settings__withholding_payment_term
+msgid "Withholding payment term"
+msgstr "Termini pagamento Ritenuta d'acconto"
+
+#. module: l10n_it_account_withholding_tax
+#: model:account.tax.group,name:l10n_it_account_withholding_tax.tax_group_wthva
+msgid "Withholding to be deposited"
+msgstr "Ritenuta d'acconto da depositare"
+
+#. module: l10n_it_account_withholding_tax
+#: model:ir.model.fields,field_description:l10n_it_account_withholding_tax.field_account_move__is_withholding_tax
+msgid "is withholding account move"
+msgstr "Movimento con Ritenuta"
+
+#. module: l10n_it_account_withholding_tax
+#: model:ir.model.fields.selection,name:l10n_it_account_withholding_tax.selection__account_account__l10n_it_account_usage__withholding_tax
+msgid "withholding tax"
+msgstr "Ritenuta d'acconto"
+
+#. module: l10n_it_account_withholding_tax
+#: model_terms:ir.ui.view,arch_db:l10n_it_account_withholding_tax.res_config_settings_withholding_tax
+msgid "withholding tax configuration"
+msgstr "Configurazione ritenuta d'acconto"

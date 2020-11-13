@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model='ir.ui.view' id='sale_pricelist_multiple_discount_product_category_form'>
+        <field name='name'>sale.pricelist.multiple.discount.product.category.form</field>
+        <field name='model'>product.category</field>
+        <field name="inherit_id" ref="product.product_category_form_view"/>
+        <field name='arch' type='xml'>
+            <xpath expr="//group[@name='first']" position="after">
+                 <group col="2" string="Discounts">
+                     <group>
+                        <field name="set_extra_max_discount"/>
+                        <field name="extra_max_discount" attrs="{'invisible':[('set_extra_max_discount', '=', False)]}"/>
+                     </group>
+                 <group/>
+                 </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

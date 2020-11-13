@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+       <record id="action_create_slip" model="ir.actions.act_window">
+            <field name="name">Create Slip</field>
+            <field name="res_model">select.bank_paper.slip.type.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="select_bank_paper_slip_type_wizard_form"/>
+            <field name="target">new</field>
+            <field name="binding_model_id" ref="account.model_account_move_line" />
+        </record>
+
+        <record model='ir.ui.view' id='view_account_move_line_tree'>
+            <field name='name'>view.account.move.line.tree</field>
+            <field name='model'>account.move.line</field>
+            <field name="inherit_id" ref="account.view_move_line_tree"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='debit']" position="before">
+                    <field name="res_partner_bank_id"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+
+</odoo>

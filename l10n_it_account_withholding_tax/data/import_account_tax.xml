@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+
+        <!-- pension Found Data -->
+        <record id="tax_group_tc01" model="account.tax.group">
+            <field name="name">Cassa nazionale previdenza e assistenza avvocati e procuratori</field>
+        </record>
+
+        <record id="tax_group_tc02" model="account.tax.group">
+            <field name="name">Cassa previdenza dottori commercialisti</field>
+        </record>
+
+        <record id="tax_group_tc03" model="account.tax.group">
+            <field name="name">Cassa previdenza e assistenza geometri</field>
+        </record>
+
+        <record id="tax_group_tc04" model="account.tax.group">
+            <field name="name">Cassa nazionale previdenza e assistenza ingegneri e architetti liberi professionisti</field>
+        </record>
+
+        <record id="tax_group_tc05" model="account.tax.group">
+            <field name="name">Cassa nazionale del notariato</field>
+        </record>
+
+        <record id="tax_group_tc06" model="account.tax.group">
+            <field name="name">Cassa nazionale previdenza e assistenza ragionieri e periti commerciali</field>
+        </record>
+
+        <record id="tax_group_tc07" model="account.tax.group">
+            <field name="name">Ente nazionale assistenza agenti e rappresentanti di commercio (ENASARCO)</field>
+        </record>
+
+        <record id="tax_group_tc08" model="account.tax.group">
+            <field name="name">Ente nazionale previdenza e assistenza consulenti del lavoro (ENPACL)</field>
+        </record>
+
+        <record id="tax_group_tc09" model="account.tax.group">
+            <field name="name">Ente nazionale previdenza e assistenza medici (ENPAM)</field>
+        </record>
+
+        <record id="tax_group_tc10" model="account.tax.group">
+            <field name="name">Ente nazionale previdenza e assistenza farmacisti (ENPAF)</field>
+        </record>
+
+        <record id="tax_group_tc11" model="account.tax.group">
+            <field name="name">Ente nazionale previdenza e assistenza veterinari (ENPAV)</field>
+        </record>
+
+        <record id="tax_group_tc12" model="account.tax.group">
+            <field name="name">Ente nazionale previdenza e assistenza impiegati dell'agricoltura (ENPAIA)</field>
+        </record>
+
+        <record id="tax_group_tc13" model="account.tax.group">
+            <field name="name">Fondo previdenza impiegati imprese di spedizione agenzie marittime</field>
+        </record>
+
+        <record id="tax_group_tc14" model="account.tax.group">
+            <field name="name">Istituto nazionale previdenza giornalisti italiani (INPGI)</field>
+        </record>
+
+        <record id="tax_group_tc15" model="account.tax.group">
+            <field name="name">Opera nazionale assistenza orfani sanitari italiani (ONAOSI)</field>
+        </record>
+
+        <record id="tax_group_tc16" model="account.tax.group">
+            <field name="name">Cassa autonoma assistenza integrativa giornalisti italiani (CASAGIT)</field>
+        </record>
+
+        <record id="tax_group_tc17" model="account.tax.group">
+            <field name="name">Ente previdenza periti industriali e periti industriali laureati (EPPI)</field>
+        </record>
+
+        <record id="tax_group_tc18" model="account.tax.group">
+            <field name="name">Ente previdenza e assistenza pluricategoriale (EPAP)</field>
+        </record>
+
+        <record id="tax_group_tc19" model="account.tax.group">
+            <field name="name">Ente nazionale previdenza e assistenza biologi (ENPAB)</field>
+        </record>
+
+        <record id="tax_group_tc20" model="account.tax.group">
+            <field name="name">Ente nazionale previdenza e assistenza professione infermieristica (ENPAPI)</field>
+        </record>
+
+        <record id="tax_group_tc21" model="account.tax.group">
+            <field name="name">Ente nazionale previdenza e assistenza psicologi (ENPAP)</field>
+        </record>
+
+        <record id="tax_group_tc22" model="account.tax.group">
+            <field name="name">INPS</field>
+        </record>
+
+        <!-- tax use sale -->
+        <record id="tax_tc01" model="account.tax">
+            <field name="name">TC01</field>
+            <field name="description">TC01</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">4</field>
+            <field name="include_base_amount">True</field>
+            <field name="account_tax_type">cassa_previdenziale</field>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_tc01')"/>
+            <field name="sequence">-1</field>
+        </record>
+
+        <record id="tax_tc02" model="account.tax">
+            <field name="name">TC02</field>
+            <field name="description">TC02</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">4</field>
+            <field name="include_base_amount">True</field>
+            <field name="account_tax_type">cassa_previdenziale</field>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_tc02')"/>
+            <field name="sequence">-1</field>
+        </record>
+
+        <record id="tax_tc03" model="account.tax">
+            <field name="name">TC03</field>
+            <field name="description">TC03</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">5</field>
+            <field name="include_base_amount">True</field>
+            <field name="account_tax_type">cassa_previdenziale</field>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_tc03')"/>
+            <field name="sequence">-1</field>
+        </record>
+
+        <record id="tax_tc04" model="account.tax">
+            <field name="name">TC04</field>
+            <field name="description">TC04</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">4</field>
+            <field name="include_base_amount">True</field>
+            <field name="account_tax_type">cassa_previdenziale</field>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_tc04')"/>
+            <field name="sequence">-1</field>
+        </record>
+
+        <record id="tax_tc05" model="account.tax">
+            <field name="name">TC05</field>
+            <field name="description">TC05</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">0</field>
+            <field name="include_base_amount">True</field>
+            <field name="account_tax_type">cassa_previdenziale</field>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_tc05')"/>
+            <field name="sequence">-1</field>
+        </record>
+
+        <record id="tax_tc06" model="account.tax">
+            <field name="name">TC06</field>
+            <field name="description">TC06</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">4</field>
+            <field name="include_base_amount">True</field>
+            <field name="account_tax_type">cassa_previdenziale</field>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_tc06')"/>
+            <field name="sequence">-1</field>
+        </record>
+
+        <record id="tax_tc07" model="account.tax">
+            <field name="name">TC07</field>
+            <field name="description">TC07</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">0</field>
+            <field name="include_base_amount">True</field>
+            <field name="account_tax_type">cassa_previdenziale</field>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_tc07')"/>
+            <field name="sequence">-1</field>
+        </record>
+
+        <record id="tax_tc08" model="account.tax">
+            <field name="name">TC08</field>
+            <field name="description">TC08</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">4</field>
+            <field name="include_base_amount">True</field>
+            <field name="account_tax_type">cassa_previdenziale</field>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_tc08')"/>
+            <field name="sequence">-1</field>
+        </record>
+
+        <record id="tax_tc09" model="account.tax">
+            <field name="name">TC09</field>
+            <field name="description">TC09</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">0</field>
+            <field name="include_base_amount">True</field>
+            <field name="account_tax_type">cassa_previdenziale</field>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_tc09')"/>
+            <field name="sequence">-1</field>
+        </record>
+
+        <record id="tax_tc10" model="account.tax">
+            <field name="name">TC10</field>
+            <field name="description">TC10</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">0</field>
+            <field name="include_base_amount">True</field>
+            <field name="account_tax_type">cassa_previdenziale</field>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_tc10')"/>
+            <field name="sequence">-1</field>
+        </record>
+
+        <record id="tax_tc11" model="account.tax">
+            <field name="name">TC11</field>
+            <field name="description">TC11</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">4</field>
+            <field name="include_base_amount">True</field>
+            <field name="account_tax_type">cassa_previdenziale</field>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_tc11')"/>
+            <field name="sequence">-1</field>
+        </record>
+
+        <record id="tax_tc12" model="account.tax">
+            <field name="name">TC12</field>
+            <field name="description">TC12</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">2</field>
+            <field name="include_base_amount">True</field>
+            <field name="account_tax_type">cassa_previdenziale</field>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_tc12')"/>
+            <field name="sequence">-1</field>
+        </record>
+
+        <record id="tax_tc13" model="account.tax">
+            <field name="name">TC13</field>
+            <field name="description">TC13</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">0</field>
+            <field name="include_base_amount">True</field>
+            <field name="account_tax_type">cassa_previdenziale</field>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_tc13')"/>
+            <field name="sequence">-1</field>
+        </record>
+
+        <record id="tax_tc14" model="account.tax">
+            <field name="name">TC14</field>
+            <field name="description">TC14</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">2</field>
+            <field name="include_base_amount">True</field>
+            <field name="account_tax_type">cassa_previdenziale</field>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_tc14')"/>
+            <field name="sequence">-1</field>
+        </record>
+
+        <record id="tax_tc15" model="account.tax">
+            <field name="name">TC15</field>
+            <field name="description">TC15</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">0</field>
+            <field name="include_base_amount">True</field>
+            <field name="account_tax_type">cassa_previdenziale</field>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_tc15')"/>
+            <field name="sequence">-1</field>
+        </record>
+
+        <record id="tax_tc16" model="account.tax">
+            <field name="name">TC16</field>
+            <field name="description">TC16</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">0</field>
+            <field name="include_base_amount">True</field>
+            <field name="account_tax_type">cassa_previdenziale</field>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_tc16')"/>
+            <field name="sequence">-1</field>
+        </record>
+
+        <record id="tax_tc17" model="account.tax">
+            <field name="name">TC17</field>
+            <field name="description">TC17</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">5</field>
+            <field name="include_base_amount">True</field>
+            <field name="account_tax_type">cassa_previdenziale</field>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_tc17')"/>
+            <field name="sequence">-1</field>
+        </record>
+
+        <record id="tax_tc18" model="account.tax">
+            <field name="name">TC18</field>
+            <field name="description">TC18</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">2</field>
+            <field name="include_base_amount">True</field>
+            <field name="account_tax_type">cassa_previdenziale</field>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_tc18')"/>
+            <field name="sequence">-1</field>
+        </record>
+
+        <record id="tax_tc19" model="account.tax">
+            <field name="name">TC19</field>
+            <field name="description">TC19</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">4</field>
+            <field name="include_base_amount">True</field>
+            <field name="account_tax_type">cassa_previdenziale</field>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_tc19')"/>
+            <field name="sequence">-1</field>
+        </record>
+
+        <record id="tax_tc20" model="account.tax">
+            <field name="name">TC20</field>
+            <field name="description">TC20</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">4</field>
+            <field name="include_base_amount">True</field>
+            <field name="account_tax_type">cassa_previdenziale</field>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_tc20')"/>
+            <field name="sequence">-1</field>
+        </record>
+
+        <record id="tax_tc21" model="account.tax">
+            <field name="name">TC21</field>
+            <field name="description">TC21</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">2</field>
+            <field name="include_base_amount">True</field>
+            <field name="account_tax_type">cassa_previdenziale</field>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_tc21')"/>
+            <field name="sequence">-1</field>
+        </record>
+
+        <record id="tax_tc22" model="account.tax">
+            <field name="name">TC22</field>
+            <field name="description">TC22</field>
+            <field name="amount_type">percent</field>
+            <field name="amount">0</field>
+            <field name="include_base_amount">True</field>
+            <field name="account_tax_type">cassa_previdenziale</field>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_tc22')"/>
+            <field name="sequence">-3</field>
+        </record>
+
+        <!-- tax use purchase -->
+        <record id="tax_tc01a" model="account.tax">
+            <field name="name">TC01</field>
+            <field name="description">TC01</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount">4</field>
+            <field name="include_base_amount">True</field>
+            <field name="account_tax_type">cassa_previdenziale</field>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_tc01')"/>
+            <field name="sequence">-1</field>
+        </record>
+
+        <record id="tax_tc02a" model="account.tax">
+            <field name="name">TC02</field>
+            <field name="description">TC02</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount">4</field>
+            <field name="include_base_amount">True</field>
+            <field name="account_tax_type">cassa_previdenziale</field>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_tc02')"/>
+            <field name="sequence">-1</field>
+        </record>
+
+        <record id="tax_tc03a" model="account.tax">
+            <field name="name">TC03</field>
+            <field name="description">TC03</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount">5</field>
+            <field name="include_base_amount">True</field>
+            <field name="account_tax_type">cassa_previdenziale</field>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_tc03')"/>
+            <field name="sequence">-1</field>
+        </record>
+
+        <record id="tax_tc04a" model="account.tax">
+            <field name="name">TC04</field>
+            <field name="description">TC04</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount">4</field>
+            <field name="include_base_amount">True</field>
+            <field name="account_tax_type">cassa_previdenziale</field>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_tc04')"/>
+            <field name="sequence">-1</field>
+        </record>
+
+        <record id="tax_tc05a" model="account.tax">
+            <field name="name">TC05</field>
+            <field name="description">TC05</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount">0</field>
+            <field name="include_base_amount">True</field>
+            <field name="account_tax_type">cassa_previdenziale</field>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_tc05')"/>
+            <field name="sequence">-1</field>
+        </record>
+
+        <record id="tax_tc06a" model="account.tax">
+            <field name="name">TC06</field>
+            <field name="description">TC06</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount">4</field>
+            <field name="include_base_amount">True</field>
+            <field name="account_tax_type">cassa_previdenziale</field>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_tc06')"/>
+            <field name="sequence">-1</field>
+        </record>
+
+        <record id="tax_tc07a" model="account.tax">
+            <field name="name">TC07</field>
+            <field name="description">TC07</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount">0</field>
+            <field name="include_base_amount">True</field>
+            <field name="account_tax_type">cassa_previdenziale</field>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_tc07')"/>
+            <field name="sequence">-1</field>
+        </record>
+
+        <record id="tax_tc08a" model="account.tax">
+            <field name="name">TC08</field>
+            <field name="description">TC08</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount">4</field>
+            <field name="include_base_amount">True</field>
+            <field name="account_tax_type">cassa_previdenziale</field>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_tc08')"/>
+            <field name="sequence">-1</field>
+        </record>
+
+        <record id="tax_tc09a" model="account.tax">
+            <field name="name">TC09</field>
+            <field name="description">TC09</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount">0</field>
+            <field name="include_base_amount">True</field>
+            <field name="account_tax_type">cassa_previdenziale</field>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_tc09')"/>
+            <field name="sequence">-1</field>
+        </record>
+
+        <record id="tax_tc10a" model="account.tax">
+            <field name="name">TC10</field>
+            <field name="description">TC10</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount">0</field>
+            <field name="include_base_amount">True</field>
+            <field name="account_tax_type">cassa_previdenziale</field>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_tc10')"/>
+            <field name="sequence">-1</field>
+        </record>
+
+        <record id="tax_tc11a" model="account.tax">
+            <field name="name">TC11</field>
+            <field name="description">TC11</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount">4</field>
+            <field name="include_base_amount">True</field>
+            <field name="account_tax_type">cassa_previdenziale</field>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_tc11')"/>
+            <field name="sequence">-1</field>
+        </record>
+
+        <record id="tax_tc12a" model="account.tax">
+            <field name="name">TC12</field>
+            <field name="description">TC12</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount">2</field>
+            <field name="include_base_amount">True</field>
+            <field name="account_tax_type">cassa_previdenziale</field>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_tc12')"/>
+            <field name="sequence">-1</field>
+        </record>
+
+        <record id="tax_tc13a" model="account.tax">
+            <field name="name">TC13</field>
+            <field name="description">TC13</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount">0</field>
+            <field name="include_base_amount">True</field>
+            <field name="account_tax_type">cassa_previdenziale</field>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_tc13')"/>
+            <field name="sequence">-1</field>
+        </record>
+
+        <record id="tax_tc14a" model="account.tax">
+            <field name="name">TC14</field>
+            <field name="description">TC14</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount">2</field>
+            <field name="include_base_amount">True</field>
+            <field name="account_tax_type">cassa_previdenziale</field>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_tc14')"/>
+            <field name="sequence">-1</field>
+        </record>
+
+        <record id="tax_tc15a" model="account.tax">
+            <field name="name">TC15</field>
+            <field name="description">TC15</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount">0</field>
+            <field name="include_base_amount">True</field>
+            <field name="account_tax_type">cassa_previdenziale</field>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_tc15')"/>
+            <field name="sequence">-1</field>
+        </record>
+
+        <record id="tax_tc16a" model="account.tax">
+            <field name="name">TC16</field>
+            <field name="description">TC16</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount">0</field>
+            <field name="include_base_amount">True</field>
+            <field name="account_tax_type">cassa_previdenziale</field>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_tc16')"/>
+            <field name="sequence">-1</field>
+        </record>
+
+        <record id="tax_tc17a" model="account.tax">
+            <field name="name">TC17</field>
+            <field name="description">TC17</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount">5</field>
+            <field name="include_base_amount">True</field>
+            <field name="account_tax_type">cassa_previdenziale</field>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_tc17')"/>
+            <field name="sequence">-1</field>
+        </record>
+
+        <record id="tax_tc18a" model="account.tax">
+            <field name="name">TC18</field>
+            <field name="description">TC18</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount">2</field>
+            <field name="include_base_amount">True</field>
+            <field name="account_tax_type">cassa_previdenziale</field>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_tc18')"/>
+            <field name="sequence">-1</field>
+        </record>
+
+        <record id="tax_tc19a" model="account.tax">
+            <field name="name">TC19</field>
+            <field name="description">TC19</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount">4</field>
+            <field name="include_base_amount">True</field>
+            <field name="account_tax_type">cassa_previdenziale</field>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_tc19')"/>
+            <field name="sequence">-1</field>
+        </record>
+
+        <record id="tax_tc20a" model="account.tax">
+            <field name="name">TC20</field>
+            <field name="description">TC20</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount">4</field>
+            <field name="include_base_amount">True</field>
+            <field name="account_tax_type">cassa_previdenziale</field>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_tc20')"/>
+            <field name="sequence">-1</field>
+        </record>
+
+        <record id="tax_tc21a" model="account.tax">
+            <field name="name">TC21</field>
+            <field name="description">TC21</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount">2</field>
+            <field name="include_base_amount">True</field>
+            <field name="account_tax_type">cassa_previdenziale</field>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_tc21')"/>
+            <field name="sequence">-1</field>
+        </record>
+
+        <record id="tax_tc22a" model="account.tax">
+            <field name="name">TC22</field>
+            <field name="description">TC22</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">purchase</field>
+            <field name="amount">0</field>
+            <field name="include_base_amount">True</field>
+            <field name="account_tax_type">cassa_previdenziale</field>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_tc22')"/>
+            <field name="sequence">-3</field>
+        </record>
+
+        <!-- Withholding tax data -->
+        <!-- CREDIT -->
+        <record id="tax_group_wthv" model="account.tax.group">
+            <field name="name">Withholding Incurs</field>
+        </record>
+
+        <record id="tax_1038v" model="account.tax">
+            <field name="account_tax_type">withholding_tax</field>
+            <field name="name">1038</field>
+            <field name="description">Provvigioni per rapporti di agenzia di mediazione e di rappresentanza</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">sale</field>
+            <field name="l10n_it_vat_due_date"/>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_wthv')"/>
+            <field name="sequence">-2</field>
+            <field name="amount">-23</field>
+            <field name="tax_exigibility">on_payment</field>
+            <field name="invoice_repartition_line_ids"
+                   eval="[(5, 0, 0),
+                        (0,0,{'factor_percent': 100,'repartition_type': 'base'}),
+                        (0,0,{'factor_percent': 50,'repartition_type': 'tax'}),]"/>
+            <field name="refund_repartition_line_ids"
+                   eval="[(5, 0, 0),
+                        (0,0,{'factor_percent': 100,'repartition_type': 'base'}),
+                        (0,0,{'factor_percent': 50,'repartition_type': 'tax'}),]"/>
+        </record>
+
+        <record id="tax_1040v" model="account.tax">
+            <field name="account_tax_type">withholding_tax</field>
+            <field name="name">1040</field>
+            <field name="description">Lavoro autonomo: arti e professioni</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">sale</field>
+            <field name="l10n_it_vat_due_date"/>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_wthv')"/>
+            <field name="sequence">-2</field>
+            <field name="amount">-20</field>
+            <field name="tax_exigibility">on_payment</field>
+            <field name="invoice_repartition_line_ids"
+                   eval="[(5, 0, 0),
+                        (0,0,{'factor_percent': 100,'repartition_type': 'base'}),
+                        (0,0,{'factor_percent': 100,'repartition_type': 'tax'}),]"/>
+            <field name="refund_repartition_line_ids"
+                   eval="[
+                        (5, 0, 0),
+                        (0,0,{'factor_percent': 100,'repartition_type': 'base'}),
+                        (0,0,{'factor_percent': 100,'repartition_type': 'tax'}),]"/>
+        </record>
+
+        <record id="tax_1043v" model="account.tax">
+            <field name="account_tax_type">withholding_tax</field>
+            <field name="name">1043</field>
+            <field name="description">Lav.autonomo: sogg. Esteri</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">sale</field>
+            <field name="l10n_it_vat_due_date"/>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_wthv')"/>
+            <field name="sequence">-2</field>
+            <field name="amount">-30</field>
+            <field name="tax_exigibility">on_payment</field>
+            <field name="invoice_repartition_line_ids"
+                   eval="[(5, 0, 0),
+                        (0,0,{'factor_percent': 100,'repartition_type': 'base'}),
+                        (0,0,{'factor_percent': 100,'repartition_type': 'tax'}),]"/>
+            <field name="refund_repartition_line_ids"
+                   eval="[(5, 0, 0),
+                        (0,0,{'factor_percent': 100,'repartition_type': 'base'}),
+                        (0,0,{'factor_percent': 100,'repartition_type': 'tax'}),]"/>
+        </record>
+        <!-- DEBIT -->
+        <record id="tax_group_wthva" model="account.tax.group">
+            <field name="name">Withholding to be deposited</field>
+        </record>
+
+        <record id="tax_1038a" model="account.tax">
+            <field name="account_tax_type">withholding_tax</field>
+            <field name="name">1038</field>
+            <field name="description">Provvigioni per rapporti di agenzia di mediazione e di rappresentanza</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">purchase</field>
+            <field name="l10n_it_vat_due_date"/>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_wthva')"/>
+            <field name="sequence">-2</field>
+            <field name="amount">-23</field>
+            <field name="tax_exigibility">on_payment</field>
+            <field name="invoice_repartition_line_ids"
+                   eval="[(5, 0, 0),
+                        (0,0,{'factor_percent': 100,'repartition_type': 'base'}),
+                        (0,0,{'factor_percent': 50,'repartition_type': 'tax'}),]"/>
+            <field name="refund_repartition_line_ids"
+                   eval="[(5, 0, 0),
+                        (0,0,{'factor_percent': 100,'repartition_type': 'base'}),
+                        (0,0,{'factor_percent': 50,'repartition_type': 'tax'}),]"/>
+        </record>
+
+        <record id="tax_1040a" model="account.tax">
+            <field name="account_tax_type">withholding_tax</field>
+            <field name="name">1040</field>
+            <field name="description">Lavoro autonomo: arti e professioni</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">purchase</field>
+            <field name="l10n_it_vat_due_date"/>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_wthva')"/>
+            <field name="sequence">-2</field>
+            <field name="amount">-20</field>
+            <field name="tax_exigibility">on_payment</field>
+            <field name="invoice_repartition_line_ids"
+                   eval="[(5, 0, 0),
+                        (0,0,{'factor_percent': 100,'repartition_type': 'base'}),
+                        (0,0,{'factor_percent': 100,'repartition_type': 'tax'}),]"/>
+            <field name="refund_repartition_line_ids"
+                   eval="[
+                        (5, 0, 0),
+                        (0,0,{'factor_percent': 100,'repartition_type': 'base'}),
+                        (0,0,{'factor_percent': 100,'repartition_type': 'tax'}),]"/>
+        </record>
+
+        <record id="tax_1043a" model="account.tax">
+            <field name="account_tax_type">withholding_tax</field>
+            <field name="name">1043</field>
+            <field name="description">Lav.autonomo: sogg. Esteri</field>
+            <field name="amount_type">percent</field>
+            <field name="type_tax_use">purchase</field>
+            <field name="l10n_it_vat_due_date"/>
+            <field name="tax_group_id" eval="ref('l10n_it_account_withholding_tax.tax_group_wthva')"/>
+            <field name="sequence">-2</field>
+            <field name="amount">-30</field>
+            <field name="tax_exigibility">on_payment</field>
+            <field name="invoice_repartition_line_ids"
+                   eval="[(5, 0, 0),
+                        (0,0,{'factor_percent': 100,'repartition_type': 'base'}),
+                        (0,0,{'factor_percent': 100,'repartition_type': 'tax'}),]"/>
+            <field name="refund_repartition_line_ids"
+                   eval="[(5, 0, 0),
+                        (0,0,{'factor_percent': 100,'repartition_type': 'base'}),
+                        (0,0,{'factor_percent': 100,'repartition_type': 'tax'}),]"/>
+        </record>
+
+    </data>
+</odoo>

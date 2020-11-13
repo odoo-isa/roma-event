@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- FORM View purchase.order.confirm.reconcile.wizard  -->
+    <record model='ir.ui.view' id='unbalance_reconciliation_reason_wizard'>
+        <field name='name'>unbalance.reconciliation.reason.wizard.form</field>
+        <field name='model'>unbalance.reconciliation.reason.wizard</field>
+        <field name='arch' type='xml'>
+            <form string='Unbalance Reason'>
+                <field name="message_info"/>
+                <group>
+                    <field name="reason"/>
+                </group>
+                <footer>
+                    <button name="confirm_reconcile_order" string="Confirm" type="object" class="oe_highlight"
+                            invisible="context.get('active_model', False) == 'account.move'"
+                            context="{
+                                'invoice_unbalance': context.get('invoice_unbalance', False),
+                                'unbalance_orders': context.get('unbalance_orders', False)
+                            }"
+                    />
+                    <button name="confirm_invoice_check" string="Close Invoice Check" type="object" class="oe_highlight"
+                            invisible="context.get('active_model', False) == 'purchase.order'"/>
+                    or
+                    <button string="Cancel" class="oe_link" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <template id="order_set_billed">
+        <span class="lead" style="font-size: 14px;">
+            <t t-set="unbalance" t-value="order.amount_untaxed - order.billed_amount_untaxed"/>
+            <i class="fa fa-exclamation-triangle" aria-hidden="true"/>
+            For this order you are reconciling a taxable amount of
+            <span t-esc="order.amount_untaxed" t-options='{"widget": "monetary", "display_currency": order.currency_id}'/>
+            in the face of <span t-esc="order.billed_amount_untaxed" t-options='{"widget": "monetary", "display_currency": order.currency_id}'/>.
+            <span class="font-weight-bold">Unbalance :</span> <span t-esc="unbalance" t-options='{"widget": "monetary", "display_currency": order.currency_id}'/>
+        </span>
+    </template>
+
+    <template id="invoice_close_check">
+        <div t-if="invoice">
+            <span class="lead" style="font-size: 14px;">
+                <t t-set="unbalance" t-value="invoice.amount_untaxed - invoice.total_purchase_order_reconcile_price"/>
+                <i class="fa fa-exclamation-triangle" aria-hidden="true"/> For this invoice you are reconciling a taxable amount of <span t-esc="invoice.amount_untaxed" t-options='{"widget": "monetary", "display_currency": invoice.currency_id}'/>
+                in the face of <span t-esc="invoice.total_purchase_order_reconcile_price" t-options='{"widget": "monetary", "display_currency": invoice.currency_id}'/>.
+                <span class="font-weight-bold">Unbalance :</span> <span t-esc="unbalance" t-options='{"widget": "monetary", "display_currency": invoice.currency_id}'/>
+            </span>
+        </div>
+        <div t-if="orders">
+            <p class="font-italic lead">
+                <i class="fa fa-exclamation-triangle" aria-hidden="true"/> These orders have a squaring between the taxable total and the reconciled total:
+            </p>
+            <table class="table table-sm table-bordered table-striped mt-4">
+                <thead style="background-color: #875A7a; color:white">
+                    <tr>
+                        <th>Order</th>
+                        <th>Date</th>
+                        <th>Internal Ref.</th>
+                        <th>Ref.</th>
+                        <th>Amount Untaxed</th>
+                        <th>Reconciled Amount</th>
+                        <th>Unbalance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr t-foreach="orders" t-as="order">
+                        <td><span t-esc="order.name"/></td>
+                        <td><span t-esc="order.date_approve" t-options="{'widget': 'date'}"/></td>
+                        <td><span t-esc="order.internal_reference"/></td>
+                        <td><span t-esc="order.partner_ref"/></td>
+                        <td><span t-esc="order.amount_untaxed" t-options='{"widget": "monetary", "display_currency": order.currency_id}'/></td>
+                        <td><span t-esc="order.billed_amount_untaxed" t-options='{"widget": "monetary", "display_currency": order.currency_id}'/></td>
+                        <td>
+                            <t t-set="unbalance" t-value="order.amount_untaxed - order.billed_amount_untaxed"/>
+                            <span t-esc="unbalance" t-options='{"widget": "monetary", "display_currency": order.currency_id}'/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </template>
+
+</odoo>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model='ir.ui.view' id='account_due_date_wizard_form'>
+        <field name='name'>account.due.date.wizard.form</field>
+        <field name='model'>account.due.date.wizard</field>
+        <field name='arch' type='xml'>
+            <form>
+                <sheet>
+                    <group>
+                        <field name="due_date"/>
+                        <field name='payment_type_id'/>
+                        <field name='amount'/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_purchase_order_form_inherit_purchases_team" model="ir.ui.view">
+        <field name="name">purchase.order.form.inherit.purchases.team</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='other_info']//field[@name='user_id']" position="after">
+                <field name="edit_user_id" invisible="1"/>
+            </xpath>
+            <xpath expr="//group[@name='other_info']//field[@name='user_id']" position="attributes">
+                <attribute name="attrs">{'readonly': [('edit_user_id', '!=', True)]}</attribute>
+                <attribute name="force_save">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Used for show own res partner for purchase_user group -->
+    <record id="view_only_own_contacts" model="ir.ui.view">
+        <field name="name">view.only.own.contacts</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="groups_id" eval="[(6, 0, [ref('purchase.group_purchase_user')])]"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="attributes">
+                <attribute name="domain">
+                    ['|',('purchase_user_id', '=', uid), ('purchase_user_id', '=', False)]
+                </attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Used for show all res partner for purchase_buyer group -->
+    <record id="view_all_contacts" model="ir.ui.view">
+        <field name="name">view.all.contacts</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchases_team.view_only_own_contacts"/>
+        <field name="groups_id" eval="[(6, 0, [ref('group_purchase_buyer')])]"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="attributes">
+                <attribute name="domain">
+                    ['|',('company_id', '=', False), ('company_id', '=', company_id)]
+                </attribute>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

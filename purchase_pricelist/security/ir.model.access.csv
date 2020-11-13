@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_product_supplier_family_user,product.supplier.family.user,model_product_supplier_family,purchase.group_purchase_user,1,1,1,1
+access_product_supplier_family_manager,product.supplier.family.manager,model_product_supplier_family,purchase.group_purchase_manager,1,1,1,1
+access_supplierinfo_discount_user,supplierinfo.discount.user,model_supplierinfo_discount,base.group_user,1,0,0,0
+access_supplierinfo_discount_manager,supplierinfo.discount.manager,model_supplierinfo_discount,base.group_system,1,1,1,1

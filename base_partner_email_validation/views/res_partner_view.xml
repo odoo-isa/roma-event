@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_partner_form" model="ir.ui.view">
+            <field name="name">res.partner.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='website']" position="before">
+                    <field name="is_verified_email" invisible="1"/>
+                    <field name="verification_email_sent" invisible="1"/>
+                    <field name="verification_email_url"
+                           widget="url"
+                           readonly="1"
+                           invisible="1"
+                    />
+                    <button name="verified_email_sent"
+                            string="Verification Email"
+                            icon="fa-arrow-right"
+                            type="object"
+                            class="btn-link"
+                            attrs="{'invisible':['|', '|', ('email', '=', False), ('is_verified_email', '=', True),('verification_email_sent', '=', True)]}"
+                    />
+                    <div style="color:#cc9900"
+                         attrs="{'invisible': ['|',('verification_email_sent', '!=', True), ('is_verified_email', '=', True)]}"
+                    >
+                        Waiting for validation
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

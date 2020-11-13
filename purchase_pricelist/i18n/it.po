@@ -1,0 +1,450 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* purchase_pricelist
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-28 10:42+0000\n"
+"PO-Revision-Date: 2020-10-28 11:45+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: it\n"
+"X-Generator: Poedit 2.3.1\n"
+
+#. module: purchase_pricelist
+#: model:ir.model.fields,field_description:purchase_pricelist.field_import_file_pricelists_wizard__pricelist_file
+msgid "CSV File"
+msgstr "File"
+
+#. module: purchase_pricelist
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplierinfo_family_wizard__calculate_discounts
+msgid "Calculate discounts"
+msgstr "Sconti"
+
+#. module: purchase_pricelist
+#: model:ir.model.fields,field_description:purchase_pricelist.field_product_supplier_family__calculate_family_discounts
+msgid "Calculate family discounts"
+msgstr "Sconti per famiglia"
+
+#. module: purchase_pricelist
+#: model_terms:ir.ui.view,arch_db:purchase_pricelist.wizard_import_file_pricelists_form
+#: model_terms:ir.ui.view,arch_db:purchase_pricelist.wizard_import_file_pricelists_form2
+msgid "Cancel"
+msgstr "Cancella"
+
+#. module: purchase_pricelist
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplier_pricelist__category_id
+msgid "Category"
+msgstr "Categoria"
+
+#. module: purchase_pricelist
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplier_pricelist__category_discounts
+msgid "Category Discounts"
+msgstr "Sconti e Maggiorazioni"
+
+#. module: purchase_pricelist
+#: model_terms:ir.ui.view,arch_db:purchase_pricelist.view_product_pricelist_form
+#: model_terms:ir.ui.view,arch_db:purchase_pricelist.view_product_pricelist_tree
+msgid "Code"
+msgstr "Codice"
+
+#. module: purchase_pricelist
+#: model:ir.model,name:purchase_pricelist.model_res_company
+msgid "Companies"
+msgstr "Aziende"
+
+#. module: purchase_pricelist
+#: model:ir.model,name:purchase_pricelist.model_res_config_settings
+msgid "Config Settings"
+msgstr "Impostazioni di configurazione"
+
+#. module: purchase_pricelist
+#: model:ir.model,name:purchase_pricelist.model_res_partner
+msgid "Contact"
+msgstr "Contatto"
+
+#. module: purchase_pricelist
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplier_pricelist__standard_price
+msgid "Cost"
+msgstr "Prezzo"
+
+#. module: purchase_pricelist
+#: model:product.pricelist,name:purchase_pricelist.cost_pricelist
+msgid "Cost Pricelist"
+msgstr "Listino a prezzo di costo"
+
+#. module: purchase_pricelist
+#: model:ir.model.fields,field_description:purchase_pricelist.field_import_file_pricelists_wizard__create_uid
+#: model:ir.model.fields,field_description:purchase_pricelist.field_product_supplier_family__create_uid
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplier_pricelist__create_uid
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplierinfo_discount__create_uid
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplierinfo_discount_wizard__create_uid
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplierinfo_family_wizard__create_uid
+msgid "Created by"
+msgstr "Creato da"
+
+#. module: purchase_pricelist
+#: model:ir.model.fields,field_description:purchase_pricelist.field_import_file_pricelists_wizard__create_date
+#: model:ir.model.fields,field_description:purchase_pricelist.field_product_supplier_family__create_date
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplier_pricelist__create_date
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplierinfo_discount__create_date
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplierinfo_discount_wizard__create_date
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplierinfo_family_wizard__create_date
+msgid "Created on"
+msgstr "Creato il"
+
+#. module: purchase_pricelist
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplier_pricelist__description_product
+msgid "Description Product"
+msgstr "Descrizione Prodotto"
+
+#. module: purchase_pricelist
+#: model:ir.model.fields,field_description:purchase_pricelist.field_product_supplier_family__discount_ids
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplierinfo_family_wizard__discount_ids
+#: model_terms:ir.ui.view,arch_db:purchase_pricelist.product_supplier_family_tree
+#: model_terms:ir.ui.view,arch_db:purchase_pricelist.supplierinfo_family_wizard_tree
+msgid "Discounts"
+msgstr "Sconti e Maggiorazioni"
+
+#. module: purchase_pricelist
+#: model:ir.model.fields,field_description:purchase_pricelist.field_product_supplierinfo__discounts
+msgid "Discounts (%)"
+msgstr "Sconti (%)"
+
+#. module: purchase_pricelist
+#: model:ir.model.fields,field_description:purchase_pricelist.field_import_file_pricelists_wizard__display_name
+#: model:ir.model.fields,field_description:purchase_pricelist.field_product_supplier_family__display_name
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplier_pricelist__display_name
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplierinfo_discount__display_name
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplierinfo_discount_wizard__display_name
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplierinfo_family_wizard__display_name
+msgid "Display Name"
+msgstr "Nome visualizzato"
+
+#. module: purchase_pricelist
+#: model:ir.model.fields,field_description:purchase_pricelist.field_import_file_pricelists_wizard__date_end
+msgid "End Date"
+msgstr "Data finale di validità in vendita"
+
+#. module: purchase_pricelist
+#: model:ir.model.fields,help:purchase_pricelist.field_import_file_pricelists_wizard__date_end
+msgid "End date for this pricelist"
+msgstr "Data finale per questo listino prezzi"
+
+#. module: purchase_pricelist
+#: model:ir.model.fields,field_description:purchase_pricelist.field_import_file_pricelists_wizard__family_ids
+#: model_terms:ir.ui.view,arch_db:purchase_pricelist.view_partner_form
+msgid "Families"
+msgstr "Famiglie"
+
+#. module: purchase_pricelist
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplier_pricelist__supplier_family_name
+msgid "Family"
+msgstr "Famiglia"
+
+#. module: purchase_pricelist
+#: model:ir.model.fields,help:purchase_pricelist.field_import_file_pricelists_wizard__pricelist_file
+msgid "Field that allows to select csv file for import"
+msgstr "Campo che permette di selezionare e importare un file csv"
+
+#. module: purchase_pricelist
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplier_pricelist__fixed_price
+msgid "Fixed Price"
+msgstr "Prezzo fisso"
+
+#. module: purchase_pricelist
+#: model:ir.model.fields,field_description:purchase_pricelist.field_import_file_pricelists_wizard__id
+#: model:ir.model.fields,field_description:purchase_pricelist.field_product_supplier_family__id
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplier_pricelist__id
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplierinfo_discount__id
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplierinfo_discount_wizard__id
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplierinfo_family_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: purchase_pricelist
+#: model_terms:ir.ui.view,arch_db:purchase_pricelist.wizard_import_file_pricelists_form
+msgid "Import"
+msgstr "Importa"
+
+#. module: purchase_pricelist
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplier_pricelist__import_file_pricelist_wizard_id
+msgid "Import Pricelist Wizard"
+msgstr "Importazione Listino Prodotti"
+
+#. module: purchase_pricelist
+#: model:ir.actions.act_window,name:purchase_pricelist.action_wizard_import_pricelists
+msgid "Import Pricelists"
+msgstr "Importa Listini fornitore"
+
+#. module: purchase_pricelist
+#: model_terms:ir.ui.view,arch_db:purchase_pricelist.wizard_import_file_pricelists_form
+msgid "Import Purchase Pricelists"
+msgstr "Importa Listini fornitore"
+
+#. module: purchase_pricelist
+#: model:ir.ui.menu,name:purchase_pricelist.menu_import_in_config_purchase
+msgid "Imports"
+msgstr "Importazioni"
+
+#. module: purchase_pricelist
+#: model:ir.model.fields,help:purchase_pricelist.field_res_partner__supplier_family_ids
+#: model:ir.model.fields,help:purchase_pricelist.field_res_users__supplier_family_ids
+msgid "Indicates the families to which are associated with the supplier"
+msgstr "Indica le famiglie che sono associate al fornitore"
+
+#. module: purchase_pricelist
+#: model:ir.model.fields,help:purchase_pricelist.field_supplier_pricelist__template_id
+msgid ""
+"It's used to know if is a new rule to be imported: Red means that a "
+"template for the rule in question has not been found, then the template is "
+"automatically created and then the rule"
+msgstr ""
+"viene utilizzato per sapere se è una nuova regola da importare: rossa vuol "
+"dire che non è stato trovato un template per la regola in esame, quindi "
+"viene automaticamente creato il template e poi la regola (quando viene "
+"confermata l'importazione)"
+
+#. module: purchase_pricelist
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplierinfo_discount__label
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplierinfo_discount_wizard__label
+msgid "Label"
+msgstr "Descrizione"
+
+#. module: purchase_pricelist
+#: model:ir.model.fields,field_description:purchase_pricelist.field_import_file_pricelists_wizard____last_update
+#: model:ir.model.fields,field_description:purchase_pricelist.field_product_supplier_family____last_update
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplier_pricelist____last_update
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplierinfo_discount____last_update
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplierinfo_discount_wizard____last_update
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplierinfo_family_wizard____last_update
+msgid "Last Modified on"
+msgstr "Ultima modifica il"
+
+#. module: purchase_pricelist
+#: model:ir.model.fields,field_description:purchase_pricelist.field_import_file_pricelists_wizard__write_uid
+#: model:ir.model.fields,field_description:purchase_pricelist.field_product_supplier_family__write_uid
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplier_pricelist__write_uid
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplierinfo_discount__write_uid
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplierinfo_discount_wizard__write_uid
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplierinfo_family_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Ultima modifica da"
+
+#. module: purchase_pricelist
+#: model:ir.model.fields,field_description:purchase_pricelist.field_import_file_pricelists_wizard__write_date
+#: model:ir.model.fields,field_description:purchase_pricelist.field_product_supplier_family__write_date
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplier_pricelist__write_date
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplierinfo_discount__write_date
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplierinfo_discount_wizard__write_date
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplierinfo_family_wizard__write_date
+msgid "Last Updated on"
+msgstr "Ultima modifica il"
+
+#. module: purchase_pricelist
+#: model_terms:ir.ui.view,arch_db:purchase_pricelist.view_res_config_settings_pricelist_form
+msgid "Manage sale pricelist"
+msgstr "Gestione listino prezzi"
+
+#. module: purchase_pricelist
+#: model:ir.model.fields,field_description:purchase_pricelist.field_product_supplier_family__name
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplierinfo_family_wizard__name
+msgid "Name"
+msgstr "Nome"
+
+#. module: purchase_pricelist
+#: model:ir.model.fields,field_description:purchase_pricelist.field_product_supplier_family__profit
+#: model:ir.model.fields,field_description:purchase_pricelist.field_product_supplierinfo__profit
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplier_pricelist__profit
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplierinfo_family_wizard__profit
+msgid "Percentage Profit (%)"
+msgstr "Ricarica Percentuale (%)"
+
+#. module: purchase_pricelist
+#: model:ir.ui.menu,name:purchase_pricelist.menu_import_pricelist_purchases
+msgid "Pricelist Purchases"
+msgstr "Listino Acquisti"
+
+#. module: purchase_pricelist
+#: model:ir.model,name:purchase_pricelist.model_product_pricelist_item
+msgid "Pricelist Rule"
+msgstr "Regola listino prezzi"
+
+#. module: purchase_pricelist
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplier_pricelist__product_category_id
+msgid "Product Category"
+msgstr "Categoria Prodotto"
+
+#. module: purchase_pricelist
+#: model:ir.model.fields,field_description:purchase_pricelist.field_product_supplierinfo__product_pricelist_item_id
+msgid "Product Pricelist Item"
+msgstr "Regola Listino"
+
+#. module: purchase_pricelist
+#: model:ir.model,name:purchase_pricelist.model_product_supplier_family
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplierinfo_discount__product_supplier_family_id
+#: model_terms:ir.ui.view,arch_db:purchase_pricelist.product_supplier_family_form
+#: model_terms:ir.ui.view,arch_db:purchase_pricelist.product_supplier_family_tree
+msgid "Product Supplier Family"
+msgstr "Famiglie"
+
+#. module: purchase_pricelist
+#: code:addons/purchase_pricelist/wizard/import_file_pricelists_wizard.py:0
+#, python-format
+msgid "Products Preview"
+msgstr "Anteprima Prodotti"
+
+#. module: purchase_pricelist
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplier_pricelist__min_qty
+msgid "Quantity"
+msgstr "Quantità"
+
+#. module: purchase_pricelist
+#: code:addons/purchase_pricelist/wizard/import_file_pricelists_wizard.py:0
+#, python-format
+msgid "Selected file isn't a csv format"
+msgstr "Il file selezionato non è di tipo csv"
+
+#. module: purchase_pricelist
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplierinfo_discount__sequence
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplierinfo_discount_wizard__sequence
+msgid "Sequence"
+msgstr "Sequenza"
+
+#. module: purchase_pricelist
+#: model:ir.model.fields,field_description:purchase_pricelist.field_import_file_pricelists_wizard__date_start
+msgid "Start Date"
+msgstr "Data iniziale di validità in acquisto"
+
+#. module: purchase_pricelist
+#: model:ir.model.fields,help:purchase_pricelist.field_import_file_pricelists_wizard__date_start
+msgid "Start date for this pricelist"
+msgstr "Data iniziale di validità per questo listino"
+
+#. module: purchase_pricelist
+#: model:ir.model.fields,field_description:purchase_pricelist.field_import_file_pricelists_wizard__supplier_id
+#: model:ir.model.fields,field_description:purchase_pricelist.field_product_supplier_family__partner_id
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplierinfo_family_wizard__supplier_id
+msgid "Supplier"
+msgstr "Fornitore"
+
+#. module: purchase_pricelist
+#: model:ir.model.fields,field_description:purchase_pricelist.field_res_partner__supplier_family_ids
+#: model:ir.model.fields,field_description:purchase_pricelist.field_res_users__supplier_family_ids
+msgid "Supplier Families"
+msgstr "Famiglie"
+
+#. module: purchase_pricelist
+#: model:ir.model.fields,field_description:purchase_pricelist.field_product_supplierinfo__supplier_price
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplier_pricelist__supplier_price
+msgid "Supplier Price"
+msgstr "Prezzo di Listino"
+
+#. module: purchase_pricelist
+#: model:ir.model,name:purchase_pricelist.model_product_supplierinfo
+#: model:ir.model,name:purchase_pricelist.model_supplier_pricelist
+#: model:ir.model.fields,field_description:purchase_pricelist.field_import_file_pricelists_wizard__supplier_pricelist_ids
+#: model_terms:ir.ui.view,arch_db:purchase_pricelist.wizard_import_file_pricelists_form2
+msgid "Supplier Pricelist"
+msgstr "Listino prezzi fornitore"
+
+#. module: purchase_pricelist
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplier_pricelist__supplier_code
+msgid "Supplier code"
+msgstr "Codice Fornitore"
+
+#. module: purchase_pricelist
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplier_pricelist__supplierinfo_id
+msgid "Supplierinfo"
+msgstr "Riga di acquisto"
+
+#. module: purchase_pricelist
+#: model:ir.model,name:purchase_pricelist.model_supplierinfo_discount
+msgid "Supplierinfo Discount"
+msgstr ""
+
+#. module: purchase_pricelist
+#: model_terms:ir.ui.view,arch_db:purchase_pricelist.supplierinfo_family_wizard_form
+#: model_terms:ir.ui.view,arch_db:purchase_pricelist.supplierinfo_family_wizard_tree
+msgid "Supplierinfo Family"
+msgstr "Famiglia Fornitore"
+
+#. module: purchase_pricelist
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplier_pricelist__template_id
+msgid "Template"
+msgstr ""
+
+#. module: purchase_pricelist
+#: code:addons/purchase_pricelist/wizard/import_file_pricelists_wizard.py:0
+#, python-format
+msgid "There isn't default family for the selected supplier. Insert one *"
+msgstr ""
+"Non è presente una famiglia di default per il fornitore selezionato. "
+"Inserirne una con nome *"
+
+#. module: purchase_pricelist
+#: model_terms:ir.ui.view,arch_db:purchase_pricelist.wizard_import_file_pricelists_form2
+msgid "Turn back"
+msgstr "Torna indietro"
+
+#. module: purchase_pricelist
+#: model_terms:ir.ui.view,arch_db:purchase_pricelist.wizard_import_file_pricelists_form2
+msgid "Update Products"
+msgstr "Aggiorna Prodotti"
+
+#. module: purchase_pricelist
+#: model:ir.model.fields,field_description:purchase_pricelist.field_res_company__update_sale_pricelist
+msgid "Update Sale Pricelist"
+msgstr "Aggiorna listino prezzi"
+
+#. module: purchase_pricelist
+#: model:ir.model.fields,field_description:purchase_pricelist.field_res_config_settings__update_sale_pricelist
+msgid "Update sale pricelist"
+msgstr "Aggiorna listino prezzi"
+
+#. module: purchase_pricelist
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplierinfo_discount__value
+#: model:ir.model.fields,field_description:purchase_pricelist.field_supplierinfo_discount_wizard__value
+msgid "Value"
+msgstr "Valore"
+
+#. module: purchase_pricelist
+#: model:ir.model,name:purchase_pricelist.model_import_file_pricelists_wizard
+msgid "Wizard: Import pricelists by csv"
+msgstr ""
+
+#. module: purchase_pricelist
+#: model:ir.model,name:purchase_pricelist.model_supplierinfo_discount_wizard
+msgid "Wizard: Supplierinfo Discount"
+msgstr ""
+
+#. module: purchase_pricelist
+#: model:ir.model,name:purchase_pricelist.model_supplierinfo_family_wizard
+msgid "Wizard: Supplierinfo Family"
+msgstr ""
+
+#. module: purchase_pricelist
+#: code:addons/purchase_pricelist/models/product_pricelist_item.py:0
+#, python-format
+msgid "You cannot delete an Item linked to supplierinfo row."
+msgstr ""
+
+#. module: purchase_pricelist
+#: code:addons/purchase_pricelist/models/product_supplierinfo.py:0
+#, python-format
+msgid "You cannot delete this Supplierinfo cause is linked to cost pricelist."
+msgstr ""
+"Non si può cancellare questa riga di acquisto perchè è collegata ad una "
+"regola di listino di vendita"
+
+#. module: purchase_pricelist
+#: model_terms:ir.ui.view,arch_db:purchase_pricelist.wizard_import_file_pricelists_form
+#: model_terms:ir.ui.view,arch_db:purchase_pricelist.wizard_import_file_pricelists_form2
+msgid "or"
+msgstr "o"

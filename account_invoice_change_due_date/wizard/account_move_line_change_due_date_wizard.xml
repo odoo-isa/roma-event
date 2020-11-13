@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model='ir.ui.view' id='account_invoice_change_due_date_wizard'>
+        <field name='name'>account.invoice.change.due.date.wizard</field>
+        <field name='model'>account.move.line.change.due.date.wizard</field>
+        <field name='arch' type='xml'>
+            <form string='Change Due Date'>
+                <sheet>
+                    <h3>Actual Moves</h3>
+                    <field name="is_unchangeable_payment" invisible="1"/>
+                    <div class="alert alert-warning" role="alert" attrs="{'invisible': [('is_unchangeable_payment', '=', False)]}">
+                        There are one or more move line with bank paper associated. This line doesn't view in list.
+                    </div>
+                    <field name="old_deadline_moves" readonly="1" nolabel="1" widget="one2many" />
+                    <h3>Change Move</h3>
+                    <field name="new_deadline_moves" widget="one2many" nolabel="1">
+                        <tree editable="bottom">
+                            <field name='due_date' required="1"/>
+                            <field name='payment_type_id' required="1"/>
+                            <field name='amount' sum="Amount" widget="monetary" required="1"/>
+                        </tree>
+                    </field>
+                    <field name="compute_old_amount" invisible="1"/>
+                    <field name="compute_new_amount" invisible="1"/>
+                </sheet>
+                <footer>
+                    <button type="object" string="Change Due Date" name="change_due_date" class="btn-primary"/>
+                    <button special="cancel" string="Cancel" class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="account_change_due_date_invoice_action" model="ir.actions.act_window">
+        <field name="name">Open Due Date Wizard</field>
+        <field name="res_model">account.move.line.change.due.date.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

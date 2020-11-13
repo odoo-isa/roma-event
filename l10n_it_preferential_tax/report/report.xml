@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <report
+            id="vat_quote"
+            model="account.preferential.tax"
+            string="Vat quote"
+            report_type="qweb-pdf"
+            name="l10n_it_preferential_tax.print_quote"
+            file="l10n_it_preferential_tax.print_quote"
+            attachment_use="True"
+        />
+
+    </data>
+</odoo>

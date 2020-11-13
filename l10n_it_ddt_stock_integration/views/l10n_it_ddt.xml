@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- FORM View  -->
+    <record model='ir.ui.view' id='l10n_it_ddt_stock_view_form'>
+        <field name='name'>l10n.it.ddt.stock.view.form</field>
+        <field name='model'>l10n_it.ddt</field>
+        <field name="inherit_id" ref="l10n_it_ddt_extension_isa.l10n_it_ddt_extension_isa_view_form"/>
+        <field name='arch' type='xml'>
+            <xpath expr="//field[@name='l10n_it_ddt_sequence']" position="after">
+                <field name="location_id"/>
+            </xpath>
+            <xpath expr="//page[@name='line']/group" position="after">
+                <separator string="Reverse Moves"/>
+                <field name="ddt_lines_return">
+                    <tree>
+                        <field name="product_id"/>
+                        <field name="product_qty"/>
+                        <field name="product_uom_qty"/>
+                        <field name="to_refund" string="To Refund"/>
+                        <field name="location_dest_id"/>
+                        <field name="origin"/>
+                        <field name="state"/>
+                    </tree>
+                </field>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

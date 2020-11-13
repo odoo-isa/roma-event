@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_warehouse" model="ir.ui.view">
+        <field name="name">view.warehouse.form.inherit.sale.advanced.mto</field>
+        <field name="model">stock.warehouse</field>
+        <field name="inherit_id" ref="stock.view_warehouse"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form//page//group" position="after">
+                <group colspan="4">
+                    <group/>
+                    <group string="Sales Behalf">
+                        <field name="sale_buy_behalf_ids" domain="[('id', '!=', id)]" widget='many2many_checkboxes'/>
+                    </group>
+                </group>
+                <group colspan="4">
+                    <group/>
+                    <group string="Sales without inventory">
+                        <field name="sale_buy_receving_in_ids"
+                               widget='many2many_checkboxes'
+                        />
+                        <field name="sale_pick_up_from_ids" context="{'warehouse_id': active_id}">
+                            <form>
+                                <field name="warehouse_id" invisible="1"/>
+                                <field name="temporary_warehouse_ids">
+                                    <tree editable="bottom">
+                                        <field name="sequence" widget="handle"/>
+                                        <field name="warehouse_id"
+                                               options="{'no_create_edit': True, 'no_create': True}"
+                                        />
+                                    </tree>
+                                </field>
+                            </form>
+                        </field>
+                    </group>
+                </group>
+            </xpath>
+            <xpath expr="//field[@name='wh_output_stock_loc_id']" position="after">
+                <field name="wh_transit_stock_loc_id" readonly="1"/>
+            </xpath>
+            <xpath expr="//field[@name='out_type_id']" position="after">
+                <field name="shipment_sale_type_id" readonly="1"/>
+                <field name="receipt_sale_type_id" readonly="1"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

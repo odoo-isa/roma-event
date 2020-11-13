@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record model='ir.ui.view' id='view_res_partner_riba_form'>
+            <field name='name'>view.res.partner.riba.form</field>
+            <field name='model'>res.partner</field>
+            <field name="inherit_id" ref="account.view_partner_property_form"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//group[@name='accounting_entries']" position="after">
+                    <group string="Bank Slip" name="bank_slip" groups="account.group_account_user">
+                        <field name="group_bank_papers_by_expiration"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

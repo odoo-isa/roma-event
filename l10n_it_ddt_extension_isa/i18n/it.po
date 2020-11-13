@@ -1,0 +1,914 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_it_ddt_extension_isa
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-07-14 13:58+0000\n"
+"PO-Revision-Date: 2020-07-14 15:59+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+
+#. module: l10n_it_ddt_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.l10n_it_ddt_extension_isa_view_form
+msgid "<span class=\"badge-pill badge-danger\">Cancelled</span>"
+msgstr "<span class=\"badge-pill badge-danger\">Annullato</span>"
+
+#. module: l10n_it_ddt_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.l10n_it_ddt_extension_isa_view_form
+msgid "<span class=\"badge-pill badge-secondary\">Draft</span>"
+msgstr "<span class=\"badge-pill badge-secondary\">Bozza</span>"
+
+#. module: l10n_it_ddt_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.l10n_it_ddt_extension_isa_view_form
+msgid "<span class=\"badge-pill badge-success\">Confirmed</span>"
+msgstr "<span class=\"badge-pill badge-success\">Confermato</span>"
+
+#. module: l10n_it_ddt_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.report_ddt_document
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.report_ddt_enhanced_document
+msgid "<strong>Carrier's Signature:</strong>"
+msgstr "<strong>Firma del Conducente (o Vettore):<strong>"
+
+#. module: l10n_it_ddt_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.report_ddt_document
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.report_ddt_enhanced_document
+msgid "<strong>Date Done:</strong><br/>"
+msgstr "<strong>Data Consegna:</strong><br/>"
+
+#. module: l10n_it_ddt_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.report_ddt_document
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.report_ddt_enhanced_document
+msgid "<strong>Date:</strong><br/>"
+msgstr "<strong>Data:</strong><br/>"
+
+#. module: l10n_it_ddt_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.report_ddt_document
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.report_ddt_enhanced_document
+msgid "<strong>Description of Goods:</strong><br/>"
+msgstr "<strong>Descrizione dei Beni:</strong><br/>"
+
+#. module: l10n_it_ddt_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.report_ddt_document
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.report_ddt_enhanced_document
+msgid "<strong>Incoterm:</strong><br/>"
+msgstr "<strong>Termine di Resa:</strong><br/>"
+
+#. module: l10n_it_ddt_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.report_ddt_document
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.report_ddt_enhanced_document
+msgid "<strong>Note:</strong><br/>"
+msgstr "<strong>Nota:</strong><br/>"
+
+#. module: l10n_it_ddt_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.report_ddt_document
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.report_ddt_enhanced_document
+msgid "<strong>Parcels:</strong><br/>"
+msgstr "<strong>Colli:</strong><br/>"
+
+#. module: l10n_it_ddt_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.report_ddt_document
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.report_ddt_enhanced_document
+msgid "<strong>Reason for Transportation:</strong><br/>"
+msgstr "<strong>Causale del Trasporto:</strong><br/>"
+
+#. module: l10n_it_ddt_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.report_ddt_document
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.report_ddt_enhanced_document
+msgid "<strong>Recipient's Signature:</strong>"
+msgstr "<strong>Firma del Destinatario:</strong>"
+
+#. module: l10n_it_ddt_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.report_ddt_document
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.report_ddt_enhanced_document
+msgid "<strong>Shipping Address:</strong><br/>"
+msgstr "<strong>Indirizzo di Spedizione:</strong><br/>"
+
+#. module: l10n_it_ddt_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.report_ddt_enhanced_document
+msgid "<strong>Subtotal</strong>"
+msgstr "<strong>Importo Imponibile</strong>"
+
+#. module: l10n_it_ddt_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.report_ddt_document
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.report_ddt_enhanced_document
+msgid "<strong>To:</strong><br/>"
+msgstr "<strong>A:</strong><br/>"
+
+#. module: l10n_it_ddt_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.report_ddt_document
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.report_ddt_enhanced_document
+msgid "<strong>Transportation Method:</strong><br/>"
+msgstr "<strong>Trasporto a Mezzo:</strong><br/>"
+
+#. module: l10n_it_ddt_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.report_ddt_document
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.report_ddt_enhanced_document
+msgid "<strong>Weight Net:</strong><br/>"
+msgstr "<strong>Peso Netto:</strong><br/>"
+
+#. module: l10n_it_ddt_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.report_ddt_document
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.report_ddt_enhanced_document
+msgid "<strong>Weight:</strong><br/>"
+msgstr "<strong>Peso:</strong><br/>"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_ddt_extension_isa.selection__res_partner__favorite_billing_method__accompanying
+msgid "Accompanying document"
+msgstr "Fattura accompagnatoria"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_ddt_extension_isa.selection__res_partner__favorite_billing_method__all
+msgid "All"
+msgstr "Tutti"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_ddt_line__price_subtotal
+msgid "Amount (without Taxes)"
+msgstr "Importo (tasse escluse)"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_ddt_extension_isa.selection__l10n_it_ddt__invoice_option__billable
+msgid "Billable"
+msgstr "Fatturabile"
+
+#. module: l10n_it_ddt_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.l10n_it_ddt_advance_payment_invoice
+msgid "Cancel"
+msgstr "Annulla"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_ddt_extension_isa.selection__l10n_it_ddt__state__cancelled
+msgid "Cancelled"
+msgstr "Annullato"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_ddt__company_id
+msgid "Company"
+msgstr "Azienda"
+
+#. module: l10n_it_ddt_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.l10n_it_ddt_extension_isa_view_form
+msgid "Confirm"
+msgstr "Conferma"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_ddt_extension_isa.selection__l10n_it_ddt__state__confirmed
+msgid "Confirmed"
+msgstr "Confermato"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.actions.act_window,name:l10n_it_ddt_extension_isa.create_invoice_wizard_action
+msgid "Create Deferred Invoice "
+msgstr "Crea Fattura Differita"
+
+#. module: l10n_it_ddt_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.l10n_it_ddt_advance_payment_invoice
+msgid "Create Invoices"
+msgstr "Crea Fatture"
+
+#. module: l10n_it_ddt_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.l10n_it_ddt_advance_payment_invoice
+msgid "Create and View Invoices"
+msgstr "Crea e mostra fattura"
+
+#. module: l10n_it_ddt_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.l10n_it_ddt_extension_isa_view_form
+msgid "Create invoice"
+msgstr "Crea Fattura"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_ddt_advance_payment_invoice_wizard__create_uid
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_ddt_line__create_uid
+msgid "Created by"
+msgstr "Creato da"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_ddt_advance_payment_invoice_wizard__create_date
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_ddt_line__create_date
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_goods_description__create_date
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_transportation_method__create_date
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_transportation_reason__create_date
+msgid "Created on"
+msgstr "Crato il"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_ddt__currency_id
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_ddt_line__currency_id
+msgid "Currency"
+msgstr "Valuta"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_ddt_extension_isa.selection__l10n_it_ddt__partner_type__customer
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.view_l10n_it_ddt_search
+msgid "Customer"
+msgstr "Cliente"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.actions.report,name:l10n_it_ddt_extension_isa.action_report_ddt
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_ddt_line__l10n_it_ddt_id
+msgid "DDT"
+msgstr "Ddt"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.actions.report,name:l10n_it_ddt_extension_isa.action_report_ddt_enhanced
+msgid "DDT Enhanced"
+msgstr ""
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model,name:l10n_it_ddt_extension_isa.model_l10n_it_ddt_line
+msgid "DDT Line"
+msgstr "Righe Ddt"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_ddt__date
+msgid "Data DDT"
+msgstr "Data Ddt"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_ddt__date_done
+msgid "Date Done"
+msgstr "Data Consegna"
+
+#. module: l10n_it_ddt_extension_isa
+#: code:addons/l10n_it_ddt_extension_isa/models/l10n_it_ddt.py:0
+#, python-format
+msgid "Date of the invoice is previous to that of the DdT: "
+msgstr "La data della fattura è precedente a quella del DDT: "
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_account_move_line__ddt_id
+#: model:ir.ui.menu,name:l10n_it_ddt_extension_isa.menu_ddt
+msgid "DdT"
+msgstr "Ddt"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_account_move_line__ddt_line_id
+msgid "DdT Line"
+msgstr "Righe DdT"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.actions.act_window,name:l10n_it_ddt_extension_isa.action_ddt_to_invoice
+#: model:ir.ui.menu,name:l10n_it_ddt_extension_isa.menu_l10n_it_ddt_to_invoice
+msgid "DdT to Invoice"
+msgstr "Ddt in fattura"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.actions.act_window,name:l10n_it_ddt_extension_isa.action_l10n_it_ddt_extension_isa
+#: model:ir.ui.menu,name:l10n_it_ddt_extension_isa.menu_l10n_it_ddt_list
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.l10n_it_ddt_extension_isa_view_form
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.view_l10n_it_ddt_search
+msgid "Ddt"
+msgstr ""
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model,name:l10n_it_ddt_extension_isa.model_ddt_advance_payment_invoice_wizard
+msgid "Ddt Advance Payment Invoice"
+msgstr "Anticipo su fattura di vendita"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_ddt__ddt_lines
+msgid "Ddt Line"
+msgstr "Linea Ddt"
+
+#. module: l10n_it_ddt_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.report_ddt_document
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.report_ddt_enhanced_document
+msgid "Default Code"
+msgstr "Codice"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_ddt_extension_isa.selection__account_move__invoice_mode__deferred
+#: model:ir.model.fields.selection,name:l10n_it_ddt_extension_isa.selection__res_partner__favorite_billing_method__deferred
+msgid "Deferred Invoice"
+msgstr "Fattura Differita"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_res_partner__deferred_billing_method
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_res_users__deferred_billing_method
+msgid "Deferred billing method"
+msgstr "Modalità fattura differita"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_ddt__partner_shipping_id
+msgid "Delivery Address"
+msgstr "Indirizzo Consegna"
+
+#. module: l10n_it_ddt_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.report_ddt_document
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.report_ddt_enhanced_document
+msgid "Delivery Note #"
+msgstr "Documento di Trasporto #"
+
+#. module: l10n_it_ddt_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.l10n_it_res_partner_form
+msgid "Delivery Options"
+msgstr "Opzioni di Consegna"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,help:l10n_it_ddt_extension_isa.field_l10n_it_ddt__partner_shipping_id
+msgid "Delivery address for current DdT."
+msgstr "Indirizzo di spedizione per il Ddt corrente."
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model,name:l10n_it_ddt_extension_isa.model_l10n_it_goods_description
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_ddt_line__description
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.report_ddt_document
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.report_ddt_enhanced_document
+msgid "Description"
+msgstr "Descrizione"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_ddt__goods_description_id
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_goods_description__name
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_res_partner__goods_description_id
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_res_users__goods_description_id
+msgid "Description of Goods"
+msgstr "Descrizione dei Beni"
+
+#. module: l10n_it_ddt_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.report_ddt_enhanced_document
+msgid "Discount"
+msgstr ""
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_ddt_advance_payment_invoice_wizard__display_name
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_ddt_line__display_name
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_goods_description__display_name
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_transportation_method__display_name
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_transportation_reason__display_name
+msgid "Display Name"
+msgstr "Nome Visualizzato"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_ddt_extension_isa.selection__l10n_it_ddt__state__draft
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.view_l10n_it_ddt_search
+msgid "Draft"
+msgstr "Bozza"
+
+#. module: l10n_it_ddt_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.ddt_invoice_errors
+msgid "Error"
+msgstr "Errore"
+
+#. module: l10n_it_ddt_extension_isa
+#: code:addons/l10n_it_ddt_extension_isa/models/account_move.py:0
+#, python-format
+msgid ""
+"Error invoice creating. Partner favorite billing method doesn't allow to "
+"create invoice"
+msgstr ""
+"Errore nella creazione della fattura. La modalità di fatturazione "
+"predefinita del cliente non permette la creazione della fattura"
+
+#. module: l10n_it_ddt_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.report_ddt_document
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.report_ddt_enhanced_document
+msgid "F.C.:"
+msgstr "C.F.:"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_res_partner__favorite_billing_method
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_res_users__favorite_billing_method
+msgid "Favorite billing method"
+msgstr "Modalità di fatturazione preferita"
+
+#. module: l10n_it_ddt_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.view_l10n_it_ddt_search
+msgid "Group By"
+msgstr "Raggruppa Per"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_ddt_extension_isa.selection__res_partner__deferred_billing_method__delivery_adress
+msgid "Group invoice by delivery adress"
+msgstr "Raggruppa le fatture dei DdT per indirizzo di consegna"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_ddt_advance_payment_invoice_wizard__id
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_ddt_line__id
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_goods_description__id
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_transportation_method__id
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_transportation_reason__id
+msgid "ID"
+msgstr ""
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_ddt__incoterm_id
+msgid "Incoterm"
+msgstr "Termine di Resa"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,help:l10n_it_ddt_extension_isa.field_l10n_it_ddt__invoice_option
+msgid "Indicate if DdT is billable or not"
+msgstr "Indica se il Ddt è fatturabile oppure no."
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_ddt_extension_isa.selection__l10n_it_ddt__partner_type__internal
+msgid "Internal"
+msgstr "Interno"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,help:l10n_it_ddt_extension_isa.field_l10n_it_ddt__incoterm_id
+msgid ""
+"International Commercial Terms are a series of predefined commercial terms "
+"used in international transactions."
+msgstr ""
+"Gli Incoterm sono una serie di termini commerciali predefiniti usati nelle "
+"transazioni internazionali"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_ddt__invoice_id
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.l10n_it_ddt_extension_isa_view_form
+msgid "Invoice"
+msgstr "Fattura"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_ddt_advance_payment_invoice_wizard__invoice_date
+msgid "Invoice Date"
+msgstr "Data Fattura"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_account_move__invoice_mode
+msgid "Invoice Mode"
+msgstr "Tipo Fattura"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,help:l10n_it_ddt_extension_isa.field_ddt_advance_payment_invoice_wizard__invoice_date
+msgid "Invoice Registration Date"
+msgstr "Data Registrazione Fattura"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,help:l10n_it_ddt_extension_isa.field_l10n_it_ddt__invoice_id
+msgid "Invoice generated by the DDT"
+msgstr "Fattura generata da Ddt"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_ddt__invoice_option
+msgid "Invoice option"
+msgstr "Opzione di Fatturazione"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,help:l10n_it_ddt_extension_isa.field_account_move__invoice_mode
+msgid ""
+"Invoice type,changes if the invoice is created immediately, after the "
+"creation of the delivery note etc."
+msgstr ""
+"Tipo di Fattura, cambia se la fattura è stata creata immediatamente, dopo "
+"la creazione del Ddt etc.."
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_ddt_extension_isa.selection__l10n_it_ddt__state__invoiced
+msgid "Invoiced"
+msgstr "Fatturata"
+
+#. module: l10n_it_ddt_extension_isa
+#: code:addons/l10n_it_ddt_extension_isa/models/l10n_it_ddt.py:0
+#, python-format
+msgid "It's possible delete a DdT only in the Draft or Cancelled state"
+msgstr ""
+"Possono essere cancellati solo DdT che si trovano nello stato Bozza o "
+"Annullato"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_ddt_advance_payment_invoice_wizard__journal_id
+msgid "Journal"
+msgstr "Registro"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model,name:l10n_it_ddt_extension_isa.model_account_move
+msgid "Journal Entries"
+msgstr "Registrazioni contabili"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model,name:l10n_it_ddt_extension_isa.model_account_move_line
+msgid "Journal Item"
+msgstr "Movimento contabile"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_ddt_advance_payment_invoice_wizard____last_update
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_ddt_line____last_update
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_goods_description____last_update
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_transportation_method____last_update
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_transportation_reason____last_update
+msgid "Last Modified on"
+msgstr "Ultima modifica il"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_ddt_advance_payment_invoice_wizard__write_uid
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_ddt_line__write_uid
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_goods_description__write_uid
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_transportation_method__write_uid
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_transportation_reason__write_uid
+msgid "Last Updated by"
+msgstr "Ultimo aggiornamento di"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_ddt_advance_payment_invoice_wizard__write_date
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_ddt_line__write_date
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_goods_description__write_date
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_transportation_method__write_date
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_transportation_reason__write_date
+msgid "Last Updated on"
+msgstr "Ultimo aggiornamento il"
+
+#. module: l10n_it_ddt_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.l10n_it_ddt_extension_isa_view_form
+msgid "Line"
+msgstr "Linea"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_account_move__ddt_ids
+msgid "Linked DDT"
+msgstr "Ddt Collegato"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.ui.menu,name:l10n_it_ddt_extension_isa.menu_ddt_products
+msgid "Master Data"
+msgstr "Anagrafica"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_res_partner__transportation_method_id
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_res_users__transportation_method_id
+#: model:ir.model.fields,help:l10n_it_ddt_extension_isa.field_l10n_it_ddt__transportation_method_id
+#: model:ir.model.fields,help:l10n_it_ddt_extension_isa.field_res_partner__transportation_method_id
+#: model:ir.model.fields,help:l10n_it_ddt_extension_isa.field_res_users__transportation_method_id
+msgid "Method of Transportation"
+msgstr "Metodo di Trasporto"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_product_product__weight_net
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_product_template__weight_net
+msgid "Net Weight"
+msgstr "Peso Netto"
+
+#. module: l10n_it_ddt_extension_isa
+#: model_terms:ir.actions.act_window,help:l10n_it_ddt_extension_isa.action_ddt_to_invoice
+msgid "No DdT to invoice found"
+msgstr "Trovato nessun Ddt da Fatturare"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_ddt_extension_isa.selection__l10n_it_ddt__invoice_option__non-billable
+msgid "Non-billable"
+msgstr "Non Fatturabile"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_ddt__note
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_goods_description__note
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_transportation_method__note
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_transportation_reason__note
+msgid "Note"
+msgstr "Nota"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,help:l10n_it_ddt_extension_isa.field_l10n_it_ddt__parcels
+msgid "Number of parcels related with the shipping"
+msgstr "Numero di colli relativi alla spedizione"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_ddt__name
+msgid "Numero DDT"
+msgstr ""
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_ddt_extension_isa.selection__res_partner__deferred_billing_method__ddt
+msgid "One invoice for each DdT"
+msgstr "Una fattura per ogni singolo DdT"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_ddt__parcels
+msgid "Parcels"
+msgstr "Colli"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_ddt__partner_id
+msgid "Partner"
+msgstr "Cliente"
+
+#. module: l10n_it_ddt_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.view_l10n_it_ddt_search
+msgid "Partner Shipping"
+msgstr "Colli"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_ddt__partner_type
+msgid "Partner type"
+msgstr "Tipo di Partner"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_ddt__payment_term_id
+msgid "Payment Term"
+msgstr "Termine di Pagamento"
+
+#. module: l10n_it_ddt_extension_isa
+#: code:addons/l10n_it_ddt_extension_isa/models/l10n_it_ddt_line.py:0
+#, python-format
+msgid ""
+"Please define income account for this product: \"%s\" (id:%d) - or for its "
+"category: \"%s\"."
+msgstr ""
+"Definire il conto per questo prodotto: \"%s\" (id:%d) - o questa categoria: "
+"\"%s\"."
+
+#. module: l10n_it_ddt_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.report_ddt_enhanced_document
+msgid "Price Subtotal"
+msgstr ""
+
+#. module: l10n_it_ddt_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.report_ddt_enhanced_document
+msgid "Price Unit"
+msgstr ""
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,help:l10n_it_ddt_extension_isa.field_l10n_it_ddt_line__price_unit
+msgid "Price unit"
+msgstr "Prezzo Unitario"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_ddt_line__product_id
+msgid "Product"
+msgstr "Prodotto"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model,name:l10n_it_ddt_extension_isa.model_product_template
+msgid "Product Template"
+msgstr "Modello prodotto"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.ui.menu,name:l10n_it_ddt_extension_isa.menu_l10n_it_ddt_products
+msgid "Products"
+msgstr "Prodotti"
+
+#. module: l10n_it_ddt_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.report_ddt_document
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.report_ddt_enhanced_document
+msgid "Q.ty"
+msgstr "Q.tà"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_ddt_line__quantity
+msgid "Quantity"
+msgstr "Quantità"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_ddt__transportation_reason_id
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_transportation_reason__name
+#: model:ir.model.fields,help:l10n_it_ddt_extension_isa.field_l10n_it_ddt__transportation_reason_id
+#: model:ir.model.fields,help:l10n_it_ddt_extension_isa.field_res_partner__transportation_reason_id
+#: model:ir.model.fields,help:l10n_it_ddt_extension_isa.field_res_users__transportation_reason_id
+msgid "Reason for Transportation"
+msgstr "Causale di Traspoto"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_res_partner__transportation_reason_id
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_res_users__transportation_reason_id
+msgid "Reason of Transportation"
+msgstr "Causale di Trasporto"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,help:l10n_it_ddt_extension_isa.field_account_move_line__ddt_line_id
+msgid "Reference to DdT line"
+msgstr "Riferimento alle righe del DdT"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_ddt__l10n_it_ddt_sequence
+msgid "Sequence"
+msgstr "Sequenza"
+
+#. module: l10n_it_ddt_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.l10n_it_ddt_extension_isa_view_form
+msgid "Set Cancelled"
+msgstr "Imposta ad Annullato"
+
+#. module: l10n_it_ddt_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.l10n_it_ddt_extension_isa_view_form
+msgid "Set to Draft"
+msgstr "Imposta a Bozza"
+
+#. module: l10n_it_ddt_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.l10n_it_ddt_extension_isa_view_form
+msgid "Shipping Information"
+msgstr "Informazioni di spedizione"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_ddt_extension_isa.selection__res_partner__deferred_billing_method__standard
+msgid "Standard"
+msgstr ""
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_ddt__state
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_ddt_line__state
+msgid "State"
+msgstr "Stato"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,help:l10n_it_ddt_extension_isa.field_l10n_it_ddt__state
+#: model:ir.model.fields,help:l10n_it_ddt_extension_isa.field_l10n_it_ddt_line__state
+msgid "State of Ddt"
+msgstr "Stato del DdT"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields.selection,name:l10n_it_ddt_extension_isa.selection__l10n_it_ddt__partner_type__supplier
+msgid "Supplier"
+msgstr "Fornitore"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_ddt_line__ddt_line_tax_ids
+msgid "Taxes"
+msgstr "Imposte"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,help:l10n_it_ddt_extension_isa.field_l10n_it_ddt_line__type_tax_use
+msgid "Technical field"
+msgstr "Campo Tecnico"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,help:l10n_it_ddt_extension_isa.field_l10n_it_ddt__weight_net
+#: model:ir.model.fields,help:l10n_it_ddt_extension_isa.field_product_product__weight_net
+#: model:ir.model.fields,help:l10n_it_ddt_extension_isa.field_product_template__weight_net
+msgid "The Net weight in Kg."
+msgstr "Peso Netto in Kg."
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,help:l10n_it_ddt_extension_isa.field_l10n_it_ddt__weight
+msgid "The Weight in Kg."
+msgstr "Peso in Kg."
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,help:l10n_it_ddt_extension_isa.field_l10n_it_ddt__l10n_it_ddt_sequence
+msgid "The sequence used for retrieve the correct sequential DDT number."
+msgstr ""
+"La sequenza utilizzata per recuperare il numero sequenziale corretto del "
+"DdT."
+
+#. module: l10n_it_ddt_extension_isa
+#: code:addons/l10n_it_ddt_extension_isa/models/l10n_it_ddt.py:0
+#, python-format
+msgid "There is no lines that can be invoiced."
+msgstr "Non ci sono righe che possono essere fatturate."
+
+#. module: l10n_it_ddt_extension_isa
+#: code:addons/l10n_it_ddt_extension_isa/models/l10n_it_ddt.py:0
+#: code:addons/l10n_it_ddt_extension_isa/models/l10n_it_ddt.py:0
+#, python-format
+msgid "There isn't a sequence specified for this DDT. Please provided one."
+msgstr ""
+"Non è stata specificata una sequenza per questo Ddt. Si prega di "
+"specificarne una."
+
+#. module: l10n_it_ddt_extension_isa
+#: code:addons/l10n_it_ddt_extension_isa/models/l10n_it_ddt.py:0
+#, python-format
+msgid "This DdT are already invoiced: "
+msgstr "Questi DdT sono già fatturati"
+
+#. module: l10n_it_ddt_extension_isa
+#: code:addons/l10n_it_ddt_extension_isa/models/l10n_it_ddt.py:0
+#, python-format
+msgid "This DdT are not in Confirmed state: "
+msgstr "Questi DdT non sono in stato Confermato: "
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,help:l10n_it_ddt_extension_isa.field_res_partner__favorite_billing_method
+#: model:ir.model.fields,help:l10n_it_ddt_extension_isa.field_res_users__favorite_billing_method
+msgid ""
+"This field allows to choice a fixed method to create invoices for this "
+"specific partner"
+msgstr ""
+"Questo campo permette di scegliere un metodo fisso per la creazione delle "
+"fatture per questo specifico cliente"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,help:l10n_it_ddt_extension_isa.field_l10n_it_ddt__goods_description_id
+#: model:ir.model.fields,help:l10n_it_ddt_extension_isa.field_res_partner__goods_description_id
+#: model:ir.model.fields,help:l10n_it_ddt_extension_isa.field_res_users__goods_description_id
+msgid "This field indicates the appearance of the goods"
+msgstr "Questo campo indica l'aspetto dei beni"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,help:l10n_it_ddt_extension_isa.field_res_partner__deferred_billing_method
+#: model:ir.model.fields,help:l10n_it_ddt_extension_isa.field_res_users__deferred_billing_method
+msgid ""
+"This field, visible only if billing method is deferred, allows to choice if "
+"invoice must be grouped standard, or one for each DdT, or one for all DdT"
+msgstr ""
+"Questo campo, visibile solo se la modalità di fatturazione predefinita è "
+"differita, permette di scegliere se la fattura deve essere raggruppata in "
+"maniera standard, oppure una per ogni DdT, oppure ancora una per tutti i DdT"
+
+#. module: l10n_it_ddt_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.view_l10n_it_ddt_search
+msgid "To Invoice"
+msgstr "Da Fatturare"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,help:l10n_it_ddt_extension_isa.field_l10n_it_ddt_line__price_subtotal
+msgid "Total amount without taxes"
+msgstr "Totale Imponibile"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model,name:l10n_it_ddt_extension_isa.model_l10n_it_ddt
+msgid "Transport Document"
+msgstr "Documento di Trasporto"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,help:l10n_it_ddt_extension_isa.field_l10n_it_ddt__date
+msgid "Transport document date"
+msgstr "Data documento di Trasporto"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,help:l10n_it_ddt_extension_isa.field_l10n_it_ddt__name
+msgid "Transport document number"
+msgstr "Numero documento di trasporto"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model,name:l10n_it_ddt_extension_isa.model_l10n_it_transportation_method
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_ddt__transportation_method_id
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_transportation_method__name
+msgid "Transportation Method"
+msgstr "Metodo di Trasporto"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model,name:l10n_it_ddt_extension_isa.model_l10n_it_transportation_reason
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.view_l10n_it_ddt_search
+msgid "Transportation Reason"
+msgstr "Causale di Trasporto"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,help:l10n_it_ddt_extension_isa.field_l10n_it_ddt__partner_type
+msgid "Type of partner (customer, supplier or internal)"
+msgstr "Tipo di partner (cliente, fornitore o interno)"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_ddt_line__type_tax_use
+msgid "Type tax use"
+msgstr "Tipo di Imposte"
+
+#. module: l10n_it_ddt_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.report_ddt_document
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.report_ddt_enhanced_document
+msgid "U.M."
+msgstr ""
+
+#. module: l10n_it_ddt_extension_isa
+#: code:addons/l10n_it_ddt_extension_isa/models/l10n_it_ddt.py:0
+#, python-format
+msgid "Unable to confirm a DdT that don't have lines."
+msgstr "Impossibile confermare un DdT che non ha righe"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_ddt_line__price_unit
+msgid "Unit Price"
+msgstr "Prezzo Unitario"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_ddt_line__uom_id
+msgid "Unit of measure"
+msgstr "Unità di Misura"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_ddt__amount_untaxed
+msgid "Untaxed Amount"
+msgstr "Importo Imponibile"
+
+#. module: l10n_it_ddt_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.report_ddt_document
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.report_ddt_enhanced_document
+msgid "VAT N.:"
+msgstr "P.I. N.:"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_ddt__weight
+msgid "Weight"
+msgstr "Peso"
+
+#. module: l10n_it_ddt_extension_isa
+#: model:ir.model.fields,field_description:l10n_it_ddt_extension_isa.field_l10n_it_ddt__weight_net
+msgid "Weight Net"
+msgstr "Peso Netto"
+
+#. module: l10n_it_ddt_extension_isa
+#: model_terms:ir.actions.act_window,help:l10n_it_ddt_extension_isa.action_ddt_to_invoice
+msgid ""
+"You can select all DdT and invoice them in batch,<br>\n"
+"                or check every DdT and invoice them one by one."
+msgstr ""
+"E' possibile selezionare tutti i DdT e fatturarli in batch,<br>\n"
+"                oppure controlla ogni DdT e fatturarli uno per uno."
+
+#. module: l10n_it_ddt_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.l10n_it_ddt_extension_isa_view_form
+msgid "notes..."
+msgstr "Note..."
+
+#. module: l10n_it_ddt_extension_isa
+#: model_terms:ir.ui.view,arch_db:l10n_it_ddt_extension_isa.l10n_it_ddt_advance_payment_invoice
+msgid "or"
+msgstr "o"

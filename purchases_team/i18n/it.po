@@ -1,0 +1,74 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* purchases_team
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-27 14:36+0000\n"
+"PO-Revision-Date: 2020-04-27 14:36+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: purchases_team
+#: model:ir.model,name:purchases_team.model_res_partner
+msgid "Contact"
+msgstr "Contatto"
+
+#. module: purchases_team
+#: model:ir.model.fields,field_description:purchases_team.field_res_partner__edit_purchase_user_id
+#: model:ir.model.fields,field_description:purchases_team.field_res_users__edit_purchase_user_id
+msgid "Edit Purchase User"
+msgstr "Modifica Referente Acquisti"
+
+#. module: purchases_team
+#: model:ir.model.fields,field_description:purchases_team.field_purchase_order__edit_user_id
+msgid "Edit User"
+msgstr "Modifica Referente Acquisti"
+
+#. module: purchases_team
+#: model:ir.model.fields,help:purchases_team.field_res_partner__edit_purchase_user_id
+#: model:ir.model.fields,help:purchases_team.field_res_users__edit_purchase_user_id
+msgid ""
+"Field that allows to make purchase_user_id's field editable only for "
+"administrator or who belong to the Users group: all documents"
+msgstr ""
+"Campo che permette di rendere modificabile il Referente Acquisti solo per "
+"l'amministratore di sistema o per coloro che appartengono al gruppo Utenti: "
+"Tutti i documenti"
+
+#. module: purchases_team
+#: model:ir.model.fields,help:purchases_team.field_purchase_order__edit_user_id
+msgid ""
+"Field that allows to make user_id's field editable only for administrator or"
+" who belong to the Users group: all documents"
+msgstr "Campo che permette di rendere modificabile il Referente Acquisti solo per "
+"l'amministratore di sistema o per coloro che appartengono al gruppo Utenti: "
+"Tutti i documenti"
+
+#. module: purchases_team
+#: model:ir.model.fields,help:purchases_team.field_res_partner__purchase_user_id
+#: model:ir.model.fields,help:purchases_team.field_res_users__purchase_user_id
+msgid "Indicates user associated with the supplier for PO"
+msgstr "Indica il Referente associato al Fornitore per gli Acquisti"
+
+#. module: purchases_team
+#: model:ir.model,name:purchases_team.model_purchase_order
+msgid "Purchase Order"
+msgstr "Ordine di acquisto"
+
+#. module: purchases_team
+#: model:ir.model.fields,field_description:purchases_team.field_res_partner__purchase_user_id
+#: model:ir.model.fields,field_description:purchases_team.field_res_users__purchase_user_id
+msgid "Purchase User"
+msgstr "Referente Acquisti"
+
+#. module: purchases_team
+#: model:res.groups,name:purchases_team.group_purchase_buyer
+msgid "User: All Documents"
+msgstr "Utente: tutti documenti"

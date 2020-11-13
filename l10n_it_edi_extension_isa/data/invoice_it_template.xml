@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="invoice_line_FatturaPA_export" inherit_id="l10n_it_edi.account_invoice_it_FatturaPA_export">
+            <xpath expr="//CodiceDestinatario[1]" position="replace">
+                <t t-if="'partner_shipping_id' in record.fields_get() and record.partner_shipping_id.l10n_it_pa_index">
+                    <CodiceDestinatario t-esc="record.partner_shipping_id.l10n_it_pa_index.upper()"/>
+                </t>
+                <t t-else="">
+                    <CodiceDestinatario t-if="record.commercial_partner_id.l10n_it_pa_index and record.commercial_partner_id.country_id.code == 'IT'" t-esc="record.commercial_partner_id.l10n_it_pa_index.upper()"/>
+                    <CodiceDestinatario t-if="not record.commercial_partner_id.l10n_it_pa_index and record.commercial_partner_id.country_id.code == 'IT'" t-esc="'0000000'"/>
+                    <CodiceDestinatario t-if="record.commercial_partner_id.country_id.code != 'IT'" t-esc="'XXXXXXX'"/>
+                </t>
+            </xpath>
+
+            <xpath expr="//CodiceDestinatario[2]" position="replace"/>
+
+            <xpath expr="//CodiceDestinatario[2]" position="replace"/>
+
+            <!--1.1.1.2-->
+            <xpath expr="//IdTrasmittente//..//IdCodice" position="replace">
+                <IdCodice t-esc="id_codice"/>
+            </xpath>
+            <!--1.1.2-->
+            <xpath expr="//ProgressivoInvio" position="replace">
+                <ProgressivoInvio t-esc="progressivo_invio"/>
+            </xpath>
+            <xpath expr="//DatiGeneraliDocumento//DatiBollo" position="after">
+                <!--2.1.1.9-->
+                <ImportoTotaleDocumento t-esc="'%.2f' % (record.amount_total)"/>
+                <!--2.1.1.12-->
+                <t t-if="fatturapa_art73">
+                    <Art73 t-esc="fatturapa_art73"/>
+                </t>
+            </xpath>
+            <xpath expr="//DatiGeneraliDocumento" position="after">
+                <t t-set="filtered_invoice_lines" t-value="record.invoice_line_ids.mapped('related_document_line_ids')"/>
+                <t t-foreach="filtered_invoice_lines.filtered(lambda l: l.document_type == 'order')"
+                   t-as="type_order_line_for_invoice_line">
+                    <!--2.1.2-->
+                    <DatiOrdineAcquisto>
+                        <RiferimentoNumeroLinea t-esc="type_order_line_for_invoice_line.line_ref"/>
+                        <IdDocumento t-esc="type_order_line_for_invoice_line.name"/>
+                        <Data t-esc="type_order_line_for_invoice_line.date"/>
+                        <NumItem t-esc="type_order_line_for_invoice_line.num_item"/>
+                        <CodiceCommessaConvenzione t-esc="type_order_line_for_invoice_line.code"/>
+                        <CodiceCUP t-esc="type_order_line_for_invoice_line.cup"/>
+                        <CodiceCIG t-esc="type_order_line_for_invoice_line.cig"/>
+                    </DatiOrdineAcquisto>
+                </t>
+                <!-- Related Documents by Invoice-->
+            <t t-foreach="record.related_document_ids.filtered(lambda l: l.document_type == 'order')"
+               t-as="type_order_line_for_invoice"
+            >
+                <!--2.1.2-->
+                <DatiOrdineAcquisto>
+                    <IdDocumento t-esc="type_order_line_for_invoice.name"/>
+                    <Data t-esc="type_order_line_for_invoice.date"/>
+                    <CodiceCommessaConvenzione t-esc="type_order_line_for_invoice.code"/>
+                    <NumItem t-esc="type_order_line_for_invoice.num_item"/>
+                    <CodiceCUP t-esc="type_order_line_for_invoice.cup"/>
+                    <CodiceCIG t-esc="type_order_line_for_invoice.cig"/>
+                </DatiOrdineAcquisto>
+            </t>
+            <!-- Related Documents by Invoice Lines-->
+            <t t-foreach="filtered_invoice_lines.filtered(lambda l: l.document_type == 'contract')"
+               t-as="type_contract_line_for_invoice_line"
+            >
+                <!--2.1.3-->
+                <DatiContratto>
+                    <RiferimentoNumeroLinea t-esc="type_contract_line_for_invoice_line.line_ref"/>
+                    <IdDocumento t-esc="type_contract_line_for_invoice_line.name"/>
+                    <Data t-esc="type_contract_line_for_invoice_line.date"/>
+                    <NumItem t-esc="type_contract_line_for_invoice_line.num_item"/>
+                    <CodiceCommessaConvenzione t-esc="type_contract_line_for_invoice_line.code"/>
+                    <CodiceCUP t-esc="type_contract_line_for_invoice_line.cup"/>
+                    <CodiceCIG t-esc="type_contract_line_for_invoice_line.cig"/>
+                </DatiContratto>
+            </t>
+            <!-- Related Documents by Invoice -->
+            <t t-foreach="record.related_document_ids.filtered(lambda l: l.document_type == 'contract')"
+               t-as="type_contract_line_for_invoice"
+            >
+                <!--2.1.3-->
+                <DatiContratto>
+                    <IdDocumento t-esc="type_contract_line_for_invoice.name"/>
+                    <Data t-esc="type_contract_line_for_invoice.date"/>
+                    <NumItem t-esc="type_contract_line_for_invoice.num_item"/>
+                    <CodiceCommessaConvenzione t-esc="type_contract_line_for_invoice.code"/>
+                    <CodiceCUP t-esc="type_contract_line_for_invoice.cup"/>
+                    <CodiceCIG t-esc="type_contract_line_for_invoice.cig"/>
+                </DatiContratto>
+            </t>
+            <!-- Related Documents by Invoice Lines -->
+            <t t-foreach="filtered_invoice_lines.filtered(lambda l: l.document_type == 'agreement')"
+               t-as="type_agreement_line_for_invoice_line"
+            >
+                <!--2.1.4-->
+                <DatiConvenzione>
+                    <RiferimentoNumeroLinea t-esc="type_agreement_line_for_invoice_line.line_ref"/>
+                    <IdDocumento t-esc="type_agreement_line_for_invoice_line.name"/>
+                    <Data t-esc="type_agreement_line_for_invoice_line.date"/>
+                    <NumItem t-esc="type_agreement_line_for_invoice_line.num_item"/>
+                    <CodiceCommessaConvenzione t-esc="type_agreement_line_for_invoice_line.code"/>
+                    <CodiceCUP t-esc="type_agreement_line_for_invoice_line.cup"/>
+                    <CodiceCIG t-esc="type_agreement_line_for_invoice_line.cig"/>
+                </DatiConvenzione>
+            </t>
+            <!-- Related Documents by Invoice -->
+            <t t-foreach="record.related_document_ids.filtered(lambda l: l.document_type == 'agreement')"
+               t-as="type_agreement_line_for_invoice"
+            >
+                <!--2.1.4-->
+                <DatiConvenzione>
+                    <IdDocumento t-esc="type_agreement_line_for_invoice.name"/>
+                    <Data t-esc="type_agreement_line_for_invoice.date"/>
+                    <NumItem t-esc="type_agreement_line_for_invoice.num_item"/>
+                    <CodiceCommessaConvenzione t-esc="type_agreement_line_for_invoice.code"/>
+                    <CodiceCUP t-esc="type_agreement_line_for_invoice.cup"/>
+                    <CodiceCIG t-esc="type_agreement_line_for_invoice.cig"/>
+                </DatiConvenzione>
+            </t>
+            <!-- Related Documents by Invoice Lines -->
+            <t t-foreach="filtered_invoice_lines.filtered(lambda l: l.document_type == 'reception')"
+               t-as="type_reception_line_for_invoice_line"
+            >
+                <!--2.1.5-->
+                <DatiRicezione>
+                    <RiferimentoNumeroLinea t-esc="type_reception_line_for_invoice_line.line_ref"/>
+                    <IdDocumento t-esc="type_reception_line_for_invoice_line.name"/>
+                    <Data t-esc="type_reception_line_for_invoice_line.date"/>
+                    <NumItem t-esc="type_reception_line_for_invoice_line.num_item"/>
+                    <CodiceCommessaConvenzione t-esc="type_reception_line_for_invoice_line.code"/>
+                    <CodiceCUP t-esc="type_reception_line_for_invoice_line.cup"/>
+                    <CodiceCIG t-esc="type_reception_line_for_invoice_line.cig"/>
+                </DatiRicezione>
+            </t>
+            <!-- Related Documents by Invoice -->
+            <t t-foreach="record.related_document_ids.filtered(lambda l: l.document_type == 'reception')"
+               t-as="type_reception_line_for_invoice"
+            >
+                <!--2.1.5-->
+                <DatiRicezione>
+                    <IdDocumento t-esc="type_reception_line_for_invoice.name"/>
+                    <Data t-esc="type_reception_line_for_invoice.date"/>
+                    <CodiceCommessaConvenzione t-esc="type_reception_line_for_invoice.code"/>
+                    <NumItem t-esc="type_reception_line_for_invoice.num_item"/>
+                    <CodiceCUP t-esc="type_reception_line_for_invoice.cup"/>
+                    <CodiceCIG t-esc="type_reception_line_for_invoice.cig"/>
+                </DatiRicezione>
+            </t>
+            <!-- Related Documents by Invoice Lines -->
+            <t t-foreach="filtered_invoice_lines.filtered(lambda l: l.document_type == 'invoice')"
+               t-as="type_invoice_line_for_invoice_line"
+            >
+                <!--2.1.6-->
+                <DatiFattureCollegate>
+                    <RiferimentoNumeroLinea t-esc="type_invoice_line_for_invoice_line.line_ref"/>
+                    <IdDocumento t-esc="type_invoice_line_for_invoice_line.name"/>
+                    <Data t-esc="type_invoice_line_for_invoice_line.date"/>
+                    <NumItem t-esc="type_invoice_line_for_invoice_line.num_item"/>
+                    <CodiceCommessaConvenzione t-esc="type_invoice_line_for_invoice_line.code"/>
+                    <CodiceCUP t-esc="type_invoice_line_for_invoice_line.cup"/>
+                    <CodiceCIG t-esc="type_invoice_line_for_invoice_line.cig"/>
+                </DatiFattureCollegate>
+            </t>
+            <!-- Related Documents by Invoice -->
+            <t t-foreach="record.related_document_ids.filtered(lambda l: l.document_type == 'invoice')"
+               t-as="type_invoice_line_for_invoice"
+            >
+                <!--2.1.6-->
+                <DatiFattureCollegate>
+                    <IdDocumento t-esc="type_invoice_line_for_invoice.name"/>
+                    <Data t-esc="type_invoice_line_for_invoice.date"/>
+                    <CodiceCommessaConvenzione t-esc="type_invoice_line_for_invoice.code"/>
+                    <NumItem t-esc="type_invoice_line_for_invoice.num_item"/>
+                    <CodiceCUP t-esc="type_invoice_line_for_invoice.cup"/>
+                    <CodiceCIG t-esc="type_invoice_line_for_invoice.cig"/>
+                </DatiFattureCollegate>
+                 </t>
+            </xpath>
+
+            <xpath expr="//DatiDDT" position="replace">
+                <!--2.1.8.3-->
+                <t t-foreach="filtered_ddt_invoice" t-as="type_ddt_for_invoice">
+                    <t t-if="type_ddt_for_invoice not in filtered_ddt_invoice_lines">
+                         <DatiDDT>
+                            <NumeroDDT t-esc="type_ddt_for_invoice.name"/>
+                            <DataDDT t-esc="type_ddt_for_invoice.date"/>
+                        </DatiDDT>
+                    </t>
+                </t>
+                <t t-foreach="filtered_invoice_lines.filtered(lambda l: l.document_type == 'ddt')" t-as="type_ddt_line_for_invoice_line">
+                    <DatiDDT>
+                        <NumeroDDT t-esc="type_ddt_line_for_invoice_line.name"/>
+                        <DataDDT t-esc="type_ddt_line_for_invoice_line.date"/>
+                        <RiferimentoNumeroLinea t-esc="type_ddt_line_for_invoice_line.line_ref"/>
+                    </DatiDDT>
+                </t>
+            </xpath>
+
+            <xpath expr="//DettaglioPagamento" position="replace">
+                <t t-foreach="payments" t-as="payment">
+                    <DettaglioPagamento>
+                        <t t-set="company_bank_account" t-value="record.invoice_partner_bank_id"/>
+                        <ModalitaPagamento t-esc="payment.payment_type_id.l10n_it_edi_payment_method"/>
+                        <DataScadenzaPagamento t-esc="format_date(payment.date_maturity)"/>
+                        <ImportoPagamento t-esc="format_numbers_two(payment.debit)"/>
+                        <IstitutoFinanziario t-if="company_bank_account.bank_id" t-esc="company_bank_account.bank_id.name[:80]"/>
+                        <IBAN t-if="company_bank_account.acc_type == 'iban'" t-esc="company_bank_account.sanitized_acc_number"/>
+                        <BIC t-if="company_bank_account.acc_type == 'bank' and company_bank_account.bank_id.bic" t-esc="company_bank_account.bank_id.bic"/>
+                        <CodicePagamento t-esc="record.invoice_payment_ref[:60]"/>
+                    </DettaglioPagamento>
+                </t>
+            </xpath>
+
+            <!-- Modifico il tag <DatiRiepilogo> ciclando solo sulle imposte di tipo IVA -->
+            <xpath expr="//t[@t-foreach='record.line_ids.filtered(lambda line: line.tax_line_id)' and @t-as='tax_line']" position="attributes">
+                <attribute name="t-foreach">record.line_ids.filtered(lambda line: line.tax_line_id and line.tax_line_id.account_tax_type == 'vat_tax')</attribute>
+            </xpath>
+
+        </template>
+
+        <template id="account_invoice_line_extension_it_FatturaPA" inherit_id="l10n_it_edi.account_invoice_line_it_FatturaPA">
+            <xpath expr="//t[@t-set='taxes']" position="replace">
+                <t t-set="taxes" t-value="line.tax_ids.filtered(lambda t: t.account_tax_type == 'vat_tax').compute_all(line.price_unit)"/>
+            </xpath>
+            <xpath expr="//AliquotaIVA[1]" position="replace">
+                <AliquotaIVA t-if="line.tax_ids.filtered(lambda t: t.account_tax_type == 'vat_tax').amount_type == 'percent'" t-esc="format_numbers(line.tax_ids.filtered(lambda t: t.account_tax_type == 'vat_tax').amount)"/>
+            </xpath>
+            <xpath expr="//AliquotaIVA[2]" position="replace">
+                <AliquotaIVA t-if="line.tax_ids.filtered(lambda t: t.account_tax_type == 'vat_tax').amount_type != 'percent'" t-esc="'0.00'"/>
+            </xpath>
+            <xpath expr="//Natura" position="replace">
+                <Natura t-if="line.tax_ids.filtered(lambda t: t.account_tax_type == 'vat_tax').l10n_it_has_exoneration" t-esc="line.tax_ids.filtered(lambda t: t.account_tax_type == 'vat_tax').l10n_it_kind_exoneration"/>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

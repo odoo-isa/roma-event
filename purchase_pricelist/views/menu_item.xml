@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Menuitem Import -->
+        <menuitem id="menu_import_in_config_purchase"
+                  name="Imports"
+                  parent="purchase.menu_purchase_config"
+                  sequence="50"
+                  groups="purchase.group_purchase_manager"
+        />
+        <!-- Menuitem Import Pricelist Purchases -->
+        <menuitem id="menu_import_pricelist_purchases"
+                  name="Pricelist Purchases"
+                  parent="menu_import_in_config_purchase"
+                  action="action_wizard_import_pricelists"
+                  sequence="1"
+        />
+
+    </data>
+</odoo>

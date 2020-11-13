@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="down_payment_template" name="down_payment_template">
+            <h3>
+                Down Payment List
+            </h3>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Partner</th>
+                        <th scope="col">Order Number</th>
+                        <th scope="col">DDT Number</th>
+                        <th scope="col">Down Payment Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <t t-foreach="order_ids" t-as="order">
+                        <tr>
+                            <td>
+                                <t t-esc="order['partner']"/>
+                            </td>
+                            <td>
+                                <t t-esc="order['order_number']"/>
+                            </td>
+                            <td>
+                                <t t-esc="order['ddt_number']"/>
+                            </td>
+                            <td>
+                                <t t-esc="order['amount']"/>
+                            </td>
+                        </tr>
+                    </t>
+                </tbody>
+            </table>
+        </template>
+
+
+
+    </data>
+</odoo>

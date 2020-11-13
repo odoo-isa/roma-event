@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record model='ir.ui.view' id='view_picking_type_form'>
+            <field name='name'>analytic.purchase.integration.view.picking.type.form</field>
+            <field name='model'>stock.picking.type</field>
+            <field name="inherit_id" ref="stock.view_picking_type_form"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//form/sheet/group/group[@name='stock_picking_type_lot']" position="after">
+                    <group string="Analytic Account" name="analytic_account">
+                        <field name="analytic_account_id"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

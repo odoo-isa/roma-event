@@ -1,0 +1,159 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_extension_isa
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-22 09:03+0000\n"
+"PO-Revision-Date: 2020-09-22 11:05+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: it\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#. module: account_extension_isa
+#: model:ir.model,name:account_extension_isa.model_account_account
+#: model_terms:ir.ui.view,arch_db:account_extension_isa.account_group_account_form
+msgid "Account"
+msgstr "Conto"
+
+#. module: account_extension_isa
+#: model:ir.model.fields,field_description:account_extension_isa.field_account_group__account_ids
+msgid "Account "
+msgstr "Conto "
+
+#. module: account_extension_isa
+#: model:ir.model,name:account_extension_isa.model_account_group
+msgid "Account Group"
+msgstr "Gruppo contabile"
+
+#. module: account_extension_isa
+#: model:ir.model.fields,field_description:account_extension_isa.field_account_tax__account_tax_type
+msgid "Account tax type"
+msgstr ""
+
+#. module: account_extension_isa
+#: model:ir.model,name:account_extension_isa.model_res_partner_bank
+msgid "Bank Accounts"
+msgstr "Conti bancari"
+
+#. module: account_extension_isa
+#: model:ir.model.fields,field_description:account_extension_isa.field_account_group__absolute_path_name
+msgid "Complete parent name"
+msgstr "Nome genitore completo"
+
+#. module: account_extension_isa
+#: model:ir.model,name:account_extension_isa.model_res_partner
+msgid "Contact"
+msgstr "Contatto"
+
+#. module: account_extension_isa
+#: model:ir.model.fields,field_description:account_extension_isa.field_account_setup_bank_manual_config__default
+#: model:ir.model.fields,field_description:account_extension_isa.field_res_partner_bank__default
+msgid "Default"
+msgstr "Predefinito"
+
+#. module: account_extension_isa
+#: model:ir.model,name:account_extension_isa.model_account_move
+msgid "Journal Entries"
+msgstr "Registrazioni contabili"
+
+#. module: account_extension_isa
+#: model:ir.model,name:account_extension_isa.model_account_move_line
+msgid "Journal Item"
+msgstr "Movimento contabile"
+
+#. module: account_extension_isa
+#: model:ir.model.fields.selection,name:account_extension_isa.selection__account_tax__account_tax_type__other_tax
+msgid "Other Tax"
+msgstr "Altra tassa"
+
+#. module: account_extension_isa
+#: model:ir.model.fields,field_description:account_extension_isa.field_account_move__partner_bank_id
+#: model:ir.model.fields,field_description:account_extension_isa.field_account_move_line__res_partner_bank_id
+msgid "Partner Bank"
+msgstr "Conto Bancario del Partner"
+
+#. module: account_extension_isa
+#: model:ir.model.fields.selection,name:account_extension_isa.selection__account_account__l10n_it_account_usage__standard
+msgid "Standard"
+msgstr "Standard"
+
+#. module: account_extension_isa
+#: model:ir.model,name:account_extension_isa.model_account_tax
+msgid "Tax"
+msgstr "Imposta"
+
+#. module: account_extension_isa
+#: model:ir.model.fields,help:account_extension_isa.field_account_account__l10n_it_account_usage
+msgid "That indicate the usage of this account"
+msgstr "Questo indica la modalità d’uso di questo conto"
+
+#. module: account_extension_isa
+#: code:addons/account_extension_isa/models/res_partner.py:0
+#, python-format
+msgid ""
+"The Customer/Supplier must have an associated at most one default bank. \n"
+"                                                  Correct the error to proceed."
+msgstr ""
+"Al Cliente / Fornitore deve essere associata al massimo una banca predefinita.\n"
+"                                                   Correggere l'errore per continuare."
+
+#. module: account_extension_isa
+#: code:addons/account_extension_isa/models/res_partner.py:0
+#, python-format
+msgid ""
+"The Customer/Supplier must have an associated default bank. \n"
+"                                      Correct the error to proceed."
+msgstr ""
+"Il Cliente / Fornitore deve avere una banca predefinita di default.\n"
+"                                       Correggere l'errore per continuare."
+
+#. module: account_extension_isa
+#: model:ir.model.fields,help:account_extension_isa.field_account_group__account_ids
+msgid "The accounts that has this group"
+msgstr "Il conto appartenente a questo gruppo"
+
+#. module: account_extension_isa
+#: model:ir.model.fields,help:account_extension_isa.field_account_group__absolute_path_name
+msgid "The complete name of the parent record"
+msgstr "Il nome completo del record padre"
+
+#. module: account_extension_isa
+#: model:ir.model.fields,help:account_extension_isa.field_account_move__partner_bank_id
+msgid ""
+"This field is set to the default bank account associated with the Customer/Supplier. "
+"It can be further modified by the user, choosing from the Customer/Supplier bank "
+"accounts"
+msgstr ""
+"Questo campo è impostato sul conto bancario predefinito associato al cliente / "
+"fornitore. Può essere ulteriormente modificato dall'utente, scegliendo tra i conti "
+"bancari Cliente / Fornitore"
+
+#. module: account_extension_isa
+#: model:ir.model.fields,help:account_extension_isa.field_account_move_line__res_partner_bank_id
+msgid "This field is used to get Partner Bank Account with associated IBAN code"
+msgstr ""
+"Questo campo viene utilizzato per ottenere il conto bancario del partner con il "
+"codice IBAN associato"
+
+#. module: account_extension_isa
+#: model:ir.model.fields,field_description:account_extension_isa.field_account_account__l10n_it_account_usage
+msgid "Usage"
+msgstr "Uso"
+
+#. module: account_extension_isa
+#: model:ir.model.fields.selection,name:account_extension_isa.selection__account_tax__account_tax_type__vat_tax
+msgid "VAT Tax"
+msgstr "Imposta IVA"
+
+#. module: account_extension_isa
+#: model:ir.model.fields,help:account_extension_isa.field_account_tax__account_tax_type
+msgid "What kind of tax this record rapresent"
+msgstr "Tipo di imposta"

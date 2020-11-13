@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="ddt_report" inherit_id="l10n_it_ddt_extension_isa.report_ddt_document">
+            <xpath expr="//div[hasclass('page')]//div[hasclass('row')]" position="after">
+                <br/>
+                <div class="row">
+                    <div class="col-6">
+                        <strong>Client purchase order:</strong>
+                        <t t-foreach="doc.client_purchase_order_ids" t-as="client_purchase_order_id">
+                            <br/><span t-field="client_purchase_order_id.name"/> in data <span t-field="client_purchase_order_id.date"/>
+                        </t>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

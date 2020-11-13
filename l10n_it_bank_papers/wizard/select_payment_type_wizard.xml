@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- FORM View  -->
+        <record model='ir.ui.view' id='select_payment_type_wizard_form'>
+            <field name='name'>select_payment_type_wizard.form</field>
+            <field name='model'>select.payment.type.wizard</field>
+            <field name='arch' type='xml'>
+                <form string='Select Payment type'>
+                    <sheet>
+                        <group>
+                            <field name="payment_type_id"/>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button name="search_account_move_line" string="Search" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_select_payment_type_wizard_form" model="ir.actions.act_window">
+            <field name="name">Create Slips</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">select.payment.type.wizard</field>
+            <field name='view_id' ref='select_payment_type_wizard_form'/>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+    </data>
+</odoo>

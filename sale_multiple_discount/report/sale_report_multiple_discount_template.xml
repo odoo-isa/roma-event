@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="report_saleorder_multiple_discount" inherit_id="sale.report_saleorder_document">
+            <xpath expr="//table[hasclass('o_main_table')]//th[@name='th_discount']" position="replace"/>
+            <xpath expr="//table[hasclass('o_main_table')]//th[@name='th_priceunit']" position="after">
+                <t t-if="any([l.discount1 for l in doc.order_line])">
+                    <th name="th_discount1" class="text-right" groups="product.group_discount_per_so_line"><span>First Discount</span></th>
+                </t>
+                <t t-if="any([l.discount2 for l in doc.order_line])">
+                    <th name="th_discount2" class="text-right" groups="product.group_discount_per_so_line"><span>Second Discount</span></th>
+                </t>
+                <t t-if="any([l.discount3 for l in doc.order_line])">
+                    <th name="th_discount3" class="text-right" groups="product.group_discount_per_so_line"><span>Third Discount</span></th>
+                </t>
+            </xpath>
+            <xpath expr="//tbody[hasclass('sale_tbody')]//td[@t-if='display_discount']" position="replace"/>
+            <xpath expr="//tbody[hasclass('sale_tbody')]//td[@name='td_priceunit']" position="after">
+                <td t-if="line.discount1" class="text-right" groups="product.group_discount_per_so_line">
+                    <span t-field="line.discount1"/> %
+                </td>
+                <td t-if="line.discount2" class="text-right" groups="product.group_discount_per_so_line">
+                    <span t-field="line.discount2"/> %
+                </td>
+                <td t-if="line.discount3" class="text-right" groups="product.group_discount_per_so_line">
+                    <span t-field="line.discount3"/> %
+                </td>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

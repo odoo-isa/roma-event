@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- FORM View  -->
+    <record model='ir.ui.view' id='account_tax_type'>
+        <field name='name'>account.tax.type.form</field>
+        <field name='model'>account.tax</field>
+        <field name="inherit_id" ref="account.view_tax_form"/>
+        <field name='arch' type='xml'>
+            <xpath expr="//field[@name='type_tax_use']" position="before">
+                <field name="account_tax_type"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

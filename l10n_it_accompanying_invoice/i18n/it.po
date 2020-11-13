@@ -1,0 +1,188 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_it_accompanying_invoice
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-12 08:24+0000\n"
+"PO-Revision-Date: 2020-10-12 08:24+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_it_accompanying_invoice
+#: model_terms:ir.ui.view,arch_db:l10n_it_accompanying_invoice.report_accompanying_invoice_document
+msgid "<span><strong>Amount Term</strong></span>"
+msgstr "<span><strong>Importo Scadenza</strong></span>"
+
+#. module: l10n_it_accompanying_invoice
+#: model_terms:ir.ui.view,arch_db:l10n_it_accompanying_invoice.report_accompanying_invoice_document
+msgid "<span><strong>Date Maturity</strong></span>"
+msgstr "<span><strong>Data Scadenza</strong></span>"
+
+#. module: l10n_it_accompanying_invoice
+#: model_terms:ir.ui.view,arch_db:l10n_it_accompanying_invoice.report_accompanying_invoice_document
+msgid "<strong>Goods Description</strong>"
+msgstr "<strong>Descrizione dei Beni</strong>"
+
+#. module: l10n_it_accompanying_invoice
+#: model_terms:ir.ui.view,arch_db:l10n_it_accompanying_invoice.report_accompanying_invoice_document
+msgid "<strong>Incoterm</strong>"
+msgstr "<strong>Termine di Resa</strong>"
+
+#. module: l10n_it_accompanying_invoice
+#: model_terms:ir.ui.view,arch_db:l10n_it_accompanying_invoice.report_accompanying_invoice_document
+msgid "<strong>Transportation Method</strong>"
+msgstr "<strong>Metodo di Trasporto</strong>"
+
+#. module: l10n_it_accompanying_invoice
+#: model_terms:ir.ui.view,arch_db:l10n_it_accompanying_invoice.report_accompanying_invoice_document
+msgid "<strong>Transportation Reason</strong>"
+msgstr "<strong>Causale di Trasporto</strong>"
+
+#. module: l10n_it_accompanying_invoice
+#: model:ir.model.fields.selection,name:l10n_it_accompanying_invoice.selection__account_move__invoice_mode__accompanying
+#: model_terms:ir.ui.view,arch_db:l10n_it_accompanying_invoice.report_accompanying_invoice_document
+msgid "Accompanying Invoice"
+msgstr "Fattura Accompagnatoria"
+
+#. module: l10n_it_accompanying_invoice
+#: model_terms:ir.ui.view,arch_db:l10n_it_accompanying_invoice.report_accompanying_invoice_document
+msgid "Cancelled Invoice"
+msgstr "Fattura annullata"
+
+#. module: l10n_it_accompanying_invoice
+#: model_terms:ir.ui.view,arch_db:l10n_it_accompanying_invoice.view_order_form
+msgid "Create Accompanying Invoice"
+msgstr "Crea Fattura Accompagnatoria"
+
+#. module: l10n_it_accompanying_invoice
+#: model_terms:ir.ui.view,arch_db:l10n_it_accompanying_invoice.report_accompanying_invoice_document
+msgid "Credit Note"
+msgstr "Nota di Credito"
+
+#. module: l10n_it_accompanying_invoice
+#: model:ir.model.fields,field_description:l10n_it_accompanying_invoice.field_account_move__goods_description_id
+msgid "Description of Goods"
+msgstr "Descrizione dei Beni"
+
+#. module: l10n_it_accompanying_invoice
+#: model_terms:ir.ui.view,arch_db:l10n_it_accompanying_invoice.report_accompanying_invoice_document
+msgid "Draft Accompanying Invoice"
+msgstr "Fattura Accompagnatoria in bozza"
+
+#. module: l10n_it_accompanying_invoice
+#: model_terms:ir.ui.view,arch_db:l10n_it_accompanying_invoice.report_accompanying_invoice_document
+msgid "Draft Invoice"
+msgstr "Fattura in bozza"
+
+#. module: l10n_it_accompanying_invoice
+#: model:ir.model.fields,field_description:l10n_it_accompanying_invoice.field_sale_order__enable_accompanying_invoice
+msgid "Enable Accompanying Invoice"
+msgstr "Abilita Crea Fattura Accompagnatoria"
+
+#. module: l10n_it_accompanying_invoice
+#: model_terms:ir.ui.view,arch_db:l10n_it_accompanying_invoice.view_move_form_inherit
+msgid "Goods Description"
+msgstr "Descrizione dei Beni"
+
+#. module: l10n_it_accompanying_invoice
+#: model_terms:ir.ui.view,arch_db:l10n_it_accompanying_invoice.report_accompanying_invoice_document
+msgid "Invoice"
+msgstr "Fattura"
+
+#. module: l10n_it_accompanying_invoice
+#: model:ir.model.fields,field_description:l10n_it_accompanying_invoice.field_account_move__invoice_mode
+msgid "Invoice Mode"
+msgstr "Tipo Fattura"
+
+#. module: l10n_it_accompanying_invoice
+#: model:ir.model.fields,help:l10n_it_accompanying_invoice.field_account_move__invoice_mode
+msgid ""
+"Invoice type,changes if the invoice is created immediately, after the "
+"creation of the delivery note etc."
+msgstr ""
+"Tipo di Fattura, cambia se la fattura è stata creata immediatamente, dopo la"
+" creazione del Ddt etc.."
+
+#. module: l10n_it_accompanying_invoice
+#: model_terms:ir.ui.view,arch_db:l10n_it_accompanying_invoice.view_order_form
+msgid ""
+"Is displayed if exists rows which billing policy (on products) is based by "
+"delivery                             qty and qty to invoice is positive"
+msgstr ""
+"Viene visualizzato se esistono Righe per cui la politica di fatturazione "
+"(sui prodotti) è basata su quantità consegnate e la quantità da fatturare è "
+"positiva"
+
+#. module: l10n_it_accompanying_invoice
+#: model:ir.model.fields,help:l10n_it_accompanying_invoice.field_sale_order__enable_accompanying_invoice
+msgid ""
+"Is displayed if exists rows which billing policy (on products) is based by "
+"delivery qty and qty to invoice is positive"
+msgstr ""
+"Viene visualizzato se esistono Righe per cui la politica di fatturazione "
+"(sui prodotti) è basata su quantità consegnate e la quantità da fatturare è "
+"positiva"
+
+#. module: l10n_it_accompanying_invoice
+#: model:ir.model,name:l10n_it_accompanying_invoice.model_account_move
+msgid "Journal Entries"
+msgstr "Registrazioni contabili"
+
+#. module: l10n_it_accompanying_invoice
+#: model:ir.model.fields,help:l10n_it_accompanying_invoice.field_account_move__transportation_method_id
+msgid "Method of Transportation"
+msgstr "Metodo di Trasporto"
+
+#. module: l10n_it_accompanying_invoice
+#: model_terms:ir.ui.view,arch_db:l10n_it_accompanying_invoice.report_accompanying_invoice_document
+msgid "Payment Term:"
+msgstr "Tipo Pagamento: "
+
+#. module: l10n_it_accompanying_invoice
+#: model:ir.model.fields,help:l10n_it_accompanying_invoice.field_account_move__transportation_reason_id
+msgid "Reason for Transportation"
+msgstr "Causale di Trasporto"
+
+#. module: l10n_it_accompanying_invoice
+#: model:ir.model,name:l10n_it_accompanying_invoice.model_sale_order
+msgid "Sales Order"
+msgstr "Ordine di vendita"
+
+#. module: l10n_it_accompanying_invoice
+#: model_terms:ir.ui.view,arch_db:l10n_it_accompanying_invoice.report_accompanying_invoice_document
+msgid "Shipping Info:"
+msgstr "Dati di Spedizione:"
+
+#. module: l10n_it_accompanying_invoice
+#: model:ir.model.fields,help:l10n_it_accompanying_invoice.field_account_move__goods_description_id
+msgid "This field indicates the appearance of the goods"
+msgstr "Questo campo indica l'aspetto dei beni"
+
+#. module: l10n_it_accompanying_invoice
+#: model:ir.model.fields,field_description:l10n_it_accompanying_invoice.field_account_move__transportation_method_id
+#: model_terms:ir.ui.view,arch_db:l10n_it_accompanying_invoice.view_move_form_inherit
+msgid "Transportation Method"
+msgstr "Metodo di Trasporto"
+
+#. module: l10n_it_accompanying_invoice
+#: model:ir.model.fields,field_description:l10n_it_accompanying_invoice.field_account_move__transportation_reason_id
+#: model_terms:ir.ui.view,arch_db:l10n_it_accompanying_invoice.view_move_form_inherit
+msgid "Transportation Reason"
+msgstr "Causale di Trasporto"
+
+#. module: l10n_it_accompanying_invoice
+#: model_terms:ir.ui.view,arch_db:l10n_it_accompanying_invoice.report_accompanying_invoice_document
+msgid "Vendor Bill"
+msgstr "Fattura fornitore"
+
+#. module: l10n_it_accompanying_invoice
+#: model_terms:ir.ui.view,arch_db:l10n_it_accompanying_invoice.report_accompanying_invoice_document
+msgid "Vendor Credit Note"
+msgstr "Nota di credito fornitore"

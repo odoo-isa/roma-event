@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="report_accompanying_invoice_document" inherit_id="account.report_invoice_document">
+        <xpath expr="//div[hasclass('page')]/h2" position="replace">
+            <h2>
+                <t t-if="o.invoice_mode == 'accompanying'">
+                    <span t-if="o.type == 'out_invoice' and o.state == 'posted'">Accompanying Invoice</span>
+                    <span t-if="o.type == 'out_invoice' and o.state == 'draft'">Draft Accompanying Invoice</span>
+                    <span t-if="o.type == 'out_invoice' and o.state == 'cancel'">Cancelled Invoice</span>
+                    <span t-if="o.type == 'out_refund'">Credit Note</span>
+                    <span t-if="o.type == 'in_refund'">Vendor Credit Note</span>
+                    <span t-if="o.type == 'in_invoice'">Vendor Bill</span>
+                    <span t-if="o.name != '/'" t-field="o.name"/>
+                </t>
+                <t t-else="">
+                    <span t-if="o.type == 'out_invoice' and o.state == 'posted'">Invoice</span>
+                    <span t-if="o.type == 'out_invoice' and o.state == 'draft'">Draft Invoice</span>
+                    <span t-if="o.type == 'out_invoice' and o.state == 'cancel'">Cancelled Invoice</span>
+                    <span t-if="o.type == 'out_refund'">Credit Note</span>
+                    <span t-if="o.type == 'in_refund'">Vendor Credit Note</span>
+                    <span t-if="o.type == 'in_invoice'">Vendor Bill</span>
+                    <span t-if="o.name != '/'" t-field="o.name"/>
+                </t>
+            </h2>
+        </xpath>
+        <xpath expr="//p[@name='payment_term']" position="replace">
+            <p t-if="o.invoice_payment_term_id" name="payment_term">
+                Payment Term: <b><span t-field="o.invoice_payment_term_id.note"/></b>
+            </p>
+        </xpath>
+        <xpath expr="//div[@name='due_date']" position="replace"/>
+        <xpath expr="//div[@id='qrcode']" position="after">
+            <div t-if="o.invoice_date_due and o.type == 'out_invoice' and o.state == 'posted'">
+                <t t-set="scadenze" t-value="o.line_ids.filtered(lambda line: line.date_maturity)"/>
+                <table>
+                    <tr>
+                        <td>
+                            <span><strong>Date Maturity</strong></span>
+                        </td>
+                        <t t-foreach="scadenze.sorted(key=lambda x: x.date_maturity)" t-as="scadenza">
+                            <td>
+                                <span style="padding:0 15px 0 15px;" t-field="scadenza.date_maturity"/>
+                            </td>
+                        </t>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span><strong>Amount Term</strong></span>
+                        </td>
+                        <t t-foreach="scadenze.sorted(key=lambda x: x.date_maturity)" t-as="scadenza">
+                            <td>
+                                <t t-if="o.type=='out_refund'">
+                                    <span style="padding:0 15px 0 15px;" t-field="scadenza.credit"/>
+                                </t>
+                                <t t-if="o.type=='out_invoice'">
+                                    <span style="padding:0 15px 0 15px;" t-field="scadenza.debit"/>
+                                </t>
+                            </td>
+                        </t>
+                    </tr>
+                </table>
+            </div>
+        </xpath>
+
+        <!--<xpath expr="//div[hasclass('clearfix')]" position="after">-->
+        <xpath expr="//div[@id='total']" position="after">
+            <t t-if="o.invoice_mode == 'accompanying'">
+                <div class="clearfix">
+                <p>Shipping Info:</p>
+                    <div id="shipping_info" class="row">
+                        <div t-attf-class="#{'col-6' if report_type != 'html' else 'col-sm-7 col-md-6'} ml-left">
+                            <table class="table table-sm" style="page-break-inside: avoid;">
+                                <tr class="border-black o_subtotal" style="">
+                                    <td><strong>Goods Description</strong></td>
+                                    <td class="text-right">
+                                        <span t-field="o.goods_description_id"/>
+                                    </td>
+                                </tr>
+                                <tr class="border-black o_subtotal" style="">
+                                    <td><strong>Transportation Reason</strong></td>
+                                    <td class="text-right">
+                                        <span t-field="o.transportation_reason_id"/>
+                                    </td>
+                                </tr>
+                                <tr class="border-black o_subtotal" style="">
+                                    <td><strong>Transportation Method</strong></td>
+                                    <td class="text-right">
+                                        <span t-field="o.transportation_method_id"/>
+                                    </td>
+                                </tr>
+                                <tr class="border-black o_subtotal" style="border-bottom: 1px solid black">
+                                    <td><strong>Incoterm</strong></td>
+                                    <td class="text-right">
+                                        <span t-field="o.invoice_incoterm_id"/>
+                                    </td>
+                                </tr>
+                                <tr class="border-black o_subtotal" style=""></tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div/>
+            </t>
+        </xpath>
+
+    </template>
+</odoo>

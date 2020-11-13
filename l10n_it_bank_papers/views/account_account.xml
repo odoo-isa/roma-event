@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record model='ir.ui.view' id='view_account_bank_papers_form'>
+            <field name='name'>view.account.bank.papers.form</field>
+            <field name='model'>account.account</field>
+            <field name="inherit_id" ref="account.view_account_form"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='user_type_id']" position="after">
+                    <field name="related_account_type"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

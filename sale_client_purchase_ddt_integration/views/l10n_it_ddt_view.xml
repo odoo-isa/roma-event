@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- FORM View  -->
+        <record model='ir.ui.view' id='view_ddt_client_purchase_form'>
+            <field name='name'>view.ddt.client.purchase.form</field>
+            <field name='model'>l10n_it.ddt</field>
+            <field name="inherit_id" ref="l10n_it_ddt_extension_isa.l10n_it_ddt_extension_isa_view_form"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//notebook" position="inside">
+                    <field name="client_purchase_order_required_rel" invisible="1"/>
+                    <page string="Client purchase order" name="ddt_client_purchase_order" attrs="{'invisible': [('client_purchase_order_required_rel', '!=', True)]}">
+                        <field name="client_purchase_order_ids"/>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

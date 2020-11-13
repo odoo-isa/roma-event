@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- TREE View  -->
+        <record model='ir.ui.view' id='view_res_partner_delegated_tree'>
+            <field name='name'>view.res.partner.delegation.tree</field>
+            <field name='model'>res.partner.delegation</field>
+            <field name='arch' type='xml'>
+                <tree string='Partner Delegation' editable="top" create="false" edit="false">
+                    <field name='partner_delegate_id'/>
+                    <field name='type'/>
+                    <field name='active_delegation'/>
+                    <field name="note"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- FORM View  -->
+        <record model='ir.ui.view' id='view_res_partner_delegated_form'>
+            <field name='name'>view.res.partner.delegation.form</field>
+            <field name='model'>res.partner.delegation</field>
+            <field name='arch' type='xml'>
+                <form string='description'>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name='partner_id' string="Delegated"/>
+                                <field name='type' required="1"/>
+                            </group>
+                            <group>
+                                <field name='active_delegation'/>
+                                <field name='delegation_document' widget="binary" filename="delegation_file_name"/>
+                            </group>
+                            <label for="note" string="Note" class="font-weight-bold"/>
+                            <field name="note"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

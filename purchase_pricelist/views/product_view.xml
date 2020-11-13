@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- FORM View  -->
+        <record model='ir.ui.view' id='view_product_pricelist_form'>
+            <field name='name'>view.product.pricelist.form</field>
+            <field name='model'>product.category</field>
+            <field name="inherit_id" ref="product.product_category_form_view"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//group[@name='first']/field[@name='parent_id']" position="after">
+                    <field name="id" string="Code"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- TREE View  -->
+        <record model='ir.ui.view' id='view_product_pricelist_tree'>
+            <field name='name'>view.product.pricelist.tree</field>
+            <field name='model'>product.category</field>
+            <field name="inherit_id" ref="product.product_category_list_view"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//field[@name='display_name']" position="after">
+                    <field name="id" string="Code"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

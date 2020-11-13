@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- SEARCH View  -->
+    <record model="ir.ui.view" id="account_financial_report_line_filter_mode_search" >
+        <field name="name">account.financial.report.line.filter.mode.search</field>
+        <field name="model">account.financial.html.report.line</field>
+        <field name="arch" type="xml">
+            <search string="Report Section">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="absolute_path_name"/>
+                <newline/>
+                <group expand="0" string="Group by">
+                    <filter string="Report Name" name="group_report_name" context="{'group_by' : 'report_root_id'}"/>
+                    <filter string="Path Name" name="group_path_name" context="{'group_by' : 'absolute_path_name'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- TREE View  -->
+    <record model='ir.ui.view' id='account_financial_report_line_filter_mode_tree'>
+        <field name='name'>account.financial.report.line.filter.mode.tree</field>
+        <field name='model'>account.financial.html.report.line</field>
+        <field name='arch' type='xml'>
+            <tree string="Report Lines">
+                <field name="name"/>
+                <field name="code"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- FORM View  -->
+    <record model='ir.ui.view' id='account_financial_report_line_filter_mode'>
+        <field name='name'>account.financial.report.line.filter.mode.form</field>
+        <field name='model'>account.financial.html.report.line</field>
+        <field name="inherit_id" ref="account_reports.view_account_financial_report_line_form"/>
+        <field name='arch' type='xml'>
+            <xpath expr="//field[@name='domain']" position="before">
+                <field name="filter_mode"/>
+            </xpath>
+            <xpath expr="//field[@name='domain']" position="attributes">
+                <attribute name="attrs">{'invisible': [('filter_mode', '=', 'account')]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='groupby']" position="attributes">
+                <attribute name="attrs">{'required': [('filter_mode', '=', 'account')]}</attribute>
+            </xpath>
+            <xpath expr="//ancestor::group[field[@name='children_ids']]" position="replace">
+                <notebook>
+                    <page string="Children Lines" name="children_lines">
+                        <field name="children_ids" nolabel="1"/>
+                    </page>
+                    <page string="Accounts" attrs="{'invisible': [('filter_mode', '=', 'domain')]}" name="account">
+                        <field name="domain_account_ids" nolabel="1" options="{'no_create': True}"/>
+                    </page>
+                </notebook>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

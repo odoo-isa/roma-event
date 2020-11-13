@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_l10n_it_bank_paper_slip_types_manager,access.l10n.it.bank.paper.slip.types.manager,model_l10n_it_bank_paper_slip_types,account.group_account_manager,1,1,1,1
+access_l10n_it_bank_paper_manager,access.l10n.it.bank.paper.manager,model_l10n_it_bank_paper,account.group_account_manager,1,1,1,1
+access_l10n_it_bank_paper_slip_manager,access.l10n.it.bank.paper.slip.manager,model_l10n_it_bank_paper_slip,account.group_account_manager,1,1,1,1
+access_l10n_it_bank_paper_slip_user,access.l10n.it.bank.paper.slip.user,model_l10n_it_bank_paper_slip,account.group_account_manager,1,0,0,0

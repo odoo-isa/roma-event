@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="sale_order_cash_ticket">
+        <div id="ticket" class="d-flex flex-column">
+            <div class="d-flex flex-column justify-content-center">
+                <div class="text-center"><t t-esc="company.name"/></div>
+                <div class="text-center">
+                    <t t-esc="company.street"/>
+                    <t t-if="company.street2">
+                        - <t t-esc="company.street2"/>
+                    </t>
+                </div>
+                <div class="text-center">
+                    <t t-esc="company.zip"/>
+                    <t t-if="company.city">
+                        - <t t-esc="company.city"/>
+                    </t>
+                    <t t-if="company.state_id">
+                        (<t t-esc="company.state_id.name"/>)
+                    </t>
+                </div>
+                <div class="text-center">
+                    P.I. <t t-esc="company.vat"/>
+                </div>
+            </div>
+            <h2 class="border-dark border-top text-center border-bottom p-3">Sale document</h2>
+            <table class="mb-4">
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Vat</th>
+                        <th class="text-right">Price(<t t-esc="currency.symbol"/>)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr t-foreach="sale_order.order_line" t-as="order_line">
+                        <td>
+                            <t t-esc="order_line.product_id.name"/>
+                        </td>
+                        <td>
+                            <!-- VAT LINE-->
+                            <t t-set="vat_line" t-value="order_line.tax_id.filtered(lambda l: l.account_tax_type == 'vat_tax')"/>
+                            <t t-esc="', '.join([x.description if x.description else x.amount for x in vat_line])"/>
+                        </td>
+                        <td class="text-right">
+                            <t t-esc="order_line.price_subtotal"
+                               t-options='{"widget": "monetary", "display_currency": currency}'/>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot class="border-top border-dark">
+                    <tr>
+                        <th class="pt-3">Grand total</th>
+                        <th colspan="2" class="text-right pt-3">
+                            <span id="grand_total" t-esc="sale_order.amount_total"
+                               t-att-data-no-style-value="sale_order.amount_total"
+                               t-options='{"widget": "monetary", "display_currency": currency}'/>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>of which VAT</th>
+                        <th colspan="2" class="text-right">
+                            <t t-esc="sale_order.amount_tax"
+                               t-options='{"widget": "monetary", "display_currency": currency}'/>
+                        </th>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <!-- payment amount  -->
+            <form name="payments" clas="mt-3">
+
+                <div class="form-group row m-0" t-foreach="payments" t-as="payment">
+                    <label class="col-sm-4 col-form-label p-0"><t t-esc="payment.name"/></label>
+                    <div class="col-sm-8">
+                        <input t-attf-name="payment['#{payment.hydra_payment_code}']" type="number" class="form-control text-right p-0"
+                               t-att-data-foregone="payment.is_foregone_payment"/>
+                    </div>
+                </div>
+                <div class="alert alert-danger" role="alert" t-if="not payments">
+                  Unable to find a valid payment type. Please configure it or enable for retail sale.
+                </div>
+                <div class="form-group row m-0">
+                    <label class="col-sm-4 col-form-label p-0">Change</label>
+                    <div class="col-sm-8">
+                        <input type="number" readonly="readonly" class="form-control-plaintext text-right p-0"
+                               name="change" value="0"/>
+                    </div>
+                </div>
+
+            </form>
+
+
+        </div>
+    </template>
+
+</odoo>

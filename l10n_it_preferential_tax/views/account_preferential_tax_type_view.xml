@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- TREE View  -->
+        <record model='ir.ui.view' id='view_preferential_tax_type_tree'>
+            <field name='name'>view.preferential.tax.type.tree</field>
+            <field name='model'>account.preferential.tax.type</field>
+            <field name='arch' type='xml'>
+                <tree string='Preferential tax'>
+                    <field name='name'/>
+                    <field name='tax_id'/>
+                    <field name='invoice_description'/>
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</odoo>

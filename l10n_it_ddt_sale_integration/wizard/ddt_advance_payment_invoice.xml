@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record model='ir.ui.view' id='l10n_it_ddt_advance_payment_invoice'>
+            <field name='name'>sale_integration.ddt.advance.payment.invoice.wizard</field>
+            <field name='model'>ddt.advance.payment.invoice.wizard</field>
+            <field name="inherit_id" ref="l10n_it_ddt_extension_isa.l10n_it_ddt_advance_payment_invoice"/>
+            <field name='arch' type='xml'>
+                <xpath expr="//form/sheet/group/field[@name='journal_id']" position="after">
+                    <field name="has_down_payments" invisible="1"/>
+                    <field name="deduct_down_payments" attrs="{'invisible': [('has_down_payments', '=', False)]}"/>
+                </xpath>
+                <xpath expr="//form/sheet/group" position="after">
+                    <field name="message" attrs="{'invisible': [('has_down_payments', '=', False)]}"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

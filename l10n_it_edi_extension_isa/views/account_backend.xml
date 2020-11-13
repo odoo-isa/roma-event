@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="assets_backend_extension" name="account assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/l10n_it_edi_extension_isa/static/src/js/bills_tree_upload.js"/>
+        </xpath>
+    </template>
+
+    </data>
+</odoo>

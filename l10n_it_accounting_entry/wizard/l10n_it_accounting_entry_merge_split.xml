@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- FORM View  -->
+    <record model='ir.ui.view' id='l10n_it_accounting_entry_merge_form'>
+        <field name='name'>l10n_it.accounting.entry.merge.split.form</field>
+        <field name='model'>l10n_it.accounting.entry.merge.split</field>
+        <field name='arch' type='xml'>
+            <form string='Accounting Merge'>
+
+                <!-- split action -->
+                <group invisible="context.get('action', '') != 'split'">
+                    <group>
+                        <span class="lead" colspan="2">
+                            All selected accounting entries will be split. Proceed?
+                        </span>
+                        <field name="accounting_entry_to_split"
+                               options="{'no_create': True}"
+                               required="context.get('action', '') == 'split'"
+                               widget="many2many_tags"
+                        />
+                    </group>
+                </group>
+
+                <!-- merge action -->
+                <group invisible="context.get('action', '') != 'merge'">
+                    <group>
+                        <field name="main_accounting_entry"
+                               options="{'no_create': True}"
+                               required="context.get('action', '') == 'merge'"
+                        />
+                    </group>
+                </group>
+
+                <footer>
+                    <button name="process_entries"
+                            string="Ok" type="object" class="oe_highlight"
+                            context="{'action': context.get('action')}"/>
+                    or
+                    <button string="Cancel" class="oe_link" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action merge from account entry -->
+    <record model="ir.actions.act_window" id="l10n_it_accounting_entry_merge_action">
+        <field name="name">Merge Accounting Entry</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">l10n_it.accounting.entry.merge.split</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="context">{'action': 'merge'}</field>
+        <field name="binding_model_id" ref="l10n_it_accounting_entry.model_l10n_it_accounting_entry"/>
+    </record>
+
+    <!-- Action Split from account entry -->
+    <record model="ir.actions.act_window" id="l10n_it_accounting_entry_split_action">
+        <field name="name">Split Accounting Entry</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">l10n_it.accounting.entry.merge.split</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="context">{'action': 'split'}</field>
+        <field name="binding_model_id" ref="l10n_it_accounting_entry.model_l10n_it_accounting_entry"/>
+    </record>
+
+    <!-- Action Split from account move -->
+    <record model="ir.actions.act_window" id="l10n_it_accounting_entry_split_action_from_move">
+        <field name="name">Split Accounting Entry</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">l10n_it.accounting.entry.merge.split</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="context">{'action': 'split'}</field>
+        <field name="binding_model_id" ref="account.model_account_move"/>
+    </record>
+
+    <!-- Action Merge from account move -->
+    <record model="ir.actions.act_window" id="l10n_it_accounting_entry_merge_action_from_move">
+        <field name="name">Merge Accounting Entry</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">l10n_it.accounting.entry.merge.split</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="context">{'action': 'merge'}</field>
+        <field name="binding_model_id" ref="account.model_account_move"/>
+    </record>
+
+    <!-- Action Merge from account move line but only if moves isn't invoice or refund or receipt -->
+    <record model="ir.actions.act_window" id="l10n_it_accounting_entry_merge_action_from_move_line">
+        <field name="name">Merge Accounting Entry</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">l10n_it.accounting.entry.merge.split</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="context">{'action': 'merge'}</field>
+        <field name="binding_model_id" ref="account.model_account_move_line"/>
+    </record>
+
+</odoo>

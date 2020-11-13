@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_account_account_usage" model="ir.ui.view">
+        <field name="name">view.account.account.usage.form</field>
+        <field name="model">account.account</field>
+        <field name="inherit_id" ref="account.view_account_form"/>
+        <field name="arch" type="xml">
+            <field name="user_type_id" position="after">
+                <field name="l10n_it_account_usage"/>
+            </field>
+        </field>
+    </record>
+
+</odoo>

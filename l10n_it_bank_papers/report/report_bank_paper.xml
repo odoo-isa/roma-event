@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="report_bank_paper_document">
+            <t t-call="web.external_layout">
+                <div class="page">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <address>
+                                <b>Distinta presentazione di disposizioni Ri.Ba.</b><br/>
+                                <b>Name: </b><span t-field="doc.name"/><br/>
+                                <b>Bank Paper Slip Type: </b><span t-field="doc.bank_paper_slip_type_id"/>
+                            </address><br/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th class="text-left">Debitore</th>
+                                        <th class="text-center">IBAN</th>
+                                        <th class="text-center">Partner Bank</th>
+                                        <th class="text-right">Importo</th>
+                                        <th class="text-left">Scadenza</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-set="riba_count" t-value="0"/>
+                                    <t t-set="installments_count" t-value="0"/>
+
+                                    <t t-foreach="doc.bank_paper_ids" t-as="bank_paper_id">
+                                        <t t-set="riba_count" t-value="riba_count + 1"/>
+                                        <t t-set="installments_count" t-value="installments_count + len(bank_paper_id.account_move_line_ids)"/>
+
+                                        <tr style="page-break-inside: avoid;">
+                                            <td class="text-left">
+                                                <span t-field="bank_paper_id.partner_id"/>
+                                            </td>
+                                            <td class="text-center">
+                                                <span t-field="bank_paper_id.iban"/>
+                                            </td>
+                                            <td class="text-left">
+                                                <span t-field="bank_paper_id.partner_bank_id"/>
+                                            </td>
+                                            <td class="text-right">
+                                                <span t-field="bank_paper_id.amount"/>
+                                            </td>
+                                            <td class="text-right">
+                                                <span t-field="bank_paper_id.expiration_date"/>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table><br/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2" class="text-left">Riepilogo</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            Totale distinta
+                                        </td>
+                                        <td>
+                                            <span t-field="doc.total_amount"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            N. effetti
+                                        </td>
+                                        <td>
+                                            <span t-esc="riba_count"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            N. rate
+                                        </td>
+                                        <td>
+                                            <span t-esc="installments_count"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Data di accettazione
+                                        </td>
+                                        <td>
+                                            <span t-field="doc.acceptance_date"/>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </template>
+
+
+        <template id="report_bank_paper">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="l10n_it_bank_papers.report_bank_paper_document"/>
+                </t>
+            </t>
+        </template>
+
+
+        <report
+            string="Print Bank Paper"
+            id="action_report_bank_paper"
+            model="l10n_it.bank_paper.slip"
+            report_type="qweb-pdf"
+            name="l10n_it_bank_papers.report_bank_paper"
+            file="l10n_it_bank_papers.report_bank_paper"
+        />
+
+    </data>
+</odoo>

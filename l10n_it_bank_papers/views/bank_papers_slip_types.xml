@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- FORM View  -->
+        <record model='ir.ui.view' id='l10n_it_bank_paper_slip_types_form'>
+            <field name='name'>l10n_it_bank_paper_slip_types_form</field>
+            <field name='model'>l10n_it.bank_paper.slip.types</field>
+            <field name='arch' type='xml'>
+                <form string='Bank Paper Slip Types'>
+                    <sheet>
+                        <group>
+                            <field name='name'/>
+                            <field name="type"/>
+                            <field name="slip_type"/>
+                            <field name="company_id" invisible="1"/>
+                            <field name="company_bank_account_id"/>
+                        </group>
+                        <separator name="acceptance_step" string="Acceptance Step"/>
+                        <group name="acceptance_step">
+                            <field name="acceptance_journal_id"/>
+                            <field name="bank_papers_acceptance_account_account_id"/>
+                        </group>
+                        <separator name="credit_step" string="Credit Step"/>
+                        <group name="credit_step">
+                            <field name="credit_journal_id"/>
+                            <field name="bank_papers_credit_account_account_id"/>
+                            <field name="bank_credit_account_account_id"/>
+                            <field name="bank_charges_credit_account_account_id"/>
+                        </group>
+                        <separator name="unpaid_bank_papers_step" string="Unpaid Bank Papers"/>
+                        <group name="unpaid_bank_papers_step">
+                            <field name="unpaid_bank_papers_journal_id"/>
+                            <field name="unpaid_bank_papers_credit_account_account_id"/>
+                            <field name="unpaid_bank_papers_charges_account_account_id"/>
+                            <field name="bank_unpaid_bank_papers_account_account_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- TREE View  -->
+        <record model='ir.ui.view' id='l10n_it_bank_paper_slip_types_tree'>
+            <field name='name'>l10n_it_bank_paper_slip_types_tree</field>
+            <field name='model'>l10n_it.bank_paper.slip.types</field>
+            <field name='arch' type='xml'>
+                <tree>
+                    <field name='name'/>
+                    <field name="type"/>
+                    <field name="slip_type"/>
+                    <field name="company_id" invisible="1"/>
+                    <field name="company_bank_account_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_open_bank_paper_slip_types_form" model="ir.actions.act_window">
+            <field name="name">Bank Paper Slip Type</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">l10n_it.bank_paper.slip.types</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+    </data>
+</odoo>

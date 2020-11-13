@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model='ir.ui.view' id='stock_move_quantity_owner_info_form'>
+        <field name='name'>stock.move.quantity.owner.info.form</field>
+        <field name='model'>stock.move.quantity.owner.info</field>
+        <field name='arch' type='xml'>
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="move_id" invisible="1"/>
+                            <field name="doc_reference" readonly="1"/>
+                            <field name="owner" readonly="1"/>
+                            <field name="quantity" readonly="1"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model='ir.ui.view' id='stock_move_quantity_owner_info_tree'>
+        <field name='name'>stock.move.quantity.owner.info.tree</field>
+        <field name='model'>stock.move.quantity.owner.info</field>
+        <field name='arch' type='xml'>
+            <tree>
+                <field name="doc_reference"/>
+                <field name="owner"/>
+                <field name="quantity"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

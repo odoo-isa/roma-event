@@ -1,0 +1,220 @@
+<templates>
+
+    <t t-extend="sale_stock.qtyAtDate">
+        <t t-jquery="div" t-operation="replace">
+            <div t-att-class="!widget.data.display_qty_widget ? 'd-none' : ''">
+                <!-- If quantity is available today -->
+                <t t-if="widget.data.qty_available_today &gt;= widget.data.qty_to_deliver and !widget.data.is_mto">
+                    <a tabindex="0" class="fa fa-info-circle text-primary"/>
+                </t>
+                <!-- if quantity is available only at specific date or is mto -->
+                <t t-elif="widget.data.virtual_available_at_date &gt;= widget.data.qty_to_deliver and !widget.data.is_mto">
+                    <a tabindex="0" class="fa fa-info-circle text-warning"/>
+                </t>
+                <!-- if mto (and not available) change icon -->
+                <t t-elif="widget.data.is_mto">
+                    <a tabindex="0" class="fa fa-credit-card fa-info-circle"/>
+                </t>
+                <!-- quantity is not available -->
+                <t t-else="">
+                    <a tabindex="0" class="fa fa-info-circle text-danger"/>
+                </t>
+            </div>
+        </t>
+    </t>
+
+    <t t-extend="sale_stock.QtyDetailPopOver">
+        <t t-jquery="button[class*='action_open_forecast']" t-operation="after">
+            <button t-if="!data.is_mto and !data.route_id" class="text-left btn btn-link action_open_replenish" type="button">
+                <i class="fa fa-fw o_button_icon fa-arrow-right"/>
+                Replenish
+                <i class="fa fa-truck fa-flip-horizontal"/>
+            </button>
+        </t>
+    </t>
+
+    <div t-name="sale_advanced_mto.RoutingHeader">
+        <div>
+            <h2><i class="fa fa-truck fa-flip-horizontal"/> Replenish</h2>
+        </div>
+        <div class="mt-3 row">
+            <div class="col-md-6">
+                <h4>
+                    <span class="font-weight-bold grey">Product:</span>
+                    <t t-esc="widget.getParent().data.product_id.data.display_name"/>
+                </h4>
+            </div>
+            <div class="col-md-6 text-right">
+                <h4>
+                    <table class="totals">
+                        <tr>
+                            <td>
+                                <span class="font-weight-bold grey">Required quantity:</span>
+                            </td>
+                            <td>
+                                <span t-att-data-value="widget.getParent().data.product_uom_qty"
+                                      id="required_qty"
+                                      t-esc="widget.formatFloat(widget.getParent().data.product_uom_qty, false, {'digits': [false, widget.digits.digits]})"/>
+                                <span t-if="widget.has_group_uom" t-esc="widget.getParent().data.product_uom.data.display_name"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="font-weight-bold grey">Quantity procured:</span>
+                            </td>
+                            <td>
+                                <span id="qty_procured"
+                                      t-att-data-value="0"
+                                      t-esc="widget.formatFloat(0, false, {'digits': [false, widget.digits.digits]})"/>
+                                <span t-if="widget.has_group_uom" t-esc="widget.getParent().data.product_uom.data.display_name"/>
+                            </td>
+                        </tr>
+                    </table>
+                </h4>
+            </div>
+        </div>
+        <div class="mt-3">
+            <!-- Load the Pull rule -->
+            <t t-call="current_routing" t-if="widget.getParent().data.route_id"/>
+            <t t-call="wh_pull_rule"/>
+            <t t-call="wh_buy_rule" t-if="widget.has_routing_buy"/>
+        </div>
+    </div>
+
+    <!-- Current Routing -->
+    <div class="mb-3" t-name="current_routing">
+        <h3 class="font-weight-bold rule_action">Current Routing</h3>
+        <span class="lead">
+            The current routing is: <span class="font-weight-bold" t-esc="widget.getParent().data.route_id.data.display_name"/>
+            <button class="btn btn-secondary revert_to_default">
+                <i class="fa fa-refresh"/> Revert to default warehouse replenish
+            </button>
+        </span>
+    </div>
+
+    <!-- Buy Rule -->
+    <div t-name="wh_buy_rule">
+        <h3 class="font-weight-bold rule_action">Buy</h3>
+        <table class="o_list_table table table-sm table-hover table-striped o_list_table_ungrouped">
+            <colgroup>
+                <col style="width: 40%"/>
+                <col style="width: 10%"/>
+                <col style="width: 10%" t-if="widget.has_group_uom"/>
+                <col style="width: 40%"/>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>Warehouse</th>
+                    <th>Qty.To Buy</th>
+                    <th t-if="widget.has_group_uom">Uom</th>
+                    <th>Route</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr t-foreach="widget.alternative_routing"
+                    t-as="warehouse"
+                    t-if="warehouse_value['routing_buy']"
+                    t-attf-data-warehouse="buy_#{warehouse}">
+                    <td>
+                        <span t-esc="warehouse_value['warehouse_name']"/>
+                    </td>
+                    <td class="text-right">
+                        <input class="o_field_float o_field_number o_field_widget o_input o_required_modifier"
+                               type="number"
+                               t-attf-name="qty_buy_#{warehouse}"
+                        />
+                    </td>
+                    <td t-if="widget.has_group_uom">
+                        <span t-esc="widget.getParent().data.product_uom.data.display_name"/>
+                    </td>
+                    <td t-attf-class="route_buy_#{warehouse}"/>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Pull Rule -->
+    <div t-name="wh_pull_rule">
+        <h3 class="font-weight-bold rule_action">Pull</h3>
+        <table class="o_list_table table table-sm table-hover table-striped o_list_table_ungrouped">
+            <colgroup>
+                <col style="width: 35%"/>
+                <col style="width: 10%"/>
+                <col style="width: 10%" t-if="widget.has_group_uom"/>
+                <col style="width: 10%"/>
+                <col style="width: 35%"/>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>Warehouse</th>
+                    <th>Qty.Available</th>
+                    <th t-if="widget.has_group_uom">Uom</th>
+                    <th>Qty to Pull</th>
+                    <th>Route</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Main warehouse quantity available only if no route is provided -->
+                <t t-call="main_warehouse_available" t-if="!widget.getParent().data.route_id"/>
+                <!-- Other warehouse quantity -->
+                <t t-set="line" t-value="widget.getParent().data"/>
+                <tr t-foreach="widget.alternative_routing"
+                    t-as="warehouse"
+                    t-if="warehouse_value['qty_available'] and
+                          warehouse_value['routing_pull']"
+                    t-attf-data-warehouse="pull_#{warehouse}">
+                    <td>
+                        <t t-esc="warehouse_value['warehouse_name']"/>
+                    </td>
+                    <td class="text-right">
+                        <span t-attf-data-value="#{warehouse_value['qty_available']}"
+                              t-esc="widget.formatFloat(warehouse_value['qty_available'], false, {'digits': [false, widget.digits.digits]})"/>
+                    </td>
+                    <td t-if="widget.has_group_uom">
+                        <span t-esc="line.product_uom.data.display_name"/>
+                    </td>
+                    <td class="text-right">
+                        <input class="o_field_float o_field_number o_field_widget o_input o_required_modifier"
+                               type="number"
+                               t-attf-name="qty_pull_#{warehouse}"
+                        />
+                    </td>
+                    <td t-attf-class="route_pull_#{warehouse}"/>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div t-name="main_warehouse_available">
+        <!-- Main warehouse quantity available -->
+        <tr class="o_data_row font-italic">
+            <t t-set="line" t-value="widget.getParent().data"/>
+            <td class="o_data_cell o_field_cell">
+                <i class="fa fa-truck fa-flip-horizontal"/>
+                <span t-esc="line.warehouse_id.data.display_name" t-if="!_.has(line.force_data, 'warehouse_id')"/>
+                <span t-esc="line.force_data.warehouse_name" t-if="_.has(line.force_data, 'warehouse_id')"/>
+            </td>
+            <td class="o_data_cell o_field_cell text-right">
+                <t t-set="qty_available_today" t-value="line.qty_available_today"/>
+                <t t-set="qty_available_today" t-value="0" t-if="line.qty_available_today &lt; 0"/>
+
+                <span t-attf-data-value="#{qty_available_today}"
+                      t-esc="widget.formatFloat(qty_available_today, false, {'digits': [false, widget.digits.digits]})"/>
+            </td>
+            <td t-if="widget.has_group_uom" class="o_data_cell o_field_cell">
+                <span t-esc="line.product_uom.data.display_name"/>
+            </td>
+            <td class="text-right">
+                <span id="qty_from_default"/>
+            </td>
+            <td/>
+        </tr>
+    </div>
+
+    <div t-name="sale_advanced_mto.cancelledRoute">
+        <div t-att-class="!widget.data.display_cancelled_route_widget ? 'd-none' : ''">
+            <a tabindex="0" class="fa fa-retweet text-danger"/>
+        </div>
+    </div>
+
+</templates>

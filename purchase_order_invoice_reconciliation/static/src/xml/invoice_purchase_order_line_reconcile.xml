@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates xml:space="preserve">
+
+    <t t-name="filter_fields">
+        <a type="button" class="dropdown-toggle filter_fields" data-toggle="dropdown">
+            <span class="fa fa-folder-open"/> Filters
+        </a>
+        <ul class="dropdown-menu o_filters_menu" role="menu">
+            <li class="js_order_m2m"/>
+        </ul>
+        <a type="button" id="refresh">
+            <span class="fa fa-refresh"/> Refresh
+        </a>
+    </t>
+
+    <div t-name='m2mWidgetTable' class="o_form_view p-5">
+        <table class="o_group o_inner_group">
+            <tr t-foreach="fields" t-as="field">
+                <td class="o_td_label"><label class="o_form_label" t-esc="fields[field].label"/></td>
+                <td t-att-id="field + '_field'" style="min-width:200px;"/>
+            </tr>
+        </table>
+    </div>
+
+    <t t-name="invoice_purchase_order_line_reconciliation">
+        <div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="o_form_view">
+                        <div class="o_form_sheet_bg">
+                            <div class="o_form_sheet" id="invoice_form"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="o_form_view">
+                        <div class="o_form_sheet_bg">
+                            <div class="o_form_sheet" id="purchase_order_lines">
+                                <div class="lead text-center"><i class="fa fa-info"/> Using filter on top for select purchase order(s)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+
+</templates>

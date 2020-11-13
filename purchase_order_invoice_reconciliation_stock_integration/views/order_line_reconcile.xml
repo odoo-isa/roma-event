@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <template id="order_lines_ddt" inherit_id="purchase_order_invoice_reconciliation.order_lines">
+            <xpath expr="//div[@t-if='purchase_orders']" position="attributes">
+                <attribute name="t-if">purchase_orders or order_from_ddt</attribute>
+            </xpath>
+            <xpath expr="//span[@data-role='extra_lines']" position="after">
+                <tr t-foreach="order_from_ddt" t-as="ddt_order">
+                    <t t-call="purchase_order_invoice_reconciliation.print_order_header">
+                        <t t-set="order" t-value="ddt_order"/>
+                    </t>
+                    <t t-call="purchase_order_invoice_reconciliation.print_order_lines">
+                        <t t-set="order" t-value="ddt_order"/>
+                        <t t-set="order_lines" t-value="order_from_ddt[ddt_order]"/>
+                    </t>
+                </tr>
+            </xpath>
+        </template>
+
+    </data>
+</openerp>

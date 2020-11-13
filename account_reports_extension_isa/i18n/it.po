@@ -1,0 +1,162 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_reports_extension_isa
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-26 15:39+0000\n"
+"PO-Revision-Date: 2020-08-26 15:39+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: account_reports_extension_isa
+#: model:ir.model,name:account_reports_extension_isa.model_account_account
+msgid "Account"
+msgstr "Conto"
+
+#. module: account_reports_extension_isa
+#: model:ir.model,name:account_reports_extension_isa.model_account_financial_html_report_line
+msgid "Account Report (HTML Line)"
+msgstr "Resoconto conto (riga HTML)"
+
+#. module: account_reports_extension_isa
+#: model_terms:ir.ui.view,arch_db:account_reports_extension_isa.account_financial_report_line_filter_mode
+msgid "Accounts"
+msgstr "Conti"
+
+#. module: account_reports_extension_isa
+#: model:ir.model.fields,field_description:account_reports_extension_isa.field_account_financial_html_report_line__domain_account_ids
+msgid "Accounts for this section"
+msgstr "Account per questa sezione"
+
+#. module: account_reports_extension_isa
+#: model:ir.model.fields.selection,name:account_reports_extension_isa.selection__account_financial_html_report_line__filter_mode__account
+msgid "By account list"
+msgstr "Per conti specifici"
+
+#. module: account_reports_extension_isa
+#: model:ir.model.fields.selection,name:account_reports_extension_isa.selection__account_financial_html_report_line__filter_mode__domain
+msgid "By domain"
+msgstr "Per dominio"
+
+#. module: account_reports_extension_isa
+#: model_terms:ir.ui.view,arch_db:account_reports_extension_isa.account_financial_report_line_filter_mode
+msgid "Children Lines"
+msgstr "Linee Figlie"
+
+#. module: account_reports_extension_isa
+#: model:ir.model.fields,field_description:account_reports_extension_isa.field_account_financial_html_report_line__complete_name
+msgid "Complete name"
+msgstr "Nome completo"
+
+#. module: account_reports_extension_isa
+#: model:ir.model.fields,help:account_reports_extension_isa.field_account_financial_html_report_line__complete_name
+msgid "Complete name of the section's path"
+msgstr "Nome completo del percorso della sezione"
+
+#. module: account_reports_extension_isa
+#: model:ir.model.fields,field_description:account_reports_extension_isa.field_account_financial_html_report_line__absolute_path_name
+msgid "Complete parent name"
+msgstr "Nome genitore completo"
+
+#. module: account_reports_extension_isa
+#: model:ir.model.fields,field_description:account_reports_extension_isa.field_account_financial_html_report_line__filter_mode
+msgid "Filter mode"
+msgstr "Modalità di ricerca"
+
+#. module: account_reports_extension_isa
+#: model:ir.model.fields,field_description:account_reports_extension_isa.field_account_account__html_report_line_section_ids
+#: model_terms:ir.ui.view,arch_db:account_reports_extension_isa.account_account_section_report
+msgid "Financial Reports"
+msgstr "Resoconti Finanziari"
+
+#. module: account_reports_extension_isa
+#: model_terms:ir.ui.view,arch_db:account_reports_extension_isa.account_financial_report_line_filter_mode_search
+msgid "Group by"
+msgstr "Raggruppa per"
+
+#. module: account_reports_extension_isa
+#: model:ir.model.fields,help:account_reports_extension_isa.field_account_financial_html_report_line__domain_account_ids
+msgid ""
+"If filter mode is set with 'By account list' should be enumerate the accounts to considering for this\n"
+"         report section"
+msgstr ""
+"Se la modalità di ricerca è impostata ‘Per conti specifici’ dovrebbero essere elencati i conti da considerare per questa\n"
+"        sezione del report"
+
+#. module: account_reports_extension_isa
+#: model:ir.model.fields,help:account_reports_extension_isa.field_account_financial_html_report_line__report_name
+msgid "Name of the financial report of this section"
+msgstr "Nome del report finanziario di questa sezione"
+
+#. module: account_reports_extension_isa
+#: model_terms:ir.ui.view,arch_db:account_reports_extension_isa.account_financial_report_line_filter_mode_search
+msgid "Path Name"
+msgstr "Nome percorso"
+
+#. module: account_reports_extension_isa
+#: model_terms:ir.ui.view,arch_db:account_reports_extension_isa.account_financial_report_line_filter_mode_tree
+msgid "Report Lines"
+msgstr "Linee di Report"
+
+#. module: account_reports_extension_isa
+#: model_terms:ir.ui.view,arch_db:account_reports_extension_isa.account_financial_report_line_filter_mode_search
+msgid "Report Name"
+msgstr "Nome report"
+
+#. module: account_reports_extension_isa
+#: model_terms:ir.ui.view,arch_db:account_reports_extension_isa.account_financial_report_line_filter_mode_search
+msgid "Report Section"
+msgstr "Sezione Report"
+
+#. module: account_reports_extension_isa
+#: model:ir.model.fields,field_description:account_reports_extension_isa.field_account_financial_html_report_line__report_root_id
+msgid "Report html root"
+msgstr "Radice report html"
+
+#. module: account_reports_extension_isa
+#: model:ir.model.fields,field_description:account_reports_extension_isa.field_account_financial_html_report_line__report_name
+msgid "Report name"
+msgstr "Nome del Report"
+
+#. module: account_reports_extension_isa
+#: code:addons/account_reports_extension_isa/models/account_account.py:0
+#, python-format
+msgid ""
+"The account '%s' is present in more than one section for the report '%s': \n"
+"%s"
+msgstr ""
+"Il conto '%s' è presente in più di una sezione per il report '%s': \n"
+"%s"
+
+#. module: account_reports_extension_isa
+#: model:ir.model.fields,help:account_reports_extension_isa.field_account_financial_html_report_line__absolute_path_name
+msgid "The complete name of the parent record"
+msgstr "Il nome completo del record padre"
+
+#. module: account_reports_extension_isa
+#: model:ir.model.fields,help:account_reports_extension_isa.field_account_financial_html_report_line__report_root_id
+msgid "The report root id in nested report line"
+msgstr "La root del report all’interno delle righe nidificate"
+
+#. module: account_reports_extension_isa
+#: model:ir.model.fields,help:account_reports_extension_isa.field_account_account__html_report_line_section_ids
+msgid "This account will be included in this report sections."
+msgstr "Questo conto verrà incluso in questa sezione del report."
+
+#. module: account_reports_extension_isa
+#: model:ir.model.fields,help:account_reports_extension_isa.field_account_financial_html_report_line__filter_mode
+msgid ""
+"Which mode have to be used for the select of the accounts:\n"
+"* By domain - The user that configure report must be specify domain (according to the Odoo domain syntax)\n"
+"* By account list - The user must be specify accounts individually."
+msgstr ""
+"Quale modalità deve essere usata per la selezione dei conti:\n"
+"* Per dominio - L’utente che configura il report deve specificare il dominio (In base alla sintassi di Odoo)\n"
+"* Per conti specifici - L’utente deve specificare ogni conto individualmente."

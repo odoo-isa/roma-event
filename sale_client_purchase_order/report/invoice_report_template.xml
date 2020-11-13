@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="invoice_report" inherit_id="account.report_invoice_document">
+            <xpath expr="//table[hasclass('o_main_table')]" position="before">
+                <h5>Related documents</h5>
+                <table class="table table-sm">
+                    <thead>
+                        <tr>
+                            <th name="th_type">Type</th>
+                            <th name="th_name">Document ID</th>
+                            <th name="th_date">Date</th>
+                            <th name="th_code">Order agreement code</th>
+                            <th name="th_cig">CIG</th>
+                            <th name="th_cup">CUP</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="o.related_document_ids" t-as="related_document_id">
+                            <td>
+                                <span t-field="related_document_id.document_type"/>
+                            </td>
+                            <td>
+                                <span t-field="related_document_id.name"/>
+                            </td>
+                            <td>
+                                <span t-field="related_document_id.num_item"/>
+                            </td>
+                            <td>
+                                <span t-field="related_document_id.date"/>
+                            </td>
+                            <td>
+                                <span t-field="related_document_id.code"/>
+                            </td>
+                            <td>
+                                <span t-field="related_document_id.cig"/>
+                            </td>
+                            <td>
+                                <span t-field="related_document_id.cup"/>
+                            </td>
+                        </t>
+                    </tbody>
+                </table>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

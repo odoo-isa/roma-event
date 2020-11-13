@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- TREE View  -->
+        <record model='ir.ui.view' id='payment_type_tree'>
+            <field name='name'>payment_type.tree</field>
+            <field name='model'>payment.type</field>
+            <field name='arch' type='xml'>
+                <tree>
+                    <field name='name'/>
+                    <field name="code"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- FORM View  -->
+        <record model='ir.ui.view' id='payment_type_form'>
+            <field name='name'>payment_type.form</field>
+            <field name='model'>payment.type</field>
+            <field name='arch' type='xml'>
+                <form>
+                    <sheet>
+                        <group>
+                            <field name='name'/>
+                            <field name="code"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Account Payment Type Action -->
+        <record id="action_payment_type_form" model="ir.actions.act_window">
+            <field name="name">Payment Type</field>
+            <field name="res_model">payment.type</field>
+            <field name="view_mode">tree,kanban,form</field>
+        </record>
+
+        <!-- Add Payment Type MenuItem -->
+        <menuitem id="menu_action_payment_type_form"
+                  parent="account.account_invoicing_menu"
+                  action="action_payment_type_form"
+                  name="Payment Type"
+                  sequence="2"
+        />
+
+    </data>
+</odoo>
